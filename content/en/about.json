@@ -58,20 +58,6 @@
     }
   },
 
-  "leadership": {
-    "eyebrow": "LEADERSHIP",
-    "title": "Company principal",
-    "lead": "",
-    "paragraphs": [
-      "The principal sets the overall business direction of the group. Equipment procurement and client engagement run through a single point of contact, so nothing is lost in handovers between departments."
-    ],
-    "card": {
-      "title": "Kerwin Su (蘇益宏)",
-      "role": "Principal",
-      "text": "Responsible for overall business direction, equipment procurement and client engagement."
-    }
-  },
-
   "scope": {
     "eyebrow": "BUSINESS SCOPE",
     "title": "Business scope",

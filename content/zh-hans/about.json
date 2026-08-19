@@ -58,20 +58,6 @@
     }
   },
 
-  "leadership": {
-    "eyebrow": "LEADERSHIP",
-    "title": "公司负责人",
-    "lead": "",
-    "paragraphs": [
-      "集团整体业务方向由公司负责人统筹；设备采购与客户合作事宜均由统一对接窗口负责，避免跨部门转手造成信息落差。"
-    ],
-    "card": {
-      "title": "苏益宏（Kerwin）",
-      "role": "公司负责人",
-      "text": "负责集团整体业务方向、设备采购与客户合作事宜。"
-    }
-  },
-
   "scope": {
     "eyebrow": "BUSINESS SCOPE",
     "title": "业务范围",

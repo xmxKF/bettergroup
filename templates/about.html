@@ -69,30 +69,8 @@
     </div>
   </section>
 
-  <!-- ===================== 2.4 負責人 ===================== -->
-  <section class="section" id="leadership">
-    <div class="container">
-      <div class="split split--5-7 split--top">
-
-        <div class="reveal">
-          {{ section_header(page.leadership, '', 'margin-bottom:var(--space-6)') }}
-          {%- for p in page.leadership.paragraphs %}
-          <p>{{ p }}</p>
-          {%- endfor %}
-        </div>
-
-        <article class="card reveal reveal--d1">
-          <h3 class="card__title">{{ page.leadership.card.title }}</h3>
-          <p class="small muted">{{ page.leadership.card.role }}</p>
-          <p class="card__text">{{ page.leadership.card.text }}</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ===================== 2.5 業務範圍 ===================== -->
-  <section class="section section--alt" id="business-scope">
+  <section class="section" id="business-scope">
     <div class="container">
       {{ section_header(page.scope) }}
       <ul class="feature-list feature-list--3 reveal reveal--d1">
@@ -107,7 +85,7 @@
   </section>
 
   <!-- ===================== 2.6 核心價值 ===================== -->
-  <section class="section" id="values">
+  <section class="section section--alt" id="values">
     <div class="container">
       {{ section_header(page.our_values) }}
 
@@ -122,7 +100,7 @@
   </section>
 
   <!-- ===================== 2.7 總部位置 ===================== -->
-  <section class="section section--alt" id="headquarters">
+  <section class="section" id="headquarters">
     <div class="container">
       <div class="split split--5-7 split--top">
 

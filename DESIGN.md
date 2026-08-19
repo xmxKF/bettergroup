@@ -297,7 +297,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
   3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`Masuhiro@bettertechgroup.com`（mailto）、`+86-136-3266-5441`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
   - <960px 以觸控為主：導覽／製程連結補 `padding-block:12px`，可點高度 ≥44px（§10）。
   4. 九大製程快速連結（`--fs-small`）
-- 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`。
+- 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`；末行為網站設計 credit（`common.footer.credit`），同一 `--fs-small` `--on-dark-muted`，`href` 有值時渲染為 `--accent-on-dark` 連結、無值（目前）則為純文字。
 
 ### 6.10 麵包屑
 `--fs-small`、`--text-muted`；分隔符 `/`（`--border-strong` 色，左右 8px）；最後一項為 `--text-2` 且非連結；位於內頁 hero 上緣，與 h1 間距 16px。
@@ -481,7 +481,7 @@ Masuhiro@bettertechgroup.com，移除常見問題FAQ，優化微調版面設計�
 | 改動 | 理由 |
 |---|---|
 | 全站移除聯絡人姓名（footer、contact 資訊列與側欄卡、about 負責人卡的信箱行、meta description、四語 JSON） | 客戶指示：聯絡方式只留信箱與電話 |
-| 信箱 `kerwin@` → `Masuhiro@bettertechgroup.com`（含 `main.js` 的 fallback 與四語 `cta_band`／`form.mailto`） | 同上 |
+| 信箱改為 `Masuhiro@bettertechgroup.com`（含 `main.js` 的 fallback 與四語 `cta_band`／`form.mailto`） | 同上 |
 | 新增電話 `+86-136-3266-5441`（顯示四語一致）／`tel:+8613632665441`；footer 標籤 `聯絡人：` → `電話：`（电话：／Phone: ／電話：） | 同上 |
 | about 頁「公司負責人」卡**保留姓名與職稱**，只拿掉卡片底部的 mailto 行 | 該卡是公司治理資訊，不是聯絡方式；拿掉信箱後就不再把個人呈現為聯絡窗口 |
 | 移除聯絡頁 FAQ 區塊（模板、四語 JSON、規格文件、`#faq-*` 錨點） | 客戶指示 |

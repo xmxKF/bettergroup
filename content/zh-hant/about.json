@@ -58,20 +58,6 @@
     }
   },
 
-  "leadership": {
-    "eyebrow": "LEADERSHIP",
-    "title": "公司負責人",
-    "lead": "",
-    "paragraphs": [
-      "集團整體業務方向由公司負責人統籌；設備採購與客戶合作事宜均以單一窗口對接，避免跨部門轉手造成資訊落差。"
-    ],
-    "card": {
-      "title": "蘇益宏（Kerwin）",
-      "role": "公司負責人",
-      "text": "負責集團整體業務方向、設備採購與客戶合作事宜。"
-    }
-  },
-
   "scope": {
     "eyebrow": "BUSINESS SCOPE",
     "title": "業務範圍",

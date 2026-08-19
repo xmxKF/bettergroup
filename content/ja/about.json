@@ -58,20 +58,6 @@
     }
   },
 
-  "leadership": {
-    "eyebrow": "LEADERSHIP",
-    "title": "代表者",
-    "lead": "",
-    "paragraphs": [
-      "グループ全体の事業方針は代表者が統括します。装置調達やお客様との協業はすべて窓口を一本化し、部門間の受け渡しによる情報のずれを防ぎます。"
-    ],
-    "card": {
-      "title": "Kerwin Su（蘇益宏）",
-      "role": "代表者",
-      "text": "グループ全体の事業方針、装置調達、お客様との協業を担当しています。"
-    }
-  },
-
   "scope": {
     "eyebrow": "BUSINESS SCOPE",
     "title": "事業範囲",

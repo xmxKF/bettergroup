@@ -225,7 +225,10 @@ content/
     // labels 三個抬頭同時供 footer 聯絡欄、about 總部區塊與 contact 側欄卡使用
     "process_links": [ { "label": "黃光段", "href": "equipment-lithography.html" }, … 共 9 項 ],
     "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
-    "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。"
+    "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
+    "credit": { "label": "網站設計：", "name": "顯藝科技", "href": "" }
+    // 底部列的網站設計credit；href 目前未知、留空字串 → 模板輸出 <span>，
+    // 有連結時再補 href → 模板改輸出 <a>（見 partials/footer.html）
   },
 
   "cta_band": {                    // 每頁最底的共用聯絡條
@@ -342,15 +345,6 @@ content/
       { "term": "願景：…", "desc": "…" }
     ],
     "media": { … }                             // IMG-ABOUT-02，ratio 4-3
-  },
-
-  "leadership": {                              // #leadership
-    "eyebrow": "…", "title": "…", "lead": "",
-    "paragraphs": ["…"],
-    "card": { "title": "蘇益宏（Kerwin）",      // 姓名
-              "role": "公司負責人",             // <p class="small muted">
-              "text": "…" }                    // 職責描述
-    // 本卡是「公司治理」資訊，不是聯絡方式：卡片內不放 email／電話
   },
 
   "scope": {                                   // #business-scope

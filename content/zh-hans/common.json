@@ -85,7 +85,8 @@
       { "label": "掩模版工艺", "href": "equipment-mask.html" }
     ],
     "copyright": "© 2026 倍特尔科技集团有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版权所有。",
-    "trademark_note": "本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。"
+    "trademark_note": "本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。",
+    "credit": { "label": "网站设计：", "name": "显艺科技", "href": "" }
   },
 
   "cta_band": {

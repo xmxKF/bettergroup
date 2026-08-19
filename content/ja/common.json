@@ -85,7 +85,8 @@
       { "label": "フォトマスク工程", "href": "equipment-mask.html" }
     ],
     "copyright": "© 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED（倍特爾科技集團有限公司）／無断複製・転載を禁じます。",
-    "trademark_note": "本サイトに記載のブランド名は、それぞれの所有者の商標であり、装置の説明を目的として表示しています。"
+    "trademark_note": "本サイトに記載のブランド名は、それぞれの所有者の商標であり、装置の説明を目的として表示しています。",
+    "credit": { "label": "ウェブサイト制作：", "name": "顯藝科技", "href": "" }
   },
 
   "cta_band": {
