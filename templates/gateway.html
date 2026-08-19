@@ -11,8 +11,8 @@
 {%- endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ base_url }}{{ x_default }}/index.html">
 
-<!-- 無 JS 時 1 秒後導向繁體中文版 -->
-<meta http-equiv="refresh" content="1;url={{ x_default }}/index.html">
+<!-- 沒有 meta refresh：任何非零延遲的自動轉頁都違反 WCAG 2.2.1（技術 F40）。
+     無 JS 時就停在這一頁，直接點下面四個語言連結。 -->
 
 <link rel="icon" href="assets/img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">

@@ -26,7 +26,7 @@
   "shell": {
     "not_found": "找不到此页面",
     "language_nav": "语言版本",
-    "gateway_note": "正在为您选择语言版本",
+    "gateway_note": "请选择语言版本",
     "back_to_gateway": "回到语言选择"
   },
 

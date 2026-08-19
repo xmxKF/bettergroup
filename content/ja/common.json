@@ -26,7 +26,7 @@
   "shell": {
     "not_found": "ページが見つかりません",
     "language_nav": "言語版",
-    "gateway_note": "言語版を選択しています…",
+    "gateway_note": "言語版をお選びください",
     "back_to_gateway": "言語選択へ"
   },
 

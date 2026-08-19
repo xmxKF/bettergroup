@@ -1397,6 +1397,7 @@
 | 項目 | 說明 |
 |---|---|
 | 站台外殼頁的文案 | 本規格書 §0–§16 只涵蓋 15 個內容頁。語言閘道（`dist/index.html`）與 404 頁的文案不在此處，改放 `content/<lang>/common.json` 的 `shell` 物件，欄位定義見 `docs/content-schema.md §4`。 |
+| 閘道文案 `shell.gateway_note` | 閘道頁移除 `meta refresh`（WCAG 2.2.1／F40，見 `DESIGN.md §11`）後，無 JS 時不會自動轉頁，文案改為祈使句「請選擇語言版本」，四語同步。 |
 | 媒體 `caption` | `caption` 是簡短主體標籤，不是 `alt` 的複本；美術指導用語只留在 `alt`。本文件 §16 的「說明」欄是給生成端看的完整敘述，對應 `alt`，不可直接抄進 `caption`。 |
 | `title_lat` 的斜線 | 語言不變欄位一律 ASCII：`LithoDreamer / ILT`。 |
 | 逐語言潤稿紀錄 | `docs/editorial-zh-hans.md`／`editorial-en.md`／`editorial-ja.md`，術語對照見同目錄的 `glossary-*.md`。 |

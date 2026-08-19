@@ -310,3 +310,4 @@
 | `caption` を主体ラベルに短縮 | `docs/content-schema.md §2` と `editorial-en.md §3` のルールに従い、メディア `caption` 27 件からアートディレクション用語（クールトーン、余白を活かした構図、左右対称の構図、科学写真のスタイル、ダーク UI、顔は写り込みなし…）を削除。完全な記述は `alt` に残す。`caption` は未納品メディアのプレースホルダー枠に表示され、閲覧者が実際に読む文字であるため。 |
 | `ai.json` `title_lat` | `LithoDreamer／ILT` → `LithoDreamer / ILT`（言語不変フィールドは ASCII のスラッシュに統一。`index.json` と一致。訳文側の `arch` の全角／はそのまま）。 |
 | `common.json` に `shell` を追加 | 言語ゲートウェイと 404 ページの 4 つの文字列（`not_found`／`language_nav`／`gateway_note`／`back_to_gateway`）。従来はテンプレート直書きで 4 言語検証の対象外だった。 |
+| `common.json` `shell.gateway_note` | 「言語版を選択しています…」→「言語版をお選びください」。ゲートウェイの `meta refresh`（WCAG 2.2.1／F40）を撤去したため、JS 無効時は自動遷移しない。進行中を示す文では実際の挙動と矛盾するので、命令形に統一。 |

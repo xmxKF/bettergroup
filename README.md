@@ -39,7 +39,7 @@ bettergroup/
 ├── assets/                          css／img／js／video 四個子目錄複製到 dist/assets/
 │   ├── css/style.css                全站唯一樣式表（設計 token ＋ 所有元件）
 │   ├── js/main.js                   全站唯一腳本（導覽／捲動淡入／表單／媒體偵測）
-│   ├── img/                         logo 衍生檔、favicon、交付用圖片
+│   ├── img/                         logo-96、favicon、交付用圖片
 │   ├── video/                       交付用影片
 │   └── src/                         轉檔前的原始檔庫（optimize_media.py 自動搬入，不進 dist/）
 │
@@ -120,14 +120,15 @@ SITE_URL=https://acme.github.io/bettergroup python build.py --clean
 ### 3.1 網址
 
 ```
-/                       語言分流閘道（JS 依 navigator.languages 導向，無 JS 則 1 秒後轉繁中）
+/                       語言分流閘道（JS 依 navigator.languages 導向；無 JS 不轉頁，改用頁面上的四個語言連結）
 /zh-hant/index.html     繁體中文（x-default）
 /zh-hans/index.html     簡體中文
 /en/index.html          English
 /ja/index.html          日本語
 ```
 
-分流規則：`zh-TW`／`zh-HK`／`zh-MO`／`zh-Hant` → `zh-hant`；其餘 `zh*`（含 `zh`／`zh-CN`／`zh-SG`／`zh-Hans`）→ `zh-hans`；`ja*` → `ja`；`en*` → `en`；有語言偏好但都不符 → `en`；完全讀不到偏好 → `zh-hant`。閘道同時輸出四個純連結，供無 JS 的使用者與爬蟲使用。
+分流規則：`zh-TW`／`zh-HK`／`zh-MO`／`zh-Hant` → `zh-hant`；其餘 `zh*`（含 `zh`／`zh-CN`／`zh-SG`／`zh-Hans`）→ `zh-hans`；`ja*` → `ja`；`en*` → `en`；有語言偏好但都不符 → `en`；完全讀不到偏好 → `zh-hant`。閘道同時輸出四個純連結，供無 JS 的使用者與爬蟲使用；
+閘道與 404 頁都**沒有** `meta refresh`（非零延遲的自動轉頁違反 WCAG 2.2.1，見 `DESIGN.md §11`）。
 
 每頁 `<head>` 都有四個語言的 `hreflang` alternate ＋ `x-default`（指向 zh-hant）＋ `canonical`；
 `sitemap.xml` 也帶完整 alternates。
@@ -362,7 +363,7 @@ python tools/check_links.py       # dist/ 內部連結；root-absolute 路徑一
 
 部署後請確認：
 
-- 根網址 `/` 會依瀏覽器語言導向正確的語言版本，關閉 JS 時仍能看到四個語言連結
+- 根網址 `/` 會依瀏覽器語言導向正確的語言版本；關閉 JS 時停在閘道頁，四個語言連結可點（不會自動轉頁）
 - 四個語言各自的首頁載入無 console 錯誤，字體正確（TC／SC／JP／Inter）
 - 語言切換器能在同一頁面之間互相切換
 - 各頁 favicon 顯示正常（`assets/img/favicon.ico`）

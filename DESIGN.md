@@ -441,6 +441,9 @@ JS 亦須偵測 `matchMedia('(prefers-reduced-motion: reduce)')`，命中時直�
 | 動畫預設關閉 | `.reveal` 的隱藏起始狀態改由 `html.js-anim` 開啟（見 §7）；原本的 `.no-js` 反向作法在 `main.js` 載入失敗時會讓整頁空白。 |
 | 媒體 `caption` 規則 | `caption` 收成簡短主體標籤，美術指導用語只留在 `alt`（見 `docs/content-schema.md §2`）。四語一致。 |
 | `title_lat` 的斜線 | 語言不變欄位一律用 ASCII `LithoDreamer / ILT`；CJK 譯文（`arch` 等非不變欄位）仍用全形／。 |
+| 閘道頁不自動轉頁 | 原先 `templates/gateway.html` 帶 `<meta http-equiv="refresh" content="1;url=…">` 當無 JS 的退路，任何非零延遲的自動轉頁都是 WCAG 2.2.1 的失敗案例（技術 F40）。已整條移除：有 JS 時由頁尾的路由腳本立即轉向，無 JS 時就停在閘道頁點四個語言連結。`common.json` 的 `shell.gateway_note` 四語同步改成祈使句（「請選擇語言版本」／`Choose your language`），無 JS 時文案才不會與行為矛盾。 |
+| 內容圖不做 `srcset` | 經評估後**維持現狀**：`media_img` 只出一張 1600px 長邊的 JPEG（`tools/optimize_media.py` 已壓到 400 KB 以下，實測最大 273 KB）。在 1440 版面下卡片圖約 355 CSS px，1x 螢幕確實多下載了像素，但這是頻寬取捨、不影響正確性（`.media` 有 `aspect-ratio`，CLS 為 0），而加 `srcset` 需要轉檔工具多產一組 800px 檔、資產數量翻倍。日後若要做，作法是 `optimize_media.py` 同時輸出 800／1600 兩個版本，並在 `media_img` 加 `srcset`／`sizes`。 |
+| `logo-256.png`／`logo-512.png` | 全站（HTML／CSS／模板／manifest）沒有任何地方參照，建置時本來就不複製到 `dist/`，已從版控移除以免誤以為是交付檔。實際使用中的衍生檔只有 `logo-96.png`（閘道頁與 header 標記）與 `favicon-*`；需要更大尺寸時從根目錄的 `logo.png`（2048px）重新產生。 |
 | `tools/check_links.py` | 第三階段新增：檢查 `dist/` 內部連結，root-absolute 路徑視為錯誤。CI 三關之一（README §8.4）。 |
 | `SITE_URL` 優先序 | `--base-url` ＞ 環境變數 `SITE_URL` ＞ `build.py` 常數（README §2、§8.2）。 |
 | 未被參照的資產不進 `dist/` | `assets/img`／`assets/video` 裡沒有任何 content JSON 指到、也不在 `build.py` 的 `SHELL_ASSETS` 白名單內的檔案，建置時只列出警告、不複製（避免交付檔悄悄變成死重量）。 |

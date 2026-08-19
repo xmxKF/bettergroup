@@ -180,7 +180,7 @@ content/
   "shell": {                       // 站台外殼頁（dist/index.html 語言閘道、dist/404.html）
     "not_found":       "找不到此頁面",          // 404 的 <h1>，四語並列
     "language_nav":    "語言版本",              // 404 語言清單的 <nav aria-label>（取 zh-hant 那份）
-    "gateway_note":    "正在為您選擇語言版本",   // 閘道底部說明，四語並列
+    "gateway_note":    "請選擇語言版本",        // 閘道底部說明，四語並列（無 JS 時不轉頁，須是祈使句）
     "back_to_gateway": "回到語言選擇"           // 404 底部回到閘道的連結，四語並列
   },
 

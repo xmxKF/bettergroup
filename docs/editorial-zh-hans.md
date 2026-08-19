@@ -132,3 +132,4 @@
 | `caption` 收成主体标签 | 依 `docs/content-schema.md §2` 与 `editorial-en.md §3` 的规则，27 个媒体 `caption` 删去美术指导用语（冷色调、构图留白、对称构图、科学摄影风格、深色 UI、无可辨识人脸…），完整描述保留在 `alt`。`caption` 会显示在尚未产出的媒体占位框里，是访客真的会读到的字。 |
 | `ai.json` `title_lat` | `LithoDreamer／ILT` → `LithoDreamer / ILT`（语言不变字段一律 ASCII 斜线，与 `index.json` 一致；译文 `arch` 里的全角／不动）。 |
 | `common.json` 新增 `shell` | 语言闸道与 404 页的四段文案（`not_found`／`language_nav`／`gateway_note`／`back_to_gateway`），原先硬编码在模板里，现纳入四语结构验证。 |
+| `common.json` `shell.gateway_note` | 「正在为您选择语言版本」→「请选择语言版本」。闸道页的 `meta refresh`（违反 WCAG 2.2.1／F40）已移除，关闭 JS 时不再自动转页，进行式文案会与实际行为矛盾，故改为祈使句。 |
