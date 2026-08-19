@@ -222,8 +222,6 @@
 - **eyebrow**：`ABOUT BETTER`
 - **標題（H1）**：`立足香港的半導體設備集團`
 - **lead**：`以設備、製程、人才與 AI 四條主線服務先進製造。`
-- **媒體**
-  - `IMG-ABOUT-01` — 香港城市天際線與現代商業大廈立面的冷調照片，構圖留白，象徵港島樞紐位置。
 
 ### 2.2 公司簡介
 
@@ -498,7 +496,7 @@
   - `CMP 負責平坦化，晶圓水洗抑制顆粒與殘留，檢測則貫穿全線提供回饋。`
   - `九大段互為上下游，任一段的變異都會沿著疊層放大，因此需要一致的設備與資料策略。`
 - **媒體**
-  - `IMG-EQP-02` — 九大製程循環流程圖：環形排列的細線圖示，標示掩模版為起點、檢測為回饋迴路。
+  - `IMG-EQP-02` — 先進半導體主製程流程示意圖：環形排列的細線圖示，標示掩模版為起點、檢測為回饋迴路。
 
 ### 4.3 製程卡片區
 
@@ -1327,7 +1325,6 @@
 | IMG-HOME-02 | index.html | 4:3 | assets/img/home-02.jpg | 九宮格製程流程示意圖，冷灰底細線圖示，象徵晶圓流轉。 |
 | IMG-HOME-03 | index.html | 4:3 | assets/img/home-03.jpg | 抽象資料視覺化：晶圓熱場等高線與感測時序曲線疊合。 |
 | IMG-HOME-04 | index.html | 4:3 | assets/img/home-04.jpg | 工程團隊於機台前檢視資料看板的側面剪影，冷色調。 |
-| IMG-ABOUT-01 | about.html | 3:4 | assets/img/about-01.jpg | 香港天際線與現代商業大廈立面冷調照片，構圖留白。 |
 | IMG-ABOUT-02 | about.html | 4:3 | assets/img/about-02.jpg | 極簡抽象：晶圓與資料節點以細線連結，深藍底光譜漸層。 |
 | IMG-ABOUT-03 | about.html | 21:9 | assets/img/about-03.jpg | 簡化線稿地圖：九龍佐敦街廓抽象化，單一標記點。 |
 | IMG-ABOUT-04 | about.html | 16:9 | assets/img/about-04.jpg | 會議室桌面俯視：設備規格文件與筆記本，冷色調無人臉。 |
@@ -1336,7 +1333,7 @@
 | IMG-SVC-03 | services.html | 21:9 | assets/img/svc-03.jpg | 服務流程等距插畫：六節點串成一線，節點以光譜色細環標示。 |
 | IMG-SVC-04 | services.html | 3:4 | assets/img/svc-04.jpg | 工程師於機台前執行調試，手持量測工具，冷色調。 |
 | IMG-EQP-01 | equipment.html | 16:9 | assets/img/eqp-01.jpg | 無塵室製程設備列透視照，黃光區與白光區交界，對稱構圖。 |
-| IMG-EQP-02 | equipment.html | 4:3 | assets/img/eqp-02.jpg | 九大製程循環流程圖：環形細線圖示，檢測為回饋迴路。 |
+| IMG-EQP-02 | equipment.html | 4:3 | assets/img/eqp-02.jpg | 先進半導體主製程流程示意圖：環形細線圖示，檢測為回饋迴路。 |
 | IMG-EQP-03 | equipment.html | 21:9 | assets/img/eqp-03.jpg | 晶圓俯視特寫，表面折射彩虹光譜，深色背景。 |
 | IMG-LITHO-01 | equipment-lithography.html | 16:9 | assets/img/litho-01.jpg | 黃光區走道全景，黃色濾光照明下的曝光機列。 |
 | IMG-LITHO-02 | equipment-lithography.html | 4:3 | assets/img/litho-02.jpg | 旋塗顯影軌道內部特寫，晶圓於旋塗腔中，光阻膜面色帶。 |
@@ -1373,7 +1370,7 @@
 | IMG-CONTACT-02 | contact.html | 21:9 | assets/img/contact-02.jpg | 現代辦公空間會議情境冷調照片，桌上攤開設備規格文件。 |
 | IMG-CONTACT-03 | contact.html | 21:9 | assets/img/contact-03.jpg | 抽象品牌視覺：深藍底上的細線光譜漸層橫紋。 |
 
-**合計：50 個資產 ID（48 張圖片、2 支影片；影片另各含 1 張海報圖檔）。**
+**合計：49 個資產 ID（47 張圖片、2 支影片；影片另各含 1 張海報圖檔）。**
 
 「比例」欄為版位比例，唯一真實來源是 `content/zh-hant/*.json` 各媒體物件的 `ratio` 欄位；
 `docs/image-prompts.md`／`docs/video-prompts.md` 的 `--ar` 與最小解析度皆須與本欄一致。

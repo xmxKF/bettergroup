@@ -17,7 +17,7 @@
   <!-- ===================== 2.2 公司簡介 ===================== -->
   <section class="section" id="company-intro">
     <div class="container">
-      <div class="split split--7-5 split--top">
+      <div{% if page.intro.media %} class="split split--7-5 split--top"{% endif %}>
 
         <div class="reveal">
           {{ section_header(page.intro, '', 'margin-bottom:var(--space-8)') }}
@@ -34,9 +34,11 @@
           </ul>
         </div>
 
+        {%- if page.intro.media %}
         <div class="reveal reveal--d1">
           {{ media_img(page.intro.media, asset_prefix) }}
         </div>
+        {%- endif %}
 
       </div>
     </div>

@@ -323,12 +323,12 @@ content/
   "meta": { … }, "breadcrumb": [ … ],
   "hero": { "eyebrow": "ABOUT BETTER", "title": "…", "lead": "…" },
 
-  "intro": {                                   // #company-intro（split 7-5，圖在右）
+  "intro": {                                   // #company-intro（media 為 null 時單欄；有 media 時 split 7-5，圖在右）
     "eyebrow": "…", "title": "…", "lead": "",  // 本頁各區塊皆無 lead，四語一律空字串
     "paragraphs": ["…", "…", "…", "…"],        // <div class="prose"> 內的段落
     "features_label": "服務對象",               // 清單上方的 <p class="small muted">
     "features": ["…", "…", "…", "…"],          // <ul class="feature-list">
-    "media": { … }                             // IMG-ABOUT-01，ratio 3-4
+    "media": null                              // 選填，沒有時寫 null（四語一致，見 §2 media object）
   },
 
   "mission": {                                 // #mission-vision（split 5-7，圖在左）

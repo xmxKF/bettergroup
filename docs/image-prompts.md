@@ -1,7 +1,7 @@
 # 倍特爾科技集團官網 — 圖片生成提示詞（Image Prompts）
 
 > 對應檔案：`docs/content-spec.md` §16 資產索引、`DESIGN.md` §8 影像方向。
-> 本檔涵蓋 **48 個 `IMG-*` 資產 ＋ 2 張影片海報**（共 50 張靜態圖），逐一對應到固定檔名。
+> 本檔涵蓋 **47 個 `IMG-*` 資產 ＋ 2 張影片海報**（共 49 張靜態圖），逐一對應到固定檔名。
 > 說明文字為繁體中文；**生成提示詞一律使用英文**（影像模型對英文提示的理解與可控性最佳）。
 > 檔名規則：`IMG-<PAGE>-<NN>` → `assets/img/<page小寫>-<nn>.jpg`；影片海報屬影片資產，ID 為 `VID-<PAGE>-<NN>（海報）` → `assets/img/<page小寫>-<nn>-poster.jpg`。
 > 產出後請以原始檔名放入 `assets/img/`，頁面上的佔位框會自動被實圖取代。
@@ -255,35 +255,6 @@ uncovered faces, hair visible, street clothes, lab coats instead of bunny suits,
 
 ## 2. about.html（關於我們）— ABOUT
 
-### IMG-ABOUT-01｜`assets/img/about-01.jpg`
-
-- **一句話（zh）**：香港天際線與現代商業大廈立面的冷調照片，象徵港島樞紐位置。
-- 頁面 about.html｜家族 A｜3:4｜最小 1200×1600｜用途：頁首／公司定位配圖。
-
-**Positive**
-
-```
-A cool, restrained vertical architectural photograph of a modern Hong Kong commercial tower at blue
-hour, upright portrait framing, camera slightly below eye level looking up the full height of a
-glass-and-anodised-aluminium facade whose window grid is rendered crisply and repeats to the top of
-the frame, two neighbouring towers receding into soft atmospheric haze at the left edge, the lower
-sixth showing a calm strip of harbour water, overcast even sky filling the upper third as clean
-negative space, verticals perfectly corrected with no keystoning, cool blue-grey palette with only a
-few warm window lights as minimal accent, 35mm tilt-shift look, f/5.6, high micro-contrast but no HDR.
-+ STYLE-A suffix
-```
-
-**Negative**
-
-```
-NEG-BASE, plus: billboards, neon signage, illuminated advertising, junk boats, tourists, flags,
-sunset orange sky, laser show, crowded night scene, identifiable named buildings signage
-```
-
-- **Model notes**：MJ `--ar 3:4 --style raw --stylize 140`；避免生成可辨識的招牌字樣；若模型加上霓虹廣告，加 `--no signage, advertising`。
-
----
-
 ### IMG-ABOUT-02｜`assets/img/about-02.jpg`
 
 - **一句話（zh）**：晶圓與資料節點以細線連結的極簡抽象視覺。
@@ -524,14 +495,14 @@ orange filter look, uneven yellow cast over the whole frame, wide-angle barrel d
 
 ### IMG-EQP-02｜`assets/img/eqp-02.jpg`
 
-- **一句話（zh）**：九大製程環形循環流程圖，檢測為回饋迴路。
+- **一句話（zh）**：先進半導體主製程環形流程示意圖，檢測為回饋迴路。
 - 頁面 equipment.html｜家族 B｜4:3｜最小 1600×1200｜用途：九大製程流說明配圖。
 
 **Positive**
 
 ```
-A minimal circular process diagram on cool off-white #F6F7F8: nine small open ring nodes evenly
-distributed around one large hairline circle, connected head-to-tail by thin arc segments with tiny
+A minimal circular process diagram on cool off-white #F6F7F8: a row of small open ring nodes evenly
+spaced around one large hairline circle, connected head-to-tail by thin arc segments with tiny
 directional chevrons, forming a closed clockwise loop; one node sits at the top as the entry point,
 drawn slightly larger with a solid teal-blue #0C6B8F fill; from a node at the lower right, a thinner
 inner arc cuts back across the circle toward the top node to indicate a feedback path, this single
@@ -1591,7 +1562,7 @@ lens flare, prism illustration, light streaks, blur, grain, vaporwave aesthetic
 | 頁面 | 資產 |
 |---|---|
 | index.html | IMG-HOME-01、IMG-HOME-02、IMG-HOME-03、IMG-HOME-04、VID-HOME-01（海報）`home-01-poster.jpg` |
-| about.html | IMG-ABOUT-01～04 |
+| about.html | IMG-ABOUT-02～04 |
 | services.html | IMG-SVC-01～04 |
 | equipment.html | IMG-EQP-01～03 |
 | equipment-lithography.html | IMG-LITHO-01～03 |
@@ -1606,4 +1577,4 @@ lens flare, prism illustration, light streaks, blur, grain, vaporwave aesthetic
 | ai.html | IMG-AI-01～03、VID-AI-01（海報）`ai-01-poster.jpg` |
 | contact.html | IMG-CONTACT-01～03 |
 
-**合計：48 個 `IMG-*` 資產 ＋ 2 張影片海報 ＝ 50 張靜態圖，與 `docs/content-spec.md` §16 完全一致，無遺漏。**
+**合計：47 個 `IMG-*` 資產 ＋ 2 張影片海報 ＝ 49 張靜態圖，與 `docs/content-spec.md` §16 完全一致，無遺漏。**
