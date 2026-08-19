@@ -156,9 +156,9 @@
     --fs-stat:    44px;
 
     --gutter: var(--space-10);
-    --sec-pad:        var(--space-24);
-    --sec-pad-major:  var(--space-32);
-    --sec-pad-tight:  var(--space-12);
+    --sec-pad:        var(--space-20);
+    --sec-pad-major:  var(--space-24);
+    --sec-pad-tight:  var(--space-10);
     --hero-pad-top:   120px;
     --hero-pad-bottom:112px;
     --header-h: 72px;
@@ -507,7 +507,10 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
 @supports not ((backdrop-filter:blur(12px)) or (-webkit-backdrop-filter:blur(12px))){
   .site-header{ background:var(--bg); }
 }
-.site-header.is-stuck{ border-bottom-color:var(--border); box-shadow:var(--sh-sm); }
+.site-header.is-stuck{
+  background:rgba(246,247,248,.94);
+  border-bottom-color:var(--border); box-shadow:var(--sh-sm);
+}
 
 .site-header__inner{
   height:var(--header-h);
@@ -707,9 +710,15 @@ body.nav-open{ overflow:hidden; }
 
 /* 亮帶版（所有內頁） */
 .hero-light{
+  position:relative;
   background:var(--surface);
-  border-bottom:1px solid var(--border);
   padding-top:72px; padding-bottom:56px;
+}
+/* 下緣 1px 光譜髮絲線 —— 取代原本的 1px --border，讓內頁頁首與首頁暗帶 hero
+   的髮絲線同一語彙（DESIGN.md §2 允許「hero 底部的 1px 髮絲線」）。 */
+.hero-light::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:var(--grad-spectral-soft);
 }
 @media (max-width:639px){
   .hero-light{ padding-top:var(--space-10); padding-bottom:var(--space-10); }
@@ -721,7 +730,6 @@ body.nav-open{ overflow:hidden; }
    11. SECTION HEADER
    ========================================================================== */
 .section-header{ max-width:720px; margin-bottom:var(--space-10); }
-@media (min-width:960px){ .section-header{ margin-bottom:var(--space-12); } }
 .section-header h2 + .lead{ margin-top:var(--space-4); }
 .section-header--center{ margin-inline:auto; text-align:center; }
 .section-header--center .lead{ margin-inline:auto; }
@@ -1157,6 +1165,38 @@ body.nav-open{ overflow:hidden; }
 @media (max-width:419px){ .contact-card__value--nowrap{ font-size:var(--fs-small); } }
 .contact-card__value--keep{ word-break:keep-all; line-break:strict; overflow-wrap:break-word; }
 
+/* 聯絡資訊列（contact 15.2）：三筆聯絡方式收成「一件」帶框物件，格間 1px
+   分隔線 —— 與 §6.6 統計列同一視覺骨架。欄位名為小標籤、值才是主角；
+   三張獨立卡片會因地址較長而各自留下不等高的空白，收成一列即消失。 */
+.info-strip{
+  display:grid; grid-template-columns:1fr;
+  border:1px solid var(--border); border-radius:var(--r-md);
+  background:var(--surface); overflow:hidden;
+}
+.info-strip__item{ padding:var(--space-6) var(--space-5); border-top:1px solid var(--border); }
+.info-strip__item:first-child{ border-top:0; }
+@media (min-width:960px){
+  .info-strip{ grid-template-columns:repeat(3,1fr); }
+  .info-strip__item{ border-top:0; border-left:1px solid var(--border); padding:var(--space-8); }
+  .info-strip__item:first-child{ border-left:0; }
+}
+.info-strip__label{
+  font-size:var(--fs-small); line-height:var(--lh-small); font-weight:600;
+  letter-spacing:.04em; color:var(--text-muted);
+}
+.info-strip__value{
+  margin-top:var(--space-2); max-width:none;
+  font-size:var(--fs-body); line-height:var(--lh-body); font-weight:500; color:var(--text);
+}
+
+/* 連結清單（contact 側欄「填寫前可先看」）：導覽用箭頭連結，不用勾點列表 */
+.link-list{ list-style:none; display:grid; gap:var(--space-3); }
+
+/* 聯絡行（label ＋ 值）：footer 聯絡欄以外重用同一組視覺 —— about 總部、contact 側欄卡 */
+.contact-lines{ list-style:none; display:grid; gap:var(--space-2); }
+.contact-lines li{ display:flex; flex-wrap:wrap; gap:var(--space-1); align-items:baseline; }
+.contact-lines__label{ color:var(--text-muted); font-size:var(--fs-small); }
+
 /* ==========================================================================
    21. CTA BAND
    ========================================================================== */
@@ -1243,6 +1283,11 @@ body.nav-open{ overflow:hidden; }
   color:var(--on-dark-2); text-decoration:none; font-size:var(--fs-small); line-height:1.6;
   transition:color var(--dur) var(--ease);
 }
+/* <960px 以觸控為主：連結上下補到 44px 以上的可點高度（DESIGN.md §10） */
+@media (max-width:959px){
+  .footer__list{ gap:0; }
+  .footer__list a{ display:block; padding-block:var(--space-3); }
+}
 .footer__list a:hover{ color:var(--accent-on-dark); }
 .footer__contact{ display:grid; gap:var(--space-3); font-size:var(--fs-small); line-height:1.7; color:var(--on-dark-2); }
 .footer__contact a{ color:var(--accent-on-dark); text-decoration:none; }
@@ -1267,6 +1312,9 @@ body.nav-open{ overflow:hidden; }
   .site-header,.mobile-nav,.nav-toggle,.skip-link,.cta-band .btn-row,.btn{ display:none !important; }
   .hero-dark,.band-dark,.cta-band,.site-footer{ background:#FFFFFF !important; color:#000000 !important; }
   .hero-dark::before,.hero-dark::after,.cta-band::before,.site-footer::before{ display:none !important; }
+  /* 列印不上背景色：亮帶 hero 的光譜髮絲線（::after）會整條消失，改回實線邊框 */
+  .hero-light{ border-bottom:1px solid #999999; }
+  .hero-light::after{ display:none !important; }
   .hero-dark h1,.band-dark h2,.cta-band h2,.site-footer *{ color:#000000 !important; }
   .hero__lead,.hero__sub,.band-dark p,.cta-band .lead{ color:#333333 !important; }
   .media{ border:1px solid #999999; }

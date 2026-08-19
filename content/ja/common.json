@@ -4,8 +4,9 @@
     "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
-    "contact_person": "Kerwin Su（蘇益宏）",
-    "email": "kerwin@bettertechgroup.com",
+    "email": "Masuhiro@bettertechgroup.com",
+    "phone": "+86-136-3266-5441",
+    "phone_href": "tel:+8613632665441",
     "copyright_year": "2026"
   },
 
@@ -71,7 +72,7 @@
     "nav_title": "サイトナビ",
     "process_title": "主要 9 プロセス",
     "contact_title": "お問い合わせ先",
-    "labels": { "address": "所在地：", "email": "メール：", "person": "担当者：" },
+    "labels": { "address": "所在地：", "email": "メール：", "phone": "電話：" },
     "process_links": [
       { "label": "リソグラフィ工程", "href": "equipment-lithography.html" },
       { "label": "エッチング工程", "href": "equipment-etch.html" },
@@ -93,8 +94,8 @@
     "lead": "装置選定から据付、AI 導入まで、ワンストップでご対応します。",
     "primary": { "label": "装置・サービスのご相談", "href": "contact.html" },
     "secondary": {
-      "label": "kerwin@bettertechgroup.com",
-      "href": "mailto:kerwin@bettertechgroup.com"
+      "label": "Masuhiro@bettertechgroup.com",
+      "href": "mailto:Masuhiro@bettertechgroup.com"
     }
   },
 
@@ -113,7 +114,7 @@
   },
 
   "form": {
-    "mailto": "kerwin@bettertechgroup.com",
+    "mailto": "Masuhiro@bettertechgroup.com",
     "required_mark_aria": "必須",
     "fields": {
       "name": { "label": "お名前", "placeholder": "お名前をご入力ください" },

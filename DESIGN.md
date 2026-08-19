@@ -181,13 +181,13 @@ Google Fonts **每個語言只載入該語言需要的一種 CJK 字體**（由 
 ### 垂直節奏
 | 區塊型別 | Desktop 上下 padding | Mobile |
 |---|---|---|
-| 一般 section | 96px | 64px |
-| 重點 section（首段、CTA） | 128px | 80px |
-| 緊湊 section（麵包屑列、統計列） | 48px | 32px |
+| 一般 section | 80px | 64px |
+| 重點 section（首段、CTA） | 96px | 80px |
+| 緊湊 section（麵包屑列、統計列） | 40px | 32px |
 | Hero（暗帶） | 上 120 / 下 112 | 上 72 / 下 64 |
 | Footer | 上 72 / 下 40 | 上 56 / 下 32 |
 
-區塊內部間距：eyebrow→h2 = 12px；h2→lead = 16px；lead→內容 = 40px（mobile 28px）；卡片格線 gap = 24px（mobile 16px）。
+區塊內部間距：eyebrow→h2 = 12px；h2→lead = 16px；lead→內容 = 40px（**桌機與行動一致**）；卡片格線 gap = 24px（mobile 16px）。
 
 ### 容器與網格
 ```
@@ -230,7 +230,8 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 
 ### 6.1 Header / Nav
 - Sticky `top:0`，高度 72px（<960px 為 60px）。底 `rgba(246,247,248,.86)` ＋ `backdrop-filter: blur(12px) saturate(1.2)`；不支援時 fallback 為不透明 `--bg`。
-- 捲動 >8px 時加下邊框 `1px var(--border)` ＋ `--sh-sm`（以 class 切換，180ms）。
+- 捲動 >8px 時加下邊框 `1px var(--border)` ＋ `--sh-sm`，同時底色提高到 `rgba(246,247,248,.94)`
+  （以 class 切換，180ms）—— 頁面捲動時暗色媒體會從 header 底下通過，.86 的底在該瞬間讓導覽字浮動不定。
 - 導覽順序固定：首頁 / 關於我們 / 服務項目 / 設備與製程 / AI 智慧製造 / 聯絡我們。15px / 500 / `--text-2`；hover → `--text`；current → `--text` ＋ 文字寬度的 2px `--grad-spectral` 底線。
 - 右側單一 CTA 按鈕「洽詢設備」（secondary 樣式）。文案刻意與導覽第六項「聯絡我們」不同，避免同一列出現兩個相同標籤。
 - <960px：漢堡選單展開為全幅面板（`--surface`，項目 18px、上下 padding 16px、逐項 1px 分隔線）。
@@ -249,7 +250,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 
 ### 6.2 Hero
 **暗帶版（僅 index.html）**：底 `--dark-900`；晶圓網格底紋 `repeating-linear-gradient` 32px、`--grid-line-dark`；再疊 `radial-gradient(60% 80% at 20% 0%, rgba(92,200,232,.10), transparent)`。內容左對齊、最大 720px：eyebrow（`--accent-on-dark`）→ display 標題（`--on-dark`）→ lead（`--on-dark-2`）→ 兩顆按鈕。區塊最底加 1px `--grad-spectral` 髮絲線橫貫全幅。右側可放 `IMG-HOME-01`（16:9）。
-**亮帶版（所有內頁）**：底 `--surface`、下邊框 1px `--border`；麵包屑 → eyebrow → h1 → lead（最大 640px）。高度較矮（上 72 / 下 56）、無網格底紋。
+**亮帶版（所有內頁）**：底 `--surface`、下緣 1px `--grad-spectral-soft` 髮絲線（取代原本的 1px `--border`，與首頁暗帶 hero 底部的髮絲線同一語彙，見 §2 允許清單）；麵包屑 → eyebrow → h1 → lead（最大 640px）。高度較矮（上 72 / 下 56）、無網格底紋。
 
 ### 6.3 Section header
 垂直堆疊：`eyebrow`（英文、`--accent`、uppercase，前可加 24px 光譜短線）→ `h2` → `lead`（`--text-2`，最大 640px）。預設左對齊；置中僅用於 CTA 帶。
@@ -273,7 +274,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 - AI 架構表的量化結果（如 Acc 98.39%）**只能出現在標明來源的架構表或 AI 卡片內**，並標為第三方研究之對標指標；不得放入本列。
 
 ### 6.7 CTA 帶
-- 底 `--dark-900`、上緣 3px `--grad-spectral`；內容置中、最大 720px：h2（`--on-dark`）→ 一行 lead（`--on-dark-2`）→ primary 按鈕「聯絡我們」＋ on-dark ghost 連結 `kerwin@bettertechgroup.com`（mailto）。
+- 底 `--dark-900`、上緣 3px `--grad-spectral`；內容置中、最大 720px：h2（`--on-dark`）→ 一行 lead（`--on-dark-2`）→ primary 按鈕「聯絡我們」＋ on-dark ghost 連結 `Masuhiro@bettertechgroup.com`（mailto）。
 - 上下 padding 96 / 64px。每頁最多一個 CTA 帶，置於 footer 之前。
 
 ### 6.8 媒體佔位（IMG-* / VID-*）— 必須全站一致
@@ -293,7 +294,8 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 - 底 `--dark-900`、上緣 1px `--grad-spectral-soft` 髮絲線。四欄（≥960）／單欄堆疊（<640）：
   1. logo（44px）＋中文全名（`--on-dark` 16px）＋英文全名（`--on-dark-muted` `--fs-small` `--font-lat`）
   2. 導覽六項（`--on-dark-2`，hover `--accent-on-dark`）
-  3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、聯絡人 `蘇益宏（Kerwin）`、`kerwin@bettertechgroup.com`（mailto，`--accent-on-dark`）
+  3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`Masuhiro@bettertechgroup.com`（mailto）、`+86-136-3266-5441`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
+  - <960px 以觸控為主：導覽／製程連結補 `padding-block:12px`，可點高度 ≥44px（§10）。
   4. 九大製程快速連結（`--fs-small`）
 - 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`。
 
@@ -324,7 +326,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 ### 6.14 Tag / Pill
 `--accent-soft` 底、1px `--accent-border`、`--accent` 字、12px/500、padding 4px 10px、`--r-pill`。中性版用 `--surface-alt` / `--border` / `--text-2`。**不可作為按鈕使用**（無 hover 抬升、無點擊態）。
 
-### 6.15 手風琴（Accordion）
+### 6.15 手風琴（Accordion）　*（目前無頁面使用；原聯絡頁 FAQ 已於 2026-08 移除，規格保留備用）*
 - 每列上邊框 1px `--border`；標題列 padding 20px 0、`--fs-h4`、右側 `+`／`−` 線稿圖示（1.5px，展開時旋轉 45°，180ms）。
 - 展開內容 `--fs-body` `--text-2`，上 padding 4px、下 32px、最大 720px。
 - 展開列標題色為 `--accent`，列左側加 2px `--grad-spectral` 直條（僅展開態）。
@@ -337,6 +339,19 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 - 內容：`--fs-small` `--text-muted` 的「上一段製程／下一段製程」＋ `--fs-h4` 製程名；箭頭以 CSS `::before`／`::after` 產生，左卡靠左、右卡靠右。
 - hover 與卡片一致（邊框轉 `--border-strong`、`--sh-md`、`translateY(-2px)`），製程名轉 `--accent`。
 - 順序同頁尾九大製程並首尾相接（掩模版製程 → 黃光段）。
+
+### 6.17 聯絡資訊列（Info strip）與聯絡行（Contact lines）
+
+- **`.info-strip`（僅 contact.html §15.2）**：三筆聯絡方式（信箱／電話／地址）收成單一帶框物件 ——
+  `--surface` 底、1px `--border`、`--r-md`、`overflow:hidden`，格間 1px `--border` 分隔線。
+  骨架與 §6.6 統計列相同：≥960px 三等欄（分隔線為 `border-left`、padding 32px），
+  以下垂直堆疊（分隔線改為 `border-top`、padding 24px 20px）。
+  欄位名 `--fs-small`/600/`--text-muted`/字距 0.04em；值 `--fs-body`/500/`--text`。
+  信箱與電話值套 `.contact-card__value--nowrap`（不斷行），地址套 `--keep`。
+  **不用三張獨立卡片**：地址比信箱／電話長，等高卡片會在另兩張下方留下不等量空白。
+- **`.contact-lines`（about 總部區塊、contact 側欄卡）**：`<ul>` 每列「標籤＋值」，
+  標籤取自 `common.footer.labels`（`電郵：`／`電話：`），`--fs-small` `--text-muted`；
+  列距 `--space-2`，值為 `.link`。與 footer 聯絡欄同一組視覺。
 
 ---
 
@@ -446,4 +461,51 @@ JS 亦須偵測 `matchMedia('(prefers-reduced-motion: reduce)')`，命中時直�
 | `logo-256.png`／`logo-512.png` | 全站（HTML／CSS／模板／manifest）沒有任何地方參照，建置時本來就不複製到 `dist/`，已從版控移除以免誤以為是交付檔。實際使用中的衍生檔只有 `logo-96.png`（閘道頁與 header 標記）與 `favicon-*`；需要更大尺寸時從根目錄的 `logo.png`（2048px）重新產生。 |
 | `tools/check_links.py` | 第三階段新增：檢查 `dist/` 內部連結，root-absolute 路徑視為錯誤。CI 三關之一（README §8.4）。 |
 | `SITE_URL` 優先序 | `--base-url` ＞ 環境變數 `SITE_URL` ＞ `build.py` 常數（README §2、§8.2）。 |
+| 2026-08 精修（聯絡資訊／FAQ／版面） | 逐項改動與理由見 **§12 精修紀錄**；§5 垂直節奏表、§6.1、§6.2、§6.9、§6.15、§6.17 已同步更新。 |
 | 未被參照的資產不進 `dist/` | `assets/img`／`assets/video` 裡沒有任何 content JSON 指到、也不在 `build.py` 的 `SHELL_ASSETS` 白名單內的檔案，建置時只列出警告、不複製（避免交付檔悄悄變成死重量）。 |
+
+---
+
+## 12. 精修紀錄（Refinement log）
+
+### 2026-08-19 — 聯絡資訊調整、移除 FAQ、版面精修
+
+客戶指示（原文）：「不用寫聯繫人名，只要留郵箱跟手機號碼就可以，+86-136-3266-5441,
+Masuhiro@bettertechgroup.com，移除常見問題FAQ，優化微調版面設計。」
+
+本次是**設計系統內的精修**，不是改版：token、字體、色彩、元件語彙、頁面結構一律不動；
+只調整既有數值與兩個聯絡資訊元件。以下逐項記錄改動與理由。
+
+#### A. 內容（Tasks 1–2）
+
+| 改動 | 理由 |
+|---|---|
+| 全站移除聯絡人姓名（footer、contact 資訊列與側欄卡、about 負責人卡的信箱行、meta description、四語 JSON） | 客戶指示：聯絡方式只留信箱與電話 |
+| 信箱 `kerwin@` → `Masuhiro@bettertechgroup.com`（含 `main.js` 的 fallback 與四語 `cta_band`／`form.mailto`） | 同上 |
+| 新增電話 `+86-136-3266-5441`（顯示四語一致）／`tel:+8613632665441`；footer 標籤 `聯絡人：` → `電話：`（电话：／Phone: ／電話：） | 同上 |
+| about 頁「公司負責人」卡**保留姓名與職稱**，只拿掉卡片底部的 mailto 行 | 該卡是公司治理資訊，不是聯絡方式；拿掉信箱後就不再把個人呈現為聯絡窗口 |
+| 移除聯絡頁 FAQ 區塊（模板、四語 JSON、規格文件、`#faq-*` 錨點） | 客戶指示 |
+| 側欄「填寫前可先看」三個 FAQ 錨點 → 服務項目／設備與製程／AI 智慧製造三頁 | FAQ 移除後錨點會斷；改指實際頁面，卡片仍有存在意義 |
+
+#### B. 版面精修（Task 3）
+
+| # | 改動 | 之前 → 之後 | 理由 |
+|---|---|---|---|
+| 1 | 桌機區塊垂直節奏收緊一級 | `--sec-pad` 96→80、`--sec-pad-major` 128→96、`--sec-pad-tight` 48→40 | 相鄰兩個 section 各 96px，內容之間出現 192px 空白 —— 在 1440×900 上超過視窗高度的五分之一是純空白，讀起來像「沒排完」而不是留白。收到 80 後仍寬裕，但每頁少掉一到兩屏的空轉，也更貼近 §1 所寫「說服力來自資訊密度與版面秩序」。所有值仍在 4／8 尺標上；行動版不變（64/80/32） |
+| 2 | `.section-header` 下距離統一 40px | 桌機 48 → 40 | 原本桌機 48／行動 40 與 §5「lead→內容 = 40px」不符，且與收緊後的區塊 padding 疊加後標題與內容之間過鬆。改回規格值，順帶讓四個斷點的節奏一致 |
+| 3 | 內頁亮帶 hero 下緣改為 1px 光譜髮絲線 | `border-bottom:1px var(--border)` → `::after` 1px `--grad-spectral-soft` | 內頁頁首原本以一條灰線收尾，與首頁暗帶 hero 底部的光譜髮絲線斷了關係，13 個內頁的頁首因此像「還沒做完的白框」。改為髮絲線後同一語彙貫穿全站，且仍只有 1px、不承載資訊。每屏光譜元素種類仍為 1（eyebrow 短線不計，見 §2） |
+| 4 | 聯絡資訊改為 `.info-strip` 資訊列 | 三張獨立 `.card` → 一件帶框、格間 1px 分隔線的三格資訊列 | 地址比信箱／電話長一至兩行，等高卡片會在另外兩張下方各留 80–90px 空白，三張卡片看起來像沒填滿。收成「一件」後空白藏在格內、三筆資訊讀作同一組事實；骨架直接沿用 §6.6 統計列，不引入新視覺語彙 |
+| 5 | 資訊列欄位名降級、值升級 | 欄位名 `--fs-h3`(22px)/600/`--text` → `--fs-small`/600/`--text-muted`；值 `--fs-body`/400/`--text-2` → `--fs-body`/500/`--text` | 「電子郵件」「電話」是欄位名不是標題，原本比信箱本身還顯眼。倒過來之後，一眼看到的是可用的值 |
+| 6 | 側欄卡與 about 總部改用 `.contact-lines` | 單行 mailto ＋ 一行小字姓名 → 「電郵：／電話：」兩行標籤＋連結 | 電話加入後需要標籤才分得清；標籤直接沿用 `common.footer.labels`，與 footer 聯絡欄同一組視覺，不另造字串 |
+| 7 | 側欄「填寫前可先看」改用箭頭連結 | `.feature-list`（前綴短破折號） → `.link-list` ＋ `.arrow-link` | 內容已從「問題」變成「頁面」，勾點列表的破折號讀起來像條列事實；箭頭連結是全站既有的「往下一頁」記號 |
+| 8 | 聯絡頁分隔視覺併入「辦公室位置」段末 | 獨立的 `#contact-divider` section → 位置段末 `mt-12` | 移除 FAQ 後，這張裝飾條成了兩個 section 之間的孤兒圖，且與其後的暗色 CTA 帶連成兩塊深色。併進上一段後少一道區塊界線、頁面收尾更順，資產 `IMG-CONTACT-03` 仍在使用 |
+| 9 | Sticky header 捲動後底色加不透明度 | `.is-stuck` 底 `rgba(246,247,248,.86)` → `.94` | 暗色媒體（首頁 AI 視覺、製程頁主視覺）從 header 底下通過時，.86 的底讓導覽字浮動不定。.94 仍看得出玻璃感，但字始終貼在固定底色上 |
+| 10 | <960px footer 導覽連結補觸控高度 | 連結 gap 12px、可點高 ~22px → `padding-block:12px`、gap 0，可點高 ≥44px | §10 無障礙檢查表要求觸控目標 ≥44×44px，footer 兩欄連結原本不合格。只在 <960px 生效，桌機版面完全不變 |
+
+**未動**：字體家族、型階、色彩 token（未新增任何色）、圓角、陰影、動態時長與曲線、
+`prefers-reduced-motion`／無 JS／列印的行為、九大製程與各內頁的結構與文案。
+
+**已知遺留**：`.accordion`（CSS §18）與 `main.js` 第 8 段「錨點展開手風琴」在 FAQ 移除後
+不再有頁面使用。兩者都是既有元件與既有程式，本次刻意**不刪**（見 §6.15 標註）；
+若確定不再需要手風琴，再另案移除。
+

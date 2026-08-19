@@ -17,8 +17,10 @@
 | BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED | （不譯，逐字沿用） |
 | Better Science Technology Group（副行） | （不譯，逐字沿用） |
 | 香港九龍佐敦佐敦道5號至秀商業大廈10樓 | 香港九龙佐敦佐敦道5号至秀商业大厦10楼 |
-| 蘇益宏（Kerwin） | 苏益宏（Kerwin） |
-| kerwin@bettertechgroup.com | （不譯） |
+| 蘇益宏（Kerwin） | 苏益宏（Kerwin）（僅 about 頁「公司负责人」卡，非聯絡資訊） |
+| Masuhiro@bettertechgroup.com | （不譯） |
+| +86-136-3266-5441 | （不譯，逐字沿用；連結 `tel:+8613632665441`） |
+| 電話： | 电话： |
 | © 2026 …版權所有。 | © 2026 …版权所有。 |
 | 本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。 | 本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。 |
 

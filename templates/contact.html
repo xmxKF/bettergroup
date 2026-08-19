@@ -19,16 +19,18 @@
     <div class="container">
       {{ section_header(page.info) }}
 
-      <div class="grid grid--3 reveal reveal--d1">
+      <div class="info-strip reveal reveal--d1">
         {%- for e in page.info.entries %}
-        <article class="card">
-          <h3 class="card__title">{{ e.title }}</h3>
+        <div class="info-strip__item">
+          <h3 class="info-strip__label">{{ e.title }}</h3>
           {%- if e.variant == 'mailto' %}
-          <p class="card__text"><a class="link contact-card__value--nowrap" href="mailto:{{ e.text }}">{{ e.text }}</a></p>
+          <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="mailto:{{ e.text }}">{{ e.text }}</a></p>
+          {%- elif e.variant == 'tel' %}
+          <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="{{ common.site.phone_href }}">{{ e.text }}</a></p>
           {%- else %}
-          <p class="card__text contact-card__value--keep">{{ e.text }}</p>
+          <p class="info-strip__value contact-card__value--keep">{{ e.text }}</p>
           {%- endif %}
-        </article>
+        </div>
         {%- endfor %}
       </div>
 
@@ -100,14 +102,16 @@
         <article class="card">
           <h3 class="card__title">{{ page.enquiry.side_card.title }}</h3>
           <p class="card__text">{{ page.enquiry.side_card.text }}</p>
-          <p class="card__foot"><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></p>
-          <p class="small muted mt-4 contact-card__value--keep">{{ page.enquiry.side_card.person }}</p>
+          <ul class="contact-lines card__foot">
+            <li><span class="contact-lines__label">{{ common.footer.labels.email }}</span><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></li>
+            <li><span class="contact-lines__label">{{ common.footer.labels.phone }}</span><a class="link contact-card__value--nowrap" href="{{ common.site.phone_href }}">{{ common.site.phone }}</a></li>
+          </ul>
         </article>
         <article class="card mt-6">
           <h3 class="card__title">{{ page.enquiry.side_notes.title }}</h3>
-          <ul class="feature-list mt-4">
+          <ul class="link-list mt-4">
             {%- for n in page.enquiry.side_notes.entries %}
-            <li><a class="link" href="{{ n.href }}">{{ n.label }}</a></li>
+            <li><a class="arrow-link" href="{{ n.href }}">{{ n.label }}</a></li>
             {%- endfor %}
           </ul>
         </article>
@@ -133,36 +137,8 @@
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== 15.5 常見問題 ===================== -->
-  <section class="section section--alt" id="contact-faq">
-    <div class="container">
-      {{ section_header(page.faq) }}
-
-      <div class="accordion reveal reveal--d1">
-        {%- for f in page.faq.entries %}
-        <details class="accordion__item"{% if f.id %} id="{{ f.id }}"{% endif %}>
-          <summary class="accordion__summary">
-            {{ f.question }}
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </summary>
-          <div class="accordion__body">
-            {%- for a in f.answers %}
-            <p>{{ a }}</p>
-            {%- endfor %}
-          </div>
-        </details>
-        {%- endfor %}
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 15.6 分隔視覺 ===================== -->
-  <section class="section section--tight" id="contact-divider">
-    <div class="container">
-      {{ media_img(page.divider_media, asset_prefix, 'reveal') }}
+      {{ media_img(page.divider_media, asset_prefix, 'mt-12 reveal') }}
     </div>
   </section>
 

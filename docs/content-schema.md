@@ -66,6 +66,7 @@ content/
    | 路徑 | 內容 |
    |---|---|
    | `common.languages.*.label` | 語言切換器標籤 `繁`／`简`／`EN`／`日`，四語必須完全相同 |
+   | `common.site.phone`／`common.site.phone_href` | 電話號碼與 `tel:` 連結，四語必須完全相同 |
 
 5. **保留字**：JSON 的鍵**不可**使用 `items`、`keys`、`values`、`get`、`pop`、`update`
    等 Python dict 方法名 —— Jinja 的 `a.b` 會取到方法而不是資料。
@@ -144,9 +145,10 @@ content/
 - **同語言頁面**：只寫檔名，`"equipment-etch.html"`、`"services.html#service-relocation"`。
   產生器把頁面寫到 `dist/<lang>/`，因此相對連結會停在同一個語言資料夾內。
 - **資產**：一律寫成 `"assets/img/…"`（不含 `../`）。模板會自己補上 `../` 前綴。
-- **信件**：`"mailto:kerwin@bettertechgroup.com"`。
+- **信件**：`"mailto:Masuhiro@bettertechgroup.com"`。
 - **切換語言**：不需要寫在 JSON 裡，語言切換器由 `build.py` 自動產生。
-- 錨點 `#service-relocation`、`#faq-agency` 等**語言不變**，四個語言的頁面錨點相同。
+- **電話**：`"tel:+8613632665441"`（顯示字串另存於 `common.site.phone`）。
+- 錨點 `#service-relocation` 等**語言不變**，四個語言的頁面錨點相同。
 
 ---
 
@@ -159,8 +161,9 @@ content/
     "legal_name":    "倍特爾科技集團有限公司",                       // 完整法定名稱（footer）
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED", // 語言不變
     "address":       "香港九龍佐敦佐敦道5號至秀商業大廈10樓",
-    "contact_person":"蘇益宏（Kerwin）",
-    "email":         "kerwin@bettertechgroup.com",                  // 語言不變
+    "email":         "Masuhiro@bettertechgroup.com",                  // 語言不變
+    "phone":         "+86-136-3266-5441",                           // 語言不變（顯示字串）
+    "phone_href":    "tel:+8613632665441",                           // 語言不變（連結）
     "copyright_year":"2026"                                         // 語言不變
   },
 
@@ -218,7 +221,8 @@ content/
     "brand_secondary": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "desc":  "先進半導體製程設備採購、拆裝運送、技術導入與 AI 整合。",
     "nav_title": "網站導覽", "process_title": "九大製程", "contact_title": "聯絡方式",
-    "labels": { "address": "地址：", "email": "電郵：", "person": "聯絡人：" },
+    "labels": { "address": "地址：", "email": "電郵：", "phone": "電話：" },
+    // labels 三個抬頭同時供 footer 聯絡欄、about 總部區塊與 contact 側欄卡使用
     "process_links": [ { "label": "黃光段", "href": "equipment-lithography.html" }, … 共 9 項 ],
     "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。"
@@ -229,7 +233,7 @@ content/
     "title":   "與我們談談您的產線需求",
     "lead":    "從設備選型到裝機與 AI 導入，提供單一窗口。",
     "primary":   { "label": "洽詢設備與服務", "href": "contact.html" },
-    "secondary": { "label": "kerwin@bettertechgroup.com", "href": "mailto:kerwin@bettertechgroup.com" }
+    "secondary": { "label": "Masuhiro@bettertechgroup.com", "href": "mailto:Masuhiro@bettertechgroup.com" }
   },
 
   "shared_cta": {                  // 內頁重複出現的按鈕文案
@@ -245,7 +249,7 @@ content/
   },
 
   "form": {                        // 只有 contact.html 用；字串由 main.js 讀 data-* 取得
-    "mailto": "kerwin@bettertechgroup.com",             // 語言不變
+    "mailto": "Masuhiro@bettertechgroup.com",             // 語言不變
     "required_mark_aria": "必填",
     "fields": {                    // 六個欄位，鍵名固定（= <input name>）
       "name":     { "label": "姓名",    "placeholder": "請輸入您的姓名" },
@@ -346,7 +350,7 @@ content/
     "card": { "title": "蘇益宏（Kerwin）",      // 姓名
               "role": "公司負責人",             // <p class="small muted">
               "text": "…" }                    // 職責描述
-    // 卡片底部的 mailto 連結直接取自 common.site.email，不重複寫在本檔
+    // 本卡是「公司治理」資訊，不是聯絡方式：卡片內不放 email／電話
   },
 
   "scope": {                                   // #business-scope
@@ -636,27 +640,29 @@ cleaning → inspection → mask），`href` 語言不變。
   "meta": { … }, "breadcrumb": [ … ],
   "hero": { "eyebrow": "CONTACT", "title": "…", "lead": "…" },
 
-  "info": {                                    // #contact-info：三張聯絡卡
+  "info": {                                    // #contact-info：聯絡資訊列（.info-strip，三格）
     "eyebrow": "…", "title": "…", "lead": "",  // 本區無 lead，四語一律空字串
     "entries": [
-      { "title": "聯絡人",   "text": "蘇益宏（Kerwin），公司負責人",   "variant": "keep" },
-      { "title": "電子郵件", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "電子郵件", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
+      { "title": "電話",     "text": "+86-136-3266-5441",           "variant": "tel" },
       { "title": "公司地址", "text": "香港九龍…",                    "variant": "keep" }
     ],
     // variant 語言不變：
-    //   "keep"   → <p class="card__text contact-card__value--keep">（CJK 不亂斷行）
+    //   "keep"   → <p class="info-strip__value contact-card__value--keep">（CJK 不亂斷行）
     //   "mailto" → <a class="link contact-card__value--nowrap" href="mailto:{text}">
+    //   "tel"    → <a class="link contact-card__value--nowrap" href="{common.site.phone_href}">
+    //   （mailto 的 text 即信箱本身；tel 的 text 是顯示號碼，連結另取 common.site.phone_href）
     "media": { … }                             // IMG-CONTACT-02，ratio 21-9
   },
 
   "enquiry": {                                 // #enquiry-form；表單字串一律取自 common.form
     "eyebrow": "…", "title": "…", "lead": "…",
     "aside_label": "其他聯絡方式",               // <aside> 的 aria-label
-    "side_card":  { "title": "…", "text": "…",
-                    "person": "聯絡人：蘇益宏（Kerwin）" },  // 卡片最下方的小字行
-                    // 卡片中的 mailto 連結取自 common.site.email
+    "side_card":  { "title": "…", "text": "…" },
+                    // 卡片最下方的「電郵／電話」兩行取自 common.site.email／phone
+                    // 與 common.footer.labels，不重複寫在本檔
     "side_notes": { "title": "…",
-                    "entries": [ { "label": "…", "href": "#faq-agency" } ] }  // href 語言不變
+                    "entries": [ { "label": "…", "href": "services.html" } ] }  // href 語言不變
   },
 
   "location": {                                // #contact-location
@@ -665,16 +671,8 @@ cleaning → inspection → mask），`href` 語言不變。
     "media": { … }                             // IMG-CONTACT-01，ratio 21-9
   },
 
-  "faq": {                                     // #contact-faq
-    "eyebrow": "…", "title": "…", "lead": "",
-    "entries": [
-      { "id": "faq-agency",                    // 語言不變（錨點）；最後一題沒有錨點，寫 ""
-        "question": "…",
-        "answers": ["…"] }                     // 每段一個字串
-    ]
-  },
-
   "divider_media": { … }                       // IMG-CONTACT-03，ratio 21-9，decorative: true
+                                               // 接在 location 段末，不另開區塊
 }
 ```
 
@@ -693,7 +691,7 @@ cleaning → inspection → mask），`href` 語言不變。
 | 副行 | Better Science Technology Group | Better Science Technology Group | 倍特爾科技集團有限公司 | 倍特爾科技集團有限公司 |
 | footer 法定名稱 | 倍特爾科技集團有限公司 + 英文名 | 倍特尔科技集团有限公司 + 英文名 | 英文名 + 倍特爾科技集團有限公司 | 英文名 + 倍特爾科技集團有限公司 |
 | 地址 | 香港九龍佐敦佐敦道5號至秀商業大廈10樓 | 香港九龙佐敦佐敦道5号至秀商业大厦10楼 | 10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong | （同 en 的英文地址） |
-| 聯絡人 | 蘇益宏（Kerwin） | 苏益宏（Kerwin） | Kerwin Su (蘇益宏) | Kerwin Su (蘇益宏) |
+| 電話抬頭 | 電話： | 电话： | Phone: | 電話： |
 | 標點 | 全形，。、：「」（） | 全形，。、：“”（） | 半形 , . : " " ( ) | 全形 、。「」（） |
 
 - **日文不得自創片假名公司名**；一律使用英文法定名稱。

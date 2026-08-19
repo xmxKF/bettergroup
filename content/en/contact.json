@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Contact | BETTER",
-    "description": "Contact BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED in Jordan, Kowloon, Hong Kong. Kerwin Su takes inquiries on equipment, relocation, process and AI."
+    "description": "Contact BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED in Jordan, Kowloon, Hong Kong. Email Masuhiro@bettertechgroup.com or call +86-136-3266-5441 for equipment, relocation, process and AI enquiries."
   },
 
   "breadcrumb": [
@@ -20,8 +20,8 @@
     "title": "Contact information",
     "lead": "",
     "entries": [
-      { "title": "Contact person", "text": "Kerwin Su (蘇益宏), Principal", "variant": "keep" },
-      { "title": "Email", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "Email", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
+      { "title": "Phone", "text": "+86-136-3266-5441", "variant": "tel" },
       { "title": "Address", "text": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong", "variant": "keep" }
     ],
     "media": {
@@ -39,16 +39,15 @@
     "lead": "Submitting the form sends your message to us by email.",
     "aside_label": "Other ways to reach us",
     "side_card": {
-      "title": "Email us directly",
-      "text": "The form is optional. Write to us directly and one point of contact will reply.",
-      "person": "Contact: Kerwin Su (蘇益宏)"
+      "title": "Reach us directly",
+      "text": "The form is optional. Email or call us and one point of contact will reply."
     },
     "side_notes": {
       "title": "Before you write",
       "entries": [
-        { "label": "Is BETTER an authorized agent for these brands?", "href": "#faq-agency" },
-        { "label": "Can you help evaluate and buy used equipment?", "href": "#faq-used" },
-        { "label": "Does AI deployment mean replacing existing tools?", "href": "#faq-ai" }
+        { "label": "Services", "href": "services.html" },
+        { "label": "Equipment & Processes", "href": "equipment.html" },
+        { "label": "AI Manufacturing", "href": "ai.html" }
       ]
     }
   },
@@ -67,42 +66,6 @@
       "alt": "Stylized map: the street blocks of Jordan, Kowloon in minimal line art, with a single marker on the office building",
       "caption": "Minimal line-art map of Jordan, Kowloon with a single marker"
     }
-  },
-
-  "faq": {
-    "eyebrow": "FAQ",
-    "title": "Frequently asked questions",
-    "lead": "",
-    "entries": [
-      {
-        "id": "faq-agency",
-        "question": "Is BETTER an authorized agent for these brands?",
-        "answers": [
-          "No. BETTER is not an authorized agent or appointed distributor for the brands above. We provide procurement, sales and maintenance services for equipment from these Japanese brands. Brand names shown on this site are trademarks of their respective owners and are used for equipment identification only."
-        ]
-      },
-      {
-        "id": "faq-used",
-        "question": "Can you help evaluate and buy used equipment?",
-        "answers": [
-          "Yes. We provide tool comparison, condition inspection and acceptance support, and can take on the de-installation, shipping and reinstallation that follow."
-        ]
-      },
-      {
-        "id": "faq-ai",
-        "question": "Does AI deployment mean replacing existing tools?",
-        "answers": [
-          "Not necessarily. Most use cases build on sensor, metrology and inspection data from tools you already run, and we assess data availability before deployment."
-        ]
-      },
-      {
-        "id": "",
-        "question": "Can training take place on our own site?",
-        "answers": [
-          "Yes. Training is designed around your team's skills and tool configuration, and can combine classroom sessions with hands-on work at the tool."
-        ]
-      }
-    ]
   },
 
   "divider_media": {

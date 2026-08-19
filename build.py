@@ -136,6 +136,7 @@ INVARIANT_PATH_EXCEPTIONS = {
 # 語言切換器的標籤 繁 / 简 / EN / 日 在四種語言必須完全相同。
 INVARIANT_PATH_PATTERNS = (
     re.compile(r"^common\.languages\.[A-Za-z-]+\.label$"),
+    re.compile(r"^common\.site\.phone(_href)?$"),
 )
 
 ASSET_ID_RE = re.compile(r"^(IMG|VID)-([A-Z0-9]+)-(\d{2})$")

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "联系我们｜倍特尔科技集团",
-    "description": "联系倍特尔科技集团有限公司，地址位于香港九龙佐敦佐敦道5号至秀商业大厦10楼，联系人苏益宏（Kerwin），欢迎咨询设备采购、拆装机运输、工艺导入与 AI 整合。"
+    "description": "联系倍特尔科技集团有限公司，地址位于香港九龙佐敦佐敦道5号至秀商业大厦10楼，邮箱 Masuhiro@bettertechgroup.com、电话 +86-136-3266-5441，欢迎咨询设备采购、拆装机运输、工艺导入与 AI 整合。"
   },
 
   "breadcrumb": [
@@ -20,8 +20,8 @@
     "title": "联系信息",
     "lead": "",
     "entries": [
-      { "title": "联系人", "text": "苏益宏（Kerwin），公司负责人", "variant": "keep" },
-      { "title": "电子邮件", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "电子邮件", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
+      { "title": "电话", "text": "+86-136-3266-5441", "variant": "tel" },
       { "title": "公司地址", "text": "香港九龙佐敦佐敦道5号至秀商业大厦10楼", "variant": "keep" }
     ],
     "media": {
@@ -39,16 +39,15 @@
     "lead": "填写后将以电子邮件形式发送至我们的邮箱。",
     "aside_label": "其他联系方式",
     "side_card": {
-      "title": "直接来信",
-      "text": "不使用表单也可以，直接发邮件给我们，由统一对接窗口回复。",
-      "person": "联系人：苏益宏（Kerwin）"
+      "title": "直接联系",
+      "text": "不使用表单也可以，直接来信或来电，由统一对接窗口回复。"
     },
     "side_notes": {
       "title": "填写前可先看",
       "entries": [
-        { "label": "倍特尔是这些品牌的授权代理吗？", "href": "#faq-agency" },
-        { "label": "是否可协助二手设备的评估与采购？", "href": "#faq-used" },
-        { "label": "导入 AI 是否需要更换现有设备？", "href": "#faq-ai" }
+        { "label": "服务项目", "href": "services.html" },
+        { "label": "设备与工艺", "href": "equipment.html" },
+        { "label": "AI 智能制造", "href": "ai.html" }
       ]
     }
   },
@@ -67,42 +66,6 @@
       "alt": "风格化地图：九龙佐敦街区以极简线稿呈现，单一标记点指向办公大楼",
       "caption": "九龙佐敦街区极简线稿地图，单一标记点"
     }
-  },
-
-  "faq": {
-    "eyebrow": "FAQ",
-    "title": "常见问题",
-    "lead": "",
-    "entries": [
-      {
-        "id": "faq-agency",
-        "question": "倍特尔是这些品牌的授权代理吗？",
-        "answers": [
-          "不是。本公司并非上述品牌的原厂授权代理商或指定经销商；我们提供这些日系品牌设备的采购、销售及维护服务。网站所列品牌名称为其所有权人商标，仅供设备说明之用。"
-        ]
-      },
-      {
-        "id": "faq-used",
-        "question": "是否可协助二手设备的评估与采购？",
-        "answers": [
-          "可以。我们提供机型比较、设备状态查验与验机协助，并可承接后续拆机、运输与复装。"
-        ]
-      },
-      {
-        "id": "faq-ai",
-        "question": "导入 AI 是否需要更换现有设备？",
-        "answers": [
-          "不一定。多数场景以现有设备的传感、量测与检测数据为基础导入，导入前会先评估数据可获得性。"
-        ]
-      },
-      {
-        "id": "",
-        "question": "培训可以在客户现场进行吗？",
-        "answers": [
-          "可以。培训内容按客户团队能力与设备配置设计，可安排理论课程与设备实操。"
-        ]
-      }
-    ]
   },
 
   "divider_media": {

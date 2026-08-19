@@ -29,10 +29,11 @@
 | 倍特爾（內文簡稱） | BETTER |
 | 副行（header brand__en） | 倍特爾科技集團有限公司（英文版副行放中文法定名） |
 | 香港九龍佐敦佐敦道5號至秀商業大廈10樓 | 10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong |
-| 蘇益宏（Kerwin） | Kerwin Su (蘇益宏) |
+| 蘇益宏（Kerwin） | Kerwin Su (蘇益宏)（僅 about 頁「公司負責人」卡，非聯絡資訊） |
+| +86-136-3266-5441 | （不譯，逐字沿用；連結 `tel:+8613632665441`） |
 | 地址： | `"Address: "`（字串結尾保留一個半形空白） |
 | 電郵： | `"Email: "` |
-| 聯絡人： | `"Contact: "` |
+| 電話： | `"Phone: "` |
 | 網站導覽（footer 欄標題） | Site Map |
 | 九大製程（footer 欄標題） | Nine Process Areas |
 | 聯絡方式（footer 欄標題） | Contact |

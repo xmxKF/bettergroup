@@ -4,8 +4,9 @@
     "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
-    "contact_person": "Kerwin Su (蘇益宏)",
-    "email": "kerwin@bettertechgroup.com",
+    "email": "Masuhiro@bettertechgroup.com",
+    "phone": "+86-136-3266-5441",
+    "phone_href": "tel:+8613632665441",
     "copyright_year": "2026"
   },
 
@@ -74,7 +75,7 @@
     "labels": {
       "address": "Address: ",
       "email": "Email: ",
-      "person": "Contact: "
+      "phone": "Phone: "
     },
     "process_links": [
       {
@@ -106,8 +107,8 @@
     "lead": "One point of contact from equipment selection through installation and AI integration.",
     "primary": { "label": "Send an Inquiry", "href": "contact.html" },
     "secondary": {
-      "label": "kerwin@bettertechgroup.com",
-      "href": "mailto:kerwin@bettertechgroup.com"
+      "label": "Masuhiro@bettertechgroup.com",
+      "href": "mailto:Masuhiro@bettertechgroup.com"
     }
   },
 
@@ -126,7 +127,7 @@
   },
 
   "form": {
-    "mailto": "kerwin@bettertechgroup.com",
+    "mailto": "Masuhiro@bettertechgroup.com",
     "required_mark_aria": "required",
     "fields": {
       "name": { "label": "Name", "placeholder": "Your name" },

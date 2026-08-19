@@ -37,7 +37,8 @@
 | [媒體佔位（影片）](#12-媒體佔位vid-) | `.media` + `<video>` | 所有 `VID-*` 資產 |
 | [表格](#13-表格ai-架構表) | `.table-wrap` | AI 架構對標表、對應矩陣 |
 | [步驟／時間軸](#14-步驟時間軸) | `.steps` | 服務流程、導入步驟 |
-| [手風琴](#15-手風琴details) | `.accordion` | FAQ |
+| [手風琴](#15-手風琴details) | `.accordion` | 目前無頁面使用（原聯絡頁 FAQ，2026-08 移除）；規格保留 |
+| [聯絡資訊列](#15b-聯絡資訊列) | `.info-strip` | contact 15.2 的信箱／電話／地址 |
 | [兩欄圖文](#16-兩欄圖文) | `.split` | 文字＋媒體並置 |
 | [按鈕與連結](#17-按鈕與連結) | `.btn` `.arrow-link` `.link` | 行動點 |
 | [Tag](#18-tag) | `.tag` | 狀態／分類標示（不可當按鈕） |
@@ -488,7 +489,8 @@
 
 ## 15. 手風琴（`<details>`）
 
-FAQ 專用；原生可鍵盤操作，不需額外 JS。
+原為聯絡頁 FAQ 專用；FAQ 已於 2026-08 依客戶指示移除，目前**沒有任何頁面使用此元件**，
+規格與樣式保留備用。原生可鍵盤操作，不需額外 JS。
 
 ```html
 <div class="accordion">
@@ -502,6 +504,40 @@ FAQ 專用；原生可鍵盤操作，不需額外 JS。
     </div>
   </details>
 </div>
+```
+
+---
+
+## 15b. 聯絡資訊列（`.info-strip`）
+
+`contact.html` §15.2 專用。三筆聯絡方式收成「一件」帶框物件，格間 1px 分隔線 ——
+與 §6.6 統計列（`.stat-row`）同一視覺骨架，欄位名是小標籤、值才是主體。
+≥960px 三欄並排，以下垂直堆疊（分隔線由 `border-left` 改為 `border-top`）。
+
+```html
+<div class="info-strip">
+  <div class="info-strip__item">
+    <h3 class="info-strip__label">電子郵件</h3>
+    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a></p>
+  </div>
+  <div class="info-strip__item">
+    <h3 class="info-strip__label">電話</h3>
+    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="tel:+8613632665441">+86-136-3266-5441</a></p>
+  </div>
+  <div class="info-strip__item">
+    <h3 class="info-strip__label">公司地址</h3>
+    <p class="info-strip__value contact-card__value--keep">香港九龍佐敦佐敦道5號至秀商業大廈10樓</p>
+  </div>
+</div>
+```
+
+搭配的「標籤＋值」單行版本（`.contact-lines`）用於 about 總部區塊與 contact 側欄卡：
+
+```html
+<ul class="contact-lines">
+  <li><span class="contact-lines__label">電郵：</span><a class="link contact-card__value--nowrap" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a></li>
+  <li><span class="contact-lines__label">電話：</span><a class="link contact-card__value--nowrap" href="tel:+8613632665441">+86-136-3266-5441</a></li>
+</ul>
 ```
 
 ---
@@ -546,7 +582,7 @@ FAQ 專用；原生可鍵盤操作，不需額外 JS。
 <!-- 暗帶（hero-dark / cta-band）內改用： -->
 <div class="btn-row">
   <a class="btn btn--on-dark-primary" href="contact.html">洽詢設備與服務</a>
-  <a class="btn btn--on-dark-secondary" href="mailto:kerwin@bettertechgroup.com">kerwin@bettertechgroup.com</a>
+  <a class="btn btn--on-dark-secondary" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a>
 </div>
 
 <a class="arrow-link" href="equipment.html">查看設備與製程總覽</a>
@@ -608,7 +644,7 @@ FAQ 專用；原生可鍵盤操作，不需額外 JS。
       <p class="lead">從設備選型到裝機與 AI 導入，提供單一窗口。</p>
       <div class="btn-row btn-row--center">
         <a class="btn btn--on-dark-primary" href="contact.html">洽詢設備與服務</a>
-        <a class="btn btn--on-dark-secondary" href="mailto:kerwin@bettertechgroup.com">kerwin@bettertechgroup.com</a>
+        <a class="btn btn--on-dark-secondary" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a>
       </div>
     </div>
   </div>
@@ -624,7 +660,7 @@ FAQ 專用；原生可鍵盤操作，不需額外 JS。
 `data-mailto-form` 會被 `main.js` 接管：驗證 → 組 mailto → 開啟郵件軟體。**不需要後端。**
 
 ```html
-<form class="form form--2col" data-mailto-form data-mailto="kerwin@bettertechgroup.com" novalidate>
+<form class="form form--2col" data-mailto-form data-mailto="Masuhiro@bettertechgroup.com" novalidate>
   <div class="field">
     <label for="f-name">姓名<span class="req" aria-hidden="true">*</span></label>
     <input id="f-name" name="name" type="text" required placeholder="請輸入您的姓名">

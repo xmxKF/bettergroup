@@ -85,7 +85,6 @@
           <h3 class="card__title">{{ page.leadership.card.title }}</h3>
           <p class="small muted">{{ page.leadership.card.role }}</p>
           <p class="card__text">{{ page.leadership.card.text }}</p>
-          <p class="card__foot"><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></p>
         </article>
 
       </div>
@@ -132,7 +131,10 @@
           <p class="lat" style="font-weight:600">{{ common.site.legal_name }}</p>
           <p class="lat small muted">{{ common.site.legal_name_en }}</p>
           <p class="mt-4">{{ common.site.address }}</p>
-          <p><a class="link" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></p>
+          <ul class="contact-lines mt-4">
+            <li><span class="contact-lines__label">{{ common.footer.labels.email }}</span><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></li>
+            <li><span class="contact-lines__label">{{ common.footer.labels.phone }}</span><a class="link contact-card__value--nowrap" href="{{ common.site.phone_href }}">{{ common.site.phone }}</a></li>
+          </ul>
         </div>
 
         <div class="reveal reveal--d1">

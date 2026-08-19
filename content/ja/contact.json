@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "お問い合わせ｜BETTER SCIENCE TECHNOLOGY GROUP",
-    "description": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED へのお問い合わせ。所在地は香港・九龍（Jordan, Kowloon, Hong Kong）、担当者は Kerwin Su（蘇益宏）です。装置調達、解体・据付・輸送、プロセス技術導入、AI 統合をご相談ください。"
+    "description": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED へのお問い合わせ。所在地は香港・九龍（Jordan, Kowloon, Hong Kong）、メール Masuhiro@bettertechgroup.com、電話 +86-136-3266-5441。装置調達、解体・据付・輸送、プロセス技術導入、AI 統合をご相談ください。"
   },
 
   "breadcrumb": [
@@ -20,8 +20,8 @@
     "title": "お問い合わせ先",
     "lead": "",
     "entries": [
-      { "title": "担当者", "text": "Kerwin Su（蘇益宏）／代表者", "variant": "keep" },
-      { "title": "メール", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "メール", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
+      { "title": "電話", "text": "+86-136-3266-5441", "variant": "tel" },
       { "title": "所在地", "text": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong", "variant": "keep" }
     ],
     "media": {
@@ -39,16 +39,15 @@
     "lead": "ご入力いただいた内容は、メールで BETTER 宛に送信されます。",
     "aside_label": "その他のお問い合わせ方法",
     "side_card": {
-      "title": "メールで直接ご連絡",
-      "text": "フォームをご利用にならず、直接メールをお送りいただいても構いません。窓口を一本化してご対応します。",
-      "person": "担当者：Kerwin Su（蘇益宏）"
+      "title": "直接ご連絡",
+      "text": "フォームをご利用にならず、メールまたはお電話でご連絡いただいても構いません。窓口を一本化してご対応します。"
     },
     "side_notes": {
       "title": "ご記入の前に",
       "entries": [
-        { "label": "BETTER はブランドの正規代理店ですか？", "href": "#faq-agency" },
-        { "label": "中古装置の評価や調達も依頼できますか？", "href": "#faq-used" },
-        { "label": "AI 導入には既存装置の入れ替えが必要ですか？", "href": "#faq-ai" }
+        { "label": "サービス", "href": "services.html" },
+        { "label": "装置・プロセス", "href": "equipment.html" },
+        { "label": "AI スマート製造", "href": "ai.html" }
       ]
     }
   },
@@ -67,42 +66,6 @@
       "alt": "スタイライズしたマップ：九龍・佐敦の街区をミニマルな線画で表現し、1 点のマーカーがオフィスビルを示す",
       "caption": "九龍・佐敦の街区をミニマルな線画で描いたマップ、マーカーは 1 点のみ"
     }
-  },
-
-  "faq": {
-    "eyebrow": "FAQ",
-    "title": "よくあるご質問",
-    "lead": "",
-    "entries": [
-      {
-        "id": "faq-agency",
-        "question": "BETTER はこれらのブランドの正規代理店ですか？",
-        "answers": [
-          "いいえ。BETTER はこれらのブランドのメーカー正規代理店や指定販売店ではありません。これら日系ブランドの装置について、調達、販売および保守サービスを提供しています。本サイトに記載のブランド名はそれぞれの所有者の商標であり、装置の説明を目的として表示しています。"
-        ]
-      },
-      {
-        "id": "faq-used",
-        "question": "中古装置の評価や調達も依頼できますか？",
-        "answers": [
-          "はい。機種比較、装置の状態確認、受入検査の支援を行い、その後の解体、輸送、再据付まで承ります。"
-        ]
-      },
-      {
-        "id": "faq-ai",
-        "question": "AI 導入には既存装置の入れ替えが必要ですか？",
-        "answers": [
-          "必ずしも必要ではありません。多くの場合は既存装置のセンサー、計測、検査データを活用して導入できます。導入前にデータの取得可否を評価します。"
-        ]
-      },
-      {
-        "id": "",
-        "question": "研修はお客様の現場で実施できますか？",
-        "answers": [
-          "はい。研修内容はお客様チームのスキルと装置構成に合わせて設計し、座学と実機での実習を組み合わせて実施します。"
-        ]
-      }
-    ]
   },
 
   "divider_media": {

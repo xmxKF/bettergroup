@@ -5,7 +5,7 @@
 
 - 語言：**繁體中文（母本）／簡體中文／English／日本語** 四種，各自輸出到 `dist/<lang>/`
 - 技術：Python + Jinja2 靜態產生器；輸出為純 HTML／CSS／原生 JS，**無框架、無外部 JS**（僅 Google Fonts 以 `<link>` 載入）
-- 地址：香港九龍佐敦佐敦道5號至秀商業大廈10樓　｜　聯絡人：蘇益宏（Kerwin）　｜　kerwin@bettertechgroup.com
+- 地址：香港九龍佐敦佐敦道5號至秀商業大廈10樓　｜　Masuhiro@bettertechgroup.com　｜　+86-136-3266-5441
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "聯絡我們｜倍特爾科技集團",
-    "description": "聯絡倍特爾科技集團有限公司，地址位於香港九龍佐敦佐敦道5號至秀商業大廈10樓，聯絡人蘇益宏（Kerwin），歡迎洽詢設備採購、拆裝運送、製程導入與 AI 整合。"
+    "description": "聯絡倍特爾科技集團有限公司，地址位於香港九龍佐敦佐敦道5號至秀商業大廈10樓，電郵 Masuhiro@bettertechgroup.com、電話 +86-136-3266-5441，歡迎洽詢設備採購、拆裝運送、製程導入與 AI 整合。"
   },
 
   "breadcrumb": [
@@ -20,8 +20,8 @@
     "title": "聯絡資訊",
     "lead": "",
     "entries": [
-      { "title": "聯絡人", "text": "蘇益宏（Kerwin），公司負責人", "variant": "keep" },
-      { "title": "電子郵件", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "電子郵件", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
+      { "title": "電話", "text": "+86-136-3266-5441", "variant": "tel" },
       { "title": "公司地址", "text": "香港九龍佐敦佐敦道5號至秀商業大廈10樓", "variant": "keep" }
     ],
     "media": {
@@ -39,16 +39,15 @@
     "lead": "填寫後將以電子郵件方式送出至我們的信箱。",
     "aside_label": "其他聯絡方式",
     "side_card": {
-      "title": "直接來信",
-      "text": "不使用表單也可以，直接寄信給我們，由單一窗口回覆。",
-      "person": "聯絡人：蘇益宏（Kerwin）"
+      "title": "直接聯絡",
+      "text": "不使用表單也可以，直接來信或來電，由單一窗口回覆。"
     },
     "side_notes": {
       "title": "填寫前可先看",
       "entries": [
-        { "label": "倍特爾是這些品牌的授權代理嗎？", "href": "#faq-agency" },
-        { "label": "是否可協助二手設備的評估與採購？", "href": "#faq-used" },
-        { "label": "導入 AI 是否需要更換既有設備？", "href": "#faq-ai" }
+        { "label": "服務項目", "href": "services.html" },
+        { "label": "設備與製程", "href": "equipment.html" },
+        { "label": "AI 智慧製造", "href": "ai.html" }
       ]
     }
   },
@@ -67,42 +66,6 @@
       "alt": "風格化地圖：九龍佐敦街廓以極簡線稿呈現，單一標記點指向辦公大樓",
       "caption": "九龍佐敦街廓極簡線稿地圖，單一標記點"
     }
-  },
-
-  "faq": {
-    "eyebrow": "FAQ",
-    "title": "常見問題",
-    "lead": "",
-    "entries": [
-      {
-        "id": "faq-agency",
-        "question": "倍特爾是這些品牌的授權代理嗎？",
-        "answers": [
-          "不是。本公司並非上述品牌的原廠授權代理商或指定經銷商；我們提供這些日系品牌設備的採購、銷售及維護服務。網站所列品牌名稱為其所有權人商標，僅供設備說明之用。"
-        ]
-      },
-      {
-        "id": "faq-used",
-        "question": "是否可協助二手設備的評估與採購？",
-        "answers": [
-          "可以。我們提供機種比較、設備狀態查驗與驗機協助，並可承接後續拆機、運送與復裝。"
-        ]
-      },
-      {
-        "id": "faq-ai",
-        "question": "導入 AI 是否需要更換既有設備？",
-        "answers": [
-          "不一定。多數場景以既有設備的感測、量測與檢測資料為基礎導入，導入前會先評估資料可得性。"
-        ]
-      },
-      {
-        "id": "",
-        "question": "培訓可以在客戶現場進行嗎？",
-        "answers": [
-          "可以。培訓內容依客戶團隊能力與機台配置設計，可安排理論課程與機台實作。"
-        ]
-      }
-    ]
   },
 
   "divider_media": {
