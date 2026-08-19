@@ -174,7 +174,7 @@
         "file": "assets/img/svc-02.jpg",
         "ratio": "16-9",
         "alt": "Digital twin interface on screen: a 3D tool model beside sensor time-series curves, dark UI",
-        "caption": "Tool digital twin interface: 3D tool model and sensor time-series curves, dark UI"
+        "caption": "Tool digital twin interface: 3D tool model and sensor time-series curves"
       },
       "cta": { "label": "Discover AI Manufacturing", "href": "ai.html" }
     }

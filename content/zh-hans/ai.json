@@ -39,7 +39,7 @@
       "file": "assets/img/ai-01.jpg",
       "ratio": "4-3",
       "alt": "静态主视觉：晶圆与神经网络节点叠合的抽象构图，深蓝底细线光谱渐变",
-      "caption": "晶圆与神经网络节点叠合的抽象构图，深蓝底光谱细线"
+      "caption": "晶圆与神经网络节点叠合的抽象构图，深蓝底"
     }
   },
   "pillars": {
@@ -61,7 +61,7 @@
       },
       {
         "title": "",
-        "title_lat": "LithoDreamer／ILT",
+        "title_lat": "LithoDreamer / ILT",
         "text": "以生成式方法与反演光刻修正处理图形与光学邻近效应。",
         "meta": "典型应用：掩模修正、OPC 迭代、图形风险预测"
       }
@@ -368,7 +368,7 @@
       "file": "assets/img/ai-03.jpg",
       "ratio": "4-3",
       "alt": "AI 导入流程看板截图风格：五阶段卡片与指标数字，深色 UI、光谱色进度条",
-      "caption": "AI 导入流程看板风格：五阶段卡片与指标数字，深色 UI"
+      "caption": "AI 导入流程看板：五阶段卡片与指标数字"
     }
   },
   "cta": {

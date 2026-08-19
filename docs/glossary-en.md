@@ -405,3 +405,9 @@ CMP equipment、Wafer clean & dry equipment、Inspection & test equipment、Phot
 | 製程卡 `text` 的設備字 | 九張卡一律用 `tools` | `Metrology, defect inspection and electrical test tools.` |
 | 牛津逗號 | 不使用；若列舉尾端出現 `and … and`，改用 `then` 或重排 | `Move-in positioning, reinstallation, utility hook-up, then functional and process tuning.` |
 | 四條主線（about hero） | `four lines`（不寫 `four disciplines`，與 five core business lines 呼應） | `Serving advanced manufacturing along four lines: equipment, process, people and AI.` |
+
+## `title_lat` slash (phase-4 addendum)
+
+`title_lat` is a language-invariant field: always the ASCII form with spaces —
+**`LithoDreamer / ILT`**. The fullwidth `／` stays only in the translated `arch` prose of the
+CJK languages, which is not invariant.

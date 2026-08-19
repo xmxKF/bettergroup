@@ -23,7 +23,9 @@
   .gate{ max-width:520px; }
   .gate__mark{ width:56px; height:56px; border-radius:999px; }
   .gate__code{ margin:20px 0 0; font-size:44px; font-weight:700; line-height:1;
-               letter-spacing:.02em; color:rgba(242,245,248,.28); }
+               letter-spacing:.02em; color:rgba(242,245,248,.45); }
+  .gate__title{ margin:16px 0 0; font-size:15px; font-weight:600; line-height:1.7;
+                letter-spacing:.01em; color:rgba(242,245,248,.86); }
   .gate__name{ margin:16px 0 4px; font-size:18px; font-weight:700; letter-spacing:.01em; }
   .gate__en{ margin:0; font-size:11px; font-weight:500; letter-spacing:.08em;
              text-transform:uppercase; color:rgba(242,245,248,.62); }
@@ -38,30 +40,38 @@
   .gate__link:hover,.gate__link:focus-visible{
     border-color:rgba(242,245,248,.55); background:rgba(242,245,248,.08);
   }
-  .gate__note{ margin:24px 0 0; font-size:12px; line-height:1.7; color:rgba(242,245,248,.52); }
+  .gate__note{ margin:24px 0 0; font-size:12px; line-height:1.7; color:rgba(242,245,248,.72); }
+  .gate__back{ color:inherit; text-decoration:underline; text-underline-offset:3px; }
+  .gate__back:hover,.gate__back:focus-visible{ color:#F2F5F8; }
 </style>
 </head>
 <body>
 
-<div class="gate">
+<main class="gate" id="main">
   <img class="gate__mark" src="assets/img/logo-96.png" data-rel="assets/img/logo-96.png"
        width="56" height="56" alt="">
-  <p class="gate__code">404</p>
+  <p class="gate__code" aria-hidden="true">404</p>
+  <h1 class="gate__title">
+    {%- for l in langs %}<span lang="{{ l.hreflang }}">{{ l.shell.not_found }}</span>{% if not loop.last %} · {% endif %}{%- endfor %}
+  </h1>
   <p class="gate__name">{{ site_name }}</p>
   <p class="gate__en">{{ site_name_en }}</p>
 
-  <ul class="gate__list">
-    {%- for l in langs %}
-    <li><a class="gate__link" href="{{ l.code }}/index.html" data-rel="{{ l.code }}/index.html"
-           hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}">{{ l.name }}</a></li>
-    {%- endfor %}
-  </ul>
+  <nav aria-label="{{ shell_ref.language_nav }}">
+    <ul class="gate__list">
+      {%- for l in langs %}
+      <li><a class="gate__link" href="{{ l.code }}/index.html" data-rel="{{ l.code }}/index.html"
+             hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}">{{ l.name }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
 
   <p class="gate__note">
-    找不到此頁面 · 找不到此页面 · Page not found · ページが見つかりません<br>
-    Redirecting… · 正在返回首頁
+    <a class="gate__back" href="index.html" data-rel="index.html">
+      {%- for l in langs %}<span lang="{{ l.hreflang }}">{{ l.shell.back_to_gateway }}</span>{% if not loop.last %} · {% endif %}{%- endfor %}
+    </a>
   </p>
-</div>
+</main>
 
 <script>
 (function () {
@@ -69,7 +79,10 @@
      此時頁面裡的相對連結會以那個錯誤的網址為基準。
      BASE 是建置時由 SITE_URL 推導的站台根路徑（專案頁面 "/<repo>/"，自訂網域 "/"）；
      只在目前網址真的落在 BASE 之下時才改寫連結，否則（file://、預覽伺服器、
-     SITE_URL 設錯）維持相對路徑，行為與 gateway 相同。 */
+     SITE_URL 設錯）維持相對路徑，行為與 gateway 相同。
+
+     這裡刻意「不」自動轉頁：自動轉頁會在使用者讀完之前把頁面換掉
+     （WCAG 2.2.1 Timing Adjustable），語言連結與上面的「回到語言選擇」已足夠。 */
   var BASE = "{{ base_path }}";
   var prefix = (location.protocol.indexOf("http") === 0 &&
                 location.pathname.indexOf(BASE) === 0) ? BASE : "";
@@ -81,9 +94,6 @@
       if (n.tagName === "IMG") { n.src = rel; } else { n.setAttribute("href", rel); }
     }
   }
-
-  /* 自動導回語言分流閘道，由它依瀏覽器語言決定版本。 */
-  setTimeout(function () { location.replace(prefix + "index.html"); }, 4000);
 })();
 </script>
 

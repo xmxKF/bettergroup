@@ -43,7 +43,7 @@
   .gate__link:hover,.gate__link:focus-visible{
     border-color:rgba(242,245,248,.55); background:rgba(242,245,248,.08);
   }
-  .gate__note{ margin:24px 0 0; font-size:12px; color:rgba(242,245,248,.52); }
+  .gate__note{ margin:24px 0 0; font-size:12px; line-height:1.7; color:rgba(242,245,248,.62); }
 </style>
 </head>
 <body>
@@ -59,7 +59,9 @@
     {%- endfor %}
   </ul>
 
-  <p class="gate__note">Redirecting… · 正在為您選擇語言版本</p>
+  <p class="gate__note">
+    {%- for l in langs %}<span lang="{{ l.hreflang }}">{{ l.shell.gateway_note }}</span>{% if not loop.last %} · {% endif %}{%- endfor %}
+  </p>
 </div>
 
 <script>

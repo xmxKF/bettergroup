@@ -7,6 +7,14 @@
   'use strict';
 
   var doc = document;
+  var root = doc.documentElement;
+
+  /* base.html 的 inline script 只有在這個標記出現時才會保留淡入的隱藏起始狀態；
+     這裡先接手，再把全部初始化包進 try/catch —— 任何未預期的錯誤都不得讓內容留在隱藏狀態。 */
+  root.classList.add('js-ready');
+
+  try {
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ── 1. 行動選單 ────────────────────────────────────────────── */
@@ -108,6 +116,11 @@
       if (wrap) { wrap.classList.toggle('has-error', !!text); }
       if (out) { out.textContent = text; }
       field.setAttribute('aria-invalid', text ? 'true' : 'false');
+      /* 讓已標紅的欄位在重新聚焦時也能唸出原因（role="alert" 只在訊息出現的當下播報一次） */
+      if (out && out.id) {
+        if (text) { field.setAttribute('aria-describedby', out.id); }
+        else { field.removeAttribute('aria-describedby'); }
+      }
       return !text;
     };
     var fields = [].slice.call(form.querySelectorAll('input, select, textarea'));
@@ -232,4 +245,10 @@
   };
   window.addEventListener('hashchange', openHashAccordion);
   openHashAccordion();
+
+  } catch (err) {
+    /* 初始化失敗：撤掉淡入的隱藏起始狀態，內容立即完整可見。 */
+    root.classList.remove('js-anim');
+    if (window.console && window.console.error) { window.console.error(err); }
+  }
 })();

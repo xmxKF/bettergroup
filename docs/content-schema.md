@@ -91,6 +91,12 @@ content/
 }
 ```
 
+**`caption` 是簡短的「主體標籤」，不是 `alt` 的複本。** `caption` 會在媒體尚未產出時
+出現在佔位框裡，是訪客真的會讀到的字；美術指導用語（冷／暖色調、構圖留白、對稱構圖、
+科學攝影風格、深色 UI、無可辨識人臉、燈光方向…）一律只留在 `alt`，不進 `caption`。
+四種語言一致套用（`caption` 不是語言不變欄位，各語言各自翻譯）。
+表格的 `caption`（`<caption class="visually-hidden">`）是另一回事，本來就該完整描述，不受此規則限制。
+
 影片再加一個 `poster`（語言不變）：
 
 ```jsonc
@@ -171,6 +177,13 @@ content/
     "en":      { "label": "EN",  "name": "English"  },
     "ja":      { "label": "日",  "name": "日本語"   }
   },
+  "shell": {                       // 站台外殼頁（dist/index.html 語言閘道、dist/404.html）
+    "not_found":       "找不到此頁面",          // 404 的 <h1>，四語並列
+    "language_nav":    "語言版本",              // 404 語言清單的 <nav aria-label>（取 zh-hant 那份）
+    "gateway_note":    "正在為您選擇語言版本",   // 閘道底部說明，四語並列
+    "back_to_gateway": "回到語言選擇"           // 404 底部回到閘道的連結，四語並列
+  },
+
   "lang_switcher": { "aria_label": "語言選擇" },
 
   "a11y": {

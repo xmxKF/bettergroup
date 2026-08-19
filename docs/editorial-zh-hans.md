@@ -122,3 +122,13 @@
 
 16 个文件中 8 个文件共修改 **16 个字符串**；键名、数组长度、语言不变字段、
 事实与数字均未改动。`python build.py --validate-only` 通过。
+
+---
+
+## 追补（第四阶段验收）
+
+| 项目 | 说明 |
+|---|---|
+| `caption` 收成主体标签 | 依 `docs/content-schema.md §2` 与 `editorial-en.md §3` 的规则，27 个媒体 `caption` 删去美术指导用语（冷色调、构图留白、对称构图、科学摄影风格、深色 UI、无可辨识人脸…），完整描述保留在 `alt`。`caption` 会显示在尚未产出的媒体占位框里，是访客真的会读到的字。 |
+| `ai.json` `title_lat` | `LithoDreamer／ILT` → `LithoDreamer / ILT`（语言不变字段一律 ASCII 斜线，与 `index.json` 一致；译文 `arch` 里的全角／不动）。 |
+| `common.json` 新增 `shell` | 语言闸道与 404 页的四段文案（`not_found`／`language_nav`／`gateway_note`／`back_to_gateway`），原先硬编码在模板里，现纳入四语结构验证。 |

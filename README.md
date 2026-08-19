@@ -52,7 +52,7 @@ bettergroup/
 │
 ├── dist/                            ← 產出目錄（不要手動編輯，也不要進版控）
 │   ├── index.html                   語言分流閘道
-│   ├── 404.html                     找不到頁面（四語連結 ＋ 導回閘道）
+│   ├── 404.html                     找不到頁面（四語連結 ＋ 回到閘道的連結）
 │   ├── zh-hant/ zh-hans/ en/ ja/    每個語言一份完整網站
 │   ├── assets/  sitemap.xml  robots.txt
 │   ├── .nojekyll                    GitHub Pages 不要跑 Jekyll
@@ -154,11 +154,14 @@ Header（桌機）與漢堡選單（行動）各有一組 `繁 / 简 / EN / 日`
 ## 4. 新增一個語言
 
 1. 在 `build.py` 的 `LANGS` 表加一列：`code`、`html_lang`（`<html lang>` 值）、
-   `hreflang`、`font_family`（該語言要追加的 Google Fonts family，純拉丁語系留空字串）。
+   `hreflang`、`latin`（以詞為單位、詞間需要空格的語言設 `True`，CJK 設 `False`；
+   首頁 H1 的換行處會據此決定要不要補空白）、
+   `font_family`（該語言要追加的 Google Fonts family，純拉丁語系留空字串）。
 2. 若該語言需要不同的 CJK 字體堆疊，在 `assets/css/style.css` 的
    「語言字體切換」區塊加一條 `html[lang^="…"]{ --font-cjk: … }`。
 3. 建立 `content/<code>/`，把 `content/zh-hant/` 的所有 `.json` 複製過去後翻譯
-   —— **鍵名與陣列長度不可改**，只改值。
+   —— **鍵名與陣列長度不可改**，只改值。語言閘道與 404 頁的文案也在裡面
+   （`common.json` 的 `shell` 物件），一併翻譯即可，不必動模板。
 4. 在四個語言的 `common.json` 的 `languages` 物件各加一筆
    `{ "label": "…", "name": "…" }`（`label` 是切換器上的短標籤，四語共用；`name` 各語言自譯）。
 5. `python build.py --validate-only` 通過後再 `python build.py`。
@@ -261,7 +264,7 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 
 影片一律靜音自動播放，請直接輸出無音軌檔案。影像風格與禁忌見 `DESIGN.md` §8，逐一資產的提示詞見 `docs/image-prompts.md`／`docs/video-prompts.md`。
 
-**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中超過 **1.5MB** 的檔案會被略過，並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
+**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中 `img`／`video` 裡沒有任何 content JSON 參照、也不在 `build.py` 的 `SHELL_ASSETS` 白名單（favicon 與 `logo-96.png`）內的檔案不會被複製（建置訊息會列出來）；超過 **1.5MB** 的檔案也會被略過，並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
 
 ### 檢查方式
 
@@ -366,7 +369,7 @@ python tools/check_links.py       # dist/ 內部連結；root-absolute 路徑一
 - 手機寬 320px 不出現橫向捲動
 - `mailto:` 連結與詢問表單能正確開啟郵件軟體
 - 隨便打一個不存在的網址（例如 `/nope`、`/en/nope`）會看到 404 頁，四個語言連結可點，
-  約 4 秒後自動回到語言分流閘道
+  底部的「回到語言選擇」可回到語言分流閘道（**不會**自動轉頁）
 
 GitHub Pages 已內建 HTTPS 與合理的快取；換到自架主機時建議 `assets/*` 設 1 年
 `Cache-Control`，HTML 設 no-cache。

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ html_lang }}" class="no-js">
+<html lang="{{ html_lang }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.classList.remove('no-js');</script>
+<!-- 開啟捲動淡入的起始狀態（CSS 預設 .reveal 可見）。若 main.js 沒有在期限內
+     接手（載入失敗、被封鎖、或在初始化時拋錯），這裡自行撤除，內容照樣顯示。 -->
+<script>(function(){var h=document.documentElement;h.classList.add('js-anim');
+setTimeout(function(){if(!h.classList.contains('js-ready')){h.classList.remove('js-anim');}},1200);})();</script>
 
 <title>{{ page.meta.title }}</title>
 <meta name="description" content="{{ page.meta.description }}">

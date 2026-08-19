@@ -10,7 +10,7 @@
 
         <div class="hero__content">
           <p class="eyebrow">{{ page.hero.eyebrow }}</p>
-          <h1 class="hero__title">{% for line in page.hero.title_lines %}{% if not loop.first and lang == 'en' %} {% endif %}<span class="nb">{{ line }}</span>{% endfor %}</h1>
+          <h1 class="hero__title">{% for line in page.hero.title_lines %}{% if not loop.first and lang_latin %} {% endif %}<span class="nb">{{ line }}</span>{% endfor %}</h1>
           <p class="hero__lead">{{ page.hero.lead }}</p>
           <p class="hero__sub">{{ page.hero.sub }}</p>
           <div class="hero__actions btn-row">

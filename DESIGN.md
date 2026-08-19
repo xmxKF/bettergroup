@@ -362,8 +362,11 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 ```
 JS 亦須偵測 `matchMedia('(prefers-reduced-motion: reduce)')`，命中時直接把元素設為可見、不註冊 observer。
 
-**無 JS 保底（必要）**：`<html>` 一律帶 `class="no-js"`，`<head>` 內以一行 inline script 立即移除它；
-CSS 以 `.no-js .reveal{opacity:1; transform:none;}` 保證 JS 被封鎖或載入失敗時，全站內容仍完整可見。
+**無 JS 保底（必要）**：動畫預設「關」—— CSS 的 `.reveal{opacity:1; transform:none;}` 是基準狀態，
+隱藏起始狀態寫在 `.js-anim .reveal{…}`。`<head>` 內的 inline script 加上 `html.js-anim` 開啟動畫，
+同時設一道 1200ms 保險：`main.js` 沒有加上 `html.js-ready` 就自行撤除 `js-anim`。
+`main.js` 的初始化全段包在 `try/catch`，catch 內也會撤除 `js-anim`。
+因此 JS 被封鎖、載入失敗或初始化拋錯時，全站內容仍完整可見（絕不可反過來由 head 直接開啟隱藏狀態）。
 影片同理：標記只寫 `data-autoplay`，由 `main.js` 在暫停鈕可用之後才補上 `autoplay` 並播放。
 沒有 JS 就只顯示 poster —— 絕不能出現「會自動播放但按不停」的影片（WCAG 2.2.2）。
 
@@ -422,3 +425,22 @@ CSS 以 `.no-js .reveal{opacity:1; transform:none;}` 保證 JS 被封鎖或載�
 - [ ] `prefers-reduced-motion` 下所有內容仍完整可見。
 - [ ] 320px 寬不橫向捲動；200% 縮放不破版。
 - [ ] mailto 連結文字即為信箱本身，方便朗讀與複製。
+
+---
+
+## 11. 修訂與偏離紀錄（Amendments）
+
+本節記錄第三、四階段實作時相對本文件與 `docs/content-spec.md` 的偏離，以及事後補上的規則。
+之後每次偏離都必須追加一列，否則規格與實作會再度失聯。
+
+| 項目 | 說明 |
+|---|---|
+| 站台外殼頁（`dist/index.html` 語言閘道、`dist/404.html`） | 本文件 §1–§10 只規範內容頁。兩張外殼頁不套用 `assets/css/style.css`，樣式內嵌在 `templates/gateway.html`／`templates/404.html`；文案取自 `common.json` 的 `shell` 物件（見 `docs/content-schema.md §4`），因此仍受四語結構驗證。 |
+| 404 不自動轉頁 | 原先 4 秒自動導回閘道，違反 WCAG 2.2.1（Timing Adjustable）。已移除計時器，改為四語語言連結 ＋「回到語言選擇」連結。閘道頁的立即轉向不受影響（純路由、沒有可讀內容）。 |
+| 混語片段標記 | 外殼頁的四語並列文字每段各自包在 `<span lang="…">`（WCAG 3.1.2）。 |
+| 動畫預設關閉 | `.reveal` 的隱藏起始狀態改由 `html.js-anim` 開啟（見 §7）；原本的 `.no-js` 反向作法在 `main.js` 載入失敗時會讓整頁空白。 |
+| 媒體 `caption` 規則 | `caption` 收成簡短主體標籤，美術指導用語只留在 `alt`（見 `docs/content-schema.md §2`）。四語一致。 |
+| `title_lat` 的斜線 | 語言不變欄位一律用 ASCII `LithoDreamer / ILT`；CJK 譯文（`arch` 等非不變欄位）仍用全形／。 |
+| `tools/check_links.py` | 第三階段新增：檢查 `dist/` 內部連結，root-absolute 路徑視為錯誤。CI 三關之一（README §8.4）。 |
+| `SITE_URL` 優先序 | `--base-url` ＞ 環境變數 `SITE_URL` ＞ `build.py` 常數（README §2、§8.2）。 |
+| 未被參照的資產不進 `dist/` | `assets/img`／`assets/video` 裡沒有任何 content JSON 指到、也不在 `build.py` 的 `SHELL_ASSETS` 白名單內的檔案，建置時只列出警告、不複製（避免交付檔悄悄變成死重量）。 |

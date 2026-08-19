@@ -23,6 +23,13 @@
     "ja": { "label": "日", "name": "Japanese" }
   },
 
+  "shell": {
+    "not_found": "Page not found",
+    "language_nav": "Languages",
+    "gateway_note": "Selecting your language…",
+    "back_to_gateway": "Language selection"
+  },
+
   "lang_switcher": { "aria_label": "Language" },
 
   "a11y": {

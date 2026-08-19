@@ -383,20 +383,23 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
 /* ==========================================================================
    05. MOTION — 唯一的捲動動畫：fade-up
    ========================================================================== */
-.reveal{
+/* 動畫預設「關」：.reveal 一律可見，只有 <html class="js-anim"> 才進入隱藏起始狀態。
+   head 的 inline script 會加上 js-anim 並設一道保險，main.js 沒接手就自行撤除，
+   因此 JS 被封鎖、載入失敗或拋錯時，內容永遠是看得到的。 */
+.reveal{ opacity:1; transform:none; }
+.js-anim .reveal{
   opacity:0; transform:translateY(16px);
   transition:opacity var(--dur-reveal) var(--ease),
              transform var(--dur-reveal) var(--ease);
   will-change:opacity,transform;
 }
-.reveal.is-visible{ opacity:1; transform:none; }
+.js-anim .reveal.is-visible{ opacity:1; transform:none; }
 .reveal--d1{ transition-delay:60ms; }
 .reveal--d2{ transition-delay:120ms; }
 .reveal--d3{ transition-delay:180ms; }
 .reveal--d4{ transition-delay:240ms; }
 .reveal--d5{ transition-delay:300ms; }
 .reveal--d6{ transition-delay:360ms; }
-.no-js .reveal{ opacity:1; transform:none; }
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{
@@ -1021,6 +1024,14 @@ body.nav-open{ overflow:hidden; }
 .table-note{
   margin-top:var(--space-4); font-size:var(--fs-small); color:var(--text-muted);
   max-width:var(--container-prose); text-wrap:pretty;
+}
+
+/* 桌機寬度下把儲存格內距收窄、第一欄允許換行 —— 英文版的六欄量測表最寬，
+   原本在 1440px 會把最右邊的「關鍵量化結果」切掉，必須橫捲才讀得到數字。 */
+@media (min-width:1280px){
+  .data-table thead th{ padding:12px 12px; }
+  .data-table td,.data-table tbody th{ padding:14px 12px; }
+  .data-table tbody th{ white-space:normal; }
 }
 
 /* ==========================================================================

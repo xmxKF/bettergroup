@@ -23,6 +23,13 @@
     "ja": { "label": "日", "name": "日本語" }
   },
 
+  "shell": {
+    "not_found": "找不到此页面",
+    "language_nav": "语言版本",
+    "gateway_note": "正在为您选择语言版本",
+    "back_to_gateway": "回到语言选择"
+  },
+
   "lang_switcher": { "aria_label": "语言选择" },
 
   "a11y": {

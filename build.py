@@ -54,18 +54,29 @@ MAX_ASSET_BYTES = 1.5 * 1024 * 1024
 # 刻意不列在這裡，因此永遠不會被複製到 dist/。
 ASSET_SUBDIRS = ("css", "img", "js", "video")
 
+# 外殼資產：由 templates/ 直接引用（favicon、header/footer/閘道的品牌標記），
+# 不會出現在任何 content JSON 的 media 物件裡，因此要在白名單裡才不會被當成無人參照。
+SHELL_ASSETS = {
+    "assets/img/favicon.ico",
+    "assets/img/favicon-32.png",
+    "assets/img/favicon-180.png",
+    "assets/img/logo-96.png",
+}
+
 # ---------------------------------------------------------------------------
 # 語言表 — 新增語言只要在這裡加一列，並建立 content/<code>/
 # ---------------------------------------------------------------------------
+# latin=True 代表該語言以詞為單位、詞間需要空格（首頁 H1 由多行組成，
+# 換行處要補一個空白；CJK 不補）。新增拉丁語系語言時務必設為 True。
 LANGS = [
-    # code       html lang 屬性      hreflang    Google Fonts 追加字體家族
-    {"code": "zh-hant", "html_lang": "zh-Hant-HK", "hreflang": "zh-Hant",
+    # code       html lang 屬性      hreflang    latin  Google Fonts 追加字體家族
+    {"code": "zh-hant", "html_lang": "zh-Hant-HK", "hreflang": "zh-Hant", "latin": False,
      "font_family": "Noto+Sans+TC:wght@400;500;700"},
-    {"code": "zh-hans", "html_lang": "zh-Hans-CN", "hreflang": "zh-Hans",
+    {"code": "zh-hans", "html_lang": "zh-Hans-CN", "hreflang": "zh-Hans", "latin": False,
      "font_family": "Noto+Sans+SC:wght@400;500;700"},
-    {"code": "en", "html_lang": "en", "hreflang": "en",
+    {"code": "en", "html_lang": "en", "hreflang": "en", "latin": True,
      "font_family": ""},
-    {"code": "ja", "html_lang": "ja", "hreflang": "ja",
+    {"code": "ja", "html_lang": "ja", "hreflang": "ja", "latin": False,
      "font_family": "Noto+Sans+JP:wght@400;500;700"},
 ]
 
@@ -354,10 +365,30 @@ def page_plan(contents: dict[str, dict]) -> list[tuple]:
     return plan
 
 
-def copy_assets() -> tuple[int, int]:
-    """複製 assets/ 到 dist/assets/，略過超過 MAX_ASSET_BYTES 的檔案。"""
+def referenced_media(contents: dict) -> set[str]:
+    """所有語言的 content JSON 參照到的媒體路徑（file 與 poster），相對 repo 根目錄。"""
+    used: set[str] = set()
+    for files in contents.values():
+        for name in files:
+            found: list = []
+            collect_media(files[name], name, found)
+            for _, m in found:
+                used.add(m["file"])
+                if m.get("poster"):
+                    used.add(m["poster"])
+    return used
+
+
+def copy_assets(contents: dict) -> tuple[int, int, int]:
+    """複製 assets/ 到 dist/assets/。
+
+    略過三種檔案：超過 MAX_ASSET_BYTES 的（＝尚未轉檔的原始檔）、
+    以及 img/ 與 video/ 裡沒有任何 content JSON 參照、也不在 SHELL_ASSETS 白名單裡的檔案
+    （沒有任何頁面指得到它們，複製過去只是死重量）。
+    """
     target_root = DIST_DIR / "assets"
-    copied = skipped = 0
+    used = referenced_media(contents)
+    copied = skipped = unused = 0
     for stray in sorted(ASSET_DIR.glob("*")):
         if stray.is_file():
             print(f"  ! assets/ 底下的散檔不會進 dist/（請放進 {'/'.join(ASSET_SUBDIRS)}）："
@@ -368,6 +399,11 @@ def copy_assets() -> tuple[int, int]:
             continue
         for path in sorted(source.rglob("*")):
             if not path.is_file():
+                continue
+            rel = path.relative_to(ROOT).as_posix()
+            if sub in ("img", "video") and rel not in used and rel not in SHELL_ASSETS:
+                print(f"  ! 沒有任何頁面參照，不複製到 dist/：{rel}")
+                unused += 1
                 continue
             if path.stat().st_size > MAX_ASSET_BYTES:
                 print(f"  ! 略過過大的檔案（{path.stat().st_size / 1024 / 1024:.1f}MB > "
@@ -380,7 +416,7 @@ def copy_assets() -> tuple[int, int]:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
             copied += 1
-    return copied, skipped
+    return copied, skipped, unused
 
 
 # 模板裡的中文段落註解只給維護者看，不必出現在交付的 HTML（英文版尤其不該露出中文
@@ -442,6 +478,7 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
             template = env.get_template(template_name)
             html = template.render(
                 lang=code,
+                lang_latin=l["latin"],
                 html_lang=l["html_lang"],
                 hreflang=l["hreflang"],
                 langs=lang_list,
@@ -461,6 +498,7 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
     gateway = env.get_template("gateway.html").render(
         langs=[{**l, "name": contents[l["code"]]["common"]["languages"][l["code"]]["name"],
                 "label": contents[l["code"]]["common"]["languages"][l["code"]]["label"],
+                "shell": contents[l["code"]]["common"]["shell"],
                 "title": contents[l["code"]]["common"]["site"]["legal_name"]}
                for l in all_langs],
         x_default=X_DEFAULT,
@@ -485,8 +523,10 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
     write(DIST_DIR / "robots.txt", robots)
 
     not_found = env.get_template("404.html").render(
-        langs=[{**l, "name": contents[l["code"]]["common"]["languages"][l["code"]]["name"]}
+        langs=[{**l, "name": contents[l["code"]]["common"]["languages"][l["code"]]["name"],
+                "shell": contents[l["code"]]["common"]["shell"]}
                for l in all_langs],
+        shell_ref=contents[REFERENCE_LANG]["common"]["shell"],
         x_default=X_DEFAULT,
         x_default_html_lang=next(l["html_lang"] for l in all_langs
                                  if l["code"] == X_DEFAULT),
@@ -505,7 +545,7 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
     if domain:
         write(DIST_DIR / "CNAME", f"{domain}\n")
 
-    copied, skipped_assets = copy_assets()
+    copied, skipped_assets, unused_assets = copy_assets(contents)
 
     print()
     print("─" * 62)
@@ -517,7 +557,8 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
         print(f"  尚未實作     {', '.join(skipped_pages)}")
     print(f"  HTML 檔      {rendered}")
     print(f"  資產         複製 {copied} 個檔案"
-          f"{f'，略過 {skipped_assets} 個過大檔案' if skipped_assets else ''}")
+          f"{f'，略過 {skipped_assets} 個過大檔案' if skipped_assets else ''}"
+          f"{f'，略過 {unused_assets} 個無人參照的檔案' if unused_assets else ''}")
     print(f"  其他         index.html（語言閘道）、404.html、sitemap.xml、robots.txt、.nojekyll"
           f"{('、CNAME（' + domain + '）') if domain else ''}")
     print(f"  網站網址     {base_url.rstrip('/')}（站台根路徑 {site_root_path(base_url)}）")

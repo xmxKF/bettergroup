@@ -1389,3 +1389,14 @@
 3. 品牌名稱僅作設備說明，不得使用品牌 logo，不得宣稱代理或授權。
 4. 標題 ≤ 14 字、lead ≤ 60 字、內文段落 ≤ 90 字；不使用驚嘆號與 emoji。
 5. 所有頁面 `html lang="zh-Hant-HK"`；英文僅限公司英文名、品牌名與 eyebrow 標籤。
+
+---
+
+## 18. 修訂與偏離紀錄（Amendments）
+
+| 項目 | 說明 |
+|---|---|
+| 站台外殼頁的文案 | 本規格書 §0–§16 只涵蓋 15 個內容頁。語言閘道（`dist/index.html`）與 404 頁的文案不在此處，改放 `content/<lang>/common.json` 的 `shell` 物件，欄位定義見 `docs/content-schema.md §4`。 |
+| 媒體 `caption` | `caption` 是簡短主體標籤，不是 `alt` 的複本；美術指導用語只留在 `alt`。本文件 §16 的「說明」欄是給生成端看的完整敘述，對應 `alt`，不可直接抄進 `caption`。 |
+| `title_lat` 的斜線 | 語言不變欄位一律 ASCII：`LithoDreamer / ILT`。 |
+| 逐語言潤稿紀錄 | `docs/editorial-zh-hans.md`／`editorial-en.md`／`editorial-ja.md`，術語對照見同目錄的 `glossary-*.md`。 |

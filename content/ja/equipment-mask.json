@@ -70,10 +70,10 @@
     "id": "mask-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 統合",
-    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "lead": "以下は BETTER がベンチマークする第三者の最先端アーキテクチャです。",
     "entries": [
       {
-        "arch": "LithoDreamer 生成型リソグラフィ／ILT",
+        "arch": "LithoDreamer／ILT",
         "year": "",
         "arch_note": "",
         "text": "生成型および逆リソグラフィの手法でマスクパターン補正を生成し、転写忠実度を高めます。",
