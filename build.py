@@ -14,7 +14,8 @@
     dist/index.html            語言分流閘道（JS 偵測 + meta refresh + 純連結）
     dist/404.html              找不到頁面（四語連結 + 導回閘道）
     dist/<lang>/<page>.html    每個語言每一頁
-    dist/assets/…              由 assets/ 的 css/img/js/video 複製（>1.5MB 的檔案略過）
+    dist/assets/…              由 assets/ 的 css/img/js/video 複製
+                                （圖片／css／js 超過 1.5MB、影片超過 8MB 的檔案略過）
     dist/sitemap.xml           含 hreflang alternates
     dist/robots.txt
     dist/.nojekyll             GitHub Pages 不要跑 Jekyll
@@ -47,9 +48,11 @@ DIST_DIR = ROOT / "dist"
 # （GitHub Actions 會把 SITE_URL 設成專案頁面網址或 repository variable 指定的自訂網域。）
 SITE_URL = "https://www.bettertechgroup.com"
 
-# 複製 assets/ 時的大小上限。交付檔應遠低於此值（圖片 ≤ 400KB、影片 ≤ 6MB 但另行壓縮），
-# 超過就代表那是還沒轉檔的原始檔 —— 用 tools/optimize_media.py 轉成交付檔。
-MAX_ASSET_BYTES = 1.5 * 1024 * 1024
+# 複製 assets/ 時的大小上限，依檔案類型分開設定。交付檔應遠低於此值
+# （圖片 ≤ 400KB、影片 ≤ 3MB，見 tools/optimize_media.py），超過上限就代表
+# 那是還沒轉檔的原始檔 —— 用 tools/optimize_media.py 轉成交付檔。
+MAX_ASSET_BYTES = 1.5 * 1024 * 1024        # 圖片／css／js
+MAX_VIDEO_BYTES = 8 * 1024 * 1024          # 影片（.mp4／.webm）
 # 只有這四個子目錄會進 dist/。assets/src/ 是 optimize_media.py 保存的原始檔庫，
 # 刻意不列在這裡，因此永遠不會被複製到 dist/。
 ASSET_SUBDIRS = ("css", "img", "js", "video")
@@ -382,9 +385,9 @@ def referenced_media(contents: dict) -> set[str]:
 def copy_assets(contents: dict) -> tuple[int, int, int]:
     """複製 assets/ 到 dist/assets/。
 
-    略過三種檔案：超過 MAX_ASSET_BYTES 的（＝尚未轉檔的原始檔）、
-    以及 img/ 與 video/ 裡沒有任何 content JSON 參照、也不在 SHELL_ASSETS 白名單裡的檔案
-    （沒有任何頁面指得到它們，複製過去只是死重量）。
+    略過三種檔案：超過大小上限的（影片超過 MAX_VIDEO_BYTES，其餘超過 MAX_ASSET_BYTES；
+    ＝尚未轉檔的原始檔）、以及 img/ 與 video/ 裡沒有任何 content JSON 參照、也不在
+    SHELL_ASSETS 白名單裡的檔案（沒有任何頁面指得到它們，複製過去只是死重量）。
     """
     target_root = DIST_DIR / "assets"
     used = referenced_media(contents)
@@ -405,9 +408,10 @@ def copy_assets(contents: dict) -> tuple[int, int, int]:
                 print(f"  ! 沒有任何頁面參照，不複製到 dist/：{rel}")
                 unused += 1
                 continue
-            if path.stat().st_size > MAX_ASSET_BYTES:
+            cap = MAX_VIDEO_BYTES if path.suffix.lower() in (".mp4", ".webm") else MAX_ASSET_BYTES
+            if path.stat().st_size > cap:
                 print(f"  ! 略過過大的檔案（{path.stat().st_size / 1024 / 1024:.1f}MB > "
-                      f"{MAX_ASSET_BYTES / 1024 / 1024:.1f}MB）：{path.relative_to(ROOT)}")
+                      f"{cap / 1024 / 1024:.1f}MB）：{path.relative_to(ROOT)}")
                 print(f"    這是尚未轉檔的原始檔，頁面上會顯示佔位框。請執行："
                       f"python tools/optimize_media.py")
                 skipped += 1

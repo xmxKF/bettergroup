@@ -5,7 +5,9 @@
 
 把「客戶或生成工具丟進 assets/img/ 的原始檔」轉成網站真正要用的交付檔：
 正確檔名（小寫 .jpg）、正確比例（取自 content/zh-hant/*.json 的 ratio 欄位）、
-合理的長邊與檔案大小。原始檔移到 assets/src/ 保存，不刪除。
+合理的長邊與檔案大小。也處理 assets/video/ 裡客戶交付的影片：內容 JSON 有對應
+VID 資產 ID、但寬度超過 1920 或檔案超過交付預算的，會轉成 H.264／無音軌的交付檔。
+原始檔（圖片與影片皆同）移到 assets/src/ 保存，不刪除。
 
     python tools/optimize_media.py --dry-run     # 只列出會做什麼，不動檔案
     python tools/optimize_media.py               # 實際轉檔
@@ -13,14 +15,17 @@
 
 規則（見下方常數）：
 
-    比例        以 content/zh-hant/*.json 的媒體物件 ratio 為唯一真實來源
-    長邊        海報／頁首主視覺（hero、banner_media）1920，其餘 1600；一律不放大
-    編碼        JPEG，quality 82，progressive，sRGB；超過 400 KB 就往下降到 70
-    裁切        照片置中裁切；平底技術圖形改用「以邊緣色延伸畫布」而非裁切
+    圖片比例    以 content/zh-hant/*.json 的媒體物件 ratio 為唯一真實來源
+    圖片長邊    海報／頁首主視覺（hero、banner_media）1920，其餘 1600；一律不放大
+    圖片編碼    JPEG，quality 82，progressive，sRGB；超過 400 KB 就往下降到 70
+    圖片裁切    照片置中裁切；平底技術圖形改用「以邊緣色延伸畫布」而非裁切
                 （平底判定：沿四邊取樣，若所有取樣點與中位色差 ≤ 8 即視為平底）
+    影片        寬度上限 1920（等比縮小，尺寸取偶數）；H.264（libx264，-preset slow）、
+                無音軌、+faststart；交付預算 3MB，crf 28 起，超過預算就用 crf 31 重試一次
     保護        logo*／favicon* 一律不碰；已符合上述全部條件的檔案也不碰
 
-依賴：Pillow（PIL）。
+依賴：Pillow（PIL）。影片轉檔另需 ffmpeg／ffprobe（須在 PATH 上）；
+找不到時會清楚提示並略過所有影片，圖片轉檔不受影響。
 """
 
 from __future__ import annotations
@@ -28,9 +33,12 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import shutil
 import statistics
-import unicodedata
+import subprocess
 import sys
+import tempfile
+import unicodedata
 from pathlib import Path
 
 try:
@@ -62,6 +70,13 @@ FLAT_BORDER_MAX_DEV = 8
 
 PROTECTED_PREFIXES = ("logo", "favicon")
 SOURCE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".avif")
+
+# 影片：寬度上限、交付預算（超過就轉檔）、編碼參數。
+VIDEO_MAX_WIDTH = 1920
+VIDEO_TARGET_BYTES = 3 * 1024 * 1024
+VIDEO_CRF_START = 28
+VIDEO_CRF_RETRY = 31
+VIDEO_PRESET = "slow"
 
 
 # ---------------------------------------------------------------------------
@@ -98,6 +113,26 @@ def collect_slots() -> dict[str, dict]:
 
     for path in sorted(CONTENT_DIR.glob("*.json")):
         walk(json.loads(path.read_text(encoding="utf-8")), path.stem)
+    return slots
+
+
+def collect_video_slots() -> dict[str, dict]:
+    """回傳 {檔名 stem: {id, file}}，只涵蓋 VID 開頭的影片本身（不含海報圖）。"""
+    slots: dict[str, dict] = {}
+
+    def walk(node) -> None:
+        if isinstance(node, dict):
+            if (isinstance(node.get("id"), str) and isinstance(node.get("file"), str)
+                    and node["id"].startswith("VID-") and node.get("poster")):
+                slots[Path(node["file"]).stem] = {"id": node["id"], "file": node["file"]}
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, list):
+            for item in node:
+                walk(item)
+
+    for path in sorted(CONTENT_DIR.glob("*.json")):
+        walk(json.loads(path.read_text(encoding="utf-8")))
     return slots
 
 
@@ -206,6 +241,109 @@ def is_compliant(path: Path, slot: dict) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# 影片處理
+# ---------------------------------------------------------------------------
+
+def has_ffmpeg() -> bool:
+    return shutil.which("ffmpeg") is not None and shutil.which("ffprobe") is not None
+
+
+def probe_video(path: Path) -> tuple[int, int, int]:
+    """回傳（寬, 高, 檔案大小 bytes）。"""
+    out = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=width,height", "-of", "json", str(path)],
+        capture_output=True, text=True, check=True,
+    )
+    stream = json.loads(out.stdout)["streams"][0]
+    return int(stream["width"]), int(stream["height"]), path.stat().st_size
+
+
+def is_video_compliant(width: int, height: int, size_bytes: int) -> bool:
+    """已是交付形態的影片完全不碰。"""
+    return width <= VIDEO_MAX_WIDTH and size_bytes <= VIDEO_TARGET_BYTES
+
+
+def transcode_video(path: Path, crf: int) -> Path:
+    """跑 ffmpeg，回傳轉檔結果的暫存檔路徑（呼叫者負責之後刪除或搬移）。
+
+    暫存檔開在 VIDEO_DIR 底下，跟交付路徑同一個磁碟機，之後才能用
+    Path.replace() 原子搬移（系統預設暫存目錄可能在不同磁碟機，搬移會失敗）。
+    """
+    tmp = tempfile.NamedTemporaryFile(suffix=".mp4", delete=False, dir=VIDEO_DIR)
+    tmp.close()
+    tmp_path = Path(tmp.name)
+    subprocess.run(
+        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(path),
+         "-vf", f"scale=w='min({VIDEO_MAX_WIDTH}\\,iw)':h=-2",
+         "-c:v", "libx264", "-preset", VIDEO_PRESET, "-crf", str(crf),
+         "-pix_fmt", "yuv420p", "-an", "-movflags", "+faststart",
+         str(tmp_path)],
+        capture_output=True, text=True, check=True,
+    )
+    return tmp_path
+
+
+def archive_with_dedupe(path: Path, dry_run: bool) -> Path:
+    """把原始檔搬到 assets/src/；同名檔案已存在時，保留較新的一份，
+    較舊的一份改用數字後綴（archive-1.mp4、archive-2.mp4…）。"""
+    archive = SRC_DIR / path.name
+    if dry_run:
+        return archive
+    SRC_DIR.mkdir(parents=True, exist_ok=True)
+    if archive.exists():
+        newer, older = ((path, archive) if path.stat().st_mtime >= archive.stat().st_mtime
+                         else (archive, path))
+        n = 1
+        bumped = archive.with_name(f"{archive.stem}-{n}{archive.suffix}")
+        while bumped.exists():
+            n += 1
+            bumped = archive.with_name(f"{archive.stem}-{n}{archive.suffix}")
+        if older is archive:
+            archive.replace(bumped)
+            path.replace(archive)
+        else:
+            path.replace(bumped)
+    else:
+        path.replace(archive)
+    return archive
+
+
+def process_video(path: Path, slot: dict, dry_run: bool) -> dict:
+    """回傳這個影片的處理結果（dry-run 時仍會實際轉檔到暫存檔以回報大小，但不寫入交付路徑）。"""
+    before_w, before_h, before_bytes = probe_video(path)
+
+    crf = VIDEO_CRF_START
+    tmp_path = transcode_video(path, crf)
+    note = ""
+    if tmp_path.stat().st_size > VIDEO_TARGET_BYTES:
+        tmp_path.unlink(missing_ok=True)
+        crf = VIDEO_CRF_RETRY
+        tmp_path = transcode_video(path, crf)
+        note = f"仍逾 {VIDEO_TARGET_BYTES // (1024 * 1024)}MB，已用 crf {crf} 重試"
+
+    after_w, after_h, after_bytes = probe_video(tmp_path)
+
+    target = VIDEO_DIR / f"{path.stem.lower()}.mp4"
+    archive = SRC_DIR / path.name
+    if not dry_run:
+        archive = archive_with_dedupe(path, dry_run=False)
+        tmp_path.replace(target)
+    else:
+        tmp_path.unlink(missing_ok=True)
+
+    return {
+        "action": "轉檔",
+        "asset": slot["id"],
+        "before": f"{before_w}×{before_h} mp4 {before_bytes / 1024 / 1024:.1f}MB",
+        "after": f"{after_w}×{after_h} mp4 crf{crf} {after_bytes / 1024 / 1024:.1f}MB",
+        "note": note or "縮寬／轉碼",
+        "target": target,
+        "archive": archive,
+    }
+
+
+# ---------------------------------------------------------------------------
 # 主流程
 # ---------------------------------------------------------------------------
 
@@ -303,6 +441,35 @@ def main() -> int:
         converted += 1
         rows.append((rel, result["action"], result["asset"],
                      f'{result["before"]} → {result["after"]}', result["note"]))
+
+    video_slots = collect_video_slots()
+    ffmpeg_ok = has_ffmpeg()
+    if not ffmpeg_ok and video_slots:
+        print("找不到 ffmpeg／ffprobe（須在 PATH 上），略過所有影片轉檔；圖片轉檔不受影響。",
+              file=sys.stderr)
+    if VIDEO_DIR.is_dir():
+        for path in sorted(VIDEO_DIR.glob("*.mp4")):
+            if not path.is_file():
+                continue
+            rel = path.relative_to(ROOT).as_posix()
+            stem = path.stem.lower()
+            slot = video_slots.get(stem)
+            if slot is None:
+                if args.verbose:
+                    rows.append((rel, "未對應", "—", "—", "檔名不在任何版位的資產對應表中"))
+                continue
+            if not ffmpeg_ok:
+                rows.append((rel, "略過", slot["id"], "—", "找不到 ffmpeg，無法轉檔"))
+                continue
+            width, height, size_bytes = probe_video(path)
+            if is_video_compliant(width, height, size_bytes):
+                if args.verbose:
+                    rows.append((rel, "已合規", slot["id"], "—", "不動"))
+                continue
+            result = process_video(path, slot, args.dry_run)
+            converted += 1
+            rows.append((rel, result["action"], result["asset"],
+                         f'{result["before"]} → {result["after"]}', result["note"]))
 
     if not rows:
         print("沒有需要處理的檔案。")

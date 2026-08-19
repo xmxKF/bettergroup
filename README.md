@@ -236,11 +236,11 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 
 | 旗標 | 作用 |
 |---|---|
-| （無） | 掃描 `assets/img/`（及誤放在 `assets/video/` 的海報圖），把還不是交付形態的檔案轉檔 |
+| （無） | 掃描 `assets/img/`（及誤放在 `assets/video/` 的海報圖）與 `assets/video/`，把還不是交付形態的檔案轉檔 |
 | `--dry-run` | 只列出會做什麼，不動任何檔案 |
 | `--verbose` | 連「已合規／受保護／未對應」的檔案也列進表格 |
 
-轉檔規則：
+轉檔規則（圖片）：
 
 | 項目 | 規則 |
 |---|---|
@@ -250,6 +250,16 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 | 檔名 | 一律輸出小寫 `.jpg` |
 | 原始檔 | 移到 `assets/src/`（保留原檔名與副檔名），**不會進 `dist/`**，也不會被刪除 |
 | 不處理 | `logo*`／`favicon*`；以及已符合上述全部條件的檔案 |
+
+轉檔規則（影片，`content/zh-hant/*.json` 有對應 `VID-` 資產 ID 的 `.mp4` 才會處理）：
+
+| 項目 | 規則 |
+|---|---|
+| 觸發條件 | 寬度超過 1920px，或檔案超過交付預算 3MB |
+| 尺寸 | 等比縮到寬度 ≤ 1920（高度自動取偶數），已符合則不放大 |
+| 編碼 | H.264（`libx264`，`-preset slow`）、`yuv420p`、無音軌（`-an`）、`+faststart`；crf 28 起，轉完仍超過 3MB 就用 crf 31 重試一次 |
+| 原始檔 | 移到 `assets/src/`（同名已存在時保留較新的一份，較舊的一份加數字後綴） |
+| 依賴 | 需要 `ffmpeg`／`ffprobe` 在 PATH 上；找不到時清楚提示並略過所有影片，圖片轉檔不受影響 |
 
 工具是**冪等**的：已轉好的檔案再跑一次會顯示「沒有需要處理的檔案」。
 
@@ -261,15 +271,15 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 | 卡片／段落 | 4:3 | 1600×1200 以上 | 任意 |
 | 直式 | 3:4 | 1200×1600 以上 | 任意 |
 | 地圖／寬帶 | 21:9 | 2520×1080 以上 | 任意 |
-| 影片 | 16:9 | 1920×1080、H.264、無音軌、≤ 6MB | MP4（影片不經轉檔工具，請直接輸出交付規格） |
+| 影片 | 16:9 | 1920×1080 以上 | MP4、H.264；轉檔工具會處理尺寸、壓縮與移除音軌（交付預算 3MB，見下） |
 
-影片一律靜音自動播放，請直接輸出無音軌檔案。影像風格與禁忌見 `DESIGN.md` §8，逐一資產的提示詞見 `docs/image-prompts.md`／`docs/video-prompts.md`。
+影片一律靜音自動播放；有音軌也沒關係，`tools/optimize_media.py` 會自動移除。影像風格與禁忌見 `DESIGN.md` §8，逐一資產的提示詞見 `docs/image-prompts.md`／`docs/video-prompts.md`。
 
-**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中 `img`／`video` 裡沒有任何 content JSON 參照、也不在 `build.py` 的 `SHELL_ASSETS` 白名單（favicon 與 `logo-96.png`）內的檔案不會被複製（建置訊息會列出來）；超過 **1.5MB** 的檔案也會被略過，並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
+**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中 `img`／`video` 裡沒有任何 content JSON 參照、也不在 `build.py` 的 `SHELL_ASSETS` 白名單（favicon 與 `logo-96.png`）內的檔案不會被複製（建置訊息會列出來）；超過大小上限的檔案也會被略過（圖片／`css`／`js` 上限 **1.5MB**，影片上限 **8MB**），並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
 
 ### 檢查方式
 
-檔案不存在時會看到灰底晶圓網格與資產 ID（例如 `IMG-HOME-01`）；放進正確檔名、跑完轉檔與建置後即顯示實圖。若仍是佔位框，多半是檔名不符對應規則，或該檔案超過 1.5MB 被略過（跑 `python tools/optimize_media.py`）。
+檔案不存在時會看到灰底晶圓網格與資產 ID（例如 `IMG-HOME-01`）；放進正確檔名、跑完轉檔與建置後即顯示實圖。若仍是佔位框，多半是檔名不符對應規則，或該檔案超過大小上限被略過（圖片 1.5MB／影片 8MB，跑 `python tools/optimize_media.py`）。
 
 ---
 
