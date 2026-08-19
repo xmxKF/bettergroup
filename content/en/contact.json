@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Contact | BETTER",
+    "description": "Contact BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED in Jordan, Kowloon, Hong Kong. Kerwin Su takes inquiries on equipment, relocation, process and AI."
+  },
+
+  "breadcrumb": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "Contact" }
+  ],
+
+  "hero": {
+    "eyebrow": "CONTACT",
+    "title": "Contact BETTER",
+    "lead": "Tell us what your line needs and one point of contact takes it from there."
+  },
+
+  "info": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "Contact information",
+    "lead": "",
+    "entries": [
+      { "title": "Contact person", "text": "Kerwin Su (蘇益宏), Principal", "variant": "keep" },
+      { "title": "Email", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "Address", "text": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong", "variant": "keep" }
+    ],
+    "media": {
+      "id": "IMG-CONTACT-02",
+      "file": "assets/img/contact-02.jpg",
+      "ratio": "21-9",
+      "alt": "Cool-toned photograph of a meeting in a modern office, equipment specifications open on the table",
+      "caption": "Meeting in a modern office, equipment specifications on the table"
+    }
+  },
+
+  "enquiry": {
+    "eyebrow": "INQUIRY",
+    "title": "Tell us what you need",
+    "lead": "Submitting the form sends your message to us by email.",
+    "aside_label": "Other ways to reach us",
+    "side_card": {
+      "title": "Email us directly",
+      "text": "The form is optional. Write to us directly and one point of contact will reply.",
+      "person": "Contact: Kerwin Su (蘇益宏)"
+    },
+    "side_notes": {
+      "title": "Before you write",
+      "entries": [
+        { "label": "Is BETTER an authorized agent for these brands?", "href": "#faq-agency" },
+        { "label": "Can you help evaluate and buy used equipment?", "href": "#faq-used" },
+        { "label": "Does AI deployment mean replacing existing tools?", "href": "#faq-ai" }
+      ]
+    }
+  },
+
+  "location": {
+    "eyebrow": "LOCATION",
+    "title": "Office location",
+    "lead": "",
+    "paragraphs": [
+      "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong. The office sits next to the Jordan business district."
+    ],
+    "media": {
+      "id": "IMG-CONTACT-01",
+      "file": "assets/img/contact-01.jpg",
+      "ratio": "21-9",
+      "alt": "Stylized map: the street blocks of Jordan, Kowloon in minimal line art, with a single marker on the office building",
+      "caption": "Minimal line-art map of Jordan, Kowloon with a single marker"
+    }
+  },
+
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "lead": "",
+    "entries": [
+      {
+        "id": "faq-agency",
+        "question": "Is BETTER an authorized agent for these brands?",
+        "answers": [
+          "No. BETTER is not an authorized agent or appointed distributor for the brands above. We provide procurement, sales and maintenance services for equipment from these Japanese brands. Brand names shown on this site are trademarks of their respective owners and are used for equipment identification only."
+        ]
+      },
+      {
+        "id": "faq-used",
+        "question": "Can you help evaluate and buy used equipment?",
+        "answers": [
+          "Yes. We provide tool comparison, condition inspection and acceptance support, and can take on the de-installation, shipping and reinstallation that follow."
+        ]
+      },
+      {
+        "id": "faq-ai",
+        "question": "Does AI deployment mean replacing existing tools?",
+        "answers": [
+          "Not necessarily. Most use cases build on sensor, metrology and inspection data from tools you already run, and we assess data availability before deployment."
+        ]
+      },
+      {
+        "id": "",
+        "question": "Can training take place on our own site?",
+        "answers": [
+          "Yes. Training is designed around your team's skills and tool configuration, and can combine classroom sessions with hands-on work at the tool."
+        ]
+      }
+    ]
+  },
+
+  "divider_media": {
+    "id": "IMG-CONTACT-03",
+    "file": "assets/img/contact-03.jpg",
+    "ratio": "21-9",
+    "decorative": true,
+    "alt": "Fine spectral gradient bands on deep blue",
+    "caption": "Fine spectral gradient bands on deep blue"
+  }
+}

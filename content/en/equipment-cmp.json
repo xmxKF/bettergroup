@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CMP Equipment | BETTER",
+    "description": "EBARA and ACCRETECH CMP equipment with procurement, sales and maintenance, benchmarked against polish simulation, yield prediction and time-series FDC."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CMP"
+    }
+  ],
+  "hero": {
+    "id": "cmp-hero",
+    "eyebrow": "CMP",
+    "title": "CMP equipment",
+    "title_lat": "Chemical Mechanical Polishing",
+    "lead": "The planarization area that holds stack flatness and thinning quality."
+  },
+  "banner_label": "CMP tool photo",
+  "banner_media": {
+    "id": "IMG-CMP-01",
+    "file": "assets/img/cmp-01.jpg",
+    "ratio": "16-9",
+    "alt": "Close-up of a CMP platen and polishing head in operation, slurry flowing across a wet metal surface",
+    "caption": "CMP platen and polishing head in operation, slurry across a wet surface"
+  },
+  "scope": {
+    "id": "cmp-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "EBARA CMP polishing equipment",
+      "ACCRETECH CMP and wafer processing equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering planarization polish and wafer thinning equipment."
+    ],
+    "media": {
+      "id": "IMG-CMP-02",
+      "file": "assets/img/cmp-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close-up of a mirror-finish wafer surface after polishing, reflecting ambient lines to show flatness",
+      "caption": "Mirror-finish wafer surface after polishing, reflecting ambient lines"
+    }
+  },
+  "services": {
+    "id": "cmp-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, water and drain hookup, and tuning",
+      "Polishing head, pad and consumables maintenance planning",
+      "Planarization process condition setup",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "cmp-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "Polish physics simulation",
+        "year": "",
+        "arch_note": "",
+        "text": "Models pressure distribution, removal rate and pad wear to predict within-wafer removal uniformity.",
+        "metric": "Benchmark metric: simulation converges the polish parameter window",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "PDF Exensio",
+        "year": "(2025)",
+        "arch_note": "XGBoost + PCA",
+        "text": "Combines defect, metrology, electrical test and FDC data to predict die and wafer yield.",
+        "metric": "Benchmark metric: tunable threshold balances overkill and underkill",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "TSMC smart manufacturing: RNN time-series FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "Polisher sensor time series reveal abnormal trends and the factors that drive yield loss.",
+        "metric": "Benchmark metric: about 92% (28–3nm), escape rate down 15%",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-CMP-03",
+      "file": "assets/img/cmp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: a wafer removal-rate distribution map beside yield prediction metric cards",
+      "caption": "Wafer removal-rate distribution map beside yield prediction metric cards"
+    }
+  },
+  "fit": {
+    "id": "cmp-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Multilevel metal interconnect needing tight flatness control",
+      "Wafer thinning demand from advanced packaging",
+      "CMP tool relocation and water line rebuild",
+      "Research institutes building planarization capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-implant.html",
+      "title": "Ion Implant"
+    },
+    "next": {
+      "href": "equipment-cleaning.html",
+      "title": "Wafer Clean & Dry"
+    }
+  }
+}

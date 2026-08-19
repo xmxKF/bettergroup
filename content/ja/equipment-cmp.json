@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CMP（化学機械研磨）装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は EBARA・ACCRETECH の CMP（化学機械研磨）装置の調達、販売および保守を提供し、研磨の物理シミュレーション、XGBoost による歩留まり予測、時系列 FDC などの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CMP（化学機械研磨）"
+    }
+  ],
+  "hero": {
+    "id": "cmp-hero",
+    "eyebrow": "CMP",
+    "title": "CMP（化学機械研磨）装置",
+    "title_lat": "Chemical Mechanical Polishing",
+    "lead": "積層構造の平坦度と薄化品質を維持する平坦化工程です。"
+  },
+  "banner_label": "CMP（化学機械研磨）の写真",
+  "banner_media": {
+    "id": "IMG-CMP-01",
+    "file": "assets/img/cmp-01.jpg",
+    "ratio": "16-9",
+    "alt": "CMP の研磨定盤と研磨ヘッドが稼働するクローズアップ。スラリーが流れ、濡れた金属表面が反射する様子",
+    "caption": "CMP の研磨定盤と研磨ヘッドが稼働するクローズアップ。スラリーが流れ、濡れた金属表面が反射する様子"
+  },
+  "scope": {
+    "id": "cmp-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "EBARA の CMP 研磨装置",
+      "ACCRETECH の CMP・ウェーハ加工装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、平坦化研磨とウェーハ薄化の装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-CMP-02",
+      "file": "assets/img/cmp-02.jpg",
+      "ratio": "4-3",
+      "alt": "研磨後のウェーハの鏡面をクローズアップ。周囲の線が映り込み、平坦度が分かる様子",
+      "caption": "研磨後のウェーハ鏡面のクローズアップ。周囲の線が映り込む様子"
+    }
+  },
+  "services": {
+    "id": "cmp-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付、給排水の接続と立ち上げ調整",
+      "研磨ヘッド・パッド・消耗品の保守計画",
+      "平坦化プロセス条件の導入",
+      "操作・保守要員の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "cmp-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "研磨の物理シミュレーション",
+        "year": "",
+        "arch_note": "",
+        "text": "圧力分布、除去レート、パッド摩耗をモデル化し、ウェーハ面内の除去均一性を予測します。",
+        "metric": "ベンチマーク指標：シミュレーションで研磨条件ウィンドウを絞り込み",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "PDF Exensio",
+        "year": "（2025）",
+        "arch_note": "XGBoost＋PCA",
+        "text": "欠陥、計測、電気特性テスト、FDC のデータを統合し、ダイおよびウェーハの歩留まりを予測します。",
+        "metric": "ベンチマーク指標：閾値調整で overkill／underkill のバランスを最適化",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "TSMC スマート製造 RNN 時系列 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "研磨装置のセンサー時系列から異常傾向と歩留まり影響因子を検出します。",
+        "metric": "ベンチマーク指標：予測精度 約 92%（28–3nm）、流出率 -15%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-CMP-03",
+      "file": "assets/img/cmp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：ウェーハ除去レート分布図と歩留まり予測の指標カードを並置",
+      "caption": "ウェーハ除去レート分布図と歩留まり予測の指標カードを並置"
+    }
+  },
+  "fit": {
+    "id": "cmp-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "厳密な平坦度制御が必要な多層金属配線",
+      "先端パッケージングでのウェーハ薄化ニーズ",
+      "CMP 装置の移設と給排水系統の再構築",
+      "研究機関が平坦化の実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-implant.html",
+      "title": "イオン注入"
+    },
+    "next": {
+      "href": "equipment-cleaning.html",
+      "title": "ウェーハ洗浄"
+    }
+  }
+}

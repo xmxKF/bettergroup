@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "title": "装置・プロセス総覧｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER はリソグラフィ、エッチング、CVD、ベーク、イオン注入、CMP、ウェーハ洗浄、ウェーハ検査、フォトマスクの主要 9 プロセス装置を扱い、各工程に日系主力ブランドと最先端 AI ベンチマークアーキテクチャを対応させます。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス"
+    }
+  ],
+  "hero": {
+    "eyebrow": "EQUIPMENT & PROCESS",
+    "title": "主要 9 プロセスの装置総覧",
+    "lead": "各工程に、日系主力ブランドと工程ごとの AI ベンチマークアーキテクチャを対応させています。"
+  },
+  "banner_label": "装置列の写真",
+  "banner_media": {
+    "id": "IMG-EQP-01",
+    "file": "assets/img/eqp-01.jpg",
+    "ratio": "16-9",
+    "alt": "クリーンルームに一列に並ぶプロセス装置を遠近感のある構図で捉えた写真。リソグラフィ区と白色照明区の境界、寒色と暖色の対比、左右対称の構図",
+    "caption": "クリーンルームに一列に並ぶプロセス装置を遠近感のある構図で捉えた写真。リソグラフィ区と白色照明区の境界、寒色と暖色の対比、左右対称の構図"
+  },
+  "flow": {
+    "eyebrow": "PROCESS FLOW",
+    "title": "プロセスのつながり",
+    "lead": "",
+    "paragraphs": [
+      "ウェーハ製造は積層を繰り返す循環的な工程であり、パターンはまずフォトマスク上に形成され、リソグラフィ工程でウェーハへ転写されます。",
+      "エッチングが構造を定義し、CVD が薄膜を成膜し、ベークが熱バジェットを管理し、イオン注入がドーピングと電気特性を決定します。",
+      "CMP が平坦化を担い、ウェーハ洗浄がパーティクルと残渣を抑制し、検査は全ラインを通じてフィードバックを提供します。",
+      "9 つの工程は互いに上流・下流の関係にあり、いずれかの工程のばらつきは積層とともに拡大するため、装置とデータの一貫した戦略が必要です。"
+    ],
+    "media": {
+      "id": "IMG-EQP-02",
+      "file": "assets/img/eqp-02.jpg",
+      "ratio": "4-3",
+      "alt": "主要 9 プロセスの循環フロー図：円環状に配置した細線のアイコンで、フォトマスクを起点、検査をフィードバックループとして表示",
+      "caption": "主要 9 プロセスの循環フロー図：円環状に配置した細線のアイコンで、フォトマスクを起点、検査をフィードバックループとして表示"
+    }
+  },
+  "processes": {
+    "eyebrow": "NINE AREAS",
+    "title": "主要 9 プロセスの装置",
+    "lead": "各プロセスのページで、取扱装置の範囲、サービス内容、AI 統合をご覧いただけます。",
+    "entries": [
+      {
+        "num": "01",
+        "title": "リソグラフィ工程",
+        "en": "Lithography",
+        "text": "露光装置とコータ／デベロッパの調達、販売および保守。",
+        "brands": [
+          "NIKON",
+          "CANON",
+          "TEL",
+          "DNS"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "エッチング工程",
+        "en": "Etch",
+        "text": "エッチング装置の調達、販売および保守。",
+        "brands": [
+          "TEL",
+          "SAMCO"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "CVD（化学気相成長）",
+        "en": "Chemical Vapor Deposition",
+        "text": "CVD 装置の調達、販売および保守。",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "MATSUSHITA"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "ベーク／熱処理工程",
+        "en": "Thermal / Bake",
+        "text": "ベーク・熱処理装置の調達、販売および保守。",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "TAZMO"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "イオン注入",
+        "en": "Ion Implantation",
+        "text": "イオン注入装置の調達、販売および保守。",
+        "brands": [
+          "ULVAC",
+          "NISSIN"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP（化学機械研磨）",
+        "en": "Chemical Mechanical Polishing",
+        "text": "CMP 研磨装置の調達、販売および保守。",
+        "brands": [
+          "EBARA",
+          "ACCRETECH"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "ウェーハ洗浄",
+        "en": "Wafer Cleaning",
+        "text": "洗浄装置の調達、販売および保守。",
+        "brands": [
+          "DNS",
+          "TEL"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "ウェーハ検査・テスト",
+        "en": "Wafer Inspection & Test",
+        "text": "検査・テスト装置の調達、販売および保守。",
+        "brands": [
+          "ADVANTEST",
+          "LASERTEC"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "フォトマスク工程",
+        "en": "Mask / Reticle",
+        "text": "フォトマスク装置の調達、販売および保守。",
+        "brands": [
+          "NUFLARE",
+          "JEOL"
+        ],
+        "link_label": "装置を見る",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "上記ブランドの装置について、BETTER が調達、販売および保守サービスを提供します。ブランド名はそれぞれの所有者の商標であり、装置の説明を目的として表示しています。"
+  },
+  "gallery_media": {
+    "id": "IMG-EQP-03",
+    "file": "assets/img/eqp-03.jpg",
+    "ratio": "21-9",
+    "alt": "ウェーハの俯瞰クローズアップ：表面が虹色のスペクトルを反射し、暗い背景がブランドのスペクトルカラーと呼応",
+    "caption": "ウェーハの俯瞰クローズアップ：表面が虹色のスペクトルを反射し、暗い背景がブランドのスペクトルカラーと呼応"
+  },
+  "services": {
+    "eyebrow": "SERVICE COVERAGE",
+    "title": "全工程に共通するサービス",
+    "lead": "",
+    "features": [
+      "調達と機種選定の評価",
+      "解体・梱包・越境輸送",
+      "搬入据付と立ち上げ調整",
+      "保守点検と予備品の計画",
+      "プロセス技術導入",
+      "操作・保守の人材育成",
+      "AI 統合の導入支援"
+    ]
+  }
+}

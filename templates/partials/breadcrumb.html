@@ -1,0 +1,17 @@
+{#- Breadcrumb — DESIGN.md §6.10 / docs/components.md §3.
+    Lives INSIDE the light hero's .container, above the eyebrow, so it is a macro
+    rather than a base.html block. `items` is a list of {label, href?}; the last
+    item must have no href. -#}
+{%- macro breadcrumb(items, label) -%}
+<nav class="breadcrumb" aria-label="{{ label }}">
+        <ol>
+          {%- for item in items %}
+          {%- if item.href is defined and item.href %}
+          <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {%- else %}
+          <li><span aria-current="page">{{ item.label }}</span></li>
+          {%- endif %}
+          {%- endfor %}
+        </ol>
+      </nav>
+{%- endmacro -%}

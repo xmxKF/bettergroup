@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CVD Equipment | BETTER",
+    "description": "KOKUSAI ELECTRIC (KE) and MATSUSHITA CVD equipment, benchmarked against DeepOHeat-v1 thermal surrogate models and deposition chamber digital twins."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CVD"
+    }
+  ],
+  "hero": {
+    "id": "cvd-hero",
+    "eyebrow": "CVD",
+    "title": "CVD equipment",
+    "title_lat": "Chemical Vapor Deposition",
+    "lead": "Thin-film deposition that controls thickness uniformity and step coverage."
+  },
+  "banner_label": "Furnace equipment photo",
+  "banner_media": {
+    "id": "IMG-CVD-01",
+    "file": "assets/img/cvd-01.jpg",
+    "ratio": "16-9",
+    "alt": "Exterior of a vertical furnace with piping and heating zones clearly layered, cool white light and minimal composition",
+    "caption": "Vertical furnace exterior, piping and heating zones clearly layered"
+  },
+  "scope": {
+    "id": "cvd-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) chemical vapor deposition equipment",
+      "MATSUSHITA chemical vapor deposition equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering batch and single-wafer thin-film deposition equipment."
+    ],
+    "media": {
+      "id": "IMG-CVD-02",
+      "file": "assets/img/cvd-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close-up of a wafer boat loading into the furnace, wafers evenly spaced under warm white backlight",
+      "caption": "Wafer boat loading into the furnace, wafers evenly spaced"
+    }
+  },
+  "services": {
+    "id": "cvd-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, gas line hookup and tuning",
+      "Maintenance, consumables and spare parts planning",
+      "Thin-film process technology transfer",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "cvd-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "(2025)",
+        "arch_note": "",
+        "text": "A DeepONet and KAN thermal surrogate model rapidly predicts chamber and wafer heat distribution.",
+        "metric": "Benchmark metric: MAPE 0.035%, training 62× faster, memory 31× lower",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "An encoder-decoder CNN predicts temperature contours and electrothermal coupling effects.",
+        "metric": "Benchmark metric: average IR error 0.053 mV",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Deposition chamber digital twin",
+        "year": "",
+        "arch_note": "",
+        "text": "A virtual counterpart of the deposition chamber simulates gas flow, temperature and thickness uniformity.",
+        "metric": "Benchmark metric: virtual validation shortens process condition setup",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-CVD-03",
+      "file": "assets/img/cvd-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: wafer thermal field contours and a thickness uniformity color map on a dark blue background with spectrum gradients",
+      "caption": "Wafer thermal field contours and a thickness uniformity color map"
+    }
+  },
+  "fit": {
+    "id": "cvd-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Lines needing better thickness uniformity and batch consistency",
+      "Expansion projects adding thin-film process capability",
+      "Furnace relocation and requalification",
+      "Research institutes building thin-film deposition capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-etch.html",
+      "title": "Dry & Plasma Etch"
+    },
+    "next": {
+      "href": "equipment-bake.html",
+      "title": "Bake & Thermal"
+    }
+  }
+}

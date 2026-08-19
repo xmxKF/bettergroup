@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ x_default_html_lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site_name }} · {{ site_name_en }}</title>
+<!-- 分流頁本身不索引；不放 canonical——noindex 與指向他頁的 canonical 是互相矛盾的訊號。 -->
+<meta name="robots" content="noindex,follow">
+{%- for l in langs %}
+<link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ base_url }}{{ l.code }}/index.html">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ base_url }}{{ x_default }}/index.html">
+
+<!-- 無 JS 時 1 秒後導向繁體中文版 -->
+<meta http-equiv="refresh" content="1;url={{ x_default }}/index.html">
+
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<meta name="theme-color" content="#101A2B">
+
+<style>
+  html,body{ margin:0; padding:0; }
+  body{
+    min-height:100dvh; display:flex; align-items:center; justify-content:center;
+    background:#101A2B; color:#F2F5F8;
+    font-family:"Inter","Helvetica Neue",Arial,"Noto Sans TC","PingFang TC",sans-serif;
+    text-align:center; padding:24px;
+  }
+  .gate{ max-width:520px; }
+  .gate__mark{ width:56px; height:56px; border-radius:999px; }
+  .gate__name{ margin:20px 0 4px; font-size:18px; font-weight:700; letter-spacing:.01em; }
+  .gate__en{ margin:0; font-size:11px; font-weight:500; letter-spacing:.08em;
+             text-transform:uppercase; color:rgba(242,245,248,.62); }
+  .gate__list{ list-style:none; margin:32px 0 0; padding:0;
+               display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .gate__link{
+    display:block; padding:12px 20px; border-radius:8px;
+    border:1px solid rgba(242,245,248,.24);
+    color:#F2F5F8; text-decoration:none; font-size:15px; font-weight:500;
+    transition:border-color .18s ease, background-color .18s ease;
+  }
+  .gate__link:hover,.gate__link:focus-visible{
+    border-color:rgba(242,245,248,.55); background:rgba(242,245,248,.08);
+  }
+  .gate__note{ margin:24px 0 0; font-size:12px; color:rgba(242,245,248,.52); }
+</style>
+</head>
+<body>
+
+<div class="gate">
+  <img class="gate__mark" src="assets/img/logo-96.png" width="56" height="56" alt="">
+  <p class="gate__name">{{ site_name }}</p>
+  <p class="gate__en">{{ site_name_en }}</p>
+
+  <ul class="gate__list">
+    {%- for l in langs %}
+    <li><a class="gate__link" href="{{ l.code }}/index.html" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}">{{ l.name }}</a></li>
+    {%- endfor %}
+  </ul>
+
+  <p class="gate__note">Redirecting… · 正在為您選擇語言版本</p>
+</div>
+
+<script>
+(function () {
+  var SUPPORTED = [{% for l in langs %}"{{ l.code }}"{% if not loop.last %}, {% endif %}{% endfor %}];
+  var FALLBACK = "{{ x_default }}";
+
+  function pick(tag) {
+    var t = String(tag || "").toLowerCase();
+    if (t.indexOf("zh-hant") === 0 || t.indexOf("zh-tw") === 0 ||
+        t.indexOf("zh-hk") === 0 || t.indexOf("zh-mo") === 0) { return "zh-hant"; }
+    if (t.indexOf("zh") === 0) { return "zh-hans"; }   /* zh / zh-Hans / zh-CN / zh-SG */
+    if (t.indexOf("ja") === 0) { return "ja"; }
+    if (t.indexOf("en") === 0) { return "en"; }
+    return null;
+  }
+
+  var tags = (navigator.languages && navigator.languages.length)
+    ? navigator.languages
+    : (navigator.language ? [navigator.language] : []);
+
+  var target = null;
+  for (var i = 0; i < tags.length && !target; i++) {
+    var hit = pick(tags[i]);
+    if (hit && SUPPORTED.indexOf(hit) !== -1) { target = hit; }
+  }
+  /* 有語言偏好但都不屬於上述四種 → 英文；完全讀不到偏好 → 繁體中文 */
+  if (!target) { target = tags.length ? "en" : FALLBACK; }
+  if (SUPPORTED.indexOf(target) === -1) { target = FALLBACK; }
+
+  location.replace(target + "/index.html");
+})();
+</script>
+
+</body>
+</html>

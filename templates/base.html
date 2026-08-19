@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<title>{{ page.meta.title }}</title>
+<meta name="description" content="{{ page.meta.description }}">
+
+<link rel="canonical" href="{{ base_url }}{{ lang }}/{{ page_output }}">
+{%- for l in langs %}
+<link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ base_url }}{{ l.code }}/{{ page_output }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ base_url }}{{ x_default }}/{{ page_output }}">
+
+<meta name="theme-color" content="#101A2B">
+<link rel="icon" href="{{ asset_prefix }}assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset_prefix }}assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="{{ asset_prefix }}assets/img/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ font_families|safe }}&display=swap">
+<link rel="stylesheet" href="{{ asset_prefix }}assets/css/style.css">
+{%- block head_extra %}{% endblock %}
+</head>
+<body>
+
+<a class="skip-link" href="#main">{{ common.a11y.skip_link }}</a>
+
+<!-- ===================== HEADER ===================== -->
+{% include "partials/header.html" %}
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+{% include "partials/footer.html" %}
+
+<script src="{{ asset_prefix }}assets/js/main.js" defer></script>
+</body>
+</html>

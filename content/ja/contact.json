@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "お問い合わせ｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED へのお問い合わせ。所在地は香港・九龍（Jordan, Kowloon, Hong Kong）、担当者は Kerwin Su（蘇益宏）です。装置調達、解体・据付・輸送、プロセス技術導入、AI 統合をご相談ください。"
+  },
+
+  "breadcrumb": [
+    { "label": "ホーム", "href": "index.html" },
+    { "label": "お問い合わせ" }
+  ],
+
+  "hero": {
+    "eyebrow": "CONTACT",
+    "title": "BETTER へのお問い合わせ",
+    "lead": "生産ラインのご要望をお聞かせください。窓口一本化でご対応します。"
+  },
+
+  "info": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "お問い合わせ先",
+    "lead": "",
+    "entries": [
+      { "title": "担当者", "text": "Kerwin Su（蘇益宏）／代表者", "variant": "keep" },
+      { "title": "メール", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "所在地", "text": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong", "variant": "keep" }
+    ],
+    "media": {
+      "id": "IMG-CONTACT-02",
+      "file": "assets/img/contact-02.jpg",
+      "ratio": "21-9",
+      "alt": "モダンなオフィス空間での打ち合わせ風景のクールトーン写真。テーブルには装置仕様書が広げられている",
+      "caption": "モダンなオフィス空間の打ち合わせ風景、クールトーン、識別できる顔は写り込みなし"
+    }
+  },
+
+  "enquiry": {
+    "eyebrow": "ENQUIRY",
+    "title": "ご相談フォーム",
+    "lead": "ご入力いただいた内容は、メールで BETTER 宛に送信されます。",
+    "aside_label": "その他のお問い合わせ方法",
+    "side_card": {
+      "title": "メールで直接ご連絡",
+      "text": "フォームをご利用にならず、直接メールをお送りいただいても構いません。窓口を一本化してご対応します。",
+      "person": "担当者：Kerwin Su（蘇益宏）"
+    },
+    "side_notes": {
+      "title": "ご記入の前に",
+      "entries": [
+        { "label": "BETTER はブランドの正規代理店ですか？", "href": "#faq-agency" },
+        { "label": "中古装置の評価や調達も依頼できますか？", "href": "#faq-used" },
+        { "label": "AI 導入には既存装置の入れ替えが必要ですか？", "href": "#faq-ai" }
+      ]
+    }
+  },
+
+  "location": {
+    "eyebrow": "LOCATION",
+    "title": "オフィスの所在地",
+    "lead": "",
+    "paragraphs": [
+      "オフィスは 10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong にあり、九龍・佐敦のビジネスエリアに位置しています。"
+    ],
+    "media": {
+      "id": "IMG-CONTACT-01",
+      "file": "assets/img/contact-01.jpg",
+      "ratio": "21-9",
+      "alt": "スタイライズしたマップ：九龍・佐敦の街区をミニマルな線画で表現し、1 点のマーカーがオフィスビルを示す",
+      "caption": "九龍・佐敦の街区をミニマルな線画で描いたマップ、マーカーは 1 点のみ"
+    }
+  },
+
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "よくあるご質問",
+    "lead": "",
+    "entries": [
+      {
+        "id": "faq-agency",
+        "question": "BETTER はこれらのブランドの正規代理店ですか？",
+        "answers": [
+          "いいえ。BETTER はこれらのブランドのメーカー正規代理店や指定販売店ではありません。これら日系ブランドの装置について、調達、販売および保守サービスを提供しています。本サイトに記載のブランド名はそれぞれの所有者の商標であり、装置の説明を目的として表示しています。"
+        ]
+      },
+      {
+        "id": "faq-used",
+        "question": "中古装置の評価や調達も依頼できますか？",
+        "answers": [
+          "はい。機種比較、装置の状態確認、受入検査の支援を行い、その後の解体、輸送、再据付まで承ります。"
+        ]
+      },
+      {
+        "id": "faq-ai",
+        "question": "AI 導入には既存装置の入れ替えが必要ですか？",
+        "answers": [
+          "必ずしも必要ではありません。多くの場合は既存装置のセンサー、計測、検査データを活用して導入できます。導入前にデータの取得可否を評価します。"
+        ]
+      },
+      {
+        "id": "",
+        "question": "研修はお客様の現場で実施できますか？",
+        "answers": [
+          "はい。研修内容はお客様チームのスキルと装置構成に合わせて設計し、座学と実機での実習を組み合わせて実施します。"
+        ]
+      }
+    ]
+  },
+
+  "divider_media": {
+    "id": "IMG-CONTACT-03",
+    "file": "assets/img/contact-03.jpg",
+    "ratio": "21-9",
+    "decorative": true,
+    "alt": "濃紺地に細いスペクトルグラデーションの横ストライプ",
+    "caption": "濃紺地に細いスペクトルグラデーションの横ストライプ"
+  }
+}

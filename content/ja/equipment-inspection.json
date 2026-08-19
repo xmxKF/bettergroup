@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "ウェーハ検査・テスト装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は ADVANTEST・LASERTEC のウェーハ検査・テスト装置の調達、販売および保守を提供し、G2LGAN＋CNN によるウェーハマップ欠陥分類、e-beam 再検査、GPU 適応テストなどの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "ウェーハ検査・テスト"
+    }
+  ],
+  "hero": {
+    "id": "inspection-hero",
+    "eyebrow": "INSPECTION & TEST",
+    "title": "ウェーハ検査・テスト装置",
+    "title_lat": "Wafer Inspection & Test",
+    "lead": "全ラインを貫く計測、欠陥検査、電気特性テストです。"
+  },
+  "banner_label": "ウェーハ検査の写真",
+  "banner_media": {
+    "id": "IMG-INSP-01",
+    "file": "assets/img/insp-01.jpg",
+    "ratio": "16-9",
+    "alt": "検査装置とウェーハのロードポートのクローズアップ。画面にウェーハマップが表示され、寒色の青い色調",
+    "caption": "検査装置とウェーハのロードポートのクローズアップ。画面にウェーハマップを表示"
+  },
+  "scope": {
+    "id": "inspection-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "ADVANTEST の半導体テスト装置",
+      "LASERTEC の検査・計測装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、電気特性テストと光学／レーザー検査の装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-INSP-02",
+      "file": "assets/img/insp-02.jpg",
+      "ratio": "4-3",
+      "alt": "ウェーハマップの欠陥分布ビジュアライゼーションを画面に寄って撮影。色点の集まりが特徴的なパターンを形成",
+      "caption": "ウェーハマップの欠陥分布ビジュアライゼーション。色点の集まりが特徴的なパターンを形成"
+    }
+  },
+  "services": {
+    "id": "inspection-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付、校正と立ち上げ調整",
+      "光学系とテストインターフェースの保守点検",
+      "検査・テストフローの導入",
+      "データ判読と操作の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "inspection-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "G2LGAN＋CNN",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "2 段階の GAN によるデータ拡張と MobileNetV2 を組み合わせ、クラス不均衡なウェーハマップの欠陥分類に対応します。",
+        "metric": "ベンチマーク指標：Accuracy 98.39%、F1 93.01%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "CNN-ESN",
+        "year": "（2026）",
+        "arch_note": "",
+        "text": "ResNet34 とエコーステートネットワークを組み合わせ、ノイズを含むウェーハマップに対する識別のロバスト性を高めます。",
+        "metric": "ベンチマーク指標：クリーン 94.74%、ノイズ 87.30%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "SEMVision H20",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "生産ラインで継続学習する深層学習の画像分類により、e-beam 欠陥の再検査を高速化します。",
+        "metric": "ベンチマーク指標：再検査速度 3×、2nm/GAA 顧客に導入済み",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "GPU リアルタイム適応テスト",
+        "year": "",
+        "arch_note": "",
+        "text": "GPU で加速した機械学習をテスト工程でリアルタイムに調整し、テスト時間を短縮します。",
+        "metric": "ベンチマーク指標：Blackwell 量産でテスト時間 -25%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "KGD／外れ値検出（GPR、コンフォーマル予測）",
+        "year": "",
+        "arch_note": "",
+        "text": "空間モデリングとコンフォーマル予測により、良品判定と外れ値検出の精度を高めます。",
+        "metric": "ベンチマーク指標：DPAT を上回る／Vmin 約 90% のカバレッジ保証",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "InF-ATPG",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "FFR 分割に QGNN と DQN を組み合わせ、テストパターン生成を最適化します。",
+        "metric": "ベンチマーク指標：バックトラック -55.06%、UFP 0.50%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-INSP-03",
+      "file": "assets/img/insp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：ウェーハマップ欠陥分類の結果と信頼度の棒グラフを並置",
+      "caption": "ウェーハマップ欠陥分類の結果と信頼度の棒グラフを並置"
+    }
+  },
+  "fit": {
+    "id": "inspection-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "インライン欠陥検出とフィードバックの強化が必要な生産ライン",
+      "テスト時間とテストコストの負担が大きい後工程・テスト工場",
+      "検査装置の移設と光学系の再校正",
+      "研究機関が欠陥解析の実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cleaning.html",
+      "title": "ウェーハ洗浄"
+    },
+    "next": {
+      "href": "equipment-mask.html",
+      "title": "フォトマスク工程"
+    }
+  }
+}

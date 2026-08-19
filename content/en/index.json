@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "title": "Advanced Semiconductor Equipment & AI | BETTER",
+    "description": "Hong Kong supplier of Japanese semiconductor equipment for nine process areas: procurement, relocation, process transfer, training and AI integration."
+  },
+
+  "breadcrumb": [],
+
+  "hero": {
+    "eyebrow": "SEMICONDUCTOR EQUIPMENT & AI",
+    "title_lines": ["Advanced process", "integration partner"],
+    "lead": "Equipment procurement, relocation, process transfer and AI integration across nine process areas.",
+    "sub": "Based in Hong Kong, connecting leading Japanese equipment brands with frontier AI architectures.",
+    "primary": { "label": "Send an Inquiry", "href": "contact.html" },
+    "secondary": { "label": "Explore Nine Process Areas", "href": "equipment.html" },
+    "media": {
+      "id": "VID-HOME-01",
+      "file": "assets/video/home-01.mp4",
+      "poster": "assets/img/home-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "Slow pan through a cleanroom as wafer transfer robots and tool load ports operate",
+      "caption": "Cleanroom pan: wafer transfer robots and tool load ports in operation"
+    }
+  },
+
+  "stats": {
+    "aria_label": "Scope of services",
+    "entries": [
+      { "num": "9", "label": "main process areas" },
+      { "num": "16", "label": "leading Japanese brands" },
+      { "num": "5", "label": "core business lines" }
+    ]
+  },
+
+  "pillars": {
+    "eyebrow": "WHAT WE DO",
+    "title": "Five core business lines",
+    "lead": "Full coverage from equipment to process and from people to artificial intelligence.",
+    "entries": [
+      {
+        "num": "01",
+        "title": "Equipment for nine process areas",
+        "text": "Procurement and sales of equipment across lithography, etch, CVD, bake, ion implantation, CMP, cleaning, inspection and photomask.",
+        "link_label": "Equipment & Processes",
+        "href": "equipment.html"
+      },
+      {
+        "num": "02",
+        "title": "De-installation, shipping and installation",
+        "text": "End-to-end execution and coordination of de-installation, packing, cross-border shipping, move-in positioning and reinstallation.",
+        "link_label": "Service details",
+        "href": "services.html#service-relocation"
+      },
+      {
+        "num": "03",
+        "title": "Advanced process technology transfer",
+        "text": "Against your line targets, we help set process conditions, tune tools and convert to volume production, shortening the transfer cycle.",
+        "link_label": "Service details",
+        "href": "services.html#service-process"
+      },
+      {
+        "num": "04",
+        "title": "Semiconductor talent training",
+        "text": "Training programs for tool operation, maintenance and process practice that build your own operating capability.",
+        "link_label": "Service details",
+        "href": "services.html#service-training"
+      },
+      {
+        "num": "05",
+        "title": "AI and advanced manufacturing",
+        "text": "Digital twin, physics-based simulation and generative lithography architectures, benchmarked and deployed in every process area.",
+        "link_label": "AI Manufacturing",
+        "href": "ai.html"
+      }
+    ],
+    "media": {
+      "id": "IMG-HOME-01",
+      "file": "assets/img/home-01.jpg",
+      "ratio": "4-3",
+      "alt": "Five business lines illustrated as an isometric cross-section of a semiconductor facility",
+      "caption": "Five business lines: isometric cross-section of a semiconductor facility"
+    }
+  },
+
+  "processes": {
+    "eyebrow": "NINE PROCESS AREAS",
+    "title": "Nine main process areas",
+    "lead": "Every area maps to leading Japanese brands and its own AI benchmark architectures.",
+    "overview_link": { "label": "View equipment and process overview", "href": "equipment.html" },
+    "media": {
+      "id": "IMG-HOME-02",
+      "file": "assets/img/home-02.jpg",
+      "ratio": "4-3",
+      "alt": "Nine-panel diagram of the process flow",
+      "caption": "Nine-panel process flow: the wafer journey from photomask to finished device"
+    },
+    "entries": [
+      {
+        "num": "01",
+        "title": "Photolithography",
+        "en": "Lithography",
+        "text": "Exposure tools plus coat and develop tracks that set linewidth and pattern fidelity.",
+        "brands": ["NIKON", "CANON", "TEL", "DNS"],
+        "link_label": "View equipment",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "Dry & Plasma Etch",
+        "en": "Etch",
+        "text": "Dry and plasma etch tools that hold critical dimension and sidewall profile.",
+        "brands": ["TEL", "SAMCO"],
+        "link_label": "View equipment",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "CVD",
+        "en": "Chemical Vapor Deposition",
+        "text": "Thin-film deposition tools that control thickness uniformity and step coverage.",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "MATSUSHITA"],
+        "link_label": "View equipment",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "Bake & Thermal",
+        "en": "Thermal / Bake",
+        "text": "Furnace and hot-plate tools that manage thermal budget and batch consistency.",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "TAZMO"],
+        "link_label": "View equipment",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "Ion Implant",
+        "en": "Ion Implantation",
+        "text": "Dopant concentration and depth control that determine device electrical performance.",
+        "brands": ["ULVAC", "NISSIN"],
+        "link_label": "View equipment",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP",
+        "en": "Chemical Mechanical Polishing",
+        "text": "Planarization and thinning tools that protect stack yield and flatness.",
+        "brands": ["EBARA", "ACCRETECH"],
+        "link_label": "View equipment",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "Wafer Clean & Dry",
+        "en": "Wafer Cleaning",
+        "text": "Cleaning and drying tools that suppress particle and chemical residue defects.",
+        "brands": ["DNS", "TEL"],
+        "link_label": "View equipment",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "Inspection & Test",
+        "en": "Wafer Inspection & Test",
+        "text": "Metrology, defect inspection and electrical test tools.",
+        "brands": ["ADVANTEST", "LASERTEC"],
+        "link_label": "View equipment",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "Photomask",
+        "en": "Mask / Reticle",
+        "text": "E-beam writers and mask inspection tools that set pattern quality at the source.",
+        "brands": ["NUFLARE", "JEOL"],
+        "link_label": "View equipment",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "BETTER provides procurement, sales and maintenance services for the equipment brands listed above. Brand names are trademarks of their respective owners and are used for equipment identification only."
+  },
+
+  "ai": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "Frontier AI in every process area",
+    "lead": "Digital twin, physics-based simulation and generative lithography run through all nine areas.",
+    "paragraphs": [
+      "BETTER benchmarks frontier architectures published by industry and academia against real use cases in the nine process areas.",
+      "The architectures below are third-party research results and serve as the technical benchmark for the work BETTER deploys."
+    ],
+    "cta": { "label": "Discover AI Manufacturing", "href": "ai.html" },
+    "media": {
+      "id": "IMG-HOME-03",
+      "file": "assets/img/home-03.jpg",
+      "ratio": "4-3",
+      "alt": "Abstract data visualization: wafer thermal contours overlaid with sensor time-series curves",
+      "caption": "Wafer thermal contours overlaid with sensor time-series curves"
+    },
+    "pillars": [
+      {
+        "title": "",
+        "title_lat": "Digital Twin",
+        "text": "A virtual counterpart of each tool and process, so condition changes and maintenance schedules are validated in the model first."
+      },
+      {
+        "title": "",
+        "title_lat": "Physics Simulation",
+        "text": "Plasma, heat transfer and ion transport models predict process behavior and cut the number of test wafers and trial runs."
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer / ILT",
+        "text": "Generative methods for lithography patterning and inverse lithography correction accelerate optical proximity optimization."
+      }
+    ],
+    "table": {
+      "scroll_label": "Examples of AI benchmark architectures, scrollable horizontally",
+      "caption": "AI benchmark architectures: architecture (year), benchmark metric and process area",
+      "columns": ["Architecture (year)", "Benchmark metric", "Process area"],
+      "rows": [
+        {
+          "model": "DeepOHeat-v1 (2025)",
+          "metric": "MAPE 0.035%, training 62× faster",
+          "process": "CVD, Bake & Thermal"
+        },
+        {
+          "model": "TSMC smart manufacturing: RNN time-series FDC + federated learning",
+          "metric": "About 92% prediction accuracy, escape rate down 15%",
+          "process": "Etch, CMP"
+        },
+        {
+          "model": "G2LGAN + CNN (2025)",
+          "metric": "Accuracy 98.39%, F1 93.01%",
+          "process": "Wafer inspection"
+        }
+      ],
+      "note": "This table lists architectures and quantitative results published by third-party academic and industry research. They are the reference and benchmark for the work BETTER deploys, not measurements of our own."
+    }
+  },
+
+  "why": {
+    "eyebrow": "WHY BETTER",
+    "title": "Why work with BETTER",
+    "lead": "One point of contact covering equipment, process, people and AI.",
+    "media": {
+      "id": "IMG-HOME-04",
+      "file": "assets/img/home-04.jpg",
+      "ratio": "4-3",
+      "alt": "Profile silhouette of an engineering team reviewing a data dashboard beside a process tool",
+      "caption": "Engineering team reviewing a data dashboard beside a process tool"
+    },
+    "entries": [
+      {
+        "title": "Japanese brand coverage",
+        "text": "Each of the nine process areas maps to leading Japanese equipment brands, so tool selection can be compared and planned across areas."
+      },
+      {
+        "title": "Procurement through installation",
+        "text": "One team coordinates procurement, acceptance, de-installation, packing, shipping, move-in, installation and tuning."
+      },
+      {
+        "title": "Process transfer and training",
+        "text": "We deliver more than tools: we help set process conditions and train operation and maintenance staff to shorten the ramp."
+      },
+      {
+        "title": "AI integration capability",
+        "text": "We benchmark and deploy digital twin, physics-based simulation and defect models to strengthen yield and tool utilization management."
+      }
+    ]
+  }
+}

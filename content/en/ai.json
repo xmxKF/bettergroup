@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "AI Manufacturing | BETTER",
+    "description": "Digital twin, physics-based simulation and LithoDreamer anchor BETTER's AI benchmarks for defect classification, yield prediction and test optimization."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "AI Manufacturing"
+    }
+  ],
+  "hero": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "AI across nine process areas",
+    "lead": "Verifiable frontier architectures, benchmarked and deployed on the tool floor.",
+    "media": {
+      "id": "VID-AI-01",
+      "file": "assets/video/ai-01.mp4",
+      "poster": "assets/img/ai-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "Abstract data animation: thermal fields flow over a wafer outline as defect point clouds converge into classifications",
+      "caption": "Abstract data animation: wafer thermal fields and defect point clouds converging into classifications"
+    }
+  },
+  "positioning": {
+    "eyebrow": "POSITIONING",
+    "title": "How we approach AI",
+    "lead": "",
+    "paragraphs": [
+      "The value of AI in semiconductor manufacturing comes from turning sensor, metrology and inspection data into decisions you can act on.",
+      "BETTER treats published industry and academic architectures as benchmarks, then selects the method that suits each process scenario.",
+      "The architectures and quantitative results listed below come from third-party research, used as technical reference benchmarks and not measurements of our own."
+    ],
+    "media": {
+      "id": "IMG-AI-01",
+      "file": "assets/img/ai-01.jpg",
+      "ratio": "4-3",
+      "alt": "Abstract composition of a wafer overlaid with neural network nodes, deep blue ground with fine spectral gradients",
+      "caption": "Wafer overlaid with neural network nodes on deep blue"
+    }
+  },
+  "pillars": {
+    "eyebrow": "THREE PILLARS",
+    "title": "Three pillars across all areas",
+    "lead": "Every process area shares the same methodological backbone.",
+    "entries": [
+      {
+        "title": "",
+        "title_lat": "Digital Twin",
+        "text": "A virtual counterpart of each tool, chamber and line, synchronized with real state and ready for scenario simulation.",
+        "meta": "Typical uses: condition change rehearsal, maintenance scheduling, post-relocation restart validation"
+      },
+      {
+        "title": "",
+        "title_lat": "Physics Simulation",
+        "text": "Plasma, heat transfer, fluid and ion transport models predict how the process will behave.",
+        "meta": "Typical uses: etch rate, thickness uniformity, temperature field, dopant profile"
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer／ILT",
+        "text": "Generative methods and inverse lithography correction address patterning and optical proximity effects.",
+        "meta": "Typical uses: mask correction, OPC iteration, pattern risk prediction"
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-02",
+      "file": "assets/img/ai-02.jpg",
+      "ratio": "21-9",
+      "alt": "Three-column abstract illustration pairing digital twin, physics simulation and generative lithography on a cool gray ground",
+      "caption": "Three-column abstract illustration: digital twin, physics simulation and generative lithography"
+    }
+  },
+  "benchmarks": {
+    "eyebrow": "BENCHMARK ARCHITECTURES",
+    "title": "AI benchmark architectures",
+    "lead": "Everything below is third-party published research, used as deployment benchmarks.",
+    "table": {
+      "scroll_label": "AI benchmark architecture table, scrollable horizontally",
+      "caption": "AI benchmark architectures: domain, representative model (year), core architecture, input features, output and evaluation metrics, and key quantitative results",
+      "columns": [
+        "Domain",
+        "Model (year)",
+        "Core architecture",
+        "Input features",
+        "Output / metrics",
+        "Key quantitative results"
+      ],
+      "rows": [
+        {
+          "domain": "Wafer map defect classification",
+          "model": "G2LGAN + CNN (2025)",
+          "arch": "Two-stage GAN augmentation + MobileNetV2",
+          "inputs": "Wafer map images (class-imbalanced data)",
+          "metrics": "Accuracy / F1 / 1-NN (generation quality)",
+          "result": "Acc 98.39%, F1 93.01%"
+        },
+        {
+          "domain": "Wafer map defect classification",
+          "model": "CNN-ESN (2026)",
+          "arch": "ResNet34 + echo state network",
+          "inputs": "Noisy wafer maps",
+          "metrics": "Acc (robustness at σ=0.1 noise)",
+          "result": "Clean 94.74%, noisy 87.30%"
+        },
+        {
+          "domain": "SEM defect classification",
+          "model": "IBM ASMC (2025)",
+          "arch": "ViT (DINOv2) + semi-supervised",
+          "inputs": "SEM images (<15 per class)",
+          "metrics": "Classification accuracy",
+          "result": ">90% (few-shot)"
+        },
+        {
+          "domain": "Yield prediction",
+          "model": "PDF Exensio (2025)",
+          "arch": "XGBoost + PCA",
+          "inputs": "In-line defect, metrology, electrical test, FDC",
+          "metrics": "Die/wafer pass-fail, precision/recall",
+          "result": "Tunable threshold balances overkill/underkill"
+        },
+        {
+          "domain": "Yield root cause",
+          "model": "TSMC smart manufacturing",
+          "arch": "RNN (time-series FDC) + federated learning",
+          "inputs": "Tool sensor time series, inspection data",
+          "metrics": "Yield-impacting defect prediction accuracy",
+          "result": "~92% (28–3nm), escape rate -15%"
+        },
+        {
+          "domain": "Thermal simulation surrogate",
+          "model": "DeepOHeat-v1 (2025)",
+          "arch": "DeepONet + KAN + GMRES refinement",
+          "inputs": "Power map / floorplan (physics-informed training, no simulation data)",
+          "metrics": "MAPE, training time, memory",
+          "result": "MAPE 0.035%, training -62×, memory -31×"
+        },
+        {
+          "domain": "Joint thermal-IR",
+          "model": "ThermEDGe/IREDGe",
+          "arch": "Encoder-Decoder CNN",
+          "inputs": "Time-varying power maps, PDN density",
+          "metrics": "IR error (mV), temperature contour",
+          "result": "Average IR error 0.053mV"
+        },
+        {
+          "domain": "2.5D electrothermal co-design",
+          "model": "TTSV-HMO (2025)",
+          "arch": "Equivalent model + hybrid metaheuristic (PSO+SA)",
+          "inputs": "TTSV pitch, chiplet placement, power density",
+          "metrics": "Temperature/impedance MAE, fitness",
+          "result": "Temperature MAE 0.35%, impedance 3.97%"
+        },
+        {
+          "domain": "Static IR drop",
+          "model": "MaxViT/U-Net (2026)",
+          "arch": "MaxViT encoder + U-Net/FPN decoder",
+          "inputs": "Resistance, current and power pad maps (SPICE rendered to images)",
+          "metrics": "MAE, F1 (>90% peak hotspots), inference time",
+          "result": "MAE < 15×10⁻⁵V, 10–30× faster than NGSPICE"
+        },
+        {
+          "domain": "Static IR drop",
+          "model": "ICCAD'23 winning flow",
+          "arch": "ConvNeXtV2-Nano + UPerNet",
+          "inputs": "Per-layer resistance maps + effective distance maps",
+          "metrics": "MAE (mV), F1",
+          "result": "MAE 0.075mV, F1 0.56"
+        },
+        {
+          "domain": "Dynamic IR drop",
+          "model": "PDNNet (2024)",
+          "arch": "Heterogeneous GNN (PDNGraph) + CNN",
+          "inputs": "PDN structure graph + dynamic current maps",
+          "metrics": "NMAE, speedup",
+          "result": "NMAE improved 39.3%, 545× speedup"
+        },
+        {
+          "domain": "Dynamic IR drop",
+          "model": "Dual-path spatiotemporal model (DATE'25)",
+          "arch": "3D SW-MSA Transformer",
+          "inputs": "Time-window decomposed power maps (internal/switching/leakage/toggle rate)",
+          "metrics": "Hotspot prediction accuracy",
+          "result": "Outperforms 2D/3D-CNN and recurrent U-Net"
+        },
+        {
+          "domain": "Electromigration",
+          "model": "Dey et al. (2020)",
+          "arch": "10-layer NN regression + logistic classifier",
+          "inputs": "J, L, T, IR drop, MTTF labels (KLU + Black)",
+          "metrics": "R², AMSE, failed-segment detection",
+          "result": "Large speedup, MTTF comparable to exact models"
+        },
+        {
+          "domain": "Electromigration",
+          "model": "BPINN-EM-Post (2025)",
+          "arch": "Bayesian PINN",
+          "inputs": "Korhonen PDE physics residual + observations",
+          "metrics": "Uncertainty quantification, lifetime distribution",
+          "result": "Overcomes PINN overfitting, supports multi-segment lines"
+        },
+        {
+          "domain": "ATPG",
+          "model": "InF-ATPG (2025)",
+          "arch": "FFR partitioning + QGNN + DQN",
+          "inputs": "Logic state, SCOAP controllability/observability",
+          "metrics": "Backtracks, fault coverage, UFP",
+          "result": "Backtracks -55.06%, UFP 0.50%"
+        },
+        {
+          "domain": "ATPG (commercial)",
+          "model": "Synopsys TSO.ai",
+          "arch": "AI setup tuning (black-box optimization)",
+          "inputs": "Design characteristics, ATPG engine behavior, constraints",
+          "metrics": "Pattern count, coverage, convergence iterations",
+          "result": "Patterns -20–25% (over 50% in some cases)"
+        },
+        {
+          "domain": "BIST enhancement",
+          "model": "LITE (2025)",
+          "arch": "Standard-cell scan enhancement + SCOAP analysis",
+          "inputs": "Netlist hypergraph, CC0/CC1/CObs",
+          "metrics": "Pattern count, random pattern coverage",
+          "result": "ATPG patterns -31%, improved RPR coverage"
+        },
+        {
+          "domain": "KGD/outlier detection",
+          "model": "GPR/RevTransC/conformal prediction",
+          "arch": "GPR spatial modeling, unsupervised transform, conformal QR + CatBoost",
+          "inputs": "Wafer-level parametric test data, WAT",
+          "metrics": "AUROC, DPPM, Vmin interval coverage",
+          "result": "Outperforms DPAT; Vmin ~90% coverage guarantee"
+        },
+        {
+          "domain": "Test time",
+          "model": "GPU real-time adaptive test",
+          "arch": "GPU-accelerated ML (production deployment)",
+          "inputs": "Real-time test data stream",
+          "metrics": "Test time, defect coverage maintained",
+          "result": "Blackwell production: -25% test time"
+        },
+        {
+          "domain": "Layout hotspot",
+          "model": "Explainable GAT (ASP-DAC'26)",
+          "arch": "Graph attention network (8 heads)",
+          "inputs": "Layout graph (5-dim node features, adjacency matrix)",
+          "metrics": "Recall, false alarm rate, explainability",
+          "result": "5–12× less memory than image-based methods"
+        },
+        {
+          "domain": "e-Beam review",
+          "model": "SEMVision H20 (2025)",
+          "arch": "Deep learning image classification (in-fab retraining)",
+          "inputs": "CFE e-beam images",
+          "metrics": "Review speed, real vs. nuisance defect discrimination",
+          "result": "3× speed, deployed at 2nm/GAA customers"
+        }
+      ],
+      "note": "Sources are research and industry information published by third parties. BETTER uses them as the benchmark for the work it deploys, not measurements of our own."
+    }
+  },
+  "matrix": {
+    "eyebrow": "PROCESS × AI",
+    "title": "Process and AI mapping",
+    "lead": "The main deployment direction for each of the nine areas.",
+    "table": {
+      "scroll_label": "Process and AI mapping matrix, scrollable horizontally",
+      "caption": "Process × AI matrix: process area, main benchmark architectures and deployment focus",
+      "columns": [
+        "Process area",
+        "Main benchmark architectures",
+        "Deployment focus"
+      ],
+      "rows": [
+        {
+          "process_label": "Photolithography",
+          "process_href": "equipment-lithography.html",
+          "arch": "LithoDreamer / ILT, explainable GAT (ASP-DAC'26)",
+          "focus": "Generative mask correction, layout hotspot prediction, track digital twin"
+        },
+        {
+          "process_label": "Dry & Plasma Etch",
+          "process_href": "equipment-etch.html",
+          "arch": "Plasma physics simulation, TSMC RNN time-series FDC + federated learning",
+          "focus": "Etch rate prediction, anomaly detection, endpoint determination"
+        },
+        {
+          "process_label": "CVD",
+          "process_href": "equipment-cvd.html",
+          "arch": "DeepOHeat-v1 (2025), ThermEDGe/IREDGe",
+          "focus": "Thermal field surrogate, thickness uniformity, chamber digital twin"
+        },
+        {
+          "process_label": "Bake & Thermal",
+          "process_href": "equipment-bake.html",
+          "arch": "DeepOHeat-v1 (2025), ThermEDGe/IREDGe",
+          "focus": "Temperature contour prediction, thermal budget optimization, batch digital twin"
+        },
+        {
+          "process_label": "Ion Implant",
+          "process_href": "equipment-implant.html",
+          "arch": "Monte Carlo physics simulation, BPINN-EM-Post (2025), GPR",
+          "focus": "Dopant profile simulation, uncertainty quantification, spatial outlier detection"
+        },
+        {
+          "process_label": "CMP",
+          "process_href": "equipment-cmp.html",
+          "arch": "Polish physics simulation, PDF Exensio (2025), RNN time-series FDC",
+          "focus": "Removal rate uniformity, yield prediction, consumable life trends"
+        },
+        {
+          "process_label": "Wafer Clean & Dry",
+          "process_href": "equipment-cleaning.html",
+          "arch": "IBM ASMC (2025) ViT, RNN time-series FDC",
+          "focus": "Few-shot SEM defect classification, chemistry anomaly detection, particle root cause"
+        },
+        {
+          "process_label": "Inspection & Test",
+          "process_href": "equipment-inspection.html",
+          "arch": "G2LGAN + CNN, CNN-ESN, SEMVision H20, GPU adaptive test, KGD conformal prediction, InF-ATPG",
+          "focus": "Wafer map classification, e-beam review, test time optimization, outlier detection"
+        },
+        {
+          "process_label": "Photomask",
+          "process_href": "equipment-mask.html",
+          "arch": "LithoDreamer / ILT, MaxViT/U-Net, explainable GAT",
+          "focus": "Pattern correction, risk area localization, writing digital twin"
+        }
+      ]
+    }
+  },
+  "delivery": {
+    "eyebrow": "HOW WE DELIVER",
+    "title": "Five steps to deployment",
+    "lead": "From scope definition to team handover, with verifiable metrics.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Consultation",
+        "text": "Define the problem scenario and quantifiable targets, then assess data availability and the value of deployment."
+      },
+      {
+        "num": "02",
+        "title": "Data integration",
+        "text": "Consolidate tool sensor, process metrology and inspection data into one consistent data format."
+      },
+      {
+        "num": "03",
+        "title": "Model deployment",
+        "text": "Select and tune the benchmark architecture that fits the scenario, then build the training and inference flow."
+      },
+      {
+        "num": "04",
+        "title": "Validation",
+        "text": "Compare against the baseline on agreed metrics and confirm stability and repeatability."
+      },
+      {
+        "num": "05",
+        "title": "Training",
+        "text": "Hand over operating and interpretation methods so your team can run and maintain the system."
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-03",
+      "file": "assets/img/ai-03.jpg",
+      "ratio": "4-3",
+      "alt": "AI deployment dashboard style: five stage cards with metric figures, dark UI and spectrum-colored progress bars",
+      "caption": "AI deployment dashboard: five stage cards with metric figures"
+    }
+  },
+  "cta": {
+    "primary": {
+      "label": "Discuss an AI use case",
+      "href": "contact.html"
+    }
+  }
+}

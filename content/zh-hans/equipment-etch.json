@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "刻蚀段设备｜倍特尔科技集团",
+    "description": "倍特尔提供 TEL 与 SAMCO 刻蚀设备的采购、销售及维护，并导入等离子体物理仿真、腔体数字孪生与时序 FDC 良率根因等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "刻蚀段"
+    }
+  ],
+  "hero": {
+    "id": "etch-hero",
+    "eyebrow": "ETCH",
+    "title": "刻蚀段设备",
+    "title_lat": "Etch",
+    "lead": "定义结构尺寸与侧壁形貌的关键工艺段。"
+  },
+  "banner_label": "刻蚀设备照片",
+  "banner_media": {
+    "id": "IMG-ETCH-01",
+    "file": "assets/img/etch-01.jpg",
+    "ratio": "16-9",
+    "alt": "刻蚀设备外观与腔体观察窗透出的等离子体辉光，暗色环境、紫红光晕",
+    "caption": "刻蚀设备外观与腔体观察窗透出的等离子体辉光，暗色环境、紫红光晕"
+  },
+  "scope": {
+    "id": "etch-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "TEL 半导体刻蚀设备",
+      "SAMCO 半导体刻蚀设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖干法与等离子体刻蚀设备配置。"
+    ],
+    "media": {
+      "id": "IMG-ETCH-02",
+      "file": "assets/img/etch-02.jpg",
+      "ratio": "4-3",
+      "alt": "等离子体刻蚀腔体内部视角：晶圆承载盘与均匀辉光，科学摄影风格",
+      "caption": "等离子体刻蚀腔体内部视角：晶圆承载盘与均匀辉光，科学摄影风格"
+    }
+  },
+  "services": {
+    "id": "etch-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装与工艺调试",
+      "腔体维护保养与耗材规划",
+      "刻蚀工艺技术导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "etch-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "等离子体物理仿真＋腔体数字孪生",
+        "year": "",
+        "arch_note": "",
+        "text": "以物理模型推算等离子体分布与刻蚀速率，在虚拟腔体中先行验证条件。",
+        "metric": "对标指标：以仿真降低试片与试跑次数",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "TSMC 智能制造 RNN 时序 FDC＋联邦学习",
+        "year": "",
+        "arch_note": "",
+        "text": "以设备传感时序预测影响良率的缺陷，跨厂协作而不共享原始数据。",
+        "metric": "对标指标：约 92%（28–3nm）、逃逸率 -15%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "终点检测（Endpoint Detection）模型",
+        "year": "",
+        "arch_note": "",
+        "text": "以光谱与时序信号判定刻蚀终点，抑制过刻与欠刻。",
+        "metric": "对标指标：以时序模型提升终点判定一致性",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-ETCH-03",
+      "file": "assets/img/etch-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：等离子体仿真等值面与传感时序曲线并置，深色背景、光谱色曲线",
+      "caption": "AI 可视化：等离子体仿真等值面与传感时序曲线并置，深色背景、光谱色曲线"
+    }
+  },
+  "fit": {
+    "id": "etch-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "关键尺寸控制要求提升的产线",
+      "化合物半导体与先进封装刻蚀需求",
+      "移机后需重建刻蚀条件的厂区",
+      "研究机构建立刻蚀实验能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-lithography.html",
+      "title": "光刻（黄光）"
+    },
+    "next": {
+      "href": "equipment-cvd.html",
+      "title": "化学气相沉积"
+    }
+  }
+}

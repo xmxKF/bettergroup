@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "title": "Services | BETTER",
+    "description": "Five services in one standard flow: equipment procurement and maintenance, de-installation and shipping, process transfer, training and AI integration."
+  },
+
+  "breadcrumb": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "Services" }
+  ],
+
+  "hero": {
+    "eyebrow": "SERVICES",
+    "title": "Five services, one point of contact",
+    "lead": "One undivided scope of responsibility: equipment, relocation, process, people and AI."
+  },
+
+  "banner_label": "Services key visual",
+  "banner_media": {
+    "id": "IMG-SVC-01",
+    "file": "assets/img/svc-01.jpg",
+    "ratio": "21-9",
+    "alt": "Wide shot of an equipment move-in: a fully packed tool module entering a cleanroom corridor",
+    "caption": "Equipment move-in: a packed tool module entering a cleanroom corridor"
+  },
+
+  "labels": {
+    "features": "Scope of work",
+    "steps": "How we work",
+    "outcomes": "Deliverables"
+  },
+
+  "services": [
+    {
+      "id": "service-equipment",
+      "eyebrow": "01 / PROCUREMENT",
+      "title": "Equipment procurement and sales",
+      "lead": "Selection, procurement and maintenance support across nine process areas.",
+      "features": [
+        "Procurement, sales and maintenance across nine process areas",
+        "Tool comparison and specification sign-off against your line targets",
+        "Condition inspection, service history checks and acceptance support",
+        "Planning for spares, consumables and maintenance"
+      ],
+      "steps": [
+        { "num": "01", "title": "Requirement definition", "text": "Process node, capacity targets and facility conditions." },
+        { "num": "02", "title": "Tool proposal", "text": "Cross-brand comparison and feasibility assessment." },
+        { "num": "03", "title": "Commercial execution", "text": "Quotation, terms and delivery schedule." },
+        { "num": "04", "title": "Acceptance", "text": "Pre-shipment inspection and handover documents." }
+      ],
+      "outcomes": [
+        "Tool comparison and selection report",
+        "Equipment specification and facility requirement list",
+        "Acceptance records and handover documents",
+        "Recommended maintenance plan"
+      ],
+      "note": {
+        "before": "BETTER provides procurement, sales and maintenance services for the Japanese brand equipment above; brand names are used for equipment identification only. For the related process areas, see the ",
+        "link": { "label": "equipment and process overview", "href": "equipment.html" },
+        "after": "."
+      },
+      "media": null,
+      "cta": null
+    },
+    {
+      "id": "service-relocation",
+      "eyebrow": "02 / RELOCATION",
+      "title": "De-installation, shipping and installation",
+      "lead": "Full relocation execution, from de-installation to first run at the new site.",
+      "features": [
+        "Condition records, piping and wiring labeling before de-installation",
+        "Precision disassembly, shock- and moisture-protected packing and fixtures",
+        "Cross-border shipping planning and documentation",
+        "Move-in positioning, reinstallation, tuning and functional checks"
+      ],
+      "steps": [
+        { "num": "01", "title": "Site survey", "text": "Survey of both sites and the relocation plan." },
+        { "num": "02", "title": "De-installation", "text": "Precision disassembly and standardized protective packing." },
+        { "num": "03", "title": "Shipping", "text": "Cross-border shipping and on-site acceptance." },
+        { "num": "04", "title": "Reinstallation", "text": "Reinstallation, tuning and handover sign-off." }
+      ],
+      "outcomes": [
+        "Relocation plan and risk list",
+        "De-installation labeling and parts inventory records",
+        "On-site acceptance and reinstallation report",
+        "Start-up and tuning sign-off records"
+      ],
+      "note": null,
+      "media": null,
+      "cta": null
+    },
+    {
+      "id": "service-process",
+      "eyebrow": "03 / PROCESS TRANSFER",
+      "title": "Advanced process technology transfer",
+      "lead": "Turning tool capability into stable, production-ready process conditions.",
+      "features": [
+        "Process condition setup and parameter window definition",
+        "Tool tuning, metrology alignment and repeatability verification",
+        "Review of yield factors and improvement directions",
+        "Conversion to volume production and SOP documentation"
+      ],
+      "steps": [
+        { "num": "01", "title": "Current state", "text": "Existing conditions, metrology methods and problem definition." },
+        { "num": "02", "title": "Condition setup", "text": "Design of experiments and parameter window sign-off." },
+        { "num": "03", "title": "Verification", "text": "Repeatability and tool-to-tool consistency checks." },
+        { "num": "04", "title": "Volume production", "text": "Documentation and handover." }
+      ],
+      "outcomes": [
+        "Process condition tables and parameter window notes",
+        "Verification data package",
+        "Draft standard operating procedures"
+      ],
+      "note": {
+        "before": "For the equipment scope of the areas in your project, see the ",
+        "link": { "label": "nine process pages", "href": "equipment.html" },
+        "after": "."
+      },
+      "media": null,
+      "cta": null
+    },
+    {
+      "id": "service-training",
+      "eyebrow": "04 / TRAINING",
+      "title": "Semiconductor talent training",
+      "lead": "Building your own capability to operate and maintain the tools.",
+      "features": [
+        "Tool operation and safety procedure training",
+        "Routine maintenance, servicing and troubleshooting training",
+        "Practical courses on process principles and parameter effects",
+        "Training on AI data interpretation and smart tool use"
+      ],
+      "steps": [
+        { "num": "01", "title": "Skills assessment", "text": "Assessment of current skills and course design." },
+        { "num": "02", "title": "Courses", "text": "Classroom sessions and hands-on work at the tool." },
+        { "num": "03", "title": "Evaluation", "text": "Training effectiveness review and follow-up reinforcement." },
+        { "num": "04", "title": "Materials", "text": "Training materials and documents delivered." }
+      ],
+      "outcomes": [
+        "Customized course outline",
+        "Operation and maintenance materials",
+        "Training records and evaluation results"
+      ],
+      "note": null,
+      "media": null,
+      "cta": null
+    },
+    {
+      "id": "service-ai",
+      "eyebrow": "05 / AI INTEGRATION",
+      "title": "AI and advanced manufacturing",
+      "lead": "Benchmarking frontier architectures to deploy verifiable intelligence.",
+      "features": [
+        "Digital Twin: a virtual counterpart of each tool and process",
+        "Physics-based simulation: plasma, heat transfer and ion transport models",
+        "Generative lithography and ILT: pattern generation and inverse correction",
+        "Defect classification, yield prediction and time-series FDC models"
+      ],
+      "steps": [
+        { "num": "01", "title": "Consultation", "text": "Use case definition and feasibility assessment." },
+        { "num": "02", "title": "Data onboarding", "text": "Sensor, metrology and inspection data consolidation." },
+        { "num": "03", "title": "Model deployment", "text": "Benchmark architecture selection and tuning." },
+        { "num": "04", "title": "Verification", "text": "Metric sign-off and handover to your team." }
+      ],
+      "outcomes": [
+        "AI use case assessment report",
+        "Data interface and model configuration notes",
+        "Verification metrics and results",
+        "User training materials"
+      ],
+      "note": null,
+      "media": {
+        "id": "IMG-SVC-02",
+        "file": "assets/img/svc-02.jpg",
+        "ratio": "16-9",
+        "alt": "Digital twin interface on screen: a 3D tool model beside sensor time-series curves, dark UI",
+        "caption": "Tool digital twin interface: 3D tool model and sensor time-series curves, dark UI"
+      },
+      "cta": { "label": "Discover AI Manufacturing", "href": "ai.html" }
+    }
+  ],
+
+  "flow": {
+    "eyebrow": "HOW WE WORK",
+    "title": "Our standard service flow",
+    "lead": "Six stages, from the first consultation to long-term maintenance.",
+    "steps": [
+      { "num": "01", "title": "Consultation", "text": "Clarify process node, capacity targets, site and facility limits, and define project scope." },
+      { "num": "02", "title": "Evaluation and selection", "text": "Compare tools across brands and propose workable options on specification, lead time and cost." },
+      { "num": "03", "title": "Procurement and acceptance", "text": "Execute commercial terms, then inspect condition and confirm documents before shipment." },
+      { "num": "04", "title": "De-installation and shipping", "text": "Standardized disassembly and protective packing, cross-border shipping and on-site acceptance." },
+      { "num": "05", "title": "Installation and tuning", "text": "Move-in positioning, reinstallation, utility hook-up, then functional and process tuning." },
+      { "num": "06", "title": "Training and maintenance", "text": "Operation and maintenance training, plus an ongoing servicing and support arrangement." }
+    ],
+    "media": {
+      "id": "IMG-SVC-04",
+      "file": "assets/img/svc-04.jpg",
+      "ratio": "3-4",
+      "alt": "Engineer tuning a tool with a handheld metrology instrument, tool panel in the background",
+      "caption": "Engineer tuning at the tool with a handheld instrument"
+    }
+  },
+
+  "closing_media": {
+    "id": "IMG-SVC-03",
+    "file": "assets/img/svc-03.jpg",
+    "ratio": "21-9",
+    "alt": "Isometric illustration of the service flow: six nodes on one line, cool gray ground, nodes ringed in spectral color",
+    "caption": "Isometric service flow: six nodes on one line, nodes ringed in spectral color"
+  }
+}

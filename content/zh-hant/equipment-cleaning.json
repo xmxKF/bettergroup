@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "晶圓水洗設備｜倍特爾科技集團",
+    "description": "倍特爾提供 DNS 與 TEL 晶圓水洗設備的採購、銷售及維護，並導入 ViT 少樣本 SEM 缺陷分類、時序 FDC 與顆粒缺陷根因分析等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "晶圓水洗"
+    }
+  ],
+  "hero": {
+    "id": "cleaning-hero",
+    "eyebrow": "WAFER CLEANING",
+    "title": "晶圓水洗設備",
+    "title_lat": "Wafer Cleaning",
+    "lead": "抑制顆粒與化學殘留、守住良率底線的清洗段。"
+  },
+  "banner_label": "晶圓水洗照片",
+  "banner_media": {
+    "id": "IMG-CLEAN-01",
+    "file": "assets/img/clean-01.jpg",
+    "ratio": "16-9",
+    "alt": "單片式清洗腔體內晶圓高速旋轉、藥液呈環狀噴灑，水膜光澤明顯",
+    "caption": "單片式清洗腔體內晶圓高速旋轉、藥液呈環狀噴灑"
+  },
+  "scope": {
+    "id": "cleaning-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "DNS 晶圓清洗設備",
+      "TEL 晶圓清洗設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋單片式與批次式清洗及乾燥設備。"
+    ],
+    "media": {
+      "id": "IMG-CLEAN-02",
+      "file": "assets/img/clean-02.jpg",
+      "ratio": "4-3",
+      "alt": "清洗後晶圓乾燥出料的瞬間，晶圓表面無水痕，冷白潔淨環境",
+      "caption": "清洗後晶圓乾燥出料瞬間，表面無水痕，潔淨環境"
+    }
+  },
+  "services": {
+    "id": "cleaning-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝、化學供應與排廢接續及調試",
+      "藥液系統與噴嘴維護保養",
+      "清洗製程條件導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "cleaning-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "IBM ASMC",
+        "year": "（2025）",
+        "arch_note": "ViT（DINOv2）＋半監督",
+        "text": "以少樣本學習分類 SEM 顆粒與殘留缺陷影像。",
+        "metric": "對標指標：每類少於 15 張仍達 >90%",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "TSMC 智慧製造 RNN 時序 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "由清洗機台感測時序偵測藥液與流量異常。",
+        "metric": "對標指標：約 92%（28–3nm）、逃逸率 -15%",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "顆粒缺陷根因分析",
+        "year": "",
+        "arch_note": "",
+        "text": "串接檢測與設備資料，定位顆粒來源與清洗條件關聯。",
+        "metric": "對標指標：以資料關聯縮短根因追查時間",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-CLEAN-03",
+      "file": "assets/img/clean-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：SEM 缺陷影像網格與分類信心度標註",
+      "caption": "SEM 缺陷影像網格與分類信心度標註"
+    }
+  },
+  "fit": {
+    "id": "cleaning-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "顆粒良率壓力大的先進節點產線",
+      "前後段之間需強化清洗能力的專案",
+      "清洗設備移機與化學系統重建",
+      "研究機構建立清洗與表面處理能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cmp.html",
+      "title": "CMP 研磨"
+    },
+    "next": {
+      "href": "equipment-inspection.html",
+      "title": "晶圓檢測"
+    }
+  }
+}

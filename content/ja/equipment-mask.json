@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "フォトマスク工程の装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は NUFLARE・JEOL のフォトマスク工程装置の調達、販売および保守を提供し、LithoDreamer／ILT、画像モデル、電子ビーム描画のデジタルツインなどの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "フォトマスク工程"
+    }
+  ],
+  "hero": {
+    "id": "mask-hero",
+    "eyebrow": "MASK / RETICLE",
+    "title": "フォトマスク工程の装置",
+    "title_lat": "Mask / Reticle",
+    "lead": "パターン品質の起点であり、後工程の転写結果を左右します。"
+  },
+  "banner_label": "フォトマスクの写真",
+  "banner_media": {
+    "id": "IMG-MASK-01",
+    "file": "assets/img/mask-01.jpg",
+    "ratio": "16-9",
+    "alt": "レチクルポッドと石英フォトマスクのクローズアップ。表面に微細パターンが反射する暗視野照明",
+    "caption": "レチクルポッドと石英フォトマスクのクローズアップ。微細パターンが反射する暗視野照明"
+  },
+  "scope": {
+    "id": "mask-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "NUFLARE の電子ビーム描画装置",
+      "JEOL の電子ビーム・フォトマスク関連装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、フォトマスク描画と関連プロセスの装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-MASK-02",
+      "file": "assets/img/mask-02.jpg",
+      "ratio": "4-3",
+      "alt": "電子ビーム描画装置の外観と真空チャンバー。白色光の下で精密機構のディテールが見える様子",
+      "caption": "電子ビーム描画装置の外観と真空チャンバー。精密機構のディテール"
+    }
+  },
+  "services": {
+    "id": "mask-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付、防振環境の確認と立ち上げ調整",
+      "電子光学系と真空システムの保守点検",
+      "フォトマスクのプロセス技術導入",
+      "操作・保守要員の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "mask-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "LithoDreamer 生成型リソグラフィ／ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "生成型および逆リソグラフィの手法でマスクパターン補正を生成し、転写忠実度を高めます。",
+        "metric": "ベンチマーク指標：生成型手法で ILT の反復を高速化",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "MaxViT／U-Net",
+        "year": "（2026）",
+        "arch_note": "",
+        "text": "エンコーダ・デコーダ型の画像モデルで大規模なパターン領域を扱い、リスク領域を高速に特定します。",
+        "metric": "ベンチマーク指標：NGSPICE 比 10–30× 高速（原典の適用領域での値）",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "説明可能な GAT レイアウトホットスポット（ASP-DAC'26）",
+        "year": "",
+        "arch_note": "",
+        "text": "グラフアテンションネットワークにより、レイアウト段階でホットスポットを予測しマスク補正へ反映します。",
+        "metric": "ベンチマーク指標：画像手法比でメモリ 5–12× 削減",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "電子ビーム描画のデジタルツイン",
+        "year": "",
+        "arch_note": "",
+        "text": "描画ドーズ、近接効果、描画時間をシミュレートし、描画戦略を最適化します。",
+        "metric": "ベンチマーク指標：仮想検証で試し描画のコストを低減",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-MASK-03",
+      "file": "assets/img/mask-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：フォトマスクパターンの ILT 補正前後の比較と、ホットスポット予測の色分け表示",
+      "caption": "フォトマスクパターンの ILT 補正前後の比較とホットスポットの色分け表示"
+    }
+  },
+  "fit": {
+    "id": "mask-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "フォトマスク工場の新設や描画能力の増強",
+      "パターン忠実度と補正効率の向上が必要なプロジェクト",
+      "電子ビーム装置の移設と環境条件の再構築",
+      "研究機関が電子ビーム描画の実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-inspection.html",
+      "title": "ウェーハ検査・テスト"
+    },
+    "next": {
+      "href": "equipment-lithography.html",
+      "title": "リソグラフィ工程"
+    }
+  }
+}

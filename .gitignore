@@ -1,0 +1,25 @@
+# 建置產出 —— GitHub Actions 每次都重新產生，不進版控
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# 工具狀態
+.gstack/
+
+# 轉檔前的原始媒體檔庫（tools/optimize_media.py 自動搬入）。
+# 這些是本機保存用的原始檔，體積大且不會進 dist/；交付檔在 assets/img、
+# assets/video，那兩個目錄一定要進版控。
+assets/src/
+
+# 作業系統／編輯器雜物
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+._*
+*.swp
+*~
+.idea/
+.vscode/

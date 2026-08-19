@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "掩模版製程設備｜倍特爾科技集團",
+    "description": "倍特爾提供 NUFLARE 與 JEOL 掩模版製程設備的採購、銷售及維護，並導入 LithoDreamer／ILT、影像模型與電子束寫入數字孿生等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "掩模版製程"
+    }
+  ],
+  "hero": {
+    "id": "mask-hero",
+    "eyebrow": "MASK / RETICLE",
+    "title": "掩模版製程設備",
+    "title_lat": "Mask / Reticle",
+    "lead": "圖形品質的源頭，決定後段所有轉印結果。"
+  },
+  "banner_label": "掩模版照片",
+  "banner_media": {
+    "id": "IMG-MASK-01",
+    "file": "assets/img/mask-01.jpg",
+    "ratio": "16-9",
+    "alt": "光罩盒與石英掩模版特寫，表面反射細密圖形，暗場照明",
+    "caption": "光罩盒與石英掩模版特寫，表面反射細密圖形，暗場照明"
+  },
+  "scope": {
+    "id": "mask-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "NUFLARE 電子束寫入設備",
+      "JEOL 電子束與掩模版相關設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋掩模版寫入與相關製程設備。"
+    ],
+    "media": {
+      "id": "IMG-MASK-02",
+      "file": "assets/img/mask-02.jpg",
+      "ratio": "4-3",
+      "alt": "電子束寫入機台外觀與真空腔體，冷白光、精密機構細節",
+      "caption": "電子束寫入機台外觀與真空腔體，精密機構細節"
+    }
+  },
+  "services": {
+    "id": "mask-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝、防震環境確認與調試",
+      "電子光學系統與真空系統維護保養",
+      "掩模版製程技術導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "mask-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "LithoDreamer 生成式微影／ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "以生成與反演式方法產生掩模圖形修正，提升轉印保真度。",
+        "metric": "對標指標：以生成式方法加速 ILT 迭代",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "MaxViT／U-Net",
+        "year": "（2026）",
+        "arch_note": "",
+        "text": "以編碼解碼影像模型處理大尺度圖形場，快速定位風險區。",
+        "metric": "對標指標：較 NGSPICE 快 10–30×（原領域指標）",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "可解釋 GAT 佈局熱點（ASP-DAC'26）",
+        "year": "",
+        "arch_note": "",
+        "text": "以圖注意力網路於佈局階段預測熱點並回饋光罩修正。",
+        "metric": "對標指標：記憶體較影像法省 5–12×",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "電子束寫入數字孿生",
+        "year": "",
+        "arch_note": "",
+        "text": "模擬寫入劑量、鄰近效應與寫入時間，優化寫入策略。",
+        "metric": "對標指標：以虛擬驗證降低試寫成本",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-MASK-03",
+      "file": "assets/img/mask-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：光罩圖形與 ILT 修正前後對照，疊加熱點預測色塊",
+      "caption": "光罩圖形 ILT 修正前後對照與熱點色塊"
+    }
+  },
+  "fit": {
+    "id": "mask-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "掩模版廠建置或擴充寫入產能",
+      "需要提升圖形保真度與修正效率的專案",
+      "電子束設備移機與環境條件重建",
+      "研究機構建立電子束寫入能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-inspection.html",
+      "title": "晶圓檢測"
+    },
+    "next": {
+      "href": "equipment-lithography.html",
+      "title": "黃光段"
+    }
+  }
+}

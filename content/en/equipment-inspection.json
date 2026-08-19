@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Inspection & Test Equipment | BETTER",
+    "description": "ADVANTEST and LASERTEC inspection and test equipment with procurement, sales and maintenance, benchmarked against wafer map classification and e-beam review."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Inspection & Test"
+    }
+  ],
+  "hero": {
+    "id": "inspection-hero",
+    "eyebrow": "INSPECTION & TEST",
+    "title": "Inspection & test equipment",
+    "title_lat": "Wafer Inspection & Test",
+    "lead": "Metrology, defect inspection and electrical test across the whole line."
+  },
+  "banner_label": "Inspection bay photo",
+  "banner_media": {
+    "id": "IMG-INSP-01",
+    "file": "assets/img/insp-01.jpg",
+    "ratio": "16-9",
+    "alt": "Close-up of an inspection tool and its wafer load port, a wafer map on screen in cool blue light",
+    "caption": "Inspection tool and wafer load port, a wafer map on screen"
+  },
+  "scope": {
+    "id": "inspection-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "ADVANTEST semiconductor test equipment",
+      "LASERTEC inspection and metrology equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering electrical test and optical or laser inspection equipment."
+    ],
+    "media": {
+      "id": "IMG-INSP-02",
+      "file": "assets/img/insp-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close shot of a wafer map defect distribution on screen, colored points clustering into signature patterns",
+      "caption": "Wafer map defect distribution, colored points clustering into signature patterns"
+    }
+  },
+  "services": {
+    "id": "inspection-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, calibration and tuning",
+      "Optical system and test interface maintenance",
+      "Inspection and test flow setup",
+      "Data interpretation and operator training"
+    ]
+  },
+  "ai": {
+    "id": "inspection-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "G2LGAN + CNN",
+        "year": "(2025)",
+        "arch_note": "",
+        "text": "Two-stage GAN augmentation with MobileNetV2 handles class-imbalanced wafer map defect classification.",
+        "metric": "Benchmark metric: accuracy 98.39%, F1 93.01%",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "CNN-ESN",
+        "year": "(2026)",
+        "arch_note": "",
+        "text": "ResNet34 with an echo state network improves recognition robustness on noisy wafer maps.",
+        "metric": "Benchmark metric: 94.74% clean, 87.30% noisy",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "SEMVision H20",
+        "year": "(2025)",
+        "arch_note": "",
+        "text": "Deep learning image classification, trained continuously in the fab, speeds up e-beam defect review.",
+        "metric": "Benchmark metric: 3× review speed, deployed at 2nm/GAA customers",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "GPU real-time adaptive test",
+        "year": "",
+        "arch_note": "",
+        "text": "GPU-accelerated machine learning adapts the test flow in real time and shortens test time.",
+        "metric": "Benchmark metric: Blackwell production, test time down 25%",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "KGD and outlier detection (GPR, conformal prediction)",
+        "year": "",
+        "arch_note": "",
+        "text": "Spatial modeling and conformal prediction sharpen known good die screening and outlier detection.",
+        "metric": "Benchmark metric: outperforms DPAT, about 90% Vmin coverage guarantee",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "InF-ATPG",
+        "year": "(2025)",
+        "arch_note": "",
+        "text": "FFR partitioning combined with QGNN and DQN optimizes test pattern generation.",
+        "metric": "Benchmark metric: backtracks down 55.06%, UFP 0.50%",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-INSP-03",
+      "file": "assets/img/insp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: wafer map classification results beside a confidence bar chart",
+      "caption": "Wafer map classification results beside a confidence bar chart"
+    }
+  },
+  "fit": {
+    "id": "inspection-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Lines strengthening in-line defect detection and feedback",
+      "Test houses under test time and test cost pressure",
+      "Inspection tool relocation and optical recalibration",
+      "Research institutes building defect analysis capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cleaning.html",
+      "title": "Wafer Clean & Dry"
+    },
+    "next": {
+      "href": "equipment-mask.html",
+      "title": "Photomask"
+    }
+  }
+}

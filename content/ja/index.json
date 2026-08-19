@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "title": "先端半導体装置の調達と AI 統合｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER SCIENCE TECHNOLOGY GROUP は香港を拠点に、主要 9 プロセスの日系装置の調達、解体・据付・輸送、先端プロセス技術導入、人材育成を提供し、各工程に最先端 AI アーキテクチャを統合します。"
+  },
+
+  "breadcrumb": [],
+
+  "hero": {
+    "eyebrow": "SEMICONDUCTOR EQUIPMENT & AI",
+    "title_lines": ["先端半導体プロセスの", "統合パートナー"],
+    "lead": "主要 9 プロセスの装置調達、移設・輸送、技術導入、AI 統合。",
+    "sub": "香港を拠点に、日系主力装置ブランドと先端 AI 技術をつなぎます。",
+    "primary": { "label": "装置・サービスのご相談", "href": "contact.html" },
+    "secondary": { "label": "主要 9 プロセスを見る", "href": "equipment.html" },
+    "media": {
+      "id": "VID-HOME-01",
+      "file": "assets/video/home-01.mp4",
+      "poster": "assets/img/home-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "クリーンルーム内を横移動するカメラ。ウェーハ搬送ロボットと装置ドアが動作する様子",
+      "caption": "クリーンルームの横移動ロングショット：ウェーハ搬送ロボットと装置ドアの動作"
+    }
+  },
+
+  "stats": {
+    "aria_label": "サービス範囲の概要",
+    "entries": [
+      { "num": "9", "label": "つの主要プロセス領域" },
+      { "num": "16", "label": "社の日系主力装置ブランド" },
+      { "num": "5", "label": "つのコア事業" }
+    ]
+  },
+
+  "pillars": {
+    "eyebrow": "WHAT WE DO",
+    "title": "5 つのコア事業",
+    "lead": "装置からプロセスまで、人材から AI まで一貫してカバーします。",
+    "entries": [
+      {
+        "num": "01",
+        "title": "主要 9 プロセス装置の調達",
+        "text": "リソグラフィ、エッチング、CVD、ベーク、イオン注入、CMP、洗浄、検査、フォトマスクの 9 工程の装置調達・販売に対応します。",
+        "link_label": "装置・プロセス",
+        "href": "equipment.html"
+      },
+      {
+        "num": "02",
+        "title": "装置の解体・据付・輸送",
+        "text": "装置の解体、梱包、越境輸送、搬入位置決めから再据付まで、全工程の実行と調整を行います。",
+        "link_label": "サービス内容",
+        "href": "services.html#service-relocation"
+      },
+      {
+        "num": "03",
+        "title": "先端プロセス技術の導入",
+        "text": "生産ラインの目標に合わせて、プロセス条件の確立から装置の立ち上げ調整、量産移行までを支援し、導入期間を短縮します。",
+        "link_label": "サービス内容",
+        "href": "services.html#service-process"
+      },
+      {
+        "num": "04",
+        "title": "先端半導体人材の育成",
+        "text": "装置操作、保守点検、プロセス実務に応じた育成プログラムを設計し、お客様が自立して運用できる体制を築きます。",
+        "link_label": "サービス内容",
+        "href": "services.html#service-training"
+      },
+      {
+        "num": "05",
+        "title": "AI と先端製造の統合",
+        "text": "デジタルツイン、物理シミュレーション、生成型リソグラフィなどの最先端アーキテクチャをベンチマークし、各工程へ導入します。",
+        "link_label": "AI スマート製造",
+        "href": "ai.html"
+      }
+    ],
+    "media": {
+      "id": "IMG-HOME-01",
+      "file": "assets/img/home-01.jpg",
+      "ratio": "4-3",
+      "alt": "5 つのコア事業のイメージ：半導体工場設備の断面をアイソメトリックで表現した図",
+      "caption": "5 つのコア事業のイメージ：半導体工場設備の断面をアイソメトリックで表現"
+    }
+  },
+
+  "processes": {
+    "eyebrow": "NINE PROCESS AREAS",
+    "title": "主要 9 プロセスの装置",
+    "lead": "各工程に、日系主力ブランドと工程ごとの AI ベンチマークアーキテクチャを対応させています。",
+    "overview_link": { "label": "装置・プロセスの全体像を見る", "href": "equipment.html" },
+    "media": {
+      "id": "IMG-HOME-02",
+      "file": "assets/img/home-02.jpg",
+      "ratio": "4-3",
+      "alt": "9 分割で示したプロセスフロー図",
+      "caption": "9 分割のプロセスフロー図：フォトマスクから完成品までのウェーハの流れ"
+    },
+    "entries": [
+      {
+        "num": "01",
+        "title": "リソグラフィ工程",
+        "en": "Lithography",
+        "text": "露光装置とコータ／デベロッパ。線幅とパターン精度を決定します。",
+        "brands": ["NIKON", "CANON", "TEL", "DNS"],
+        "link_label": "装置を見る",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "エッチング工程",
+        "en": "Etch",
+        "text": "ドライ／プラズマエッチング装置。限界寸法と側壁形状を制御します。",
+        "brands": ["TEL", "SAMCO"],
+        "link_label": "装置を見る",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "CVD（化学気相成長）",
+        "en": "Chemical Vapor Deposition",
+        "text": "薄膜成膜装置。膜厚の均一性とステップカバレッジを制御します。",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "MATSUSHITA"],
+        "link_label": "装置を見る",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "ベーク／熱処理工程",
+        "en": "Thermal / Bake",
+        "text": "炉およびホットプレート装置。熱バジェットとバッチ間の再現性を管理します。",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "TAZMO"],
+        "link_label": "装置を見る",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "イオン注入",
+        "en": "Ion Implantation",
+        "text": "ドーピング濃度と深さを制御し、デバイスの電気特性を左右します。",
+        "brands": ["ULVAC", "NISSIN"],
+        "link_label": "装置を見る",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP（化学機械研磨）",
+        "en": "Chemical Mechanical Polishing",
+        "text": "平坦化・薄化装置。積層構造の歩留まりと平坦度を維持します。",
+        "brands": ["EBARA", "ACCRETECH"],
+        "link_label": "装置を見る",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "ウェーハ洗浄",
+        "en": "Wafer Cleaning",
+        "text": "洗浄・乾燥装置。パーティクルと化学残渣による欠陥を抑制します。",
+        "brands": ["DNS", "TEL"],
+        "link_label": "装置を見る",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "ウェーハ検査・テスト",
+        "en": "Wafer Inspection & Test",
+        "text": "計測、欠陥検査、電気特性テストの装置。",
+        "brands": ["ADVANTEST", "LASERTEC"],
+        "link_label": "装置を見る",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "フォトマスク工程",
+        "en": "Mask / Reticle",
+        "text": "電子ビーム描画とマスク検査の装置。上流でパターン品質を決定します。",
+        "brands": ["NUFLARE", "JEOL"],
+        "link_label": "装置を見る",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "上記ブランドの装置について、BETTER が調達、販売および保守サービスを提供します。ブランド名はそれぞれの所有者の商標であり、装置の説明を目的として表示しています。"
+  },
+
+  "ai": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "すべての工程に最先端 AI を導入",
+    "lead": "デジタルツイン、物理シミュレーション、生成型リソグラフィを 3 つの軸とします。",
+    "paragraphs": [
+      "BETTER は、産業界と学術界が公開した最先端アーキテクチャを、主要 9 プロセスの実運用を想定してベンチマークしています。",
+      "以下に挙げるアーキテクチャはいずれも第三者の研究成果であり、BETTER が導入とベンチマークの基準としています。"
+    ],
+    "cta": { "label": "AI スマート製造を見る", "href": "ai.html" },
+    "media": {
+      "id": "IMG-HOME-03",
+      "file": "assets/img/home-03.jpg",
+      "ratio": "4-3",
+      "alt": "抽象的なデータビジュアライゼーション：ウェーハ熱分布の等高線とセンサー時系列カーブの重ね合わせ",
+      "caption": "ウェーハ熱分布の等高線とセンサー時系列カーブの重ね合わせ"
+    },
+    "pillars": [
+      {
+        "title": "デジタルツイン",
+        "title_lat": "Digital Twin",
+        "text": "装置とプロセスの仮想モデルを構築し、条件変更や保守計画をモデル上で事前に検証します。"
+      },
+      {
+        "title": "物理解析",
+        "title_lat": "Physics Simulation",
+        "text": "プラズマ、熱伝導、イオン輸送などの物理モデルでプロセス挙動を予測し、テストウェーハと試作回数を削減します。"
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer / ILT",
+        "text": "生成型の手法でリソグラフィパターンと逆リソグラフィ補正を扱い、光近接効果の最適化を加速します。"
+      }
+    ],
+    "table": {
+      "scroll_label": "AI ベンチマークアーキテクチャの例。左右にスクロールできます",
+      "caption": "AI ベンチマークアーキテクチャの例：アーキテクチャ（年）、ベンチマーク指標、適用プロセス",
+      "columns": ["アーキテクチャ（年）", "ベンチマーク指標", "適用プロセス"],
+      "rows": [
+        {
+          "model": "DeepOHeat-v1（2025）",
+          "metric": "MAPE 0.035%、学習時間 -62×",
+          "process": "CVD（化学気相成長）、ベーク／熱処理工程"
+        },
+        {
+          "model": "TSMC スマート製造 RNN 時系列 FDC＋連合学習",
+          "metric": "予測精度 約 92%、流出率 -15%",
+          "process": "エッチング工程、CMP（化学機械研磨）"
+        },
+        {
+          "model": "G2LGAN＋CNN（2025）",
+          "metric": "Accuracy 98.39%、F1 93.01%",
+          "process": "ウェーハ検査・テスト"
+        }
+      ],
+      "note": "本表は第三者の学術界および産業界が公開したアーキテクチャと定量結果であり、BETTER が導入・ベンチマークする基準です。BETTER 自身の測定データではありません。"
+    }
+  },
+
+  "why": {
+    "eyebrow": "WHY BETTER",
+    "title": "BETTER が選ばれる理由",
+    "lead": "装置、プロセス、人材、AI の 4 領域をひとつの窓口でカバーします。",
+    "media": {
+      "id": "IMG-HOME-04",
+      "file": "assets/img/home-04.jpg",
+      "ratio": "4-3",
+      "alt": "装置の前でデータダッシュボードを確認するエンジニアチームの横顔のシルエット",
+      "caption": "装置の前でデータダッシュボードを確認するエンジニアチームの横顔のシルエット"
+    },
+    "entries": [
+      {
+        "title": "日系主力ブランド網羅",
+        "text": "主要 9 プロセスの各工程に日系主力装置ブランドを対応させ、工程を横断した比較と一体の導入計画が可能です。"
+      },
+      {
+        "title": "調達から据付まで一貫",
+        "text": "調達、受入検査、解体、梱包、輸送、搬入、据付、立ち上げ調整を同一チームが統括します。"
+      },
+      {
+        "title": "技術導入と人材育成",
+        "text": "装置の納入にとどまらず、プロセス条件の確立と操作・保守の育成を支援し、立ち上げ期間を短縮します。"
+      },
+      {
+        "title": "AI 統合力",
+        "text": "デジタルツイン、物理シミュレーション、欠陥モデルをベンチマークして導入し、歩留まりと稼働管理を強化します。"
+      }
+    ]
+  }
+}

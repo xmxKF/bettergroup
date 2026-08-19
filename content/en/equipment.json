@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "title": "Equipment & Process Overview | BETTER",
+    "description": "Nine main process areas: lithography, etch, CVD, bake, ion implantation, CMP, wafer cleaning, inspection and photomask, each mapped to Japanese brands."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes"
+    }
+  ],
+  "hero": {
+    "eyebrow": "EQUIPMENT & PROCESS",
+    "title": "Equipment across nine process areas",
+    "lead": "Every area maps to leading Japanese brands and its own AI benchmark architectures."
+  },
+  "banner_label": "Equipment row photo",
+  "banner_media": {
+    "id": "IMG-EQP-01",
+    "file": "assets/img/eqp-01.jpg",
+    "ratio": "16-9",
+    "alt": "Perspective photo of a row of process tools in a cleanroom at the boundary of the yellow and white light bays, warm and cool contrast, symmetrical composition",
+    "caption": "Row of process tools at the boundary of the yellow and white light bays"
+  },
+  "flow": {
+    "eyebrow": "PROCESS FLOW",
+    "title": "How the areas connect",
+    "lead": "",
+    "paragraphs": [
+      "Wafer fabrication is a repeating cycle of stacked layers. The pattern is first formed on the photomask, then transferred to the wafer in lithography.",
+      "Etch defines the structure, CVD deposits thin films, bake controls the thermal budget, and ion implantation sets doping and electrical behavior.",
+      "CMP handles planarization, wafer cleaning suppresses particles and residue, and inspection runs through the whole line to provide feedback.",
+      "The nine areas feed one another, and variation in any one is amplified through the stack, so equipment and data strategy has to be consistent."
+    ],
+    "media": {
+      "id": "IMG-EQP-02",
+      "file": "assets/img/eqp-02.jpg",
+      "ratio": "4-3",
+      "alt": "Cyclic flow diagram of the nine process areas: thin-line icons arranged in a ring, with photomask as the starting point and inspection as the feedback loop",
+      "caption": "Cyclic flow diagram of the nine process areas, photomask through inspection"
+    }
+  },
+  "processes": {
+    "eyebrow": "NINE AREAS",
+    "title": "Equipment by process area",
+    "lead": "Select any area to see its equipment scope, services and AI integration.",
+    "entries": [
+      {
+        "num": "01",
+        "title": "Photolithography",
+        "en": "Lithography",
+        "text": "Procurement, sales and maintenance of exposure tools and coat and develop tracks.",
+        "brands": [
+          "NIKON",
+          "CANON",
+          "TEL",
+          "DNS"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "Dry & Plasma Etch",
+        "en": "Etch",
+        "text": "Procurement, sales and maintenance of etch equipment.",
+        "brands": [
+          "TEL",
+          "SAMCO"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "CVD",
+        "en": "Chemical Vapor Deposition",
+        "text": "Procurement, sales and maintenance of CVD equipment.",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "MATSUSHITA"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "Bake & Thermal",
+        "en": "Thermal / Bake",
+        "text": "Procurement, sales and maintenance of bake and thermal equipment.",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "TAZMO"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "Ion Implant",
+        "en": "Ion Implantation",
+        "text": "Procurement, sales and maintenance of ion implantation equipment.",
+        "brands": [
+          "ULVAC",
+          "NISSIN"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP",
+        "en": "Chemical Mechanical Polishing",
+        "text": "Procurement, sales and maintenance of CMP equipment.",
+        "brands": [
+          "EBARA",
+          "ACCRETECH"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "Wafer Clean & Dry",
+        "en": "Wafer Cleaning",
+        "text": "Procurement, sales and maintenance of wafer cleaning equipment.",
+        "brands": [
+          "DNS",
+          "TEL"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "Inspection & Test",
+        "en": "Wafer Inspection & Test",
+        "text": "Procurement, sales and maintenance of inspection and test equipment.",
+        "brands": [
+          "ADVANTEST",
+          "LASERTEC"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "Photomask",
+        "en": "Mask / Reticle",
+        "text": "Procurement, sales and maintenance of photomask equipment.",
+        "brands": [
+          "NUFLARE",
+          "JEOL"
+        ],
+        "link_label": "View equipment",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "BETTER provides procurement, sales and maintenance services for the equipment brands listed above. Brand names are trademarks of their respective owners and are used for equipment identification only."
+  },
+  "gallery_media": {
+    "id": "IMG-EQP-03",
+    "file": "assets/img/eqp-03.jpg",
+    "ratio": "21-9",
+    "alt": "Top-down wafer close-up: the surface refracts a rainbow spectrum against a dark background, echoing the brand spectrum colors",
+    "caption": "Top-down wafer close-up: the surface refracts a rainbow spectrum"
+  },
+  "services": {
+    "eyebrow": "SERVICE COVERAGE",
+    "title": "Services included in every area",
+    "lead": "",
+    "features": [
+      "Procurement and tool selection",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation and tuning",
+      "Maintenance and spare parts planning",
+      "Process technology transfer",
+      "Operation and maintenance training",
+      "AI integration"
+    ]
+  }
+}

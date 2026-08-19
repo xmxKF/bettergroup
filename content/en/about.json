@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "About | BETTER",
+    "description": "BETTER SCIENCE TECHNOLOGY GROUP is based in Kowloon, Hong Kong, covering equipment procurement, relocation, process transfer, training and AI integration."
+  },
+
+  "breadcrumb": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "About" }
+  ],
+
+  "hero": {
+    "eyebrow": "ABOUT BETTER",
+    "title": "Hong Kong semiconductor equipment group",
+    "lead": "Serving advanced manufacturing along four lines: equipment, process, people and AI."
+  },
+
+  "intro": {
+    "eyebrow": "WHO WE ARE",
+    "title": "Who we are",
+    "lead": "",
+    "paragraphs": [
+      "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED (倍特爾科技集團有限公司) operates from Hong Kong.",
+      "We focus on procurement and sales of equipment for the nine main process areas, and provide de-installation, installation and cross-border shipping.",
+      "Beyond equipment, we also take on advanced process technology transfer and semiconductor talent training projects.",
+      "We combine artificial intelligence with advanced manufacturing equipment and deploy it in real use cases across every process area."
+    ],
+    "features_label": "Who we serve",
+    "features": [
+      "Wafer fabs and advanced packaging and test plants",
+      "Research institutes and university laboratory lines",
+      "Buyers and sellers in the used and refurbished equipment market",
+      "New line projects under construction or expansion"
+    ],
+    "media": {
+      "id": "IMG-ABOUT-01",
+      "file": "assets/img/about-01.jpg",
+      "ratio": "3-4",
+      "alt": "Cool-toned photograph of the Hong Kong skyline and a modern commercial building facade",
+      "caption": "Hong Kong skyline and a modern commercial building facade"
+    }
+  },
+
+  "mission": {
+    "eyebrow": "MISSION & VISION",
+    "title": "Mission and vision",
+    "lead": "",
+    "entries": [
+      {
+        "term": "Mission: make advanced process equipment easier to obtain, to run well and to keep running.",
+        "desc": "We combine equipment procurement, relocation, transfer and training into a single process, lowering the barrier and the time cost of bringing up a line."
+      },
+      {
+        "term": "Vision: lead the integration of artificial intelligence and advanced manufacturing equipment.",
+        "desc": "Using frontier AI architectures as our benchmark, we keep bringing verifiable intelligence into every process area."
+      }
+    ],
+    "media": {
+      "id": "IMG-ABOUT-02",
+      "file": "assets/img/about-02.jpg",
+      "ratio": "4-3",
+      "alt": "Minimal abstract visual: a wafer and data nodes joined by hairlines",
+      "caption": "Wafer and data nodes joined by hairlines"
+    }
+  },
+
+  "leadership": {
+    "eyebrow": "LEADERSHIP",
+    "title": "Company principal",
+    "lead": "",
+    "paragraphs": [
+      "The principal sets the overall business direction of the group. Equipment procurement and client engagement run through a single point of contact, so nothing is lost in handovers between departments."
+    ],
+    "card": {
+      "title": "Kerwin Su (蘇益宏)",
+      "role": "Principal",
+      "text": "Responsible for overall business direction, equipment procurement and client engagement."
+    }
+  },
+
+  "scope": {
+    "eyebrow": "BUSINESS SCOPE",
+    "title": "Business scope",
+    "lead": "",
+    "features": [
+      "Procurement and sales of equipment for nine process areas",
+      "De-installation, packing, shipping and on-site installation",
+      "Equipment maintenance and tuning support",
+      "Advanced process technology transfer",
+      "Semiconductor talent training",
+      "AI combined with advanced manufacturing equipment"
+    ]
+  },
+
+  "our_values": {
+    "eyebrow": "OUR VALUES",
+    "title": "What we stand for",
+    "lead": "",
+    "entries": [
+      {
+        "title": "Expertise",
+        "text": "We read equipment through process practice. Selection and tuning start from your line targets, not from catalog specifications."
+      },
+      {
+        "title": "Completeness",
+        "text": "From procurement to installation and from technology to people, responsibility is not split, so no gaps open at the interfaces."
+      },
+      {
+        "title": "Foresight",
+        "text": "We benchmark against published, verifiable frontier AI architectures and keep our deployment methods current."
+      }
+    ],
+    "media": {
+      "id": "IMG-ABOUT-04",
+      "file": "assets/img/about-04.jpg",
+      "ratio": "16-9",
+      "alt": "Top-down view of a meeting room table with equipment specification documents and a notebook",
+      "caption": "Top-down meeting room table: equipment specifications and a notebook"
+    }
+  },
+
+  "headquarters": {
+    "eyebrow": "HEADQUARTERS",
+    "title": "Our Hong Kong base",
+    "lead": "",
+    "media": {
+      "id": "IMG-ABOUT-03",
+      "file": "assets/img/about-03.jpg",
+      "ratio": "21-9",
+      "alt": "Simplified line-art map abstracting the street blocks around Jordan, Kowloon",
+      "caption": "Line-art map of the Jordan, Kowloon street blocks with a single marker"
+    }
+  }
+}

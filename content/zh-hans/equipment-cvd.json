@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "化学气相沉积设备｜倍特尔科技集团",
+    "description": "倍特尔提供 KOKUSAI ELECTRIC (KE) 与 MATSUSHITA 化学气相沉积设备的采购、销售及维护，并导入 DeepOHeat-v1 热场代理与腔体数字孪生等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "化学气相沉积"
+    }
+  ],
+  "hero": {
+    "id": "cvd-hero",
+    "eyebrow": "CVD",
+    "title": "化学气相沉积设备",
+    "title_lat": "Chemical Vapor Deposition",
+    "lead": "控制膜厚均匀性与台阶覆盖的薄膜沉积段。"
+  },
+  "banner_label": "炉管设备照片",
+  "banner_media": {
+    "id": "IMG-CVD-01",
+    "file": "assets/img/cvd-01.jpg",
+    "ratio": "16-9",
+    "alt": "立式炉管设备外观，管路与加热段层次分明，冷白光、极简构图",
+    "caption": "立式炉管设备外观，管路与加热段层次分明，冷白光、极简构图"
+  },
+  "scope": {
+    "id": "cvd-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) 化学气相沉积设备",
+      "MATSUSHITA 化学气相沉积设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖批式与单片式薄膜沉积设备。"
+    ],
+    "media": {
+      "id": "IMG-CVD-02",
+      "file": "assets/img/cvd-02.jpg",
+      "ratio": "4-3",
+      "alt": "晶舟载入炉管的瞬间特写，多片晶圆整齐排列，暖白背光",
+      "caption": "晶舟载入炉管的瞬间特写，多片晶圆整齐排列，暖白背光"
+    }
+  },
+  "services": {
+    "id": "cvd-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、气体管路接驳与调试",
+      "维护保养与耗材备件规划",
+      "薄膜工艺技术导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "cvd-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "以 DeepONet＋KAN 建立热场代理模型，快速推算腔体与晶圆热分布。",
+        "metric": "对标指标：MAPE 0.035%、训练 -62×、内存 -31×",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "以 Encoder-Decoder CNN 推算温度轮廓与电热耦合影响。",
+        "metric": "对标指标：平均 IR 误差 0.053mV",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "腔体数字孪生",
+        "year": "",
+        "arch_note": "",
+        "text": "建立沉积腔体虚拟对照体，仿真气流、温度与膜厚均匀性。",
+        "metric": "对标指标：以虚拟验证缩短条件建立周期",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-CVD-03",
+      "file": "assets/img/cvd-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：晶圆热场等高线与膜厚均匀性色阶图，深蓝底、光谱色阶",
+      "caption": "AI 可视化：晶圆热场等高线与膜厚均匀性色阶图，深蓝底、光谱色阶"
+    }
+  },
+  "fit": {
+    "id": "cvd-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "需要提升膜厚均匀性与批次一致性的产线",
+      "新增薄膜工艺能力的扩产项目",
+      "炉管设备移机与重新验证",
+      "研究机构建立薄膜沉积实验能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-etch.html",
+      "title": "刻蚀段"
+    },
+    "next": {
+      "href": "equipment-bake.html",
+      "title": "热处理（烘烤）"
+    }
+  }
+}

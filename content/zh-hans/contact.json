@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "联系我们｜倍特尔科技集团",
+    "description": "联系倍特尔科技集团有限公司，地址位于香港九龙佐敦佐敦道5号至秀商业大厦10楼，联系人苏益宏（Kerwin），欢迎咨询设备采购、拆装机运输、工艺导入与 AI 整合。"
+  },
+
+  "breadcrumb": [
+    { "label": "首页", "href": "index.html" },
+    { "label": "联系我们" }
+  ],
+
+  "hero": {
+    "eyebrow": "CONTACT",
+    "title": "联系倍特尔",
+    "lead": "告诉我们您的产线需求，由统一对接窗口协助后续安排。"
+  },
+
+  "info": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "联系信息",
+    "lead": "",
+    "entries": [
+      { "title": "联系人", "text": "苏益宏（Kerwin），公司负责人", "variant": "keep" },
+      { "title": "电子邮件", "text": "kerwin@bettertechgroup.com", "variant": "mailto" },
+      { "title": "公司地址", "text": "香港九龙佐敦佐敦道5号至秀商业大厦10楼", "variant": "keep" }
+    ],
+    "media": {
+      "id": "IMG-CONTACT-02",
+      "file": "assets/img/contact-02.jpg",
+      "ratio": "21-9",
+      "alt": "现代办公空间会议场景的冷色调照片，桌面摊开设备规格文件",
+      "caption": "现代办公空间会议场景冷色调照片，无可辨识人脸"
+    }
+  },
+
+  "enquiry": {
+    "eyebrow": "ENQUIRY",
+    "title": "需求咨询",
+    "lead": "填写后将以电子邮件形式发送至我们的邮箱。",
+    "aside_label": "其他联系方式",
+    "side_card": {
+      "title": "直接来信",
+      "text": "不使用表单也可以，直接发邮件给我们，由统一对接窗口回复。",
+      "person": "联系人：苏益宏（Kerwin）"
+    },
+    "side_notes": {
+      "title": "填写前可先看",
+      "entries": [
+        { "label": "倍特尔是这些品牌的授权代理吗？", "href": "#faq-agency" },
+        { "label": "是否可协助二手设备的评估与采购？", "href": "#faq-used" },
+        { "label": "导入 AI 是否需要更换现有设备？", "href": "#faq-ai" }
+      ]
+    }
+  },
+
+  "location": {
+    "eyebrow": "LOCATION",
+    "title": "办公室位置",
+    "lead": "",
+    "paragraphs": [
+      "香港九龙佐敦佐敦道5号至秀商业大厦10楼，邻近佐敦一带商业区。"
+    ],
+    "media": {
+      "id": "IMG-CONTACT-01",
+      "file": "assets/img/contact-01.jpg",
+      "ratio": "21-9",
+      "alt": "风格化地图：九龙佐敦街区以极简线稿呈现，单一标记点指向办公大楼",
+      "caption": "九龙佐敦街区极简线稿地图，单一标记点"
+    }
+  },
+
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "常见问题",
+    "lead": "",
+    "entries": [
+      {
+        "id": "faq-agency",
+        "question": "倍特尔是这些品牌的授权代理吗？",
+        "answers": [
+          "不是。本公司并非上述品牌的原厂授权代理商或指定经销商；我们提供这些日系品牌设备的采购、销售及维护服务。网站所列品牌名称为其所有权人商标，仅供设备说明之用。"
+        ]
+      },
+      {
+        "id": "faq-used",
+        "question": "是否可协助二手设备的评估与采购？",
+        "answers": [
+          "可以。我们提供机型比较、设备状态查验与验机协助，并可承接后续拆机、运输与复装。"
+        ]
+      },
+      {
+        "id": "faq-ai",
+        "question": "导入 AI 是否需要更换现有设备？",
+        "answers": [
+          "不一定。多数场景以现有设备的传感、量测与检测数据为基础导入，导入前会先评估数据可获得性。"
+        ]
+      },
+      {
+        "id": "",
+        "question": "培训可以在客户现场进行吗？",
+        "answers": [
+          "可以。培训内容按客户团队能力与设备配置设计，可安排理论课程与设备实操。"
+        ]
+      }
+    ]
+  },
+
+  "divider_media": {
+    "id": "IMG-CONTACT-03",
+    "file": "assets/img/contact-03.jpg",
+    "ratio": "21-9",
+    "decorative": true,
+    "alt": "深蓝底上的细线光谱渐变横纹",
+    "caption": "深蓝底上的细线光谱渐变横纹"
+  }
+}

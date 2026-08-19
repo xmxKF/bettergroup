@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "title": "先進半導體設備採購與 AI 整合｜倍特爾科技集團",
+    "description": "倍特爾科技集團為香港半導體設備服務商，提供九大主製程日系設備採購、拆裝機運送、先進製程技術導入、人才培訓，並整合前沿人工智能架構於各段製程。"
+  },
+
+  "breadcrumb": [],
+
+  "hero": {
+    "eyebrow": "SEMICONDUCTOR EQUIPMENT & AI",
+    "title_lines": ["先進半導體製程的", "整合夥伴"],
+    "lead": "九大主製程設備採購、拆裝運送、技術導入與 AI 整合。",
+    "sub": "以香港為據點，串接日系主力設備品牌與前沿人工智能架構。",
+    "primary": { "label": "洽詢設備與服務", "href": "contact.html" },
+    "secondary": { "label": "瀏覽九大製程", "href": "equipment.html" },
+    "media": {
+      "id": "VID-HOME-01",
+      "file": "assets/video/home-01.mp4",
+      "poster": "assets/img/home-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "無塵室環境橫移鏡頭，晶圓傳輸機械手臂與設備艙門運作",
+      "caption": "無塵室橫移長鏡頭：晶圓傳輸機械手臂與設備艙門運作"
+    }
+  },
+
+  "stats": {
+    "aria_label": "服務範圍概要",
+    "entries": [
+      { "num": "9", "label": "大主製程設備段" },
+      { "num": "16", "label": "個日系主力設備品牌" },
+      { "num": "5", "label": "項核心業務" }
+    ]
+  },
+
+  "pillars": {
+    "eyebrow": "WHAT WE DO",
+    "title": "五大核心業務",
+    "lead": "從設備到製程、從人才到人工智能的完整覆蓋。",
+    "entries": [
+      {
+        "num": "01",
+        "title": "九大主製程設備採購",
+        "text": "涵蓋黃光、蝕刻、CVD、烘烤、離子植入、CMP、水洗、檢測、掩模版九大段設備的採購與銷售。",
+        "link_label": "設備與製程",
+        "href": "equipment.html"
+      },
+      {
+        "num": "02",
+        "title": "拆裝機及運送服務",
+        "text": "提供設備拆機、包裝、跨境運送、進場定位與重新安裝的全流程執行與協調。",
+        "link_label": "服務內容",
+        "href": "services.html#service-relocation"
+      },
+      {
+        "num": "03",
+        "title": "先進製程技術導入",
+        "text": "依據產線目標協助製程條件建立、機台調試與量產轉換，縮短導入週期。",
+        "link_label": "服務內容",
+        "href": "services.html#service-process"
+      },
+      {
+        "num": "04",
+        "title": "先進半導體人才培訓",
+        "text": "針對設備操作、維護保養與製程實務規劃培訓內容，建立客戶自主維運能力。",
+        "link_label": "服務內容",
+        "href": "services.html#service-training"
+      },
+      {
+        "num": "05",
+        "title": "AI 與先進製造整合",
+        "text": "將數字孿生、物理仿真與生成式微影等前沿架構對標導入各段製程。",
+        "link_label": "AI 智慧製造",
+        "href": "ai.html"
+      }
+    ],
+    "media": {
+      "id": "IMG-HOME-01",
+      "file": "assets/img/home-01.jpg",
+      "ratio": "4-3",
+      "alt": "五大業務示意：半導體廠務剖面等距構圖",
+      "caption": "五大業務示意：半導體廠務剖面等距構圖"
+    }
+  },
+
+  "processes": {
+    "eyebrow": "NINE PROCESS AREAS",
+    "title": "九大主製程設備",
+    "lead": "每一段製程都對應日系主力品牌與專屬 AI 對標架構。",
+    "overview_link": { "label": "查看設備與製程總覽", "href": "equipment.html" },
+    "media": {
+      "id": "IMG-HOME-02",
+      "file": "assets/img/home-02.jpg",
+      "ratio": "4-3",
+      "alt": "九宮格製程流程示意圖",
+      "caption": "九宮格製程流程示意圖：晶圓由光罩到成品的流轉"
+    },
+    "entries": [
+      {
+        "num": "01",
+        "title": "黃光段",
+        "en": "Lithography",
+        "text": "曝光、旋塗與顯影設備，決定線寬與圖形精度。",
+        "brands": ["NIKON", "CANON", "TEL", "DNS"],
+        "link_label": "查看設備",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "蝕刻段",
+        "en": "Etch",
+        "text": "乾式與電漿蝕刻設備，掌握關鍵尺寸與側壁形貌。",
+        "brands": ["TEL", "SAMCO"],
+        "link_label": "查看設備",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "化學氣相沉積",
+        "en": "Chemical Vapor Deposition",
+        "text": "薄膜沉積設備，控制膜厚均勻度與階梯覆蓋。",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "MATSUSHITA"],
+        "link_label": "查看設備",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "烘烤製程",
+        "en": "Thermal / Bake",
+        "text": "爐管與熱盤設備，管理熱預算與批次一致性。",
+        "brands": ["KOKUSAI ELECTRIC (KE)", "TAZMO"],
+        "link_label": "查看設備",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "離子植入",
+        "en": "Ion Implantation",
+        "text": "摻雜濃度與深度控制，決定元件電性表現。",
+        "brands": ["ULVAC", "NISSIN"],
+        "link_label": "查看設備",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP 研磨",
+        "en": "Chemical Mechanical Polishing",
+        "text": "平坦化與減薄設備，維持疊層良率與平整度。",
+        "brands": ["EBARA", "ACCRETECH"],
+        "link_label": "查看設備",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "晶圓水洗",
+        "en": "Wafer Cleaning",
+        "text": "清洗與乾燥設備，抑制顆粒與化學殘留缺陷。",
+        "brands": ["DNS", "TEL"],
+        "link_label": "查看設備",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "晶圓檢測",
+        "en": "Wafer Inspection & Test",
+        "text": "量測、缺陷檢測與電性測試設備。",
+        "brands": ["ADVANTEST", "LASERTEC"],
+        "link_label": "查看設備",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "掩模版製程",
+        "en": "Mask / Reticle",
+        "text": "電子束寫入與掩模檢查設備，源頭決定圖形品質。",
+        "brands": ["NUFLARE", "JEOL"],
+        "link_label": "查看設備",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "上列品牌設備由倍特爾提供採購、銷售及維護服務；品牌名稱為其各自所有權人之商標，僅供設備說明之用。"
+  },
+
+  "ai": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "每一段製程都導入前沿 AI",
+    "lead": "以數字孿生、物理仿真與生成式微影為三大貫穿主軸。",
+    "paragraphs": [
+      "倍特爾將產業與學界公開的前沿架構，對標到九大製程的實際使用場景。",
+      "以下架構為第三方研究成果，作為倍特爾導入與對標的技術基準。"
+    ],
+    "cta": { "label": "了解 AI 智慧製造", "href": "ai.html" },
+    "media": {
+      "id": "IMG-HOME-03",
+      "file": "assets/img/home-03.jpg",
+      "ratio": "4-3",
+      "alt": "抽象資料視覺化：晶圓熱場等高線與感測時序曲線疊合",
+      "caption": "晶圓熱場等高線與感測時序曲線疊合"
+    },
+    "pillars": [
+      {
+        "title": "數字孿生",
+        "title_lat": "Digital Twin",
+        "text": "為機台與製程建立虛擬對照體，於模型中先行驗證條件變更與維護排程。"
+      },
+      {
+        "title": "物理仿真",
+        "title_lat": "Physics Simulation",
+        "text": "以電漿、熱傳、離子傳輸等物理模型推算製程行為，減少試片與試跑次數。"
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer / ILT",
+        "text": "以生成式方法處理微影圖形與反演式微影修正，加速光學鄰近效應優化。"
+      }
+    ],
+    "table": {
+      "scroll_label": "AI 對標架構範例，可左右捲動",
+      "caption": "AI 對標架構範例：架構（年份）、對標指標與應用製程",
+      "columns": ["架構（年份）", "對標指標", "應用製程"],
+      "rows": [
+        {
+          "model": "DeepOHeat-v1（2025）",
+          "metric": "MAPE 0.035%、訓練時間 -62×",
+          "process": "化學氣相沉積、烘烤製程"
+        },
+        {
+          "model": "TSMC 智慧製造 RNN 時序 FDC ＋ 聯邦學習",
+          "metric": "約 92% 預測準確率、逃逸率 -15%",
+          "process": "蝕刻段、CMP 研磨"
+        },
+        {
+          "model": "G2LGAN＋CNN（2025）",
+          "metric": "Accuracy 98.39%、F1 93.01%",
+          "process": "晶圓檢測"
+        }
+      ],
+      "note": "本表為第三方學術與業界公開發表之架構與量化結果，係倍特爾導入與對標之基準，非倍特爾自有量測數據。"
+    }
+  },
+
+  "why": {
+    "eyebrow": "WHY BETTER",
+    "title": "選擇倍特爾的理由",
+    "lead": "一個窗口，覆蓋設備、製程、人才與 AI 四個面向。",
+    "media": {
+      "id": "IMG-HOME-04",
+      "file": "assets/img/home-04.jpg",
+      "ratio": "4-3",
+      "alt": "工程團隊在機台前檢視資料看板的側面剪影",
+      "caption": "工程團隊於機台前檢視資料看板的側面剪影"
+    },
+    "entries": [
+      {
+        "title": "日系主力品牌覆蓋",
+        "text": "九大製程逐段對應日系主力設備品牌，選型時可跨段比較與整合規劃。"
+      },
+      {
+        "title": "一站式採購到裝機",
+        "text": "採購、驗機、拆機、包裝、運送、進場、安裝與調試由同一團隊統籌。"
+      },
+      {
+        "title": "製程導入與培訓",
+        "text": "不只交付機台，並協助製程條件建立與操作維護培訓，縮短爬坡期。"
+      },
+      {
+        "title": "AI 整合能力",
+        "text": "以數字孿生、物理仿真與缺陷模型對標導入，強化良率與稼動管理。"
+      }
+    ]
+  }
+}

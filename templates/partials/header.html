@@ -1,0 +1,41 @@
+{% from "partials/lang-switcher.html" import lang_switcher %}
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="{{ asset_prefix }}{{ common.brand.logo }}" width="36" height="36" alt="{{ common.brand.logo_alt }}" fetchpriority="high">
+      <span>
+        <span class="brand__name">{{ common.brand.name_primary }}</span>
+        <span class="brand__en">{{ common.brand.name_secondary }}</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="{{ common.a11y.nav_label }}">
+      <ul class="nav__list">
+        {%- for item in common.nav.entries %}
+        <li><a class="nav__link" href="{{ item.href }}" data-nav="{{ item.href }}"{% if item.match %} data-nav-match="{{ item.match }}"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+      {{ lang_switcher(langs, lang, page_output, common) }}
+      <a class="btn btn--secondary btn--sm" href="{{ common.nav.cta.href }}">{{ common.nav.cta.label }}</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
+            aria-label="{{ common.a11y.nav_open }}" data-label-open="{{ common.a11y.nav_open }}" data-label-close="{{ common.a11y.nav_close }}">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-nav-panel>
+    <div class="container">
+      <ul class="mobile-nav__list">
+        {%- for item in common.nav.entries %}
+        <li><a class="mobile-nav__link" href="{{ item.href }}" data-nav="{{ item.href }}"{% if item.match %} data-nav-match="{{ item.match }}"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+      {{ lang_switcher(langs, lang, page_output, common, 'mobile') }}
+      <div class="mobile-nav__cta">
+        <a class="btn btn--primary" href="{{ common.nav.mobile_cta.href }}">{{ common.nav.mobile_cta.label }}</a>
+      </div>
+    </div>
+  </div>
+</header>

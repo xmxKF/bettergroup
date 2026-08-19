@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CMP 研磨設備｜倍特爾科技集團",
+    "description": "倍特爾提供 EBARA 與 ACCRETECH CMP 研磨設備的採購、銷售及維護，並導入研磨物理仿真、XGBoost 良率預測與時序 FDC 等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CMP 研磨"
+    }
+  ],
+  "hero": {
+    "id": "cmp-hero",
+    "eyebrow": "CMP",
+    "title": "CMP 研磨設備",
+    "title_lat": "Chemical Mechanical Polishing",
+    "lead": "維持疊層平坦度與減薄品質的平坦化段。"
+  },
+  "banner_label": "CMP 研磨照片",
+  "banner_media": {
+    "id": "IMG-CMP-01",
+    "file": "assets/img/cmp-01.jpg",
+    "ratio": "16-9",
+    "alt": "CMP 研磨盤與研磨頭運轉特寫，研磨液流動、濕潤金屬表面反光",
+    "caption": "CMP 研磨盤與研磨頭運轉特寫，研磨液流動、濕潤金屬表面反光"
+  },
+  "scope": {
+    "id": "cmp-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "EBARA CMP 研磨設備",
+      "ACCRETECH CMP 與晶圓加工設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋平坦化研磨與晶圓減薄設備。"
+    ],
+    "media": {
+      "id": "IMG-CMP-02",
+      "file": "assets/img/cmp-02.jpg",
+      "ratio": "4-3",
+      "alt": "研磨後晶圓的鏡面表面特寫，反射環境線條，展現平坦度",
+      "caption": "研磨後晶圓鏡面表面特寫，反射環境線條"
+    }
+  },
+  "services": {
+    "id": "cmp-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝、水路與排廢接續及調試",
+      "研磨頭、墊材與耗材維護規劃",
+      "平坦化製程條件導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "cmp-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "研磨物理仿真",
+        "year": "",
+        "arch_note": "",
+        "text": "建模壓力分布、去除率與墊材磨耗，推算晶圓內移除均勻度。",
+        "metric": "對標指標：以仿真收斂研磨條件視窗",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "PDF Exensio",
+        "year": "（2025）",
+        "arch_note": "XGBoost＋PCA",
+        "text": "整合缺陷、計量、電測與 FDC 資料，預測 die 與晶圓良率。",
+        "metric": "對標指標：可調閾值平衡 overkill／underkill",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "TSMC 智慧製造 RNN 時序 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "以研磨機台感測時序偵測異常趨勢與良率影響因子。",
+        "metric": "對標指標：約 92%（28–3nm）、逃逸率 -15%",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-CMP-03",
+      "file": "assets/img/cmp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：晶圓移除率分布圖與良率預測指標卡並置",
+      "caption": "晶圓移除率分布圖與良率預測指標卡並置"
+    }
+  },
+  "fit": {
+    "id": "cmp-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "多層金屬互連需要嚴格平坦度控制",
+      "先進封裝晶圓減薄需求",
+      "CMP 設備移機與水路重建",
+      "研究機構建立平坦化實驗能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-implant.html",
+      "title": "離子植入"
+    },
+    "next": {
+      "href": "equipment-cleaning.html",
+      "title": "晶圓水洗"
+    }
+  }
+}

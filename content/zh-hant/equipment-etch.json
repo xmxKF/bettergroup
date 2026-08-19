@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "蝕刻段設備｜倍特爾科技集團",
+    "description": "倍特爾提供 TEL 與 SAMCO 蝕刻設備的採購、銷售及維護，並導入電漿物理仿真、腔體數字孿生與時序 FDC 良率根因等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "蝕刻段"
+    }
+  ],
+  "hero": {
+    "id": "etch-hero",
+    "eyebrow": "ETCH",
+    "title": "蝕刻段設備",
+    "title_lat": "Etch",
+    "lead": "定義結構尺寸與側壁形貌的關鍵段。"
+  },
+  "banner_label": "蝕刻機台照片",
+  "banner_media": {
+    "id": "IMG-ETCH-01",
+    "file": "assets/img/etch-01.jpg",
+    "ratio": "16-9",
+    "alt": "蝕刻機台外觀與腔體觀察窗透出的電漿輝光，暗色環境、紫紅光暈",
+    "caption": "蝕刻機台外觀與腔體觀察窗透出的電漿輝光，暗色環境、紫紅光暈"
+  },
+  "scope": {
+    "id": "etch-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "TEL 半導體蝕刻設備",
+      "SAMCO 半導體蝕刻設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋乾式與電漿蝕刻機台配置。"
+    ],
+    "media": {
+      "id": "IMG-ETCH-02",
+      "file": "assets/img/etch-02.jpg",
+      "ratio": "4-3",
+      "alt": "電漿蝕刻腔體內部視角：晶圓承載盤與均勻輝光，科學攝影風格",
+      "caption": "電漿蝕刻腔體內部視角：晶圓承載盤與均勻輝光，科學攝影風格"
+    }
+  },
+  "services": {
+    "id": "etch-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝與製程調試",
+      "腔體維護保養與耗材規劃",
+      "蝕刻製程技術導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "etch-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "電漿物理仿真＋腔體數字孿生",
+        "year": "",
+        "arch_note": "",
+        "text": "以物理模型推算電漿分布與蝕刻速率，於虛擬腔體先行驗證條件。",
+        "metric": "對標指標：以仿真降低試片與試跑次數",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "TSMC 智慧製造 RNN 時序 FDC＋聯邦學習",
+        "year": "",
+        "arch_note": "",
+        "text": "以設備感測時序預測良率影響缺陷，跨廠協作而不共享原始資料。",
+        "metric": "對標指標：約 92%（28–3nm）、逃逸率 -15%",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "終點偵測（Endpoint Detection）模型",
+        "year": "",
+        "arch_note": "",
+        "text": "以光譜與時序訊號判定蝕刻終點，抑制過蝕與欠蝕。",
+        "metric": "對標指標：以時序模型提升終點判定一致性",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-ETCH-03",
+      "file": "assets/img/etch-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：電漿模擬等值面與感測時序曲線並置，深色背景、光譜色曲線",
+      "caption": "AI 視覺化：電漿模擬等值面與感測時序曲線並置，深色背景、光譜色曲線"
+    }
+  },
+  "fit": {
+    "id": "etch-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "關鍵尺寸控制需求提升的產線",
+      "化合物半導體與先進封裝蝕刻需求",
+      "移機後需重建蝕刻條件的廠區",
+      "研究機構建立蝕刻實驗能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-lithography.html",
+      "title": "黃光段"
+    },
+    "next": {
+      "href": "equipment-cvd.html",
+      "title": "化學氣相沉積"
+    }
+  }
+}

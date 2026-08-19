@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "ベーク／熱処理工程の装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は KOKUSAI ELECTRIC (KE)・TAZMO のベーク・熱処理装置の調達、販売および保守を提供し、熱シミュレーションのサロゲートモデル、温度プロファイル推定、バッチ熱処理のデジタルツインなどの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "ベーク／熱処理工程"
+    }
+  ],
+  "hero": {
+    "id": "bake-hero",
+    "eyebrow": "THERMAL / BAKE",
+    "title": "ベーク／熱処理工程の装置",
+    "title_lat": "Thermal / Bake",
+    "lead": "熱バジェットとバッチ間の再現性を管理する熱処理工程です。"
+  },
+  "banner_label": "ホットプレートモジュールの写真",
+  "banner_media": {
+    "id": "IMG-BAKE-01",
+    "file": "assets/img/bake-01.jpg",
+    "ratio": "16-9",
+    "alt": "ホットプレートとクールプレートのモジュールが並ぶ装置の上面図。金属表面と熱放射の質感、寒色調",
+    "caption": "ホットプレートとクールプレートのモジュールが並ぶ装置の上面図。金属表面と熱放射の質感、寒色調"
+  },
+  "scope": {
+    "id": "bake-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) のベーク・熱処理装置",
+      "TAZMO のベーク・熱処理装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、ホットプレートモジュールとバッチ式熱処理装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-BAKE-02",
+      "file": "assets/img/bake-02.jpg",
+      "ratio": "4-3",
+      "alt": "ホットプレート上のウェーハのクローズアップ。表面の熱ゆらぎと微細なハロー",
+      "caption": "ホットプレート上のウェーハのクローズアップ。表面の熱ゆらぎと微細なハロー"
+    }
+  },
+  "services": {
+    "id": "bake-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付と温度均一性の立ち上げ調整",
+      "加熱モジュールの保守点検と予備品の計画",
+      "熱プロセス条件の導入",
+      "操作・保守要員の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "bake-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "物理情報を用いて学習した熱シミュレーションのサロゲートモデルで、ホットプレートとウェーハの温度場を高速に予測します。",
+        "metric": "ベンチマーク指標：MAPE 0.035%、学習 -62×",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "時間変化する消費電力と加熱分布から温度プロファイルを算出し、熱の不均一な領域を特定します。",
+        "metric": "ベンチマーク指標：平均 IR 誤差 0.053mV",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "バッチ熱処理のデジタルツイン",
+        "year": "",
+        "arch_note": "",
+        "text": "バッチの昇降温カーブとウェーハボート位置の差異をシミュレーションし、熱バジェットの配分を最適化します。",
+        "metric": "ベンチマーク指標：仮想検証で熱バジェット調整の試行回数を削減",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-BAKE-03",
+      "file": "assets/img/bake-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：ウェーハ温度プロファイルのヒートマップと昇降温カーブを並置。暗い背景に暖色・寒色の二色階調",
+      "caption": "AI ビジュアライゼーション：ウェーハ温度プロファイルのヒートマップと昇降温カーブを並置。暗い背景に暖色・寒色の二色階調"
+    }
+  },
+  "fit": {
+    "id": "bake-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "レジストベークと熱処理の再現性要求が高い生産ライン",
+      "熱バジェットに制約のある先端ノードのプロセス",
+      "熱処理装置の移設と再校正",
+      "研究機関が熱プロセスの実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cvd.html",
+      "title": "CVD（化学気相成長）"
+    },
+    "next": {
+      "href": "equipment-implant.html",
+      "title": "イオン注入"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{#
+  Language switcher — DESIGN.md §6.1b
+  Renders the same page in every generated language. Labels are language-invariant
+  (繁 / 简 / EN / 日) and come from common.languages.<code>.label; the accessible
+  name comes from common.languages.<code>.name (translated).
+  variant: "" (header, desktop) | "mobile" (inside the mobile nav panel)
+#}
+{% macro lang_switcher(langs, current, page_output, common, variant='') -%}
+<nav class="lang-switch{% if variant %} lang-switch--{{ variant }}{% endif %}" aria-label="{{ common.lang_switcher.aria_label }}">
+  {%- for l in langs %}
+  {%- set meta = common.languages[l.code] %}
+  <a class="lang-switch__item" href="../{{ l.code }}/{{ page_output }}" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}"{% if l.code == current %} aria-current="true"{% endif %} title="{{ meta.name }}"><span aria-hidden="true">{{ meta.label }}</span><span class="visually-hidden">{{ meta.name }}</span></a>
+  {%- endfor %}
+</nav>
+{%- endmacro %}

@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "晶圆检测设备｜倍特尔科技集团",
+    "description": "倍特尔提供 ADVANTEST 与 LASERTEC 晶圆检测与测试设备的采购、销售及维护，并导入 G2LGAN＋CNN 晶圆图缺陷分类、e-beam 复检与 GPU 自适应测试等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "晶圆检测"
+    }
+  ],
+  "hero": {
+    "id": "inspection-hero",
+    "eyebrow": "INSPECTION & TEST",
+    "title": "晶圆检测设备",
+    "title_lat": "Wafer Inspection & Test",
+    "lead": "贯穿全线的量测、缺陷检测与电性测试。"
+  },
+  "banner_label": "晶圆检测照片",
+  "banner_media": {
+    "id": "IMG-INSP-01",
+    "file": "assets/img/insp-01.jpg",
+    "ratio": "16-9",
+    "alt": "检测设备与晶圆装载端特写，屏幕上显示晶圆图，冷蓝色调",
+    "caption": "检测设备与晶圆装载端特写，屏幕上显示晶圆图"
+  },
+  "scope": {
+    "id": "inspection-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "ADVANTEST 半导体测试设备",
+      "LASERTEC 检测与量测设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖电性测试与光学／激光检测设备。"
+    ],
+    "media": {
+      "id": "IMG-INSP-02",
+      "file": "assets/img/insp-02.jpg",
+      "ratio": "4-3",
+      "alt": "晶圆图缺陷分布可视化贴近屏幕拍摄，色点聚集形成特征图案",
+      "caption": "晶圆图缺陷分布可视化，色点聚集形成特征图案"
+    }
+  },
+  "services": {
+    "id": "inspection-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、校准与调试",
+      "光学系统与测试接口维护保养",
+      "检测与测试流程导入",
+      "数据解读与操作培训"
+    ]
+  },
+  "ai": {
+    "id": "inspection-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "G2LGAN＋CNN",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "两阶段 GAN 增强配合 MobileNetV2，处理类别不平衡的晶圆图缺陷分类。",
+        "metric": "对标指标：Accuracy 98.39%、F1 93.01%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "CNN-ESN",
+        "year": "（2026）",
+        "arch_note": "",
+        "text": "ResNet34 结合回声状态网络，提升含噪声晶圆图的识别鲁棒性。",
+        "metric": "对标指标：干净 94.74%、噪声 87.30%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "SEMVision H20",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "以产线持续训练的深度学习图像分类加速 e-beam 缺陷复检。",
+        "metric": "对标指标：3× 复检速度、已导入 2nm/GAA 客户",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "GPU 实时自适应测试",
+        "year": "",
+        "arch_note": "",
+        "text": "以 GPU 加速机器学习在测试流程中实时调整，缩短测试时间。",
+        "metric": "对标指标：Blackwell 量产：测试时间 -25%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "KGD／离群检测（GPR、共形预测）",
+        "year": "",
+        "arch_note": "",
+        "text": "以空间建模与共形预测提升已知良品判定与离群检测。",
+        "metric": "对标指标：优于 DPAT；Vmin 约 90% 覆盖保证",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "InF-ATPG",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "以 FFR 划分结合 QGNN 与 DQN 优化测试图形生成。",
+        "metric": "对标指标：回溯 -55.06%、UFP 0.50%",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-INSP-03",
+      "file": "assets/img/insp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：晶圆图缺陷分类结果与置信度柱状图并置",
+      "caption": "晶圆图缺陷分类结果与置信度柱状图并置"
+    }
+  },
+  "fit": {
+    "id": "inspection-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "需要强化在线缺陷检测与反馈的产线",
+      "测试时间与测试成本压力大的封测厂",
+      "检测设备移机与光学重新校准",
+      "研究机构建立缺陷分析能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cleaning.html",
+      "title": "晶圆清洗"
+    },
+    "next": {
+      "href": "equipment-mask.html",
+      "title": "掩模版工艺"
+    }
+  }
+}

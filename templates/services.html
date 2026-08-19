@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, section_header with context %}
+{% from "partials/breadcrumb.html" import breadcrumb %}
+{% from "partials/cta-band.html" import cta_band %}
+{% macro steps(items, classes) -%}
+<ol class="steps{% if classes %} {{ classes }}{% endif %}">
+            {%- for s in items %}
+            <li class="steps__item">
+              <span class="steps__dot" aria-hidden="true"></span>
+              <p class="steps__num">{{ s.num }}</p>
+              <p class="steps__title">{{ s.title }}</p>
+              <p class="steps__text">{{ s.text }}</p>
+            </li>
+            {%- endfor %}
+          </ol>
+{%- endmacro %}
+{% block main %}
+
+  <!-- ===================== 3.1 HERO（亮帶） ===================== -->
+  <section class="hero-light" id="services-hero">
+    <div class="container">
+      {{ breadcrumb(page.breadcrumb, common.a11y.breadcrumb_label) }}
+      <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+      <h1>{{ page.hero.title }}</h1>
+      <p class="lead">{{ page.hero.lead }}</p>
+    </div>
+  </section>
+
+  <!-- ===================== Hero 主視覺 ===================== -->
+  <section class="section section--tight" aria-label="{{ page.banner_label }}">
+    <div class="container container--wide">
+      {{ media_img(page.banner_media, asset_prefix, 'reveal') }}
+    </div>
+  </section>
+
+  <!-- ===================== 3.2–3.6 五大服務 ===================== -->
+  {%- for s in page.services %}
+
+  <section class="section {{ 'section--line' if loop.index is odd else 'section--alt' }}" id="{{ s.id }}">
+    <div class="container">
+
+      {{ section_header(s) }}
+
+      <div class="split split--top">
+        <div class="reveal">
+          <h3>{{ page.labels.features }}</h3>
+          <ul class="feature-list mt-4">
+            {%- for f in s.features %}
+            <li>{{ f }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="reveal reveal--d1">
+          <h3>{{ page.labels.steps }}</h3>
+          {{ steps(s.steps, 'mt-4') }}
+        </div>
+      </div>
+
+      <div class="mt-12 reveal">
+        <h3>{{ page.labels.outcomes }}</h3>
+        <ul class="feature-list feature-list--3 mt-4">
+          {%- for o in s.outcomes %}
+          <li>{{ o }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- if s.media %}
+
+      {{ media_img(s.media, asset_prefix, 'mt-12 reveal') }}
+      {%- endif %}
+      {%- if s.note %}
+
+      <p class="note mt-8 reveal">{{ s.note.before }}<a class="link" href="{{ s.note.link.href }}">{{ s.note.link.label }}</a>{{ s.note.after }}</p>
+      {%- endif %}
+      {%- if s.cta %}
+
+      <p class="btn-row mt-10 reveal">
+        <a class="arrow-link" href="{{ s.cta.href }}">{{ s.cta.label }}</a>
+      </p>
+      {%- endif %}
+
+    </div>
+  </section>
+  {%- endfor %}
+
+  <!-- ===================== 3.7 服務流程時間軸 ===================== -->
+  <section class="section section--major section--alt" id="service-flow">
+    <div class="container">
+
+      {{ section_header(page.flow) }}
+
+      <div class="split split--7-5 split--top">
+        {{ steps(page.flow.steps, 'reveal') }}
+
+        <div class="reveal reveal--d1">
+          {{ media_img(page.flow.media, asset_prefix) }}
+        </div>
+      </div>
+
+      {{ media_img(page.closing_media, asset_prefix, 'mt-12 reveal') }}
+
+    </div>
+  </section>
+
+  <!-- ===================== 3.8 聯絡條（共用 CTA 帶） ===================== -->
+  {{ cta_band(common.cta_band) }}
+
+{% endblock %}

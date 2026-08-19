@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "title": "设备与工艺总览｜倍特尔科技集团",
+    "description": "倍特尔覆盖光刻、刻蚀、化学气相沉积、热处理、离子注入、CMP、晶圆清洗、晶圆检测与掩模版九大主工艺段设备，逐段对应日系主力品牌与前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺"
+    }
+  ],
+  "hero": {
+    "eyebrow": "EQUIPMENT & PROCESS",
+    "title": "九大主工艺段设备总览",
+    "lead": "每一道工艺段对应日系主力品牌与专属 AI 对标架构。"
+  },
+  "banner_label": "成排设备照片",
+  "banner_media": {
+    "id": "IMG-EQP-01",
+    "file": "assets/img/eqp-01.jpg",
+    "ratio": "16-9",
+    "alt": "洁净室中一整排工艺设备的透视照片，黄光区与白光区交界，冷暖对比、构图对称",
+    "caption": "洁净室中一整排工艺设备的透视照片，黄光区与白光区交界，冷暖对比、构图对称"
+  },
+  "flow": {
+    "eyebrow": "PROCESS FLOW",
+    "title": "工艺如何衔接",
+    "lead": "",
+    "paragraphs": [
+      "晶圆制造是重复循环的叠层过程，图形先在掩模版上成形，再由光刻段转印到晶圆。",
+      "刻蚀定义结构，CVD 沉积薄膜，热处理控制热预算，离子注入决定掺杂与电性。",
+      "CMP 负责平坦化，晶圆清洗抑制颗粒与残留，检测则贯穿全线提供反馈。",
+      "九大工艺段互为上下游，任一段的波动都会沿着叠层放大，因此需要一致的设备与数据策略。"
+    ],
+    "media": {
+      "id": "IMG-EQP-02",
+      "file": "assets/img/eqp-02.jpg",
+      "ratio": "4-3",
+      "alt": "九大工艺段循环流程图：环形排列的细线图示，标示掩模版为起点、检测为反馈回路",
+      "caption": "九大工艺段循环流程图：环形排列的细线图示，标示掩模版为起点、检测为反馈回路"
+    }
+  },
+  "processes": {
+    "eyebrow": "NINE AREAS",
+    "title": "九大工艺段设备",
+    "lead": "点击任一工艺段，查看设备范围、服务内容与 AI 整合。",
+    "entries": [
+      {
+        "num": "01",
+        "title": "光刻（黄光）",
+        "en": "Lithography",
+        "text": "光刻机与涂胶显影设备的采购、销售及维护。",
+        "brands": [
+          "NIKON",
+          "CANON",
+          "TEL",
+          "DNS"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-lithography.html"
+      },
+      {
+        "num": "02",
+        "title": "刻蚀段",
+        "en": "Etch",
+        "text": "刻蚀设备的采购、销售及维护。",
+        "brands": [
+          "TEL",
+          "SAMCO"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-etch.html"
+      },
+      {
+        "num": "03",
+        "title": "化学气相沉积",
+        "en": "Chemical Vapor Deposition",
+        "text": "CVD 设备的采购、销售及维护。",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "MATSUSHITA"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-cvd.html"
+      },
+      {
+        "num": "04",
+        "title": "热处理（烘烤）",
+        "en": "Thermal / Bake",
+        "text": "烘烤与热处理设备的采购、销售及维护。",
+        "brands": [
+          "KOKUSAI ELECTRIC (KE)",
+          "TAZMO"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-bake.html"
+      },
+      {
+        "num": "05",
+        "title": "离子注入",
+        "en": "Ion Implantation",
+        "text": "离子注入设备的采购、销售及维护。",
+        "brands": [
+          "ULVAC",
+          "NISSIN"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-implant.html"
+      },
+      {
+        "num": "06",
+        "title": "CMP 化学机械抛光",
+        "en": "Chemical Mechanical Polishing",
+        "text": "CMP 抛光设备的采购、销售及维护。",
+        "brands": [
+          "EBARA",
+          "ACCRETECH"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-cmp.html"
+      },
+      {
+        "num": "07",
+        "title": "晶圆清洗",
+        "en": "Wafer Cleaning",
+        "text": "清洗设备的采购、销售及维护。",
+        "brands": [
+          "DNS",
+          "TEL"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "num": "08",
+        "title": "晶圆检测",
+        "en": "Wafer Inspection & Test",
+        "text": "检测与测试设备的采购、销售及维护。",
+        "brands": [
+          "ADVANTEST",
+          "LASERTEC"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-inspection.html"
+      },
+      {
+        "num": "09",
+        "title": "掩模版工艺",
+        "en": "Mask / Reticle",
+        "text": "掩模版设备的采购、销售及维护。",
+        "brands": [
+          "NUFLARE",
+          "JEOL"
+        ],
+        "link_label": "查看设备",
+        "href": "equipment-mask.html"
+      }
+    ],
+    "brand_note": "上述品牌设备由倍特尔提供采购、销售及维护服务；品牌名称为其各自所有权人之商标，仅供设备说明之用。"
+  },
+  "gallery_media": {
+    "id": "IMG-EQP-03",
+    "file": "assets/img/eqp-03.jpg",
+    "ratio": "21-9",
+    "alt": "晶圆特写俯视：晶圆表面折射出彩虹光谱，深色背景，呼应品牌光谱色",
+    "caption": "晶圆特写俯视：晶圆表面折射出彩虹光谱，深色背景，呼应品牌光谱色"
+  },
+  "services": {
+    "eyebrow": "SERVICE COVERAGE",
+    "title": "每一段都包含的服务",
+    "lead": "",
+    "features": [
+      "采购与选型评估",
+      "拆机、包装与跨境运输",
+      "进场安装与调试",
+      "维护保养与备件规划",
+      "工艺技术导入",
+      "操作与维护培训",
+      "AI 整合导入"
+    ]
+  }
+}

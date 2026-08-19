@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Bake & Thermal Equipment | BETTER",
+    "description": "KOKUSAI ELECTRIC (KE) and TAZMO bake and thermal equipment, benchmarked against thermal surrogate models and batch thermal process digital twins."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Bake & Thermal"
+    }
+  ],
+  "hero": {
+    "id": "bake-hero",
+    "eyebrow": "THERMAL / BAKE",
+    "title": "Bake & thermal equipment",
+    "title_lat": "Thermal / Bake",
+    "lead": "Thermal processing that manages thermal budget and batch consistency."
+  },
+  "banner_label": "Hot plate module photo",
+  "banner_media": {
+    "id": "IMG-BAKE-01",
+    "file": "assets/img/bake-01.jpg",
+    "ratio": "16-9",
+    "alt": "Top view of hot plate and chill plate modules in a row, metal surfaces with a sense of radiated heat, cool tones",
+    "caption": "Hot plate and chill plate modules in a row, seen from above"
+  },
+  "scope": {
+    "id": "bake-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) bake and thermal equipment",
+      "TAZMO bake and thermal equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering hot plate modules and batch thermal equipment."
+    ],
+    "media": {
+      "id": "IMG-BAKE-02",
+      "file": "assets/img/bake-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close-up of a wafer on a hot plate, with surface heat shimmer and a faint halo",
+      "caption": "Wafer on a hot plate, with surface heat shimmer"
+    }
+  },
+  "services": {
+    "id": "bake-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation and temperature uniformity tuning",
+      "Heater module maintenance and spare parts planning",
+      "Thermal process condition setup",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "bake-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "(2025)",
+        "arch_note": "",
+        "text": "A physics-informed thermal surrogate model quickly predicts hot plate and wafer temperature fields.",
+        "metric": "Benchmark metric: MAPE 0.035%, training 62× faster",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "Time-varying power and heating distribution predict temperature contours and locate thermal non-uniformity.",
+        "metric": "Benchmark metric: average IR error 0.053 mV",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Batch thermal process digital twin",
+        "year": "",
+        "arch_note": "",
+        "text": "Simulates batch ramp profiles and wafer boat position differences to optimize thermal budget allocation.",
+        "metric": "Benchmark metric: virtual validation lowers thermal budget trial cost",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-BAKE-03",
+      "file": "assets/img/bake-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: a wafer temperature contour heat map beside ramp-up and ramp-down curves on a dark background with a warm-cool color scale",
+      "caption": "Wafer temperature contour heat map beside ramp-up and ramp-down curves"
+    }
+  },
+  "fit": {
+    "id": "bake-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Lines needing consistent photoresist bake and thermal steps",
+      "Advanced node processes with a constrained thermal budget",
+      "Thermal equipment relocation and recalibration",
+      "Research institutes building thermal process capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cvd.html",
+      "title": "CVD"
+    },
+    "next": {
+      "href": "equipment-implant.html",
+      "title": "Ion Implant"
+    }
+  }
+}

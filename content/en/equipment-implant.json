@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Ion Implant Equipment | BETTER",
+    "description": "ULVAC and NISSIN ion implantation equipment, benchmarked against Monte Carlo dopant simulation, Bayesian PINN uncertainty and GPR spatial modeling."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Ion Implant"
+    }
+  ],
+  "hero": {
+    "id": "implant-hero",
+    "eyebrow": "ION IMPLANTATION",
+    "title": "Ion implant equipment",
+    "title_lat": "Ion Implantation",
+    "lead": "The critical area for dopant concentration, depth and electrical performance."
+  },
+  "banner_label": "Ion implanter photo",
+  "banner_media": {
+    "id": "IMG-IMP-01",
+    "file": "assets/img/imp-01.jpg",
+    "ratio": "16-9",
+    "alt": "Exterior of the long beamline of an ion implanter, emphasizing the industrial geometry of the piping and magnet sections",
+    "caption": "Long beamline of an ion implanter, piping and magnet sections"
+  },
+  "scope": {
+    "id": "implant-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "ULVAC ion implantation equipment",
+      "NISSIN ion implantation equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering ion implanters across different energy ranges."
+    ],
+    "media": {
+      "id": "IMG-IMP-02",
+      "file": "assets/img/imp-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close-up of the beamline and wafer end station, with the blue ion beam path shown as a visualization",
+      "caption": "Beamline and wafer end station with the ion beam path visualized"
+    }
+  },
+  "services": {
+    "id": "implant-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, beam calibration and tuning",
+      "Ion source and vacuum system maintenance",
+      "Doping process condition setup",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "implant-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "Monte Carlo dopant profile simulation",
+        "year": "",
+        "arch_note": "",
+        "text": "Ion transport physics models predict dopant concentration profiles and channeling effects.",
+        "metric": "Benchmark metric: simulated profiles reduce destructive verification",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "BPINN-EM-Post",
+        "year": "(2025)",
+        "arch_note": "Bayesian PINN approach",
+        "text": "Combines physics residuals with observations to quantify uncertainty intervals in process predictions.",
+        "metric": "Benchmark metric: overcomes PINN overfitting, supports multiple segments",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "GPR spatial modeling (KGD / outlier detection)",
+        "year": "",
+        "arch_note": "",
+        "text": "Gaussian processes model wafer-level parameter distributions and detect spatial outliers.",
+        "metric": "Benchmark metric: outperforms DPAT, about 90% Vmin coverage guarantee",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-IMP-03",
+      "file": "assets/img/imp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: simulated wafer dopant concentration profiles with uncertainty bands on a dark background in spectrum colors",
+      "caption": "Simulated wafer dopant concentration profiles with uncertainty bands"
+    }
+  },
+  "fit": {
+    "id": "implant-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Advanced device processes needing precise doping control",
+      "Power device and compound semiconductor lines",
+      "Implanter relocation and beam recalibration",
+      "Research institutes building doping capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-bake.html",
+      "title": "Bake & Thermal"
+    },
+    "next": {
+      "href": "equipment-cmp.html",
+      "title": "CMP"
+    }
+  }
+}

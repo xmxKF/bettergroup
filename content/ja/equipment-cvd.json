@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CVD（化学気相成長）装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は KOKUSAI ELECTRIC (KE)・MATSUSHITA の CVD 装置の調達、販売および保守を提供し、DeepOHeat-v1 の熱場サロゲートモデルやチャンバーのデジタルツインなどの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CVD（化学気相成長）"
+    }
+  ],
+  "hero": {
+    "id": "cvd-hero",
+    "eyebrow": "CVD",
+    "title": "CVD（化学気相成長）装置",
+    "title_lat": "Chemical Vapor Deposition",
+    "lead": "膜厚の均一性とステップカバレッジを制御する薄膜成膜工程です。"
+  },
+  "banner_label": "炉装置の写真",
+  "banner_media": {
+    "id": "IMG-CVD-01",
+    "file": "assets/img/cvd-01.jpg",
+    "ratio": "16-9",
+    "alt": "縦型炉装置の外観。配管と加熱部の層構造が明確で、寒色系の白色光とミニマルな構図",
+    "caption": "縦型炉装置の外観。配管と加熱部の層構造が明確で、寒色系の白色光とミニマルな構図"
+  },
+  "scope": {
+    "id": "cvd-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) の CVD 装置",
+      "MATSUSHITA の CVD 装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、バッチ式と枚葉式の薄膜成膜装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-CVD-02",
+      "file": "assets/img/cvd-02.jpg",
+      "ratio": "4-3",
+      "alt": "ウェーハボートを炉へ搬入する瞬間のクローズアップ。多数のウェーハが整然と並び、暖白色のバックライト",
+      "caption": "ウェーハボートを炉へ搬入する瞬間のクローズアップ。多数のウェーハが整然と並び、暖白色のバックライト"
+    }
+  },
+  "services": {
+    "id": "cvd-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付、ガス配管の接続と立ち上げ調整",
+      "保守点検と消耗品・予備品の計画",
+      "薄膜プロセスの技術導入",
+      "操作・保守要員の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "cvd-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "DeepONet＋KAN で熱場のサロゲートモデルを構築し、チャンバーとウェーハの熱分布を高速に算出します。",
+        "metric": "ベンチマーク指標：MAPE 0.035%、学習 -62×、メモリ -31×",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "Encoder-Decoder CNN で温度プロファイルと電熱連成の影響を算出します。",
+        "metric": "ベンチマーク指標：平均 IR 誤差 0.053mV",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "チャンバーのデジタルツイン",
+        "year": "",
+        "arch_note": "",
+        "text": "成膜チャンバーの仮想モデルを構築し、ガス流、温度、膜厚の均一性をシミュレーションします。",
+        "metric": "ベンチマーク指標：仮想検証でプロセス条件の確立期間を短縮",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-CVD-03",
+      "file": "assets/img/cvd-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：ウェーハ熱場の等高線と膜厚均一性のカラースケール図。濃紺の背景にスペクトルカラーの階調",
+      "caption": "AI ビジュアライゼーション：ウェーハ熱場の等高線と膜厚均一性のカラースケール図。濃紺の背景にスペクトルカラーの階調"
+    }
+  },
+  "fit": {
+    "id": "cvd-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "膜厚の均一性とバッチ間再現性の向上が必要な生産ライン",
+      "薄膜プロセス能力を新設する増産プロジェクト",
+      "炉装置の移設と再検証",
+      "研究機関が薄膜成膜の実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-etch.html",
+      "title": "エッチング工程"
+    },
+    "next": {
+      "href": "equipment-bake.html",
+      "title": "ベーク／熱処理工程"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{#
+  九個製程頁共用模板（equipment-lithography … equipment-mask）。
+  區塊順序固定：hero → 設備範圍 → 服務內容 → AI 整合 → 適用場景 → 翻頁 → CTA。
+  各區塊的錨點 id 來自 JSON（litho-scope / etch-scope …），四種語言一致。
+#}
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, section_header with context %}
+{% from "partials/breadcrumb.html" import breadcrumb %}
+{% from "partials/cta-band.html" import cta_band %}
+{% block main %}
+
+  <!-- ===================== HERO（亮帶） ===================== -->
+  <section class="hero-light" id="{{ page.hero.id }}">
+    <div class="container">
+      {{ breadcrumb(page.breadcrumb, common.a11y.breadcrumb_label) }}
+      <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+      <h1>{{ page.hero.title }}</h1>
+      <p class="lat muted small">{{ page.hero.title_lat }}</p>
+      <p class="lead">{{ page.hero.lead }}</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="{{ page.banner_label }}">
+    <div class="container">
+      {{ media_img(page.banner_media, asset_prefix, 'reveal') }}
+    </div>
+  </section>
+
+  <!-- ===================== 設備範圍 ===================== -->
+  <section class="section section--alt" id="{{ page.scope.id }}">
+    <div class="container">
+      <div class="split split--7-5 split--top">
+        <div class="reveal">
+          {{ section_header(page.scope, '', 'margin-bottom:var(--space-8)') }}
+          <ul class="feature-list">
+            {%- for f in page.scope.features %}
+            <li>{{ f }}</li>
+            {%- endfor %}
+          </ul>
+          {%- for p in page.scope.paragraphs %}
+          <p class="mt-6">{{ p }}</p>
+          {%- endfor %}
+        </div>
+        <div class="reveal reveal--d1">
+          {{ media_img(page.scope.media, asset_prefix) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 服務內容 ===================== -->
+  <section class="section" id="{{ page.services.id }}">
+    <div class="container">
+      {{ section_header(page.services) }}
+      <ul class="feature-list feature-list--3 reveal">
+        {%- for f in page.services.features %}
+        <li>{{ f }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== AI 整合 ===================== -->
+  <section class="section section--alt" id="{{ page.ai.id }}">
+    <div class="container">
+      {{ section_header(page.ai) }}
+
+      <div class="grid grid--3">
+        {%- for item in page.ai.entries %}
+        <article class="card card--ai {{ 'reveal' if loop.index0 % 3 == 0 else 'reveal reveal--d%d'|format(loop.index0 % 3) }}">
+          <p class="card__arch">{{ item.arch }}{% if item.year %} <span class="card__year">{{ item.year }}</span>{% endif %}{% if item.arch_note %} {{ item.arch_note }}{% endif %}</p>
+          <p class="card__text">{{ item.text }}</p>
+          <p class="card__meta">{{ item.metric }}</p>
+          <p class="card__foot"><span class="tag">{{ item.tag }}</span></p>
+        </article>
+        {%- endfor %}
+      </div>
+
+      {{ media_img(page.ai.media, asset_prefix, 'mt-12 reveal') }}
+    </div>
+  </section>
+
+  <!-- ===================== 適用場景 ===================== -->
+  <section class="section" id="{{ page.fit.id }}">
+    <div class="container">
+      {{ section_header(page.fit) }}
+      <ul class="feature-list feature-list--3 reveal">
+        {%- for f in page.fit.features %}
+        <li>{{ f }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 製程頁翻頁 ===================== -->
+  <nav class="pager" aria-label="{{ common.pager.aria_label }}">
+    <div class="container">
+      <div class="pager__row reveal">
+        <a class="pager__link pager__link--prev" href="{{ page.pager.prev.href }}">
+          <span class="pager__label">{{ common.pager.prev_label }}</span>
+          <span class="pager__title">{{ page.pager.prev.title }}</span>
+        </a>
+        <a class="pager__link pager__link--next" href="{{ page.pager.next.href }}">
+          <span class="pager__label">{{ common.pager.next_label }}</span>
+          <span class="pager__title">{{ page.pager.next.title }}</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== 聯絡條（主 CTA 改為「索取設備與服務說明」） ===================== -->
+  {{ cta_band({'eyebrow': common.cta_band.eyebrow,
+               'title': common.cta_band.title,
+               'lead': common.cta_band.lead,
+               'primary': common.shared_cta.process_page,
+               'secondary': common.cta_band.secondary}) }}
+
+{% endblock %}

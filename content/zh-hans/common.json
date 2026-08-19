@@ -1,0 +1,139 @@
+{
+  "site": {
+    "name": "倍特尔科技集团",
+    "legal_name": "倍特尔科技集团有限公司",
+    "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "address": "香港九龙佐敦佐敦道5号至秀商业大厦10楼",
+    "contact_person": "苏益宏（Kerwin）",
+    "email": "kerwin@bettertechgroup.com",
+    "copyright_year": "2026"
+  },
+
+  "brand": {
+    "logo": "assets/img/logo-96.png",
+    "logo_alt": "倍特尔科技集团有限公司",
+    "name_primary": "倍特尔科技集团",
+    "name_secondary": "Better Science Technology Group"
+  },
+
+  "languages": {
+    "zh-hant": { "label": "繁", "name": "繁体中文" },
+    "zh-hans": { "label": "简", "name": "简体中文" },
+    "en": { "label": "EN", "name": "English" },
+    "ja": { "label": "日", "name": "日本語" }
+  },
+
+  "lang_switcher": { "aria_label": "语言选择" },
+
+  "a11y": {
+    "skip_link": "跳至主要内容",
+    "nav_label": "主导航",
+    "breadcrumb_label": "面包屑导航",
+    "nav_open": "打开主菜单",
+    "nav_close": "关闭主菜单"
+  },
+
+  "media_ctrl": {
+    "pause": "暂停视频",
+    "play": "播放视频",
+    "pause_aria": "暂停背景视频",
+    "play_aria": "播放背景视频"
+  },
+
+  "nav": {
+    "entries": [
+      { "label": "首页", "href": "index.html", "match": "" },
+      { "label": "关于我们", "href": "about.html", "match": "" },
+      { "label": "服务项目", "href": "services.html", "match": "" },
+      {
+        "label": "设备与工艺",
+        "href": "equipment.html",
+        "match": "equipment.html equipment-lithography.html equipment-etch.html equipment-cvd.html equipment-bake.html equipment-implant.html equipment-cmp.html equipment-cleaning.html equipment-inspection.html equipment-mask.html"
+      },
+      { "label": "AI 智能制造", "href": "ai.html", "match": "" },
+      { "label": "联系我们", "href": "contact.html", "match": "" }
+    ],
+    "cta": { "label": "设备咨询", "href": "contact.html" },
+    "mobile_cta": { "label": "咨询设备与服务", "href": "contact.html" }
+  },
+
+  "footer": {
+    "brand_primary": "倍特尔科技集团有限公司",
+    "brand_secondary": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "desc": "先进半导体工艺设备采购、拆装机运输、技术导入与 AI 整合。",
+    "nav_title": "网站导航",
+    "process_title": "九大工艺段",
+    "contact_title": "联系方式",
+    "labels": { "address": "地址：", "email": "邮箱：", "person": "联系人：" },
+    "process_links": [
+      { "label": "光刻（黄光）", "href": "equipment-lithography.html" },
+      { "label": "刻蚀段", "href": "equipment-etch.html" },
+      { "label": "化学气相沉积", "href": "equipment-cvd.html" },
+      { "label": "热处理（烘烤）", "href": "equipment-bake.html" },
+      { "label": "离子注入", "href": "equipment-implant.html" },
+      { "label": "CMP 化学机械抛光", "href": "equipment-cmp.html" },
+      { "label": "晶圆清洗", "href": "equipment-cleaning.html" },
+      { "label": "晶圆检测", "href": "equipment-inspection.html" },
+      { "label": "掩模版工艺", "href": "equipment-mask.html" }
+    ],
+    "copyright": "© 2026 倍特尔科技集团有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版权所有。",
+    "trademark_note": "本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。"
+  },
+
+  "cta_band": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "与我们谈谈您的产线需求",
+    "lead": "从设备选型到装机与 AI 导入，提供统一对接窗口。",
+    "primary": { "label": "咨询设备与服务", "href": "contact.html" },
+    "secondary": {
+      "label": "kerwin@bettertechgroup.com",
+      "href": "mailto:kerwin@bettertechgroup.com"
+    }
+  },
+
+  "shared_cta": {
+    "primary": { "label": "咨询设备与服务", "href": "contact.html" },
+    "secondary": { "label": "浏览九大工艺段", "href": "equipment.html" },
+    "ai": { "label": "了解 AI 智能制造", "href": "ai.html" },
+    "services": { "label": "查看服务项目", "href": "services.html" },
+    "process_page": { "label": "索取设备与服务资料", "href": "contact.html" }
+  },
+
+  "pager": {
+    "prev_label": "上一工艺段",
+    "next_label": "下一工艺段",
+    "aria_label": "工艺页导航"
+  },
+
+  "form": {
+    "mailto": "kerwin@bettertechgroup.com",
+    "required_mark_aria": "必填",
+    "fields": {
+      "name": { "label": "姓名", "placeholder": "请输入您的姓名" },
+      "company": { "label": "公司", "placeholder": "公司或机构名称" },
+      "email": { "label": "Email", "placeholder": "your@company.com" },
+      "phone": { "label": "电话", "placeholder": "含国家区号，例如 +852" },
+      "category": { "label": "需求类别", "placeholder": "请选择需求类别" },
+      "message": { "label": "留言", "placeholder": "请简述工艺段、设备需求与时间计划" }
+    },
+    "categories": ["设备采购", "拆装机运输", "工艺技术导入", "人才培训", "AI 整合", "其他"],
+    "submit": "提交咨询",
+    "hint": "提交后将打开您的邮件客户端，内容已预先填入，请确认后发送。",
+    "messages": {
+      "required": "此项为必填。",
+      "select": "请选择需求类别。",
+      "email": "请输入正确的电子邮件格式。"
+    },
+    "mail": {
+      "subject_prefix": "网站咨询",
+      "subject_sep": "｜",
+      "sep": "：",
+      "name": "姓名",
+      "company": "公司",
+      "email": "Email",
+      "phone": "电话",
+      "category": "需求类别",
+      "message": "留言"
+    }
+  }
+}

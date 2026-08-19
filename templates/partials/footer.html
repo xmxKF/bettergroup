@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div>
+        <img class="footer__brand-mark" src="{{ asset_prefix }}{{ common.brand.logo }}" width="44" height="44" alt="" aria-hidden="true">
+        <p class="footer__name">{{ common.footer.brand_primary }}</p>
+        <p class="footer__en">{{ common.footer.brand_secondary }}</p>
+        <p class="footer__desc">{{ common.footer.desc }}</p>
+      </div>
+
+      <div>
+        <p class="footer__title">{{ common.footer.nav_title }}</p>
+        <ul class="footer__list">
+          {%- for item in common.nav.entries %}
+          <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">{{ common.footer.process_title }}</p>
+        <ul class="footer__list">
+          {%- for item in common.footer.process_links %}
+          <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">{{ common.footer.contact_title }}</p>
+        <div class="footer__contact">
+          <p><span class="footer__label">{{ common.footer.labels.address }}</span>{{ common.site.address }}</p>
+          <p><span class="footer__label">{{ common.footer.labels.email }}</span><a href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></p>
+          <p><span class="footer__label">{{ common.footer.labels.person }}</span>{{ common.site.contact_person }}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>{{ common.footer.copyright }}</p>
+      <p>{{ common.footer.trademark_note }}</p>
+    </div>
+  </div>
+</footer>

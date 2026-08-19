@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Photolithography Equipment | BETTER",
+    "description": "NIKON and CANON exposure tools including nanoimprint, plus TEL and DNS coat and develop tracks, benchmarked against LithoDreamer generative lithography."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Photolithography"
+    }
+  ],
+  "hero": {
+    "id": "litho-hero",
+    "eyebrow": "LITHOGRAPHY",
+    "title": "Photolithography equipment",
+    "title_lat": "Lithography",
+    "lead": "Linewidth, alignment and pattern fidelity are set at exposure and on the coat and develop track."
+  },
+  "banner_label": "Lithography bay photo",
+  "banner_media": {
+    "id": "IMG-LITHO-01",
+    "file": "assets/img/litho-01.jpg",
+    "ratio": "16-9",
+    "alt": "Panorama of the lithography bay aisle: a row of exposure tools under yellow filtered lighting, clean and symmetrical composition",
+    "caption": "Lithography bay aisle: a row of exposure tools under yellow filtered lighting"
+  },
+  "scope": {
+    "id": "litho-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "NIKON exposure tools, full product range",
+      "CANON exposure tools, full range including nanoimprint",
+      "TEL coat and develop tracks",
+      "DNS coat and develop tracks"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering full line configurations of exposure tools and coat and develop tracks."
+    ],
+    "media": {
+      "id": "IMG-LITHO-02",
+      "file": "assets/img/litho-02.jpg",
+      "ratio": "4-3",
+      "alt": "Close-up inside a coat and develop track: a wafer in the spin chamber, with color bands reflecting off the photoresist film",
+      "caption": "Inside a coat and develop track: color bands on the photoresist film"
+    }
+  },
+  "services": {
+    "id": "litho-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, alignment and tuning",
+      "Maintenance and spare parts planning",
+      "Lithography process technology transfer",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "litho-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "LithoDreamer generative lithography / ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "Generative and inverse correction of mask patterns accelerates OPC iteration and pattern convergence.",
+        "metric": "Benchmark metric: generative methods shorten lithography correction iterations",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Explainable GAT layout hotspot",
+        "year": "(ASP-DAC'26)",
+        "arch_note": "",
+        "text": "An 8-head graph attention network predicts layout hotspots and gives explainable reasoning.",
+        "metric": "Benchmark metric: 5–12× less memory than image-based methods",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Coat and develop track digital twin",
+        "year": "",
+        "arch_note": "",
+        "text": "A virtual counterpart of the coat and develop track simulates condition changes and scheduling effects.",
+        "metric": "Benchmark metric: virtual validation replaces part of the physical trial runs",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-LITHO-03",
+      "file": "assets/img/litho-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: mask pattern overlaid with hotspot predictions, nodes linked by graph attention edges on a dark blue background",
+      "caption": "Mask pattern overlaid with hotspot predictions and graph attention edges"
+    }
+  },
+  "fit": {
+    "id": "litho-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "New lines that need exposure and track installed together",
+      "Capacity expansion or tool relocation at an existing fab",
+      "Research institutes building lithography capability",
+      "Used-equipment buyers needing condition checks and reinstallation"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-mask.html",
+      "title": "Photomask"
+    },
+    "next": {
+      "href": "equipment-etch.html",
+      "title": "Dry & Plasma Etch"
+    }
+  }
+}

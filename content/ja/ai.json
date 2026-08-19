@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "AI スマート製造｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER はデジタルツイン、物理シミュレーション、LithoDreamer を 3 つの軸とし、ウェーハ欠陥分類、歩留まり予測、熱シミュレーション、テスト最適化などの最先端 AI アーキテクチャをベンチマークし、主要 9 プロセスの装置へ導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "AI スマート製造"
+    }
+  ],
+  "hero": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "主要 9 プロセスを貫く AI",
+    "lead": "検証可能な最先端アーキテクチャを基準に、装置とプロセスの現場へ導入します。",
+    "media": {
+      "id": "VID-AI-01",
+      "file": "assets/video/ai-01.mp4",
+      "poster": "assets/img/ai-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "抽象的なデータアニメーション：ウェーハ輪郭の上を流れる熱場と欠陥点群が、分類結果へと収束していく様子",
+      "caption": "抽象的なデータアニメーション：ウェーハの熱場と欠陥点群が分類結果へ収束"
+    }
+  },
+  "positioning": {
+    "eyebrow": "POSITIONING",
+    "title": "AI に対する考え方",
+    "lead": "",
+    "paragraphs": [
+      "半導体製造における AI の価値は、センサー、計測、検査のデータを現場で使える判断へ変えることにあります。",
+      "BETTER は、産業界・学術界が公開したアーキテクチャをベンチマーク基準とし、工程ごとの状況に応じて適した手法を選定・導入します。",
+      "以下に挙げるアーキテクチャと定量結果はいずれも第三者の研究成果であり、技術基準の参考として掲載しています。BETTER 自身の測定データではありません。"
+    ],
+    "media": {
+      "id": "IMG-AI-01",
+      "file": "assets/img/ai-01.jpg",
+      "ratio": "4-3",
+      "alt": "静止メインビジュアル：ウェーハとニューラルネットワークのノードを重ねた抽象構図。濃紺地に細線のスペクトルグラデーション",
+      "caption": "ウェーハとニューラルネットワークのノードを重ねた抽象構図。濃紺地にスペクトルの細線"
+    }
+  },
+  "pillars": {
+    "eyebrow": "THREE PILLARS",
+    "title": "全工程を貫く 3 つの軸",
+    "lead": "プロセスが異なっても、同じ方法論の骨格を共有します。",
+    "entries": [
+      {
+        "title": "デジタルツイン",
+        "title_lat": "Digital Twin",
+        "text": "装置、チャンバー、ライン全体の仮想モデルを構築し、実機の状態と同期させながら各種シナリオの検証を支援します。",
+        "meta": "代表的な用途：条件変更の事前検証、保守計画、移設後の立ち上げ検証"
+      },
+      {
+        "title": "物理解析",
+        "title_lat": "Physics Simulation",
+        "text": "プラズマ、熱伝導、流体、イオン輸送などの物理モデルでプロセスの挙動を予測します。",
+        "meta": "代表的な用途：エッチングレート、膜厚の均一性、温度場、ドーピングプロファイル"
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer／ILT",
+        "text": "生成型の手法と逆リソグラフィ補正により、パターンと光近接効果を扱います。",
+        "meta": "代表的な用途：フォトマスク補正、OPC の反復、パターンリスク予測"
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-02",
+      "file": "assets/img/ai-02.jpg",
+      "ratio": "21-9",
+      "alt": "3 カラムの抽象イラスト：デジタルツイン、物理シミュレーション、生成型リソグラフィの 3 つの視覚表現を並置。クールグレー地",
+      "caption": "3 カラムの抽象イラスト：デジタルツイン、物理シミュレーション、生成型リソグラフィを並置"
+    }
+  },
+  "benchmarks": {
+    "eyebrow": "BENCHMARK ARCHITECTURES",
+    "title": "AI アーキテクチャのベンチマーク表",
+    "lead": "いずれも第三者が公開した研究成果であり、導入のベンチマーク基準としています。",
+    "table": {
+      "scroll_label": "AI アーキテクチャのベンチマーク表。左右にスクロールできます",
+      "caption": "AI アーキテクチャのベンチマーク表：領域、代表モデル（年）、コアアーキテクチャ、入力データの特徴、出力／評価指標、主要な定量結果",
+      "columns": [
+        "領域",
+        "代表モデル（年）",
+        "コアアーキテクチャ",
+        "入力データの特徴",
+        "出力／評価指標",
+        "主要な定量結果"
+      ],
+      "rows": [
+        {
+          "domain": "ウェーハマップ欠陥分類",
+          "model": "G2LGAN＋CNN（2025）",
+          "arch": "2 段階 GAN データ拡張＋MobileNetV2",
+          "inputs": "ウェーハマップ画像（クラス不均衡データ）",
+          "metrics": "Accuracy／F1／1-NN（生成品質）",
+          "result": "Acc 98.39%、F1 93.01%"
+        },
+        {
+          "domain": "ウェーハマップ欠陥分類",
+          "model": "CNN-ESN（2026）",
+          "arch": "ResNet34＋エコーステートネットワーク",
+          "inputs": "ノイズを含むウェーハマップ",
+          "metrics": "Acc（σ=0.1 ノイズへのロバスト性を含む）",
+          "result": "クリーン 94.74%、ノイズ 87.30%"
+        },
+        {
+          "domain": "SEM 欠陥分類",
+          "model": "IBM ASMC（2025）",
+          "arch": "ViT（DINOv2）＋半教師あり",
+          "inputs": "SEM 画像（1 クラス <15 枚）",
+          "metrics": "分類精度",
+          "result": ">90%（少数サンプル）"
+        },
+        {
+          "domain": "歩留まり予測",
+          "model": "PDF Exensio（2025）",
+          "arch": "XGBoost＋PCA",
+          "inputs": "インライン欠陥、計測、電気特性テスト、FDC",
+          "metrics": "die/wafer pass-fail、precision/recall",
+          "result": "閾値調整で overkill／underkill のバランスを最適化"
+        },
+        {
+          "domain": "歩留まり根本原因",
+          "model": "TSMC スマート製造",
+          "arch": "RNN（時系列 FDC）＋連合学習",
+          "inputs": "装置センサー時系列、検査データ",
+          "metrics": "歩留まり影響欠陥の予測精度",
+          "result": "予測精度 約 92%（28–3nm）、流出率 -15%"
+        },
+        {
+          "domain": "熱シミュレーション代理モデル",
+          "model": "DeepOHeat-v1（2025）",
+          "arch": "DeepONet＋KAN＋GMRES による精緻化",
+          "inputs": "消費電力マップ／floorplan（物理情報に基づく学習、シミュレーションデータ不要）",
+          "metrics": "MAPE、学習時間、メモリ",
+          "result": "MAPE 0.035%、学習 -62×、メモリ -31×"
+        },
+        {
+          "domain": "熱-IR 連成",
+          "model": "ThermEDGe/IREDGe",
+          "arch": "Encoder-Decoder CNN",
+          "inputs": "時間変化する消費電力マップ、PDN 密度",
+          "metrics": "IR 誤差（mV）、温度プロファイル",
+          "result": "平均 IR 誤差 0.053mV"
+        },
+        {
+          "domain": "2.5D 電気-熱協調",
+          "model": "TTSV-HMO（2025）",
+          "arch": "等価モデル＋ハイブリッドメタヒューリスティック（PSO+SA）",
+          "inputs": "TTSV 間隔、chiplet 位置、消費電力密度",
+          "metrics": "温度/インピーダンス MAE、fitness",
+          "result": "温度 MAE 0.35%、インピーダンス 3.97%"
+        },
+        {
+          "domain": "静的 IR Drop",
+          "model": "MaxViT/U-Net（2026）",
+          "arch": "MaxViT エンコード＋U-Net/FPN デコード",
+          "inputs": "抵抗マップ、電流マップ、電源パッドマップ（SPICE を画像化）",
+          "metrics": "MAE、F1（>90% ピークホットスポット）、推論時間",
+          "result": "MAE <15×10⁻⁵V、NGSPICE 比 10–30× 高速"
+        },
+        {
+          "domain": "静的 IR Drop",
+          "model": "ICCAD'23 優勝フロー",
+          "arch": "ConvNeXtV2-Nano＋UPerNet",
+          "inputs": "各金属層の抵抗マップ＋有効距離マップ",
+          "metrics": "MAE（mV）、F1",
+          "result": "MAE 0.075mV、F1 0.56"
+        },
+        {
+          "domain": "動的 IR Drop",
+          "model": "PDNNet（2024）",
+          "arch": "GNN（PDNGraph）＋CNN のヘテロ構成",
+          "inputs": "PDN 構造グラフ＋動的電流マップ",
+          "metrics": "NMAE、高速化率",
+          "result": "NMAE 改善 39.3%、545× 加速"
+        },
+        {
+          "domain": "動的 IR Drop",
+          "model": "デュアルパス時空間モデル（DATE'25）",
+          "arch": "3D SW-MSA Transformer",
+          "inputs": "時間窓で分解した消費電力マップ（内部/スイッチング/リーク/トグル率）",
+          "metrics": "ホットスポット予測精度",
+          "result": "2D/3D-CNN および再帰型 U-Net を上回る"
+        },
+        {
+          "domain": "エレクトロマイグレーション",
+          "model": "Dey et al.（2020）",
+          "arch": "10 層 NN 回帰＋ロジスティック回帰分類",
+          "inputs": "J、L、T、IR Drop、MTTF ラベル（KLU＋Black）",
+          "metrics": "R²、AMSE、故障セグメント検出",
+          "result": "大幅な高速化、MTTF は精密モデルと同等"
+        },
+        {
+          "domain": "エレクトロマイグレーション",
+          "model": "BPINN-EM-Post（2025）",
+          "arch": "ベイズ PINN",
+          "inputs": "Korhonen PDE の物理残差＋観測",
+          "metrics": "不確実性の定量化、寿命分布",
+          "result": "PINN の過学習を克服、多セグメント対応"
+        },
+        {
+          "domain": "ATPG",
+          "model": "InF-ATPG（2025）",
+          "arch": "FFR 分割＋QGNN＋DQN",
+          "inputs": "論理状態、SCOAP 可制御性/可観測性",
+          "metrics": "バックトラック数、故障カバレッジ、UFP",
+          "result": "バックトラック -55.06%、UFP 0.50%"
+        },
+        {
+          "domain": "ATPG（商用）",
+          "model": "Synopsys TSO.ai",
+          "arch": "AI による設定チューニング（ブラックボックス最適化）",
+          "inputs": "設計特性、ATPG エンジンの挙動、制約",
+          "metrics": "パターン数、カバレッジ、収束反復",
+          "result": "パターン数 -20〜25%（一部 >50%）"
+        },
+        {
+          "domain": "BIST 強化",
+          "model": "LITE（2025）",
+          "arch": "標準セルのスキャン強化＋SCOAP 解析",
+          "inputs": "ネットリストのハイパーグラフ、CC0/CC1/CObs",
+          "metrics": "パターン数、ランダムパターンカバレッジ",
+          "result": "ATPG パターン数 -31%、RPR カバレッジを改善"
+        },
+        {
+          "domain": "KGD/外れ値検出",
+          "model": "GPR/RevTransC/コンフォーマル予測",
+          "arch": "GPR 空間モデリング、教師なし変換、コンフォーマル QR＋CatBoost",
+          "inputs": "ウェーハレベルのパラメトリックテストデータ、WAT",
+          "metrics": "AUROC、DPPM、Vmin 区間カバレッジ",
+          "result": "DPAT を上回る／Vmin 約 90% のカバレッジを保証"
+        },
+        {
+          "domain": "テスト時間",
+          "model": "GPU リアルタイム適応テスト",
+          "arch": "GPU 加速 ML（生産ラインに配備）",
+          "inputs": "リアルタイムのテストデータストリーム",
+          "metrics": "テスト時間、欠陥カバレッジの維持",
+          "result": "Blackwell 量産でテスト時間 -25%"
+        },
+        {
+          "domain": "レイアウトホットスポット",
+          "model": "説明可能な GAT（ASP-DAC'26）",
+          "arch": "グラフアテンションネットワーク（8 ヘッド）",
+          "inputs": "レイアウトグラフ（ノード特徴 5 次元、隣接行列）",
+          "metrics": "Recall、誤検出率、説明可能性",
+          "result": "画像手法比でメモリ 5–12× 削減"
+        },
+        {
+          "domain": "e-Beam 再検査",
+          "model": "SEMVision H20（2025）",
+          "arch": "深層学習の画像分類（生産ラインで継続学習）",
+          "inputs": "CFE e-beam 画像",
+          "metrics": "再検査速度、真/偽欠陥の判別",
+          "result": "3× 速度、2nm/GAA 顧客に導入済み"
+        }
+      ],
+      "note": "出典は第三者が公開した研究および産業情報であり、BETTER はこれを導入のベンチマーク基準としています。"
+    }
+  },
+  "matrix": {
+    "eyebrow": "PROCESS × AI",
+    "title": "プロセスと AI の対応",
+    "lead": "主要 9 プロセスごとの主な導入の方向性です。",
+    "table": {
+      "scroll_label": "プロセスと AI の対応マトリクス。左右にスクロールできます",
+      "caption": "プロセス × AI 対応マトリクス：プロセス、主なベンチマークアーキテクチャ、導入の要点",
+      "columns": [
+        "プロセス",
+        "主なベンチマークアーキテクチャ",
+        "導入の要点"
+      ],
+      "rows": [
+        {
+          "process_label": "リソグラフィ工程",
+          "process_href": "equipment-lithography.html",
+          "arch": "LithoDreamer／ILT、説明可能な GAT（ASP-DAC'26）",
+          "focus": "マスクパターンの生成補正、レイアウトホットスポット予測、トラック装置のデジタルツイン"
+        },
+        {
+          "process_label": "エッチング工程",
+          "process_href": "equipment-etch.html",
+          "arch": "プラズマ物理シミュレーション、TSMC RNN 時系列 FDC＋連合学習",
+          "focus": "エッチングレートの予測、異常検出、終点検出"
+        },
+        {
+          "process_label": "CVD（化学気相成長）",
+          "process_href": "equipment-cvd.html",
+          "arch": "DeepOHeat-v1（2025）、ThermEDGe/IREDGe",
+          "focus": "熱場のサロゲートモデル、膜厚の均一性、チャンバーのデジタルツイン"
+        },
+        {
+          "process_label": "ベーク／熱処理工程",
+          "process_href": "equipment-bake.html",
+          "arch": "DeepOHeat-v1（2025）、ThermEDGe/IREDGe",
+          "focus": "温度プロファイルの予測、熱バジェットの最適化、バッチのデジタルツイン"
+        },
+        {
+          "process_label": "イオン注入",
+          "process_href": "equipment-implant.html",
+          "arch": "モンテカルロ物理シミュレーション、BPINN-EM-Post（2025）、GPR",
+          "focus": "ドーピングプロファイルのシミュレーション、不確実性の定量化、空間的な外れ値検出"
+        },
+        {
+          "process_label": "CMP（化学機械研磨）",
+          "process_href": "equipment-cmp.html",
+          "arch": "研磨の物理シミュレーション、PDF Exensio（2025）、RNN 時系列 FDC",
+          "focus": "除去レートの均一性、歩留まり予測、消耗品寿命のトレンド"
+        },
+        {
+          "process_label": "ウェーハ洗浄",
+          "process_href": "equipment-cleaning.html",
+          "arch": "IBM ASMC（2025）ViT、RNN 時系列 FDC",
+          "focus": "SEM の少数サンプル欠陥分類、薬液の異常検出、パーティクルの根本原因分析"
+        },
+        {
+          "process_label": "ウェーハ検査・テスト",
+          "process_href": "equipment-inspection.html",
+          "arch": "G2LGAN＋CNN、CNN-ESN、SEMVision H20、GPU 適応テスト、KGD コンフォーマル予測、InF-ATPG",
+          "focus": "ウェーハマップ分類、e-beam 再検査、テスト時間の最適化、外れ値検出"
+        },
+        {
+          "process_label": "フォトマスク工程",
+          "process_href": "equipment-mask.html",
+          "arch": "LithoDreamer／ILT、MaxViT/U-Net、説明可能な GAT",
+          "focus": "パターン補正、リスク領域の特定、描画のデジタルツイン"
+        }
+      ]
+    }
+  },
+  "delivery": {
+    "eyebrow": "HOW WE DELIVER",
+    "title": "AI 導入の 5 ステップ",
+    "lead": "適用シーンの定義からチームへの引き継ぎまで、各段階を指標で検証します。",
+    "steps": [
+      {
+        "num": "01",
+        "title": "ご相談",
+        "text": "対象となる適用シーンと定量目標を定め、データの入手可否と導入効果を評価します。"
+      },
+      {
+        "num": "02",
+        "title": "データ連携",
+        "text": "装置センサー、プロセス計測、検査のデータを統合し、形式を揃えたデータ基盤を整えます。"
+      },
+      {
+        "num": "03",
+        "title": "モデル導入",
+        "text": "シーンに応じてベンチマークアーキテクチャを選定・調整し、学習と推論のフローを構築します。"
+      },
+      {
+        "num": "04",
+        "title": "検証",
+        "text": "定めた指標でベースラインと比較し、安定性と再現性を確認します。"
+      },
+      {
+        "num": "05",
+        "title": "育成",
+        "text": "操作方法とデータの読み解き方を引き継ぎ、お客様が自立して運用できる体制を築きます。"
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-03",
+      "file": "assets/img/ai-03.jpg",
+      "ratio": "4-3",
+      "alt": "AI 導入フローのダッシュボード風の画面：5 段階のカードと指標の数値、ダーク UI、スペクトルカラーのプログレスバー",
+      "caption": "AI 導入フローのダッシュボード風：5 段階のカードと指標の数値、ダーク UI"
+    }
+  },
+  "cta": {
+    "primary": {
+      "label": "AI 導入シーンのご相談",
+      "href": "contact.html"
+    }
+  }
+}

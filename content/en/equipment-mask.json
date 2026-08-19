@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Photomask Equipment | BETTER",
+    "description": "NUFLARE and JEOL photomask equipment with procurement, sales and maintenance, benchmarked against ILT, image models and e-beam writing digital twins."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Photomask"
+    }
+  ],
+  "hero": {
+    "id": "mask-hero",
+    "eyebrow": "MASK / RETICLE",
+    "title": "Photomask equipment",
+    "title_lat": "Mask / Reticle",
+    "lead": "The source of pattern quality for every downstream transfer step."
+  },
+  "banner_label": "Photomask photo",
+  "banner_media": {
+    "id": "IMG-MASK-01",
+    "file": "assets/img/mask-01.jpg",
+    "ratio": "16-9",
+    "alt": "Close-up of a reticle pod and quartz photomask reflecting fine patterns under dark-field lighting",
+    "caption": "Reticle pod and quartz photomask under dark-field lighting"
+  },
+  "scope": {
+    "id": "mask-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "NUFLARE e-beam writer equipment",
+      "JEOL e-beam and photomask related equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering mask writing and related process equipment."
+    ],
+    "media": {
+      "id": "IMG-MASK-02",
+      "file": "assets/img/mask-02.jpg",
+      "ratio": "4-3",
+      "alt": "Exterior of an e-beam writer and its vacuum chamber in cool white light, precision mechanics in detail",
+      "caption": "E-beam writer and vacuum chamber, precision mechanics in detail"
+    }
+  },
+  "services": {
+    "id": "mask-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, vibration environment check and tuning",
+      "Electron optics and vacuum system maintenance",
+      "Photomask process technology transfer",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "mask-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "LithoDreamer generative lithography / ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "Generative and inverse methods produce mask pattern corrections that raise transfer fidelity.",
+        "metric": "Benchmark metric: generative methods accelerate ILT iteration",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "MaxViT / U-Net",
+        "year": "(2026)",
+        "arch_note": "",
+        "text": "An encoder-decoder image model handles large pattern fields and locates risk areas quickly.",
+        "metric": "Benchmark metric: 10–30× faster than NGSPICE (metric from the original domain)",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Explainable GAT layout hotspot (ASP-DAC'26)",
+        "year": "",
+        "arch_note": "",
+        "text": "A graph attention network predicts hotspots at layout and feeds them back into mask correction.",
+        "metric": "Benchmark metric: 5–12× less memory than image-based methods",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "E-beam writing digital twin",
+        "year": "",
+        "arch_note": "",
+        "text": "Simulates write dose, proximity effects and write time to optimize the writing strategy.",
+        "metric": "Benchmark metric: virtual validation lowers trial-write cost",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-MASK-03",
+      "file": "assets/img/mask-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: a mask pattern before and after ILT correction, overlaid with hotspot prediction blocks",
+      "caption": "Mask pattern before and after ILT correction with hotspot color blocks"
+    }
+  },
+  "fit": {
+    "id": "mask-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Mask shops building or expanding writing capacity",
+      "Projects raising pattern fidelity and correction efficiency",
+      "E-beam tool relocation and environment rebuild",
+      "Research institutes building e-beam writing capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-inspection.html",
+      "title": "Inspection & Test"
+    },
+    "next": {
+      "href": "equipment-lithography.html",
+      "title": "Photolithography"
+    }
+  }
+}

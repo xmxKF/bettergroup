@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "掩模版工艺设备｜倍特尔科技集团",
+    "description": "倍特尔提供 NUFLARE 与 JEOL 掩模版工艺设备的采购、销售及维护，并导入 LithoDreamer／ILT、图像模型与电子束直写数字孪生等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "掩模版工艺"
+    }
+  ],
+  "hero": {
+    "id": "mask-hero",
+    "eyebrow": "MASK / RETICLE",
+    "title": "掩模版工艺设备",
+    "title_lat": "Mask / Reticle",
+    "lead": "图形质量的源头，决定后续所有转印结果。"
+  },
+  "banner_label": "掩模版照片",
+  "banner_media": {
+    "id": "IMG-MASK-01",
+    "file": "assets/img/mask-01.jpg",
+    "ratio": "16-9",
+    "alt": "掩模盒与石英掩模版特写，表面反射细密图形，暗场照明",
+    "caption": "掩模盒与石英掩模版特写，表面反射细密图形，暗场照明"
+  },
+  "scope": {
+    "id": "mask-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "NUFLARE 电子束直写设备",
+      "JEOL 电子束与掩模版相关设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖掩模版直写与相关工艺设备。"
+    ],
+    "media": {
+      "id": "IMG-MASK-02",
+      "file": "assets/img/mask-02.jpg",
+      "ratio": "4-3",
+      "alt": "电子束直写设备外观与真空腔体，冷白光、精密机构细节",
+      "caption": "电子束直写设备外观与真空腔体，精密机构细节"
+    }
+  },
+  "services": {
+    "id": "mask-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、防振环境确认与调试",
+      "电子光学系统与真空系统维护保养",
+      "掩模版工艺技术导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "mask-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "LithoDreamer 生成式光刻／ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "以生成式与反演光刻方法生成掩模图形修正，提升转印保真度。",
+        "metric": "对标指标：以生成式方法加速 ILT 迭代",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "MaxViT／U-Net",
+        "year": "（2026）",
+        "arch_note": "",
+        "text": "以编码解码图像模型处理大尺度图形场，快速定位风险区。",
+        "metric": "对标指标：较 NGSPICE 快 10–30×（原领域指标）",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "可解释 GAT 版图热点（ASP-DAC'26）",
+        "year": "",
+        "arch_note": "",
+        "text": "以图注意力网络在版图阶段预测热点并反馈掩模修正。",
+        "metric": "对标指标：内存较图像法省 5–12×",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "电子束直写数字孪生",
+        "year": "",
+        "arch_note": "",
+        "text": "模拟写入剂量、邻近效应与写入时间，优化写入策略。",
+        "metric": "对标指标：以虚拟验证降低试写成本",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-MASK-03",
+      "file": "assets/img/mask-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：掩模图形与 ILT 修正前后对照，叠加热点预测色块",
+      "caption": "掩模图形 ILT 修正前后对照与热点色块"
+    }
+  },
+  "fit": {
+    "id": "mask-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "掩模版厂建设或扩充直写产能",
+      "需要提升图形保真度与修正效率的项目",
+      "电子束设备移机与环境条件重建",
+      "研究机构建立电子束直写能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-inspection.html",
+      "title": "晶圆检测"
+    },
+    "next": {
+      "href": "equipment-lithography.html",
+      "title": "光刻（黄光）"
+    }
+  }
+}

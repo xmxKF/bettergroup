@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "CMP 化学机械抛光设备｜倍特尔科技集团",
+    "description": "倍特尔提供 EBARA 与 ACCRETECH CMP 抛光设备的采购、销售及维护，并导入抛光物理仿真、XGBoost 良率预测与时序 FDC 等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "CMP 化学机械抛光"
+    }
+  ],
+  "hero": {
+    "id": "cmp-hero",
+    "eyebrow": "CMP",
+    "title": "CMP 化学机械抛光设备",
+    "title_lat": "Chemical Mechanical Polishing",
+    "lead": "维持叠层平坦度与减薄质量的平坦化工艺段。"
+  },
+  "banner_label": "CMP 抛光照片",
+  "banner_media": {
+    "id": "IMG-CMP-01",
+    "file": "assets/img/cmp-01.jpg",
+    "ratio": "16-9",
+    "alt": "CMP 抛光盘与抛光头运转特写，抛光液流动、湿润金属表面反光",
+    "caption": "CMP 抛光盘与抛光头运转特写，抛光液流动、湿润金属表面反光"
+  },
+  "scope": {
+    "id": "cmp-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "EBARA CMP 抛光设备",
+      "ACCRETECH CMP 与晶圆加工设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖平坦化抛光与晶圆减薄设备。"
+    ],
+    "media": {
+      "id": "IMG-CMP-02",
+      "file": "assets/img/cmp-02.jpg",
+      "ratio": "4-3",
+      "alt": "抛光后晶圆的镜面表面特写，反射环境线条，呈现平坦度",
+      "caption": "抛光后晶圆镜面表面特写，反射环境线条"
+    }
+  },
+  "services": {
+    "id": "cmp-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、水路与排废接驳及调试",
+      "抛光头、抛光垫与耗材维护计划",
+      "平坦化工艺条件导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "cmp-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "抛光物理仿真",
+        "year": "",
+        "arch_note": "",
+        "text": "建模压力分布、去除率与抛光垫磨耗，推算晶圆内去除均匀性。",
+        "metric": "对标指标：以仿真收敛抛光条件窗口",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "PDF Exensio",
+        "year": "（2025）",
+        "arch_note": "XGBoost＋PCA",
+        "text": "整合缺陷、量测、电测与 FDC 数据，预测 die 与晶圆良率。",
+        "metric": "对标指标：可调阈值平衡 overkill／underkill",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "TSMC 智能制造 RNN 时序 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "以抛光设备传感时序检测异常趋势与良率影响因子。",
+        "metric": "对标指标：约 92%（28–3nm）、逃逸率 -15%",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-CMP-03",
+      "file": "assets/img/cmp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：晶圆去除率分布图与良率预测指标卡并置",
+      "caption": "晶圆去除率分布图与良率预测指标卡并置"
+    }
+  },
+  "fit": {
+    "id": "cmp-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "多层金属互连需要严格平坦度控制",
+      "先进封装晶圆减薄需求",
+      "CMP 设备移机与水路重建",
+      "研究机构建立平坦化实验能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-implant.html",
+      "title": "离子注入"
+    },
+    "next": {
+      "href": "equipment-cleaning.html",
+      "title": "晶圆清洗"
+    }
+  }
+}

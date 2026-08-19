@@ -1,0 +1,139 @@
+{
+  "site": {
+    "name": "BETTER SCIENCE TECHNOLOGY GROUP",
+    "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
+    "contact_person": "Kerwin Su（蘇益宏）",
+    "email": "kerwin@bettertechgroup.com",
+    "copyright_year": "2026"
+  },
+
+  "brand": {
+    "logo": "assets/img/logo-96.png",
+    "logo_alt": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "name_primary": "BETTER",
+    "name_secondary": "倍特爾科技集團有限公司"
+  },
+
+  "languages": {
+    "zh-hant": { "label": "繁", "name": "繁体字中国語" },
+    "zh-hans": { "label": "简", "name": "簡体字中国語" },
+    "en": { "label": "EN", "name": "English" },
+    "ja": { "label": "日", "name": "日本語" }
+  },
+
+  "lang_switcher": { "aria_label": "言語を選択" },
+
+  "a11y": {
+    "skip_link": "本文へスキップ",
+    "nav_label": "メインナビゲーション",
+    "breadcrumb_label": "パンくずリスト",
+    "nav_open": "メニューを開く",
+    "nav_close": "メニューを閉じる"
+  },
+
+  "media_ctrl": {
+    "pause": "動画を一時停止",
+    "play": "動画を再生",
+    "pause_aria": "背景動画を一時停止",
+    "play_aria": "背景動画を再生"
+  },
+
+  "nav": {
+    "entries": [
+      { "label": "ホーム", "href": "index.html", "match": "" },
+      { "label": "会社概要", "href": "about.html", "match": "" },
+      { "label": "サービス", "href": "services.html", "match": "" },
+      {
+        "label": "装置・プロセス",
+        "href": "equipment.html",
+        "match": "equipment.html equipment-lithography.html equipment-etch.html equipment-cvd.html equipment-bake.html equipment-implant.html equipment-cmp.html equipment-cleaning.html equipment-inspection.html equipment-mask.html"
+      },
+      { "label": "AI スマート製造", "href": "ai.html", "match": "" },
+      { "label": "お問い合わせ", "href": "contact.html", "match": "" }
+    ],
+    "cta": { "label": "装置のご相談", "href": "contact.html" },
+    "mobile_cta": { "label": "装置・サービスのご相談", "href": "contact.html" }
+  },
+
+  "footer": {
+    "brand_primary": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "brand_secondary": "倍特爾科技集團有限公司",
+    "desc": "先端半導体プロセス装置の調達、解体・据付・輸送、プロセス技術導入、AI 統合。",
+    "nav_title": "サイトナビ",
+    "process_title": "主要 9 プロセス",
+    "contact_title": "お問い合わせ先",
+    "labels": { "address": "所在地：", "email": "メール：", "person": "担当者：" },
+    "process_links": [
+      { "label": "リソグラフィ工程", "href": "equipment-lithography.html" },
+      { "label": "エッチング工程", "href": "equipment-etch.html" },
+      { "label": "CVD（化学気相成長）", "href": "equipment-cvd.html" },
+      { "label": "ベーク／熱処理工程", "href": "equipment-bake.html" },
+      { "label": "イオン注入", "href": "equipment-implant.html" },
+      { "label": "CMP（化学機械研磨）", "href": "equipment-cmp.html" },
+      { "label": "ウェーハ洗浄", "href": "equipment-cleaning.html" },
+      { "label": "ウェーハ検査・テスト", "href": "equipment-inspection.html" },
+      { "label": "フォトマスク工程", "href": "equipment-mask.html" }
+    ],
+    "copyright": "© 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED（倍特爾科技集團有限公司）／無断複製・転載を禁じます。",
+    "trademark_note": "本サイトに記載のブランド名は、それぞれの所有者の商標であり、装置の説明を目的として表示しています。"
+  },
+
+  "cta_band": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "生産ラインのご要望をお聞かせください",
+    "lead": "装置選定から据付、AI 導入まで、ワンストップでご対応します。",
+    "primary": { "label": "装置・サービスのご相談", "href": "contact.html" },
+    "secondary": {
+      "label": "kerwin@bettertechgroup.com",
+      "href": "mailto:kerwin@bettertechgroup.com"
+    }
+  },
+
+  "shared_cta": {
+    "primary": { "label": "装置・サービスのご相談", "href": "contact.html" },
+    "secondary": { "label": "主要 9 プロセスを見る", "href": "equipment.html" },
+    "ai": { "label": "AI スマート製造を見る", "href": "ai.html" },
+    "services": { "label": "サービス一覧を見る", "href": "services.html" },
+    "process_page": { "label": "装置・サービス資料を請求", "href": "contact.html" }
+  },
+
+  "pager": {
+    "prev_label": "前のプロセス",
+    "next_label": "次のプロセス",
+    "aria_label": "プロセスページナビゲーション"
+  },
+
+  "form": {
+    "mailto": "kerwin@bettertechgroup.com",
+    "required_mark_aria": "必須",
+    "fields": {
+      "name": { "label": "お名前", "placeholder": "お名前をご入力ください" },
+      "company": { "label": "会社名", "placeholder": "会社・団体名" },
+      "email": { "label": "Email", "placeholder": "your@company.com" },
+      "phone": { "label": "電話番号", "placeholder": "国番号を含む（例：+852）" },
+      "category": { "label": "ご相談内容", "placeholder": "ご相談内容を選択してください" },
+      "message": { "label": "メッセージ", "placeholder": "対象工程、装置のご要望、ご希望時期をご記入ください" }
+    },
+    "categories": ["装置調達", "解体・据付・輸送", "プロセス技術導入", "人材育成", "AI 統合", "その他"],
+    "submit": "送信する",
+    "hint": "ボタンを押すとメールソフトが起動し、入力内容が本文に反映されます。内容をご確認のうえ送信してください。",
+    "messages": {
+      "required": "この項目は必須です。",
+      "select": "ご相談内容を選択してください。",
+      "email": "正しいメールアドレスの形式でご入力ください。"
+    },
+    "mail": {
+      "subject_prefix": "ウェブサイトからのお問い合わせ",
+      "subject_sep": "｜",
+      "sep": "：",
+      "name": "お名前",
+      "company": "会社名",
+      "email": "Email",
+      "phone": "電話番号",
+      "category": "ご相談内容",
+      "message": "メッセージ"
+    }
+  }
+}

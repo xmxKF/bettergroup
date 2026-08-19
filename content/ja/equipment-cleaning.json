@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "ウェーハ洗浄装置｜BETTER SCIENCE TECHNOLOGY GROUP",
+    "description": "BETTER は DNS・TEL のウェーハ洗浄装置の調達、販売および保守を提供し、ViT による少数サンプル SEM 欠陥分類、時系列 FDC、パーティクル欠陥の根本原因分析などの最先端 AI ベンチマークアーキテクチャを導入します。"
+  },
+  "breadcrumb": [
+    {
+      "label": "ホーム",
+      "href": "index.html"
+    },
+    {
+      "label": "装置・プロセス",
+      "href": "equipment.html"
+    },
+    {
+      "label": "ウェーハ洗浄"
+    }
+  ],
+  "hero": {
+    "id": "cleaning-hero",
+    "eyebrow": "WAFER CLEANING",
+    "title": "ウェーハ洗浄装置",
+    "title_lat": "Wafer Cleaning",
+    "lead": "パーティクルと化学残渣を抑え、歩留まりを守る洗浄工程です。"
+  },
+  "banner_label": "ウェーハ洗浄の写真",
+  "banner_media": {
+    "id": "IMG-CLEAN-01",
+    "file": "assets/img/clean-01.jpg",
+    "ratio": "16-9",
+    "alt": "枚葉式洗浄チャンバー内でウェーハが高速回転し、薬液がリング状に噴射され、水膜が光る様子",
+    "caption": "枚葉式洗浄チャンバー内でウェーハが高速回転し、薬液がリング状に噴射される様子"
+  },
+  "scope": {
+    "id": "cleaning-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "取扱装置の範囲",
+    "lead": "",
+    "features": [
+      "DNS のウェーハ洗浄装置",
+      "TEL のウェーハ洗浄装置"
+    ],
+    "paragraphs": [
+      "日系主力ブランドを中心に、枚葉式・バッチ式の洗浄および乾燥装置をカバーします。"
+    ],
+    "media": {
+      "id": "IMG-CLEAN-02",
+      "file": "assets/img/clean-02.jpg",
+      "ratio": "4-3",
+      "alt": "洗浄後のウェーハが乾燥して搬出される瞬間。表面に水跡はなく、白色照明の清浄な環境",
+      "caption": "洗浄後のウェーハが乾燥して搬出される瞬間。表面に水跡のない清浄な環境"
+    }
+  },
+  "services": {
+    "id": "cleaning-services",
+    "eyebrow": "SERVICES",
+    "title": "サービス内容",
+    "lead": "",
+    "features": [
+      "装置の調達と機種選定の評価",
+      "装置状態の確認と受入検査の支援",
+      "解体・梱包・越境輸送",
+      "搬入据付、薬液配管の接続と立ち上げ調整",
+      "薬液システムとノズルの保守点検",
+      "洗浄プロセス条件の導入",
+      "操作・保守要員の人材育成"
+    ]
+  },
+  "ai": {
+    "id": "cleaning-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 統合",
+    "lead": "以下は BETTER がベンチマークして導入する第三者の最先端アーキテクチャです。",
+    "entries": [
+      {
+        "arch": "IBM ASMC",
+        "year": "（2025）",
+        "arch_note": "ViT（DINOv2）＋半教師あり",
+        "text": "少数サンプル学習で SEM のパーティクルおよび残渣欠陥の画像を分類します。",
+        "metric": "ベンチマーク指標：1 クラス 15 枚未満でも精度 >90%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "TSMC スマート製造 RNN 時系列 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "洗浄装置のセンサー時系列から薬液と流量の異常を検出します。",
+        "metric": "ベンチマーク指標：予測精度 約 92%（28–3nm）、流出率 -15%",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      },
+      {
+        "arch": "パーティクル欠陥の根本原因分析",
+        "year": "",
+        "arch_note": "",
+        "text": "検査データと装置データを連携し、パーティクルの発生源と洗浄条件の関連を特定します。",
+        "metric": "ベンチマーク指標：データ連携で根本原因の追跡時間を短縮",
+        "tag": "ベンチマーク／導入対象の最先端アーキテクチャ"
+      }
+    ],
+    "media": {
+      "id": "IMG-CLEAN-03",
+      "file": "assets/img/clean-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI ビジュアライゼーション：SEM 欠陥画像のグリッドと分類信頼度の表示",
+      "caption": "SEM 欠陥画像のグリッドと分類信頼度の表示"
+    }
+  },
+  "fit": {
+    "id": "cleaning-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用シーン",
+    "lead": "",
+    "features": [
+      "パーティクル起因の歩留まり課題が大きい先端ノードの生産ライン",
+      "前工程と後工程の間で洗浄能力の強化が必要なプロジェクト",
+      "洗浄装置の移設と薬液系統の再構築",
+      "研究機関が洗浄・表面処理の実験能力を立ち上げる場合"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cmp.html",
+      "title": "CMP（化学機械研磨）"
+    },
+    "next": {
+      "href": "equipment-inspection.html",
+      "title": "ウェーハ検査・テスト"
+    }
+  }
+}

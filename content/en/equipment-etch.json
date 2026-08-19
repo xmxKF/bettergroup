@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Dry & Plasma Etch Equipment | BETTER",
+    "description": "TEL and SAMCO etch equipment with procurement, sales and maintenance, benchmarked against plasma simulation, chamber digital twins and time-series FDC."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Dry & Plasma Etch"
+    }
+  ],
+  "hero": {
+    "id": "etch-hero",
+    "eyebrow": "ETCH",
+    "title": "Dry & plasma etch equipment",
+    "title_lat": "Etch",
+    "lead": "The critical area for feature dimensions and sidewall profile."
+  },
+  "banner_label": "Etch tool photo",
+  "banner_media": {
+    "id": "IMG-ETCH-01",
+    "file": "assets/img/etch-01.jpg",
+    "ratio": "16-9",
+    "alt": "Exterior of an etch tool with plasma glow through the chamber viewport, dark surroundings and a magenta halo",
+    "caption": "Etch tool exterior with plasma glow through the chamber viewport"
+  },
+  "scope": {
+    "id": "etch-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "TEL semiconductor etch equipment",
+      "SAMCO semiconductor etch equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering dry etch and plasma etch tool configurations."
+    ],
+    "media": {
+      "id": "IMG-ETCH-02",
+      "file": "assets/img/etch-02.jpg",
+      "ratio": "4-3",
+      "alt": "View inside a plasma etch chamber: the wafer chuck under an even glow, scientific photography style",
+      "caption": "Inside a plasma etch chamber: the wafer chuck under an even glow"
+    }
+  },
+  "services": {
+    "id": "etch-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation and process tuning",
+      "Chamber maintenance and consumables planning",
+      "Etch process technology transfer",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "etch-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "Plasma physics simulation and chamber digital twin",
+        "year": "",
+        "arch_note": "",
+        "text": "Physics models predict plasma distribution and etch rate, so conditions are validated in a virtual chamber first.",
+        "metric": "Benchmark metric: simulation cuts test wafers and trial runs",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "TSMC smart manufacturing: RNN time-series FDC + federated learning",
+        "year": "",
+        "arch_note": "",
+        "text": "Tool sensor time series predict yield-impacting defects, with cross-fab collaboration and no raw data sharing.",
+        "metric": "Benchmark metric: about 92% (28–3nm), escape rate down 15%",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Endpoint detection models",
+        "year": "",
+        "arch_note": "",
+        "text": "Spectral and time-series signals determine the etch endpoint, suppressing over-etch and under-etch.",
+        "metric": "Benchmark metric: time-series models improve endpoint consistency",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-ETCH-03",
+      "file": "assets/img/etch-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: plasma simulation isosurfaces beside sensor time-series curves on a dark background with spectrum-colored lines",
+      "caption": "Plasma simulation isosurfaces beside sensor time-series curves"
+    }
+  },
+  "fit": {
+    "id": "etch-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Lines with tighter critical dimension control targets",
+      "Compound semiconductor and advanced packaging etch needs",
+      "Fabs rebuilding etch conditions after a relocation",
+      "Research institutes building etch capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-lithography.html",
+      "title": "Photolithography"
+    },
+    "next": {
+      "href": "equipment-cvd.html",
+      "title": "CVD"
+    }
+  }
+}

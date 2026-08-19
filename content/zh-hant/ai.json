@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "AI 智慧製造｜倍特爾科技集團",
+    "description": "倍特爾以數字孿生、物理仿真與 LithoDreamer 為三大主軸，對標晶圓缺陷分類、良率預測、熱模擬與測試優化等前沿人工智能架構，導入九大主製程設備。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "AI 智慧製造"
+    }
+  ],
+  "hero": {
+    "eyebrow": "AI × ADVANCED MANUFACTURING",
+    "title": "AI 貫穿九大製程",
+    "lead": "以可驗證的前沿架構為基準，導入設備與製程現場。",
+    "media": {
+      "id": "VID-AI-01",
+      "file": "assets/video/ai-01.mp4",
+      "poster": "assets/img/ai-01-poster.jpg",
+      "ratio": "16-9",
+      "alt": "抽象資料動畫：晶圓輪廓上流動的熱場與缺陷點雲逐步收斂為分類結果",
+      "caption": "抽象資料動畫：晶圓熱場與缺陷點雲逐步收斂為分類結果"
+    }
+  },
+  "positioning": {
+    "eyebrow": "POSITIONING",
+    "title": "我們如何看待 AI",
+    "lead": "",
+    "paragraphs": [
+      "AI 對半導體製造的價值，來自把感測、量測與檢測資料轉換為可行動的判斷。",
+      "倍特爾以公開發表的產業與學界架構為對標基準，依製程場景選擇合適方法導入。",
+      "以下所列架構與量化結果均為第三方研究成果，作為技術基準參考，非倍特爾自有量測數據。"
+    ],
+    "media": {
+      "id": "IMG-AI-01",
+      "file": "assets/img/ai-01.jpg",
+      "ratio": "4-3",
+      "alt": "靜態主視覺：晶圓與神經網路節點疊合的抽象構圖，深藍底細線光譜漸層",
+      "caption": "晶圓與神經網路節點疊合的抽象構圖，深藍底光譜細線"
+    }
+  },
+  "pillars": {
+    "eyebrow": "THREE PILLARS",
+    "title": "三大貫穿主軸",
+    "lead": "不同製程共用同一套方法論骨架。",
+    "entries": [
+      {
+        "title": "數字孿生",
+        "title_lat": "Digital Twin",
+        "text": "為機台、腔體與整線建立虛擬對照體，同步真實狀態並支援情境模擬。",
+        "meta": "典型應用：條件變更預演、維護排程、移機後復機驗證"
+      },
+      {
+        "title": "物理仿真",
+        "title_lat": "Physics Simulation",
+        "text": "以電漿、熱傳、流體與離子傳輸等物理模型推算製程行為。",
+        "meta": "典型應用：蝕刻速率、膜厚均勻度、溫度場、摻雜剖面"
+      },
+      {
+        "title": "",
+        "title_lat": "LithoDreamer／ILT",
+        "text": "以生成式方法與反演式微影修正處理圖形與光學鄰近效應。",
+        "meta": "典型應用：光罩修正、OPC 迭代、圖形風險預測"
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-02",
+      "file": "assets/img/ai-02.jpg",
+      "ratio": "21-9",
+      "alt": "三欄式抽象插畫：數字孿生、物理仿真、生成式微影三種視覺語彙並置，冷灰底",
+      "caption": "三欄式抽象插畫：數字孿生、物理仿真、生成式微影並置"
+    }
+  },
+  "benchmarks": {
+    "eyebrow": "BENCHMARK ARCHITECTURES",
+    "title": "AI 架構對標表",
+    "lead": "下列均為第三方公開研究成果，作為導入對標基準。",
+    "table": {
+      "scroll_label": "AI 架構對標表，可左右捲動",
+      "caption": "AI 架構對標表：領域、代表模型（年份）、核心架構、輸入數據特徵、輸出／評估指標與關鍵量化結果",
+      "columns": [
+        "領域",
+        "代表模型（年份）",
+        "核心架構",
+        "輸入數據特徵",
+        "輸出／評估指標",
+        "關鍵量化結果"
+      ],
+      "rows": [
+        {
+          "domain": "晶圓圖缺陷分類",
+          "model": "G2LGAN＋CNN（2025）",
+          "arch": "兩階段 GAN 增強＋MobileNetV2",
+          "inputs": "晶圓圖影像（類別不平衡資料）",
+          "metrics": "Accuracy／F1／1-NN（生成品質）",
+          "result": "Acc 98.39%、F1 93.01%"
+        },
+        {
+          "domain": "晶圓圖缺陷分類",
+          "model": "CNN-ESN（2026）",
+          "arch": "ResNet34＋回聲狀態網路",
+          "inputs": "含雜訊晶圓圖",
+          "metrics": "Acc（含 σ=0.1 雜訊穩健性）",
+          "result": "乾淨 94.74%、雜訊 87.30%"
+        },
+        {
+          "domain": "SEM 缺陷分類",
+          "model": "IBM ASMC（2025）",
+          "arch": "ViT（DINOv2）＋半監督",
+          "inputs": "SEM 影像（每類<15 張）",
+          "metrics": "分類準確率",
+          "result": ">90%（少樣本）"
+        },
+        {
+          "domain": "良率預測",
+          "model": "PDF Exensio（2025）",
+          "arch": "XGBoost＋PCA",
+          "inputs": "線上缺陷、計量、電測、FDC",
+          "metrics": "die/wafer pass-fail、precision/recall",
+          "result": "可調閾值平衡 overkill/underkill"
+        },
+        {
+          "domain": "良率根因",
+          "model": "TSMC 智慧製造",
+          "arch": "RNN（時序 FDC）＋聯邦學習",
+          "inputs": "設備感測器時序、檢測資料",
+          "metrics": "良率影響缺陷預測準確率",
+          "result": "~92%（28–3nm）、逃逸率-15%"
+        },
+        {
+          "domain": "熱模擬代理",
+          "model": "DeepOHeat-v1（2025）",
+          "arch": "DeepONet＋KAN＋GMRES 細化",
+          "inputs": "功耗圖／floorplan（物理資訊訓練，無需模擬資料）",
+          "metrics": "MAPE、訓練時間、記憶體",
+          "result": "MAPE 0.035%、訓練-62×、記憶體-31×"
+        },
+        {
+          "domain": "熱-IR 聯合",
+          "model": "ThermEDGe/IREDGe",
+          "arch": "Encoder-Decoder CNN",
+          "inputs": "時變功耗圖、PDN 密度",
+          "metrics": "IR 誤差（mV）、溫度輪廓",
+          "result": "平均 IR 誤差 0.053mV"
+        },
+        {
+          "domain": "2.5D 電熱協同",
+          "model": "TTSV-HMO（2025）",
+          "arch": "等效模型＋混合元啟發式（PSO+SA）",
+          "inputs": "TTSV 間距、chiplet 位置、功耗密度",
+          "metrics": "溫度/阻抗 MAE、fitness",
+          "result": "溫度 MAE 0.35%、阻抗 3.97%"
+        },
+        {
+          "domain": "靜態 IR Drop",
+          "model": "MaxViT/U-Net（2026）",
+          "arch": "MaxViT 編碼＋U-Net/FPN 解碼",
+          "inputs": "電阻圖、電流圖、電源焊墊圖（SPICE 轉影像）",
+          "metrics": "MAE、F1（>90% 峰值熱點）、推論時間",
+          "result": "MAE<15×10⁻⁵V、較 NGSPICE 快 10–30×"
+        },
+        {
+          "domain": "靜態 IR Drop",
+          "model": "ICCAD'23 冠軍流",
+          "arch": "ConvNeXtV2-Nano＋UPerNet",
+          "inputs": "各金屬層電阻圖＋有效距離圖",
+          "metrics": "MAE（mV）、F1",
+          "result": "MAE 0.075mV、F1 0.56"
+        },
+        {
+          "domain": "動態 IR Drop",
+          "model": "PDNNet（2024）",
+          "arch": "GNN（PDNGraph）＋CNN 異構",
+          "inputs": "PDN 結構圖＋動態電流圖",
+          "metrics": "NMAE、加速比",
+          "result": "NMAE 改善 39.3%、545× 加速"
+        },
+        {
+          "domain": "動態 IR Drop",
+          "model": "雙路徑時空模型（DATE'25）",
+          "arch": "3D SW-MSA Transformer",
+          "inputs": "時序窗分解功耗圖（內部/開關/漏電/翻轉率）",
+          "metrics": "熱點預測精度",
+          "result": "超越 2D/3D-CNN 與遞迴 U-Net"
+        },
+        {
+          "domain": "電遷移",
+          "model": "Dey et al.（2020）",
+          "arch": "10 層 NN 迴歸＋邏輯迴歸分類",
+          "inputs": "J、L、T、IR Drop、MTTF 標註（KLU＋Black）",
+          "metrics": "R²、AMSE、失效段偵測",
+          "result": "顯著加速、MTTF 可比精確模型"
+        },
+        {
+          "domain": "電遷移",
+          "model": "BPINN-EM-Post（2025）",
+          "arch": "貝氏 PINN",
+          "inputs": "Korhonen PDE 物理殘差＋觀測",
+          "metrics": "不確定性量化、壽命分佈",
+          "result": "克服 PINN 過擬合、支援多線段"
+        },
+        {
+          "domain": "ATPG",
+          "model": "InF-ATPG（2025）",
+          "arch": "FFR 劃分＋QGNN＋DQN",
+          "inputs": "邏輯狀態、SCOAP 可控/可觀測性",
+          "metrics": "回溯數、故障覆蓋率、UFP",
+          "result": "回溯-55.06%、UFP 0.50%"
+        },
+        {
+          "domain": "ATPG（商用）",
+          "model": "Synopsys TSO.ai",
+          "arch": "AI 設定調優（黑盒優化）",
+          "inputs": "設計特性、ATPG 引擎行為、約束",
+          "metrics": "圖樣數、覆蓋率、收斂迭代",
+          "result": "圖樣-20~25%（部分>50%）"
+        },
+        {
+          "domain": "BIST 強化",
+          "model": "LITE（2025）",
+          "arch": "標準單元掃描增強＋SCOAP 分析",
+          "inputs": "網表超圖、CC0/CC1/CObs",
+          "metrics": "圖樣數、隨機圖樣覆蓋率",
+          "result": "ATPG 圖樣-31%、改善 RPR 覆蓋"
+        },
+        {
+          "domain": "KGD/離群偵測",
+          "model": "GPR/RevTransC/共形預測",
+          "arch": "GPR 空間建模、無監督轉換、共形 QR＋CatBoost",
+          "inputs": "晶圓級參數測試資料、WAT",
+          "metrics": "AUROC、DPPM、Vmin 區間覆蓋率",
+          "result": "優於 DPAT；Vmin ~90% 覆蓋保證"
+        },
+        {
+          "domain": "測試時間",
+          "model": "GPU 即時適應性測試",
+          "arch": "GPU 加速 ML（產線部署）",
+          "inputs": "即時測試資料流",
+          "metrics": "測試時間、缺陷覆蓋維持",
+          "result": "Blackwell 量產：-25% 測試時間"
+        },
+        {
+          "domain": "佈局熱點",
+          "model": "可解釋 GAT（ASP-DAC'26）",
+          "arch": "圖注意力網路（8 頭）",
+          "inputs": "佈局圖（節點特徵 5 維、鄰接矩陣）",
+          "metrics": "Recall、誤報率、可解釋性",
+          "result": "記憶體較影像法省 5–12×"
+        },
+        {
+          "domain": "e-Beam 複審",
+          "model": "SEMVision H20（2025）",
+          "arch": "深度學習影像分類（產線持續訓練）",
+          "inputs": "CFE e-beam 影像",
+          "metrics": "複審速度、真/假缺陷區分",
+          "result": "3× 速度、已導入 2nm/GAA 客戶"
+        }
+      ],
+      "note": "資料來源為第三方公開發表之研究與產業資訊，倍特爾以其作為導入對標基準。"
+    }
+  },
+  "matrix": {
+    "eyebrow": "PROCESS × AI",
+    "title": "製程與 AI 對應",
+    "lead": "九大製程各自對應的主要導入方向。",
+    "table": {
+      "scroll_label": "製程與 AI 對應矩陣，可左右捲動",
+      "caption": "製程 × AI 對應矩陣：製程、主要對標架構與導入重點",
+      "columns": [
+        "製程",
+        "主要對標架構",
+        "導入重點"
+      ],
+      "rows": [
+        {
+          "process_label": "黃光段",
+          "process_href": "equipment-lithography.html",
+          "arch": "LithoDreamer／ILT、可解釋 GAT（ASP-DAC'26）",
+          "focus": "光罩圖形生成修正、佈局熱點預測、軌道數字孿生"
+        },
+        {
+          "process_label": "蝕刻段",
+          "process_href": "equipment-etch.html",
+          "arch": "電漿物理仿真、TSMC RNN 時序 FDC＋聯邦學習",
+          "focus": "蝕刻速率推算、異常偵測、終點判定"
+        },
+        {
+          "process_label": "化學氣相沉積",
+          "process_href": "equipment-cvd.html",
+          "arch": "DeepOHeat-v1（2025）、ThermEDGe/IREDGe",
+          "focus": "熱場代理、膜厚均勻度、腔體數字孿生"
+        },
+        {
+          "process_label": "烘烤製程",
+          "process_href": "equipment-bake.html",
+          "arch": "DeepOHeat-v1（2025）、ThermEDGe/IREDGe",
+          "focus": "溫度輪廓推算、熱預算優化、批次數字孿生"
+        },
+        {
+          "process_label": "離子植入",
+          "process_href": "equipment-implant.html",
+          "arch": "蒙地卡羅物理仿真、BPINN-EM-Post（2025）、GPR",
+          "focus": "摻雜剖面模擬、不確定性量化、空間離群偵測"
+        },
+        {
+          "process_label": "CMP 研磨",
+          "process_href": "equipment-cmp.html",
+          "arch": "研磨物理仿真、PDF Exensio（2025）、RNN 時序 FDC",
+          "focus": "移除率均勻度、良率預測、耗材壽命趨勢"
+        },
+        {
+          "process_label": "晶圓水洗",
+          "process_href": "equipment-cleaning.html",
+          "arch": "IBM ASMC（2025）ViT、RNN 時序 FDC",
+          "focus": "SEM 少樣本缺陷分類、藥液異常偵測、顆粒根因"
+        },
+        {
+          "process_label": "晶圓檢測",
+          "process_href": "equipment-inspection.html",
+          "arch": "G2LGAN＋CNN、CNN-ESN、SEMVision H20、GPU 適應性測試、KGD 共形預測、InF-ATPG",
+          "focus": "晶圓圖分類、e-beam 複審、測試時間優化、離群偵測"
+        },
+        {
+          "process_label": "掩模版製程",
+          "process_href": "equipment-mask.html",
+          "arch": "LithoDreamer／ILT、MaxViT/U-Net、可解釋 GAT",
+          "focus": "圖形修正、風險區定位、寫入數字孿生"
+        }
+      ]
+    }
+  },
+  "delivery": {
+    "eyebrow": "HOW WE DELIVER",
+    "title": "AI 導入五步驟",
+    "lead": "從場景界定到團隊移交，指標可驗證。",
+    "steps": [
+      {
+        "num": "01",
+        "title": "諮詢",
+        "text": "界定問題場景與可量化目標，評估資料可得性與導入價值。"
+      },
+      {
+        "num": "02",
+        "title": "資料接入",
+        "text": "整併設備感測、製程量測與檢測資料，建立一致的資料格式。"
+      },
+      {
+        "num": "03",
+        "title": "模型導入",
+        "text": "依場景選擇對標架構並調校，建立訓練與推論流程。"
+      },
+      {
+        "num": "04",
+        "title": "驗證",
+        "text": "以既定指標比對基線，確認穩定性與可重現性。"
+      },
+      {
+        "num": "05",
+        "title": "培訓",
+        "text": "移交操作與判讀方法，建立客戶自主維運能力。"
+      }
+    ],
+    "media": {
+      "id": "IMG-AI-03",
+      "file": "assets/img/ai-03.jpg",
+      "ratio": "4-3",
+      "alt": "AI 導入流程看板截圖風格：五階段卡片與指標數字，深色 UI、光譜色進度條",
+      "caption": "AI 導入流程看板風格：五階段卡片與指標數字，深色 UI"
+    }
+  },
+  "cta": {
+    "primary": {
+      "label": "討論 AI 導入場景",
+      "href": "contact.html"
+    }
+  }
+}

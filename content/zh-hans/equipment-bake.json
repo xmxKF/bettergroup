@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "热处理（烘烤）设备｜倍特尔科技集团",
+    "description": "倍特尔提供 KOKUSAI ELECTRIC (KE) 与 TAZMO 热处理（烘烤）设备的采购、销售及维护，并导入热仿真代理、温度轮廓推算与批式热处理数字孪生等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "热处理（烘烤）"
+    }
+  ],
+  "hero": {
+    "id": "bake-hero",
+    "eyebrow": "THERMAL / BAKE",
+    "title": "热处理（烘烤）设备",
+    "title_lat": "Thermal / Bake",
+    "lead": "管理热预算与批次一致性的热处理段。"
+  },
+  "banner_label": "热板模组照片",
+  "banner_media": {
+    "id": "IMG-BAKE-01",
+    "file": "assets/img/bake-01.jpg",
+    "ratio": "16-9",
+    "alt": "热板与冷却板模组排列的设备俯视图，金属表面与热辐射感，冷色调",
+    "caption": "热板与冷却板模组排列的设备俯视图，金属表面与热辐射感，冷色调"
+  },
+  "scope": {
+    "id": "bake-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "KOKUSAI ELECTRIC (KE) 烘烤与热处理设备",
+      "TAZMO 烘烤与热处理设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖热板模组与批式热处理设备。"
+    ],
+    "media": {
+      "id": "IMG-BAKE-02",
+      "file": "assets/img/bake-02.jpg",
+      "ratio": "4-3",
+      "alt": "晶圆置于热板上的近距离特写，表面热扰动与细微光晕",
+      "caption": "晶圆置于热板上的近距离特写，表面热扰动与细微光晕"
+    }
+  },
+  "services": {
+    "id": "bake-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装与温度均匀性调试",
+      "加热模组维护保养与备件规划",
+      "热工艺条件导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "bake-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "DeepOHeat-v1",
+        "year": "（2025）",
+        "arch_note": "",
+        "text": "以物理信息训练的热仿真代理模型，快速预测热板与晶圆温度场。",
+        "metric": "对标指标：MAPE 0.035%、训练 -62×",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "ThermEDGe / IREDGe",
+        "year": "",
+        "arch_note": "",
+        "text": "由时变功耗与加热分布推算温度轮廓，定位热不均区域。",
+        "metric": "对标指标：平均 IR 误差 0.053mV",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "批式热处理数字孪生",
+        "year": "",
+        "arch_note": "",
+        "text": "仿真批次升降温曲线与晶舟位置差异，优化热预算配置。",
+        "metric": "对标指标：以虚拟验证降低热预算试错成本",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-BAKE-03",
+      "file": "assets/img/bake-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：晶圆温度轮廓热图与升降温曲线并置，深色底、暖冷双色阶",
+      "caption": "AI 可视化：晶圆温度轮廓热图与升降温曲线并置，深色底、暖冷双色阶"
+    }
+  },
+  "fit": {
+    "id": "bake-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "光刻胶烘烤与热处理一致性要求高的产线",
+      "热预算受限的先进节点工艺",
+      "热处理设备移机与重新校准",
+      "研究机构建立热工艺实验能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cvd.html",
+      "title": "化学气相沉积"
+    },
+    "next": {
+      "href": "equipment-implant.html",
+      "title": "离子注入"
+    }
+  }
+}

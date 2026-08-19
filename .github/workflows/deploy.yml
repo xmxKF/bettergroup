@@ -1,0 +1,94 @@
+name: Deploy to GitHub Pages
+
+# 推到 main 就重新建置並發佈；也可以在 Actions 分頁手動觸發。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一時間只跑一個發佈；排隊而不取消，避免半途中斷的部署。
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # SITE_URL 決定 canonical / hreflang / sitemap / 404 的站台根路徑，
+      # 以及自訂網域時要不要寫出 dist/CNAME。
+      #   1. repository variable vars.SITE_URL（設了自訂網域就設這個）
+      #   2. <owner>.github.io           → https://<owner>.github.io
+      #   3. 其他 repo                    → https://<owner>.github.io/<repo>
+      - name: Resolve SITE_URL
+        id: site
+        env:
+          VAR_SITE_URL: ${{ vars.SITE_URL }}
+          OWNER: ${{ github.repository_owner }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -n "${VAR_SITE_URL}" ]; then
+            url="${VAR_SITE_URL}"
+          else
+            owner=$(printf '%s' "${OWNER}" | tr '[:upper:]' '[:lower:]')
+            name=$(printf '%s' "${REPOSITORY#*/}" | tr '[:upper:]' '[:lower:]')
+            if [ "${name}" = "${owner}.github.io" ]; then
+              url="https://${owner}.github.io"
+            else
+              url="https://${owner}.github.io/${REPOSITORY#*/}"
+            fi
+          fi
+          url="${url%/}"
+          echo "url=${url}" >> "$GITHUB_OUTPUT"
+          echo "SITE_URL = ${url}"
+
+      # 內容結構／語言不變欄位／資產命名 —— 任何一項不過就不發佈。
+      - name: Validate content
+        run: |
+          python build.py --validate-only
+          python tools/check_parity.py
+
+      - name: Build
+        env:
+          SITE_URL: ${{ steps.site.outputs.url }}
+        run: python build.py --clean
+
+      - name: Check internal links
+        run: python tools/check_links.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

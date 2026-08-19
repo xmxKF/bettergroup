@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, section_header with context %}
+{% from "partials/breadcrumb.html" import breadcrumb %}
+{% from "partials/cta-band.html" import cta_band %}
+{% block main %}
+
+  <!-- ===================== 15.1 HERO（亮帶） ===================== -->
+  <section class="hero-light" id="contact-hero">
+    <div class="container">
+      {{ breadcrumb(page.breadcrumb, common.a11y.breadcrumb_label) }}
+      <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+      <h1>{{ page.hero.title }}</h1>
+      <p class="lead">{{ page.hero.lead }}</p>
+    </div>
+  </section>
+
+  <!-- ===================== 15.2 聯絡資訊 ===================== -->
+  <section class="section" id="contact-info">
+    <div class="container">
+      {{ section_header(page.info) }}
+
+      <div class="grid grid--3 reveal reveal--d1">
+        {%- for e in page.info.entries %}
+        <article class="card">
+          <h3 class="card__title">{{ e.title }}</h3>
+          {%- if e.variant == 'mailto' %}
+          <p class="card__text"><a class="link contact-card__value--nowrap" href="mailto:{{ e.text }}">{{ e.text }}</a></p>
+          {%- else %}
+          <p class="card__text contact-card__value--keep">{{ e.text }}</p>
+          {%- endif %}
+        </article>
+        {%- endfor %}
+      </div>
+
+      {{ media_img(page.info.media, asset_prefix, 'mt-10 reveal reveal--d2') }}
+    </div>
+  </section>
+
+  <!-- ===================== 15.3 詢問表單 ===================== -->
+  <section class="section section--alt" id="enquiry-form">
+    <div class="container">
+      {{ section_header(page.enquiry) }}
+
+      <div class="split split--7-5 split--top">
+      <form class="form form--2col reveal reveal--d1" data-mailto-form data-mailto="{{ common.form.mailto }}" novalidate
+            data-msg-required="{{ common.form.messages.required }}"
+            data-msg-select="{{ common.form.messages.select }}"
+            data-msg-email="{{ common.form.messages.email }}"
+            data-mail-subject="{{ common.form.mail.subject_prefix }}"
+            data-mail-subject-sep="{{ common.form.mail.subject_sep }}"
+            data-mail-sep="{{ common.form.mail.sep }}"
+            data-mail-name="{{ common.form.mail.name }}"
+            data-mail-company="{{ common.form.mail.company }}"
+            data-mail-email="{{ common.form.mail.email }}"
+            data-mail-phone="{{ common.form.mail.phone }}"
+            data-mail-category="{{ common.form.mail.category }}"
+            data-mail-message="{{ common.form.mail.message }}">
+        <div class="field">
+          <label for="f-name">{{ common.form.fields.name.label }}<span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" required placeholder="{{ common.form.fields.name.placeholder }}">
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">{{ common.form.fields.company.label }}<span class="req" aria-hidden="true">*</span></label>
+          <input id="f-company" name="company" type="text" required placeholder="{{ common.form.fields.company.placeholder }}">
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-email">{{ common.form.fields.email.label }}<span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" required placeholder="{{ common.form.fields.email.placeholder }}">
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">{{ common.form.fields.phone.label }}</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="{{ common.form.fields.phone.placeholder }}">
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="field field--full">
+          <label for="f-category">{{ common.form.fields.category.label }}<span class="req" aria-hidden="true">*</span></label>
+          <select id="f-category" name="category" required>
+            <option value="">{{ common.form.fields.category.placeholder }}</option>
+            {%- for c in common.form.categories %}
+            <option>{{ c }}</option>
+            {%- endfor %}
+          </select>
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="field field--full">
+          <label for="f-message">{{ common.form.fields.message.label }}<span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" required placeholder="{{ common.form.fields.message.placeholder }}"></textarea>
+          <p class="error" role="alert"></p>
+        </div>
+        <div class="form__foot">
+          <button class="btn btn--primary" type="submit">{{ common.form.submit }}</button>
+          <p class="form__hint">{{ common.form.hint }}</p>
+        </div>
+      </form>
+
+      <aside class="reveal reveal--d2" aria-label="{{ page.enquiry.aside_label }}">
+        <article class="card">
+          <h3 class="card__title">{{ page.enquiry.side_card.title }}</h3>
+          <p class="card__text">{{ page.enquiry.side_card.text }}</p>
+          <p class="card__foot"><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></p>
+          <p class="small muted mt-4 contact-card__value--keep">{{ page.enquiry.side_card.person }}</p>
+        </article>
+        <article class="card mt-6">
+          <h3 class="card__title">{{ page.enquiry.side_notes.title }}</h3>
+          <ul class="feature-list mt-4">
+            {%- for n in page.enquiry.side_notes.entries %}
+            <li><a class="link" href="{{ n.href }}">{{ n.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        </article>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 15.4 位置 ===================== -->
+  <section class="section" id="contact-location">
+    <div class="container">
+      <div class="split split--5-7 split--top">
+
+        <div class="reveal">
+          {{ section_header(page.location, '', 'margin-bottom:var(--space-6)') }}
+          {%- for p in page.location.paragraphs %}
+          <p>{{ p }}</p>
+          {%- endfor %}
+        </div>
+
+        <div class="reveal reveal--d1">
+          {{ media_img(page.location.media, asset_prefix) }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 15.5 常見問題 ===================== -->
+  <section class="section section--alt" id="contact-faq">
+    <div class="container">
+      {{ section_header(page.faq) }}
+
+      <div class="accordion reveal reveal--d1">
+        {%- for f in page.faq.entries %}
+        <details class="accordion__item"{% if f.id %} id="{{ f.id }}"{% endif %}>
+          <summary class="accordion__summary">
+            {{ f.question }}
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="accordion__body">
+            {%- for a in f.answers %}
+            <p>{{ a }}</p>
+            {%- endfor %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 15.6 分隔視覺 ===================== -->
+  <section class="section section--tight" id="contact-divider">
+    <div class="container">
+      {{ media_img(page.divider_media, asset_prefix, 'reveal') }}
+    </div>
+  </section>
+
+  <!-- ===================== 聯絡條（共用 CTA 帶） ===================== -->
+  {{ cta_band(common.cta_band) }}
+
+{% endblock %}

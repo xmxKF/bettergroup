@@ -1,0 +1,139 @@
+{
+  "site": {
+    "name": "倍特爾科技集團",
+    "legal_name": "倍特爾科技集團有限公司",
+    "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "address": "香港九龍佐敦佐敦道5號至秀商業大廈10樓",
+    "contact_person": "蘇益宏（Kerwin）",
+    "email": "kerwin@bettertechgroup.com",
+    "copyright_year": "2026"
+  },
+
+  "brand": {
+    "logo": "assets/img/logo-96.png",
+    "logo_alt": "倍特爾科技集團有限公司",
+    "name_primary": "倍特爾科技集團",
+    "name_secondary": "Better Science Technology Group"
+  },
+
+  "languages": {
+    "zh-hant": { "label": "繁", "name": "繁體中文" },
+    "zh-hans": { "label": "简", "name": "簡體中文" },
+    "en": { "label": "EN", "name": "English" },
+    "ja": { "label": "日", "name": "日本語" }
+  },
+
+  "lang_switcher": { "aria_label": "語言選擇" },
+
+  "a11y": {
+    "skip_link": "跳至主要內容",
+    "nav_label": "主要導覽",
+    "breadcrumb_label": "麵包屑",
+    "nav_open": "開啟主選單",
+    "nav_close": "關閉主選單"
+  },
+
+  "media_ctrl": {
+    "pause": "暫停影片",
+    "play": "播放影片",
+    "pause_aria": "暫停背景影片",
+    "play_aria": "播放背景影片"
+  },
+
+  "nav": {
+    "entries": [
+      { "label": "首頁", "href": "index.html", "match": "" },
+      { "label": "關於我們", "href": "about.html", "match": "" },
+      { "label": "服務項目", "href": "services.html", "match": "" },
+      {
+        "label": "設備與製程",
+        "href": "equipment.html",
+        "match": "equipment.html equipment-lithography.html equipment-etch.html equipment-cvd.html equipment-bake.html equipment-implant.html equipment-cmp.html equipment-cleaning.html equipment-inspection.html equipment-mask.html"
+      },
+      { "label": "AI 智慧製造", "href": "ai.html", "match": "" },
+      { "label": "聯絡我們", "href": "contact.html", "match": "" }
+    ],
+    "cta": { "label": "洽詢設備", "href": "contact.html" },
+    "mobile_cta": { "label": "洽詢設備與服務", "href": "contact.html" }
+  },
+
+  "footer": {
+    "brand_primary": "倍特爾科技集團有限公司",
+    "brand_secondary": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "desc": "先進半導體製程設備採購、拆裝運送、技術導入與 AI 整合。",
+    "nav_title": "網站導覽",
+    "process_title": "九大製程",
+    "contact_title": "聯絡方式",
+    "labels": { "address": "地址：", "email": "電郵：", "person": "聯絡人：" },
+    "process_links": [
+      { "label": "黃光段", "href": "equipment-lithography.html" },
+      { "label": "蝕刻段", "href": "equipment-etch.html" },
+      { "label": "化學氣相沉積", "href": "equipment-cvd.html" },
+      { "label": "烘烤製程", "href": "equipment-bake.html" },
+      { "label": "離子植入", "href": "equipment-implant.html" },
+      { "label": "CMP 研磨", "href": "equipment-cmp.html" },
+      { "label": "晶圓水洗", "href": "equipment-cleaning.html" },
+      { "label": "晶圓檢測", "href": "equipment-inspection.html" },
+      { "label": "掩模版製程", "href": "equipment-mask.html" }
+    ],
+    "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
+    "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。"
+  },
+
+  "cta_band": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "與我們談談您的產線需求",
+    "lead": "從設備選型到裝機與 AI 導入，提供單一窗口。",
+    "primary": { "label": "洽詢設備與服務", "href": "contact.html" },
+    "secondary": {
+      "label": "kerwin@bettertechgroup.com",
+      "href": "mailto:kerwin@bettertechgroup.com"
+    }
+  },
+
+  "shared_cta": {
+    "primary": { "label": "洽詢設備與服務", "href": "contact.html" },
+    "secondary": { "label": "瀏覽九大製程", "href": "equipment.html" },
+    "ai": { "label": "了解 AI 智慧製造", "href": "ai.html" },
+    "services": { "label": "查看服務項目", "href": "services.html" },
+    "process_page": { "label": "索取設備與服務說明", "href": "contact.html" }
+  },
+
+  "pager": {
+    "prev_label": "上一段製程",
+    "next_label": "下一段製程",
+    "aria_label": "製程頁導覽"
+  },
+
+  "form": {
+    "mailto": "kerwin@bettertechgroup.com",
+    "required_mark_aria": "必填",
+    "fields": {
+      "name": { "label": "姓名", "placeholder": "請輸入您的姓名" },
+      "company": { "label": "公司", "placeholder": "公司或機構名稱" },
+      "email": { "label": "Email", "placeholder": "your@company.com" },
+      "phone": { "label": "電話", "placeholder": "含國碼，例如 +852" },
+      "category": { "label": "需求類別", "placeholder": "請選擇需求類別" },
+      "message": { "label": "訊息", "placeholder": "請簡述製程段、設備需求與時程" }
+    },
+    "categories": ["設備採購", "拆裝運送", "製程技術導入", "人才培訓", "AI 整合", "其他"],
+    "submit": "送出詢問",
+    "hint": "送出後將開啟您的郵件軟體，內容已預先填入，請確認後寄出。",
+    "messages": {
+      "required": "此欄位為必填。",
+      "select": "請選擇需求類別。",
+      "email": "請輸入正確的電子郵件格式。"
+    },
+    "mail": {
+      "subject_prefix": "網站詢問",
+      "subject_sep": "｜",
+      "sep": "：",
+      "name": "姓名",
+      "company": "公司",
+      "email": "Email",
+      "phone": "電話",
+      "category": "需求類別",
+      "message": "訊息"
+    }
+  }
+}

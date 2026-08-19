@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, section_header, card_process with context %}
+{% from "partials/breadcrumb.html" import breadcrumb %}
+{% from "partials/cta-band.html" import cta_band %}
+{% block main %}
+
+  <!-- ===================== 4.1 HERO（亮帶） ===================== -->
+  <section class="hero-light" id="equipment-hero">
+    <div class="container">
+      {{ breadcrumb(page.breadcrumb, common.a11y.breadcrumb_label) }}
+      <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+      <h1>{{ page.hero.title }}</h1>
+      <p class="lead">{{ page.hero.lead }}</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="{{ page.banner_label }}">
+    <div class="container">
+      {{ media_img(page.banner_media, asset_prefix, 'reveal') }}
+    </div>
+  </section>
+
+  <!-- ===================== 4.2 九大製程流 ===================== -->
+  <section class="section section--alt" id="process-flow">
+    <div class="container">
+      <div class="split split--7-5 split--top">
+        <div class="reveal">
+          {{ section_header(page.flow, '', 'margin-bottom:0') }}
+          {%- for p in page.flow.paragraphs %}
+          <p>{{ p }}</p>
+          {%- endfor %}
+        </div>
+        <div class="reveal reveal--d1">
+          {{ media_img(page.flow.media, asset_prefix) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4.3 製程卡片區 ===================== -->
+  <section class="section" id="process-cards">
+    <div class="container">
+
+      {{ section_header(page.processes) }}
+
+      <div class="grid grid--3">
+        {% for item in page.processes.entries %}
+        {{ card_process(item, 'reveal' if loop.index0 % 3 == 0 else 'reveal reveal--d%d'|format(loop.index0 % 3)) }}
+        {% endfor %}
+      </div>
+
+      <p class="brand-note reveal mt-8">{{ page.processes.brand_note }}</p>
+
+      {{ media_img(page.gallery_media, asset_prefix, 'mt-12 reveal') }}
+
+    </div>
+  </section>
+
+  <!-- ===================== 4.4 服務對應說明 ===================== -->
+  <section class="section section--alt" id="equipment-services">
+    <div class="container">
+      {{ section_header(page.services) }}
+      <ul class="feature-list feature-list--3 reveal">
+        {%- for f in page.services.features %}
+        <li>{{ f }}</li>
+        {%- endfor %}
+      </ul>
+      <p class="btn-row mt-8">
+        <a class="arrow-link" href="{{ common.shared_cta.services.href }}">{{ common.shared_cta.services.label }}</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== 4.5 聯絡條 ===================== -->
+  {{ cta_band(common.cta_band) }}
+
+{% endblock %}

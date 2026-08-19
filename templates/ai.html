@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, media_video, section_header with context %}
+{% from "partials/breadcrumb.html" import breadcrumb %}
+{% from "partials/cta-band.html" import cta_band %}
+{% block main %}
+
+  <!-- ===================== 14.1 HERO（亮帶） ===================== -->
+  <section class="hero-light" id="ai-hero">
+    <div class="container">
+      {{ breadcrumb(page.breadcrumb, common.a11y.breadcrumb_label) }}
+
+      <div class="split split--7-5 split--top">
+        <div>
+          <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+          <h1>{{ page.hero.title }}</h1>
+          <p class="lead">{{ page.hero.lead }}</p>
+        </div>
+
+        <div class="reveal">
+          {{ media_video(page.hero.media, asset_prefix, common.media_ctrl) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 14.2 定位說明 ===================== -->
+  <section class="section section--line" id="ai-positioning">
+    <div class="container">
+      <div class="split split--7-5 split--top">
+        <div class="reveal">
+          {{ section_header(page.positioning, '', 'margin-bottom:var(--space-6)') }}
+          <div class="stack-4">
+            {%- for p in page.positioning.paragraphs %}
+            <p>{{ p }}</p>
+            {%- endfor %}
+          </div>
+        </div>
+        <div class="reveal reveal--d1">
+          {{ media_img(page.positioning.media, asset_prefix) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 14.3 三大貫穿主軸 ===================== -->
+  <section class="section section--alt" id="ai-pillars">
+    <div class="container">
+
+      {{ section_header(page.pillars) }}
+
+      <div class="grid grid--3">
+        {%- for item in page.pillars.entries %}
+        <article class="card card--ai {{ 'reveal' if loop.index0 % 3 == 0 else 'reveal reveal--d%d'|format(loop.index0 % 3) }}">
+          <h3 class="card__title">{% if item.title %}{{ item.title }} {% endif %}<span class="lat">{{ item.title_lat }}</span></h3>
+          <p class="card__text">{{ item.text }}</p>
+          <p class="card__meta">{{ item.meta }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+
+      {{ media_img(page.pillars.media, asset_prefix, 'mt-10 reveal') }}
+
+    </div>
+  </section>
+
+  <!-- ===================== 14.4 AI 架構對標表 ===================== -->
+  <section class="section section--major" id="ai-benchmark-table">
+    <div class="container">
+
+      {{ section_header(page.benchmarks) }}
+
+      <div class="table-wrap reveal">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="{{ page.benchmarks.table.scroll_label }}">
+          <table class="data-table">
+            <caption class="visually-hidden">{{ page.benchmarks.table.caption }}</caption>
+            <thead>
+              <tr>
+                {%- for c in page.benchmarks.table.columns %}
+                <th scope="col">{{ c }}</th>
+                {%- endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for r in page.benchmarks.table.rows %}
+              <tr>
+                <th scope="row">{{ r.domain }}</th>
+                <td class="model">{{ r.model }}</td>
+                <td>{{ r.arch }}</td>
+                <td>{{ r.inputs }}</td>
+                <td>{{ r.metrics }}</td>
+                <td class="num">{{ r.result }}</td>
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="table-note reveal">{{ page.benchmarks.table.note }}</p>
+
+    </div>
+  </section>
+
+  <!-- ===================== 14.5 製程 × AI 對應矩陣 ===================== -->
+  <section class="section section--alt" id="ai-process-matrix">
+    <div class="container">
+
+      {{ section_header(page.matrix) }}
+
+      <div class="table-wrap reveal">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="{{ page.matrix.table.scroll_label }}">
+          <table class="data-table">
+            <caption class="visually-hidden">{{ page.matrix.table.caption }}</caption>
+            <thead>
+              <tr>
+                {%- for c in page.matrix.table.columns %}
+                <th scope="col">{{ c }}</th>
+                {%- endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for r in page.matrix.table.rows %}
+              <tr>
+                <th scope="row"><a class="link" href="{{ r.process_href }}">{{ r.process_label }}</a></th>
+                <td>{{ r.arch }}</td>
+                <td>{{ r.focus }}</td>
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 14.6 導入方法 ===================== -->
+  <section class="section section--major" id="ai-delivery">
+    <div class="container">
+
+      {{ section_header(page.delivery) }}
+
+      <div class="split split--top">
+        <ol class="steps reveal">
+          {%- for s in page.delivery.steps %}
+          <li class="steps__item">
+            <span class="steps__dot" aria-hidden="true"></span>
+            <p class="steps__num">{{ s.num }}</p>
+            <p class="steps__title">{{ s.title }}</p>
+            <p class="steps__text">{{ s.text }}</p>
+          </li>
+          {%- endfor %}
+        </ol>
+
+        <div class="reveal reveal--d1">
+          {{ media_img(page.delivery.media, asset_prefix) }}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 14.7 聯絡條（主 CTA 改為「討論 AI 導入場景」） ===================== -->
+  {{ cta_band({'eyebrow': common.cta_band.eyebrow,
+               'title': common.cta_band.title,
+               'lead': common.cta_band.lead,
+               'primary': page.cta.primary,
+               'secondary': common.cta_band.secondary}) }}
+
+{% endblock %}

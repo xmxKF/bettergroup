@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Wafer Cleaning Equipment | BETTER",
+    "description": "DNS and TEL wafer cleaning equipment with procurement, sales and maintenance, benchmarked against few-shot SEM defect classification and time-series FDC."
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Equipment & Processes",
+      "href": "equipment.html"
+    },
+    {
+      "label": "Wafer Clean & Dry"
+    }
+  ],
+  "hero": {
+    "id": "cleaning-hero",
+    "eyebrow": "WAFER CLEANING",
+    "title": "Wafer clean & dry equipment",
+    "title_lat": "Wafer Cleaning",
+    "lead": "The area that suppresses particles and chemical residue to protect yield."
+  },
+  "banner_label": "Wafer cleaning bay photo",
+  "banner_media": {
+    "id": "IMG-CLEAN-01",
+    "file": "assets/img/clean-01.jpg",
+    "ratio": "16-9",
+    "alt": "Wafer spinning at high speed inside a single-wafer clean chamber as chemistry sprays in a ring, water film catching the light",
+    "caption": "Wafer spinning inside a single-wafer clean chamber as chemistry sprays in a ring"
+  },
+  "scope": {
+    "id": "cleaning-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "Equipment scope",
+    "lead": "",
+    "features": [
+      "DNS wafer cleaning equipment",
+      "TEL wafer cleaning equipment"
+    ],
+    "paragraphs": [
+      "Focused on leading Japanese brands, covering single-wafer and batch cleaning and drying equipment."
+    ],
+    "media": {
+      "id": "IMG-CLEAN-02",
+      "file": "assets/img/clean-02.jpg",
+      "ratio": "4-3",
+      "alt": "A dry wafer unloading after cleaning, its surface free of water marks in a cool white cleanroom",
+      "caption": "Dry wafer unloading after cleaning, surface free of water marks, cleanroom setting"
+    }
+  },
+  "services": {
+    "id": "cleaning-services",
+    "eyebrow": "SERVICES",
+    "title": "Services provided",
+    "lead": "",
+    "features": [
+      "Equipment procurement, evaluation and tool selection",
+      "Tool condition inspection and acceptance support",
+      "De-installation, packing and cross-border shipping",
+      "Move-in installation, chemical supply and drain hookup, and tuning",
+      "Chemical delivery system and nozzle maintenance",
+      "Cleaning process condition setup",
+      "Operator and maintenance staff training"
+    ]
+  },
+  "ai": {
+    "id": "cleaning-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI integration",
+    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "entries": [
+      {
+        "arch": "IBM ASMC",
+        "year": "(2025)",
+        "arch_note": "ViT (DINOv2) + semi-supervised",
+        "text": "Few-shot learning classifies SEM images of particle and residue defects.",
+        "metric": "Benchmark metric: over 90% with fewer than 15 images per class",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "TSMC smart manufacturing: RNN time-series FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "Cleaner sensor time series reveal chemistry and flow anomalies as they develop.",
+        "metric": "Benchmark metric: about 92% (28–3nm), escape rate down 15%",
+        "tag": "Benchmark architecture"
+      },
+      {
+        "arch": "Particle defect root cause analysis",
+        "year": "",
+        "arch_note": "",
+        "text": "Inspection and tool data are linked to trace particle sources back to cleaning conditions.",
+        "metric": "Benchmark metric: data correlation shortens root cause investigation",
+        "tag": "Benchmark architecture"
+      }
+    ],
+    "media": {
+      "id": "IMG-CLEAN-03",
+      "file": "assets/img/clean-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI visualization: a grid of SEM defect images annotated with classification confidence",
+      "caption": "Grid of SEM defect images annotated with classification confidence"
+    }
+  },
+  "fit": {
+    "id": "cleaning-fit",
+    "eyebrow": "USE CASES",
+    "title": "Where it fits",
+    "lead": "",
+    "features": [
+      "Advanced-node lines under particle yield pressure",
+      "Projects strengthening cleaning between front and back end",
+      "Cleaning tool relocation and chemical system rebuild",
+      "Research institutes building cleaning and surface treatment capability"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cmp.html",
+      "title": "CMP"
+    },
+    "next": {
+      "href": "equipment-inspection.html",
+      "title": "Inspection & Test"
+    }
+  }
+}

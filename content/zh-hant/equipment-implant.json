@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "離子植入設備｜倍特爾科技集團",
+    "description": "倍特爾提供 ULVAC 與 NISSIN 離子植入設備的採購、銷售及維護，並導入蒙地卡羅摻雜物理仿真、貝氏 PINN 不確定性量化與 GPR 空間建模等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "離子植入"
+    }
+  ],
+  "hero": {
+    "id": "implant-hero",
+    "eyebrow": "ION IMPLANTATION",
+    "title": "離子植入設備",
+    "title_lat": "Ion Implantation",
+    "lead": "決定摻雜濃度、深度與元件電性的關鍵段。"
+  },
+  "banner_label": "離子植入機照片",
+  "banner_media": {
+    "id": "IMG-IMP-01",
+    "file": "assets/img/imp-01.jpg",
+    "ratio": "16-9",
+    "alt": "離子植入機的長束線設備外觀，強調管線與磁鐵段的工業幾何感",
+    "caption": "離子植入機的長束線設備外觀，強調管線與磁鐵段的工業幾何感"
+  },
+  "scope": {
+    "id": "implant-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "ULVAC 離子植入設備",
+      "NISSIN 離子植入設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋不同能量區間的離子植入機台。"
+    ],
+    "media": {
+      "id": "IMG-IMP-02",
+      "file": "assets/img/imp-02.jpg",
+      "ratio": "4-3",
+      "alt": "束線與晶圓端站示意特寫，藍色離子束軌跡以視覺化方式呈現",
+      "caption": "束線與晶圓端站示意特寫，藍色離子束軌跡以視覺化方式呈現"
+    }
+  },
+  "services": {
+    "id": "implant-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝、束流校正與調試",
+      "離子源與真空系統維護保養",
+      "摻雜製程條件導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "implant-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "蒙地卡羅摻雜剖面物理仿真",
+        "year": "",
+        "arch_note": "",
+        "text": "以離子傳輸物理模型推算摻雜濃度剖面與通道效應。",
+        "metric": "對標指標：以仿真預估剖面，減少破壞性驗證",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "BPINN-EM-Post",
+        "year": "（2025）",
+        "arch_note": "貝氏 PINN 思路",
+        "text": "將物理殘差與觀測結合，量化製程預測的不確定性區間。",
+        "metric": "對標指標：克服 PINN 過擬合、支援多線段",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "GPR 空間建模（KGD／離群偵測）",
+        "year": "",
+        "arch_note": "",
+        "text": "以高斯過程建模晶圓級參數分布，偵測空間性離群。",
+        "metric": "對標指標：優於 DPAT；Vmin 約 90% 覆蓋保證",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-IMP-03",
+      "file": "assets/img/imp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：晶圓摻雜濃度剖面模擬圖與不確定性區間帶，深色底、光譜色",
+      "caption": "AI 視覺化：晶圓摻雜濃度剖面模擬圖與不確定性區間帶，深色底、光譜色"
+    }
+  },
+  "fit": {
+    "id": "implant-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "需要精準摻雜控制的先進元件製程",
+      "功率元件與化合物半導體產線",
+      "植入機移機與束流重新校正",
+      "研究機構建立摻雜實驗能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-bake.html",
+      "title": "烘烤製程"
+    },
+    "next": {
+      "href": "equipment-cmp.html",
+      "title": "CMP 研磨"
+    }
+  }
+}

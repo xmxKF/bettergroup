@@ -1,0 +1,17 @@
+{#- Shared contact band — docs/components.md §19. `band` defaults to common.cta_band;
+    pages that override the wording (ai / equipment-*) pass their own object. -#}
+{%- macro cta_band(band) -%}
+<section class="cta-band" id="contact-band">
+    <div class="container">
+      <div class="cta-band__inner reveal">
+        <p class="eyebrow eyebrow--center">{{ band.eyebrow }}</p>
+        <h2>{{ band.title }}</h2>
+        <p class="lead">{{ band.lead }}</p>
+        <div class="btn-row btn-row--center">
+          <a class="btn btn--on-dark-primary" href="{{ band.primary.href }}">{{ band.primary.label }}</a>
+          <a class="btn btn--on-dark-secondary" href="{{ band.secondary.href }}">{{ band.secondary.label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endmacro -%}

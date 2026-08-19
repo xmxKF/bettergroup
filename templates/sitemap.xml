@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for l in langs %}
+{%- for key, template, output, priority in pages %}
+{%- if key in contents[l.code] %}
+  <url>
+    <loc>{{ base_url }}{{ l.code }}/{{ output }}</loc>
+{%- for alt in langs %}
+{%- if key in contents[alt.code] %}
+    <xhtml:link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ base_url }}{{ alt.code }}/{{ output }}"/>
+{%- endif %}
+{%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ base_url }}{{ x_default }}/{{ output }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>{{ priority }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+{%- endfor %}
+</urlset>

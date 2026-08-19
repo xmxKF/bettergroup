@@ -1,0 +1,168 @@
+{
+  "site": {
+    "name": "BETTER SCIENCE TECHNOLOGY GROUP",
+    "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
+    "contact_person": "Kerwin Su (蘇益宏)",
+    "email": "kerwin@bettertechgroup.com",
+    "copyright_year": "2026"
+  },
+
+  "brand": {
+    "logo": "assets/img/logo-96.png",
+    "logo_alt": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "name_primary": "BETTER",
+    "name_secondary": "倍特爾科技集團有限公司"
+  },
+
+  "languages": {
+    "zh-hant": { "label": "繁", "name": "Traditional Chinese" },
+    "zh-hans": { "label": "简", "name": "Simplified Chinese" },
+    "en": { "label": "EN", "name": "English" },
+    "ja": { "label": "日", "name": "Japanese" }
+  },
+
+  "lang_switcher": { "aria_label": "Language" },
+
+  "a11y": {
+    "skip_link": "Skip to main content",
+    "nav_label": "Main navigation",
+    "breadcrumb_label": "Breadcrumb",
+    "nav_open": "Open main menu",
+    "nav_close": "Close main menu"
+  },
+
+  "media_ctrl": {
+    "pause": "Pause",
+    "play": "Play",
+    "pause_aria": "Pause background video",
+    "play_aria": "Play background video"
+  },
+
+  "nav": {
+    "entries": [
+      { "label": "Home", "href": "index.html", "match": "" },
+      { "label": "About", "href": "about.html", "match": "" },
+      { "label": "Services", "href": "services.html", "match": "" },
+      {
+        "label": "Equipment & Processes",
+        "href": "equipment.html",
+        "match": "equipment.html equipment-lithography.html equipment-etch.html equipment-cvd.html equipment-bake.html equipment-implant.html equipment-cmp.html equipment-cleaning.html equipment-inspection.html equipment-mask.html"
+      },
+      { "label": "AI Manufacturing", "href": "ai.html", "match": "" },
+      { "label": "Contact", "href": "contact.html", "match": "" }
+    ],
+    "cta": { "label": "Inquire", "href": "contact.html" },
+    "mobile_cta": { "label": "Send an Inquiry", "href": "contact.html" }
+  },
+
+  "footer": {
+    "brand_primary": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "brand_secondary": "倍特爾科技集團有限公司",
+    "desc": "Procurement, de-installation and shipping, process technology transfer and AI integration for advanced semiconductor equipment.",
+    "nav_title": "Site Map",
+    "process_title": "Nine Process Areas",
+    "contact_title": "Contact",
+    "labels": {
+      "address": "Address: ",
+      "email": "Email: ",
+      "person": "Contact: "
+    },
+    "process_links": [
+      {
+        "label": "Photolithography",
+        "href": "equipment-lithography.html"
+      },
+      { "label": "Dry & Plasma Etch", "href": "equipment-etch.html" },
+      { "label": "CVD", "href": "equipment-cvd.html" },
+      { "label": "Bake & Thermal", "href": "equipment-bake.html" },
+      { "label": "Ion Implant", "href": "equipment-implant.html" },
+      { "label": "CMP", "href": "equipment-cmp.html" },
+      {
+        "label": "Wafer Clean & Dry",
+        "href": "equipment-cleaning.html"
+      },
+      {
+        "label": "Inspection & Test",
+        "href": "equipment-inspection.html"
+      },
+      { "label": "Photomask", "href": "equipment-mask.html" }
+    ],
+    "copyright": "© 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED 倍特爾科技集團有限公司. All rights reserved.",
+    "trademark_note": "All brand names shown on this site are trademarks of their respective owners and are used for equipment identification only."
+  },
+
+  "cta_band": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "Let's talk about your line",
+    "lead": "One point of contact from equipment selection through installation and AI integration.",
+    "primary": { "label": "Send an Inquiry", "href": "contact.html" },
+    "secondary": {
+      "label": "kerwin@bettertechgroup.com",
+      "href": "mailto:kerwin@bettertechgroup.com"
+    }
+  },
+
+  "shared_cta": {
+    "primary": { "label": "Send an Inquiry", "href": "contact.html" },
+    "secondary": { "label": "Explore Nine Process Areas", "href": "equipment.html" },
+    "ai": { "label": "Discover AI Manufacturing", "href": "ai.html" },
+    "services": { "label": "View Our Services", "href": "services.html" },
+    "process_page": { "label": "Request Equipment Details", "href": "contact.html" }
+  },
+
+  "pager": {
+    "prev_label": "Previous process",
+    "next_label": "Next process",
+    "aria_label": "Process navigation"
+  },
+
+  "form": {
+    "mailto": "kerwin@bettertechgroup.com",
+    "required_mark_aria": "required",
+    "fields": {
+      "name": { "label": "Name", "placeholder": "Your name" },
+      "company": { "label": "Company", "placeholder": "Company or organization" },
+      "email": { "label": "Email", "placeholder": "your@company.com" },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "With country code, e.g. +852"
+      },
+      "category": {
+        "label": "Inquiry type",
+        "placeholder": "Select an inquiry type"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Briefly describe the process area, equipment and timeline"
+      }
+    },
+    "categories": [
+      "Equipment procurement",
+      "De-installation & shipping",
+      "Process technology transfer",
+      "Talent training",
+      "AI integration",
+      "Other"
+    ],
+    "submit": "Send inquiry",
+    "hint": "Submitting opens your email client with the message pre-filled. Please review it and send.",
+    "messages": {
+      "required": "This field is required.",
+      "select": "Please select an inquiry type.",
+      "email": "Please enter a valid email address."
+    },
+    "mail": {
+      "subject_prefix": "Website inquiry",
+      "subject_sep": " | ",
+      "sep": ": ",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "category": "Inquiry type",
+      "message": "Message"
+    }
+  }
+}

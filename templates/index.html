@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% from "partials/media.html" import media_img, media_video, section_header, card, card_link, card_process with context %}
+{% from "partials/cta-band.html" import cta_band %}
+{% block main %}
+
+  <!-- ===================== 1.1 HERO（暗帶） ===================== -->
+  <section class="hero-dark" id="hero">
+    <div class="container">
+      <div class="hero__grid">
+
+        <div class="hero__content">
+          <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+          <h1 class="hero__title">{% for line in page.hero.title_lines %}{% if not loop.first and lang == 'en' %} {% endif %}<span class="nb">{{ line }}</span>{% endfor %}</h1>
+          <p class="hero__lead">{{ page.hero.lead }}</p>
+          <p class="hero__sub">{{ page.hero.sub }}</p>
+          <div class="hero__actions btn-row">
+            <a class="btn btn--on-dark-primary" href="{{ page.hero.primary.href }}">{{ page.hero.primary.label }}</a>
+            <a class="btn btn--on-dark-secondary" href="{{ page.hero.secondary.href }}">{{ page.hero.secondary.label }}</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          {{ media_video(page.hero.media, asset_prefix, common.media_ctrl) }}
+        </div>
+
+      </div>
+    </div>
+    <span class="hero__rule" aria-hidden="true"></span>
+  </section>
+
+  <!-- ===================== 事實數據列（僅可驗證事實） ===================== -->
+  <section class="section section--tight" aria-label="{{ page.stats.aria_label }}">
+    <div class="container">
+      <div class="stat-row reveal">
+        {%- for s in page.stats.entries %}
+        <div class="stat-row__item">
+          <p class="stat-row__num">{{ s.num }}</p>
+          <p class="stat-row__label">{{ s.label }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 1.2 五大業務支柱 ===================== -->
+  <section class="section section--line" id="pillars">
+    <div class="container">
+
+      {{ section_header(page.pillars) }}
+
+      <div class="grid grid--3">
+        {% for item in page.pillars.entries %}
+        {{ card_link(item, 'reveal' if loop.index0 == 0 else 'reveal reveal--d%d'|format(loop.index0)) }}
+        {% endfor %}
+        {{ media_img(page.pillars.media, asset_prefix, 'media--fill reveal reveal--d5') }}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 1.3 九大製程總覽 ===================== -->
+  <section class="section section--alt" id="processes">
+    <div class="container">
+
+      <div class="split split--top" style="margin-bottom:var(--space-12)">
+        <div class="section-header reveal" style="margin-bottom:0">
+          <p class="eyebrow">{{ page.processes.eyebrow }}</p>
+          <h2>{{ page.processes.title }}</h2>
+          <p class="lead">{{ page.processes.lead }}</p>
+          <p class="btn-row" style="margin-top:var(--space-6)">
+            <a class="arrow-link" href="{{ page.processes.overview_link.href }}">{{ page.processes.overview_link.label }}</a>
+          </p>
+        </div>
+        <div class="reveal reveal--d1">
+          {{ media_img(page.processes.media, asset_prefix) }}
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        {% for item in page.processes.entries %}
+        {{ card_process(item, 'reveal' if loop.index0 % 3 == 0 else 'reveal reveal--d%d'|format(loop.index0 % 3)) }}
+        {% endfor %}
+      </div>
+
+      <p class="brand-note reveal mt-8">{{ page.processes.brand_note }}</p>
+
+    </div>
+  </section>
+
+  <!-- ===================== 1.4 AI 整合亮點條 ===================== -->
+  <section class="section" id="ai-highlight">
+    <div class="container">
+
+      <div class="split split--7-5 split--top">
+        <div class="reveal">
+          {{ section_header(page.ai, '', 'margin-bottom:var(--space-8)') }}
+          {%- for p in page.ai.paragraphs %}
+          <p>{{ p }}</p>
+          {%- endfor %}
+          <p class="btn-row" style="margin-top:var(--space-8)">
+            <a class="btn btn--primary" href="{{ page.ai.cta.href }}">{{ page.ai.cta.label }}</a>
+          </p>
+        </div>
+        <div class="reveal reveal--d1">
+          {{ media_img(page.ai.media, asset_prefix) }}
+        </div>
+      </div>
+
+      <div class="grid grid--3 mt-12">
+        {%- for p in page.ai.pillars %}
+        <article class="card card--ai reveal{% if not loop.first %} reveal--d{{ loop.index0 }}{% endif %}">
+          <h3 class="card__title">{% if p.title %}{{ p.title }} {% endif %}<span class="lat">{{ p.title_lat }}</span></h3>
+          <p class="card__text">{{ p.text }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+
+      <div class="table-wrap mt-10 reveal">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="{{ page.ai.table.scroll_label }}">
+          <table class="data-table">
+            <caption class="visually-hidden">{{ page.ai.table.caption }}</caption>
+            <thead>
+              <tr>
+                {%- for c in page.ai.table.columns %}
+                <th scope="col">{{ c }}</th>
+                {%- endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for r in page.ai.table.rows %}
+              <tr>
+                <th scope="row" class="model">{{ r.model }}</th>
+                <td class="num">{{ r.metric }}</td>
+                <td>{{ r.process }}</td>
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="table-note reveal">{{ page.ai.table.note }}</p>
+
+    </div>
+  </section>
+
+  <!-- ===================== 1.5 選擇倍特爾 ===================== -->
+  <section class="section section--alt" id="why-better">
+    <div class="container">
+      <div class="split split--5-7 split--top">
+
+        <div class="reveal">
+          {{ section_header(page.why, '', 'margin-bottom:var(--space-8)') }}
+          {{ media_img(page.why.media, asset_prefix) }}
+        </div>
+
+        <div class="grid grid--2">
+          {%- for item in page.why.entries %}
+          {{ card(item, 'reveal' if loop.first else 'reveal reveal--d%d'|format(loop.index0)) }}
+          {%- endfor %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 1.6 聯絡條（共用 CTA 帶） ===================== -->
+  {{ cta_band(common.cta_band) }}
+
+{% endblock %}

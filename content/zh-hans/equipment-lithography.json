@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "光刻（黄光）设备｜倍特尔科技集团",
+    "description": "倍特尔提供 NIKON 与 CANON 全系列光刻机（含纳米压印）及 TEL、DNS 涂胶显影设备的采购、销售及维护，并导入 LithoDreamer 生成式光刻等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "光刻（黄光）"
+    }
+  ],
+  "hero": {
+    "id": "litho-hero",
+    "eyebrow": "LITHOGRAPHY",
+    "title": "光刻（黄光）设备",
+    "title_lat": "Lithography",
+    "lead": "曝光与涂胶显影，决定线宽、对准与图形保真度。"
+  },
+  "banner_label": "黄光区照片",
+  "banner_media": {
+    "id": "IMG-LITHO-01",
+    "file": "assets/img/litho-01.jpg",
+    "ratio": "16-9",
+    "alt": "黄光区走道全景，黄色滤光照明下的光刻机列，画面干净、对称构图",
+    "caption": "黄光区走道全景，黄色滤光照明下的光刻机列，画面干净、对称构图"
+  },
+  "scope": {
+    "id": "litho-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "NIKON 全系列光刻机产品",
+      "CANON 全系列光刻机产品，包含纳米压印设备",
+      "TEL 涂胶与显影设备",
+      "DNS 涂胶与显影设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖光刻主机与涂胶显影机（Track）的整线配置。"
+    ],
+    "media": {
+      "id": "IMG-LITHO-02",
+      "file": "assets/img/litho-02.jpg",
+      "ratio": "4-3",
+      "alt": "涂胶显影机内部特写：晶圆位于涂胶腔中，光刻胶膜面反射色带",
+      "caption": "涂胶显影机内部特写：晶圆位于涂胶腔中，光刻胶膜面反射色带"
+    }
+  },
+  "services": {
+    "id": "litho-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、对准与调试",
+      "维护保养与备件规划",
+      "光刻工艺技术导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "litho-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "LithoDreamer 生成式光刻／ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "生成并反演修正掩模版图形，加速 OPC 迭代与图形收敛。",
+        "metric": "对标指标：以生成式方法缩短光刻修正迭代",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "可解释 GAT 版图热点",
+        "year": "（ASP-DAC'26）",
+        "arch_note": "",
+        "text": "以 8 头图注意力网络预测版图热点并提供可解释依据。",
+        "metric": "对标指标：内存较图像法节省 5–12×",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "涂胶显影机数字孪生",
+        "year": "",
+        "arch_note": "",
+        "text": "建立涂胶与显影线的虚拟对照体，仿真条件变更与排程影响。",
+        "metric": "对标指标：以虚拟验证替代部分实际试跑",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-LITHO-03",
+      "file": "assets/img/litho-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：掩模版图形与热点预测叠图，节点以图注意力连线标示，深蓝底",
+      "caption": "AI 可视化：掩模版图形与热点预测叠图，节点以图注意力连线标示，深蓝底"
+    }
+  },
+  "fit": {
+    "id": "litho-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "新产线建设需要光刻与涂胶显影整线导入",
+      "现有厂区扩产或设备移机重建",
+      "研究机构建立光刻实验能力",
+      "二手设备买方需要状态查验与复机支持"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-mask.html",
+      "title": "掩模版工艺"
+    },
+    "next": {
+      "href": "equipment-etch.html",
+      "title": "刻蚀段"
+    }
+  }
+}

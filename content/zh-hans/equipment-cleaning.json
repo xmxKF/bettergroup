@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "晶圆清洗设备｜倍特尔科技集团",
+    "description": "倍特尔提供 DNS 与 TEL 晶圆清洗设备的采购、销售及维护，并导入 ViT 小样本 SEM 缺陷分类、时序 FDC 与颗粒缺陷根因分析等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "晶圆清洗"
+    }
+  ],
+  "hero": {
+    "id": "cleaning-hero",
+    "eyebrow": "WAFER CLEANING",
+    "title": "晶圆清洗设备",
+    "title_lat": "Wafer Cleaning",
+    "lead": "抑制颗粒与化学残留、守住良率底线的清洗工艺段。"
+  },
+  "banner_label": "晶圆清洗照片",
+  "banner_media": {
+    "id": "IMG-CLEAN-01",
+    "file": "assets/img/clean-01.jpg",
+    "ratio": "16-9",
+    "alt": "单片式清洗腔体内晶圆高速旋转、药液呈环状喷淋，水膜光泽明显",
+    "caption": "单片式清洗腔体内晶圆高速旋转、药液呈环状喷淋"
+  },
+  "scope": {
+    "id": "cleaning-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "DNS 晶圆清洗设备",
+      "TEL 晶圆清洗设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖单片式与批式清洗及干燥设备。"
+    ],
+    "media": {
+      "id": "IMG-CLEAN-02",
+      "file": "assets/img/clean-02.jpg",
+      "ratio": "4-3",
+      "alt": "清洗后晶圆干燥出料的瞬间，晶圆表面无水痕，冷白洁净环境",
+      "caption": "清洗后晶圆干燥出料瞬间，表面无水痕，洁净环境"
+    }
+  },
+  "services": {
+    "id": "cleaning-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、化学品供应与排废接驳及调试",
+      "药液系统与喷嘴维护保养",
+      "清洗工艺条件导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "cleaning-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "IBM ASMC",
+        "year": "（2025）",
+        "arch_note": "ViT（DINOv2）＋半监督",
+        "text": "以小样本学习分类 SEM 颗粒与残留缺陷图像。",
+        "metric": "对标指标：每类少于 15 张仍达 >90%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "TSMC 智能制造 RNN 时序 FDC",
+        "year": "",
+        "arch_note": "",
+        "text": "由清洗设备传感时序检测药液与流量异常。",
+        "metric": "对标指标：约 92%（28–3nm）、逃逸率 -15%",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "颗粒缺陷根因分析",
+        "year": "",
+        "arch_note": "",
+        "text": "打通检测与设备数据，定位颗粒来源与清洗条件的关联。",
+        "metric": "对标指标：以数据关联缩短根因排查时间",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-CLEAN-03",
+      "file": "assets/img/clean-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：SEM 缺陷图像网格与分类置信度标注",
+      "caption": "SEM 缺陷图像网格与分类置信度标注"
+    }
+  },
+  "fit": {
+    "id": "cleaning-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "颗粒良率压力大的先进节点产线",
+      "前道与后道之间需强化清洗能力的项目",
+      "清洗设备移机与化学品系统重建",
+      "研究机构建立清洗与表面处理能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-cmp.html",
+      "title": "CMP 化学机械抛光"
+    },
+    "next": {
+      "href": "equipment-inspection.html",
+      "title": "晶圆检测"
+    }
+  }
+}

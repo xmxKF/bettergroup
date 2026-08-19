@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "黃光段設備｜倍特爾科技集團",
+    "description": "倍特爾提供 NIKON 與 CANON 全系列曝光機（含奈米壓印）及 TEL、DNS 旋塗顯影設備的採購、銷售及維護，並導入 LithoDreamer 生成式微影等前沿 AI 對標架構。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首頁",
+      "href": "index.html"
+    },
+    {
+      "label": "設備與製程",
+      "href": "equipment.html"
+    },
+    {
+      "label": "黃光段"
+    }
+  ],
+  "hero": {
+    "id": "litho-hero",
+    "eyebrow": "LITHOGRAPHY",
+    "title": "黃光段設備",
+    "title_lat": "Lithography",
+    "lead": "曝光與旋塗顯影，決定線寬、對準與圖形保真度。"
+  },
+  "banner_label": "黃光區照片",
+  "banner_media": {
+    "id": "IMG-LITHO-01",
+    "file": "assets/img/litho-01.jpg",
+    "ratio": "16-9",
+    "alt": "黃光區走道全景，黃色濾光照明下的曝光機列，畫面乾淨、對稱構圖",
+    "caption": "黃光區走道全景，黃色濾光照明下的曝光機列，畫面乾淨、對稱構圖"
+  },
+  "scope": {
+    "id": "litho-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "設備範圍",
+    "lead": "",
+    "features": [
+      "NIKON 全系列曝光機產品",
+      "CANON 全系列曝光機產品，包含奈米壓印設備",
+      "TEL 旋塗與顯影設備",
+      "DNS 旋塗與顯影設備"
+    ],
+    "paragraphs": [
+      "以日系主力品牌為主，涵蓋曝光主機與塗佈顯影軌道的整線配置。"
+    ],
+    "media": {
+      "id": "IMG-LITHO-02",
+      "file": "assets/img/litho-02.jpg",
+      "ratio": "4-3",
+      "alt": "旋塗顯影軌道內部特寫：晶圓於旋塗腔中，光阻膜面反射色帶",
+      "caption": "旋塗顯影軌道內部特寫：晶圓於旋塗腔中，光阻膜面反射色帶"
+    }
+  },
+  "services": {
+    "id": "litho-services",
+    "eyebrow": "SERVICES",
+    "title": "服務內容",
+    "lead": "",
+    "features": [
+      "設備採購與機種評估選型",
+      "設備狀態查驗與驗機協助",
+      "拆機、包裝與跨境運送",
+      "進場安裝、對準與調試",
+      "維護保養與備品規劃",
+      "微影製程技術導入",
+      "操作與維護人員培訓"
+    ]
+  },
+  "ai": {
+    "id": "litho-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "entries": [
+      {
+        "arch": "LithoDreamer 生成式微影／ILT",
+        "year": "",
+        "arch_note": "",
+        "text": "生成與反演式修正光罩圖形，加速 OPC 迭代與圖形收斂。",
+        "metric": "對標指標：以生成式方法縮短微影修正迭代",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "可解釋 GAT 佈局熱點",
+        "year": "（ASP-DAC'26）",
+        "arch_note": "",
+        "text": "以 8 頭圖注意力網路預測佈局熱點並提供可解釋依據。",
+        "metric": "對標指標：記憶體較影像法省 5–12×",
+        "tag": "對標／導入之前沿架構"
+      },
+      {
+        "arch": "旋塗顯影軌道數字孿生",
+        "year": "",
+        "arch_note": "",
+        "text": "建立塗佈與顯影軌道的虛擬對照體，模擬條件變更與排程影響。",
+        "metric": "對標指標：以虛擬驗證取代部分實際試跑",
+        "tag": "對標／導入之前沿架構"
+      }
+    ],
+    "media": {
+      "id": "IMG-LITHO-03",
+      "file": "assets/img/litho-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 視覺化：光罩圖形與熱點預測疊圖，節點以圖注意力連線標示，深藍底",
+      "caption": "AI 視覺化：光罩圖形與熱點預測疊圖，節點以圖注意力連線標示，深藍底"
+    }
+  },
+  "fit": {
+    "id": "litho-fit",
+    "eyebrow": "USE CASES",
+    "title": "適用場景",
+    "lead": "",
+    "features": [
+      "新產線建置需要曝光與塗佈顯影整線導入",
+      "既有廠區擴產或機台移機重建",
+      "研究機構建立微影實驗能力",
+      "二手設備買方需要狀態查驗與復機支援"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-mask.html",
+      "title": "掩模版製程"
+    },
+    "next": {
+      "href": "equipment-etch.html",
+      "title": "蝕刻段"
+    }
+  }
+}

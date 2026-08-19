@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "离子注入设备｜倍特尔科技集团",
+    "description": "倍特尔提供 ULVAC 与 NISSIN 离子注入设备的采购、销售及维护，并导入蒙特卡罗掺杂物理仿真、贝叶斯 PINN 不确定性量化与 GPR 空间建模等前沿 AI 对标架构。"
+  },
+  "breadcrumb": [
+    {
+      "label": "首页",
+      "href": "index.html"
+    },
+    {
+      "label": "设备与工艺",
+      "href": "equipment.html"
+    },
+    {
+      "label": "离子注入"
+    }
+  ],
+  "hero": {
+    "id": "implant-hero",
+    "eyebrow": "ION IMPLANTATION",
+    "title": "离子注入设备",
+    "title_lat": "Ion Implantation",
+    "lead": "决定掺杂浓度、深度与器件电学性能的关键工艺段。"
+  },
+  "banner_label": "离子注入机照片",
+  "banner_media": {
+    "id": "IMG-IMP-01",
+    "file": "assets/img/imp-01.jpg",
+    "ratio": "16-9",
+    "alt": "离子注入机的长束线设备外观，强调管路与磁体段的工业几何感",
+    "caption": "离子注入机的长束线设备外观，强调管路与磁体段的工业几何感"
+  },
+  "scope": {
+    "id": "implant-scope",
+    "eyebrow": "EQUIPMENT SCOPE",
+    "title": "设备范围",
+    "lead": "",
+    "features": [
+      "ULVAC 离子注入设备",
+      "NISSIN 离子注入设备"
+    ],
+    "paragraphs": [
+      "以日系主力品牌为主，涵盖不同能量区间的离子注入设备。"
+    ],
+    "media": {
+      "id": "IMG-IMP-02",
+      "file": "assets/img/imp-02.jpg",
+      "ratio": "4-3",
+      "alt": "束线与晶圆端站示意特写，蓝色离子束轨迹以可视化方式呈现",
+      "caption": "束线与晶圆端站示意特写，蓝色离子束轨迹以可视化方式呈现"
+    }
+  },
+  "services": {
+    "id": "implant-services",
+    "eyebrow": "SERVICES",
+    "title": "服务内容",
+    "lead": "",
+    "features": [
+      "设备采购与机型评估选型",
+      "设备状态查验与验机协助",
+      "拆机、包装与跨境运输",
+      "进场安装、束流校准与调试",
+      "离子源与真空系统维护保养",
+      "掺杂工艺条件导入",
+      "操作与维护人员培训"
+    ]
+  },
+  "ai": {
+    "id": "implant-ai",
+    "eyebrow": "AI INTEGRATION",
+    "title": "AI 整合",
+    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "entries": [
+      {
+        "arch": "蒙特卡罗掺杂剖面物理仿真",
+        "year": "",
+        "arch_note": "",
+        "text": "以离子输运物理模型推算掺杂浓度剖面与沟道效应。",
+        "metric": "对标指标：以仿真预估剖面，减少破坏性验证",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "BPINN-EM-Post",
+        "year": "（2025）",
+        "arch_note": "贝叶斯 PINN 思路",
+        "text": "将物理残差与观测结合，量化工艺预测的不确定性区间。",
+        "metric": "对标指标：克服 PINN 过拟合、支持多线段",
+        "tag": "对标／导入的前沿架构"
+      },
+      {
+        "arch": "GPR 空间建模（KGD／离群检测）",
+        "year": "",
+        "arch_note": "",
+        "text": "以高斯过程建模晶圆级参数分布，检测空间性离群。",
+        "metric": "对标指标：优于 DPAT；Vmin 约 90% 覆盖保证",
+        "tag": "对标／导入的前沿架构"
+      }
+    ],
+    "media": {
+      "id": "IMG-IMP-03",
+      "file": "assets/img/imp-03.jpg",
+      "ratio": "16-9",
+      "alt": "AI 可视化：晶圆掺杂浓度剖面仿真图与不确定性区间带，深色底、光谱色",
+      "caption": "AI 可视化：晶圆掺杂浓度剖面仿真图与不确定性区间带，深色底、光谱色"
+    }
+  },
+  "fit": {
+    "id": "implant-fit",
+    "eyebrow": "USE CASES",
+    "title": "适用场景",
+    "lead": "",
+    "features": [
+      "需要精准掺杂控制的先进器件工艺",
+      "功率器件与化合物半导体产线",
+      "注入机移机与束流重新校准",
+      "研究机构建立掺杂实验能力"
+    ]
+  },
+  "pager": {
+    "prev": {
+      "href": "equipment-bake.html",
+      "title": "热处理（烘烤）"
+    },
+    "next": {
+      "href": "equipment-cmp.html",
+      "title": "CMP 化学机械抛光"
+    }
+  }
+}

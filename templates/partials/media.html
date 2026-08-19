@@ -1,0 +1,88 @@
+{#
+  Media placeholder macros — DESIGN.md §6.8 / docs/components.md §11–§12.
+  Reproduces the prototype markup byte-for-byte, including the onerror pattern.
+
+  A media object (see docs/content-schema.md) looks like:
+    { "id": "IMG-HOME-01", "file": "assets/img/home-01.jpg",
+      "ratio": "4-3", "alt": "…", "caption": "…" }
+  A video object adds "poster": "assets/img/home-01-poster.jpg".
+
+  `prefix` is the path from the rendered page to the assets root ("../").
+#}
+
+{%- macro media_img(m, prefix, extra='') -%}
+<div class="media media--{{ m.ratio }}{% if extra %} {{ extra }}{% endif %}" data-asset="{{ m.id }}">
+            <img src="{{ prefix }}{{ m.file }}" alt="{% if not m.get('decorative') %}{{ m.alt }}{% endif %}" loading="lazy" decoding="async" onerror="this.hidden=true">
+            <div class="media__ph" aria-hidden="true">
+              <span class="media__id">{{ m.id }}</span>
+              <span class="media__desc">{{ m.caption }}</span>
+            </div>
+          </div>
+{%- endmacro -%}
+
+{%- macro media_video(m, prefix, ctrl, extra='') -%}
+<div class="media media--{{ m.ratio }}{% if extra %} {{ extra }}{% endif %}" data-asset="{{ m.id }}">
+            <video muted loop playsinline data-autoplay preload="metadata"
+                   poster="{{ prefix }}{{ m.poster }}"
+                   onerror="this.hidden=true"
+                   aria-label="{{ m.alt }}">
+              <source src="{{ prefix }}{{ m.file }}" type="video/mp4">
+            </video>
+            <div class="media__ph" aria-hidden="true">
+              <span class="media__id">{{ m.id }}</span>
+              <span class="media__desc">{{ m.caption }}</span>
+            </div>
+            <button class="media__ctrl" type="button" data-media-ctrl
+                    data-label-pause="{{ ctrl.pause }}" data-label-play="{{ ctrl.play }}"
+                    data-aria-pause="{{ ctrl.pause_aria }}" data-aria-play="{{ ctrl.play_aria }}">{{ ctrl.pause }}</button>
+          </div>
+{%- endmacro -%}
+
+{#- Section header — docs/components.md §4. `s` needs .eyebrow / .title / optional .lead -#}
+{%- macro section_header(s, classes='reveal', style='') -%}
+<div class="section-header{% if classes %} {{ classes }}{% endif %}"{% if style %} style="{{ style }}"{% endif %}>
+        <p class="eyebrow">{{ s.eyebrow }}</p>
+        <h2>{{ s.title }}</h2>
+        {%- if s.lead %}
+        <p class="lead">{{ s.lead }}</p>
+        {%- endif %}
+      </div>
+{%- endmacro -%}
+
+{#- Plain statement card — docs/components.md §5 -#}
+{%- macro card(item, classes='reveal') -%}
+<article class="card{% if classes %} {{ classes }}{% endif %}">
+            <h3 class="card__title">{{ item.title }}</h3>
+            <p class="card__text">{{ item.text }}</p>
+          </article>
+{%- endmacro -%}
+
+{#- Whole-card link — docs/components.md §5. item: num? / title / text / link_label / href -#}
+{%- macro card_link(item, classes='reveal') -%}
+<a class="card card--link{% if classes %} {{ classes }}{% endif %}" href="{{ item.href }}">
+          {%- if item.num %}
+          <p class="card__num">{{ item.num }}</p>
+          {%- endif %}
+          <h3 class="card__title">{{ item.title }}</h3>
+          <p class="card__text">{{ item.text }}</p>
+          <p class="card__foot"><span class="arrow-link">{{ item.link_label }}</span></p>
+        </a>
+{%- endmacro -%}
+
+{#- Process card — docs/components.md §6 -#}
+{%- macro card_process(item, classes='reveal') -%}
+<a class="card card--link card--process{% if classes %} {{ classes }}{% endif %}" href="{{ item.href }}">
+          <p class="card__num">{{ item.num }}</p>
+          <h3 class="card__title">{{ item.title }}</h3>
+          {%- if lang != 'en' %}
+          <p class="card__en">{{ item.en }}</p>
+          {%- endif %}
+          <p class="card__text">{{ item.text }}</p>
+          <ul class="brand-chips">
+            {%- for b in item.brands %}
+            <li class="brand-chip">{{ b }}</li>
+            {%- endfor %}
+          </ul>
+          <p class="card__foot"><span class="arrow-link">{{ item.link_label }}</span></p>
+        </a>
+{%- endmacro -%}
