@@ -4,9 +4,9 @@
     "legal_name": "倍特爾科技集團有限公司",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "香港九龍佐敦佐敦道5號至秀商業大廈10樓",
-    "email": "Masuhiro@bettertechgroup.com",
-    "phone": "+86-136-3266-5441",
-    "phone_href": "tel:+8613632665441",
+    "email": "better_stg@163.com",
+    "phone": "+86-135-3007-1950",
+    "phone_href": "tel:+8613530071950",
     "copyright_year": "2026"
   },
 
@@ -95,8 +95,8 @@
     "lead": "從設備選型到裝機與 AI 導入，提供單一窗口。",
     "primary": { "label": "洽詢設備與服務", "href": "contact.html" },
     "secondary": {
-      "label": "Masuhiro@bettertechgroup.com",
-      "href": "mailto:Masuhiro@bettertechgroup.com"
+      "label": "better_stg@163.com",
+      "href": "mailto:better_stg@163.com"
     }
   },
 
@@ -115,7 +115,7 @@
   },
 
   "form": {
-    "mailto": "Masuhiro@bettertechgroup.com",
+    "mailto": "better_stg@163.com",
     "required_mark_aria": "必填",
     "fields": {
       "name": { "label": "姓名", "placeholder": "請輸入您的姓名" },

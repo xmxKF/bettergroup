@@ -274,7 +274,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 - AI 架構表的量化結果（如 Acc 98.39%）**只能出現在標明來源的架構表或 AI 卡片內**，並標為第三方研究之對標指標；不得放入本列。
 
 ### 6.7 CTA 帶
-- 底 `--dark-900`、上緣 3px `--grad-spectral`；內容置中、最大 720px：h2（`--on-dark`）→ 一行 lead（`--on-dark-2`）→ primary 按鈕「聯絡我們」＋ on-dark ghost 連結 `Masuhiro@bettertechgroup.com`（mailto）。
+- 底 `--dark-900`、上緣 3px `--grad-spectral`；內容置中、最大 720px：h2（`--on-dark`）→ 一行 lead（`--on-dark-2`）→ primary 按鈕「聯絡我們」＋ on-dark ghost 連結 `better_stg@163.com`（mailto）。
 - 上下 padding 96 / 64px。每頁最多一個 CTA 帶，置於 footer 之前。
 
 ### 6.8 媒體佔位（IMG-* / VID-*）— 必須全站一致
@@ -294,7 +294,7 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 - 底 `--dark-900`、上緣 1px `--grad-spectral-soft` 髮絲線。四欄（≥960）／單欄堆疊（<640）：
   1. logo（44px）＋中文全名（`--on-dark` 16px）＋英文全名（`--on-dark-muted` `--fs-small` `--font-lat`）
   2. 導覽六項（`--on-dark-2`，hover `--accent-on-dark`）
-  3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`Masuhiro@bettertechgroup.com`（mailto）、`+86-136-3266-5441`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
+  3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`better_stg@163.com`（mailto）、`+86-135-3007-1950`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
   - <960px 以觸控為主：導覽／製程連結補 `padding-block:12px`，可點高度 ≥44px（§10）。
   4. 九大製程快速連結（`--fs-small`）
 - 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`；末行為網站設計 credit（`common.footer.credit`），同一 `--fs-small` `--on-dark-muted`，`href` 有值時渲染為 `--accent-on-dark` 連結、無值（目前）則為純文字。
@@ -470,8 +470,8 @@ JS 亦須偵測 `matchMedia('(prefers-reduced-motion: reduce)')`，命中時直�
 
 ### 2026-08-19 — 聯絡資訊調整、移除 FAQ、版面精修
 
-客戶指示（原文）：「不用寫聯繫人名，只要留郵箱跟手機號碼就可以，+86-136-3266-5441,
-Masuhiro@bettertechgroup.com，移除常見問題FAQ，優化微調版面設計。」
+客戶指示（原文）：「不用寫聯繫人名，只要留郵箱跟手機號碼就可以，+86-135-3007-1950,
+better_stg@163.com，移除常見問題FAQ，優化微調版面設計。」
 
 本次是**設計系統內的精修**，不是改版：token、字體、色彩、元件語彙、頁面結構一律不動；
 只調整既有數值與兩個聯絡資訊元件。以下逐項記錄改動與理由。
@@ -481,8 +481,8 @@ Masuhiro@bettertechgroup.com，移除常見問題FAQ，優化微調版面設計�
 | 改動 | 理由 |
 |---|---|
 | 全站移除聯絡人姓名（footer、contact 資訊列與側欄卡、about 負責人卡的信箱行、meta description、四語 JSON） | 客戶指示：聯絡方式只留信箱與電話 |
-| 信箱改為 `Masuhiro@bettertechgroup.com`（含 `main.js` 的 fallback 與四語 `cta_band`／`form.mailto`） | 同上 |
-| 新增電話 `+86-136-3266-5441`（顯示四語一致）／`tel:+8613632665441`；footer 標籤 `聯絡人：` → `電話：`（电话：／Phone: ／電話：） | 同上 |
+| 信箱改為 `better_stg@163.com`（含 `main.js` 的 fallback 與四語 `cta_band`／`form.mailto`） | 同上 |
+| 新增電話 `+86-135-3007-1950`（顯示四語一致）／`tel:+8613530071950`；footer 標籤 `聯絡人：` → `電話：`（电话：／Phone: ／電話：） | 同上 |
 | about 頁「公司負責人」卡**保留姓名與職稱**，只拿掉卡片底部的 mailto 行 | 該卡是公司治理資訊，不是聯絡方式；拿掉信箱後就不再把個人呈現為聯絡窗口 |
 | 移除聯絡頁 FAQ 區塊（模板、四語 JSON、規格文件、`#faq-*` 錨點） | 客戶指示 |
 | 側欄「填寫前可先看」三個 FAQ 錨點 → 服務項目／設備與製程／AI 智慧製造三頁 | FAQ 移除後錨點會斷；改指實際頁面，卡片仍有存在意義 |

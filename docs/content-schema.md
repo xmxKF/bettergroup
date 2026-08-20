@@ -145,9 +145,9 @@ content/
 - **同語言頁面**：只寫檔名，`"equipment-etch.html"`、`"services.html#service-relocation"`。
   產生器把頁面寫到 `dist/<lang>/`，因此相對連結會停在同一個語言資料夾內。
 - **資產**：一律寫成 `"assets/img/…"`（不含 `../`）。模板會自己補上 `../` 前綴。
-- **信件**：`"mailto:Masuhiro@bettertechgroup.com"`。
+- **信件**：`"mailto:better_stg@163.com"`。
 - **切換語言**：不需要寫在 JSON 裡，語言切換器由 `build.py` 自動產生。
-- **電話**：`"tel:+8613632665441"`（顯示字串另存於 `common.site.phone`）。
+- **電話**：`"tel:+8613530071950"`（顯示字串另存於 `common.site.phone`）。
 - 錨點 `#service-relocation` 等**語言不變**，四個語言的頁面錨點相同。
 
 ---
@@ -161,9 +161,9 @@ content/
     "legal_name":    "倍特爾科技集團有限公司",                       // 完整法定名稱（footer）
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED", // 語言不變
     "address":       "香港九龍佐敦佐敦道5號至秀商業大廈10樓",
-    "email":         "Masuhiro@bettertechgroup.com",                  // 語言不變
-    "phone":         "+86-136-3266-5441",                           // 語言不變（顯示字串）
-    "phone_href":    "tel:+8613632665441",                           // 語言不變（連結）
+    "email":         "better_stg@163.com",                  // 語言不變
+    "phone":         "+86-135-3007-1950",                           // 語言不變（顯示字串）
+    "phone_href":    "tel:+8613530071950",                           // 語言不變（連結）
     "copyright_year":"2026"                                         // 語言不變
   },
 
@@ -236,7 +236,7 @@ content/
     "title":   "與我們談談您的產線需求",
     "lead":    "從設備選型到裝機與 AI 導入，提供單一窗口。",
     "primary":   { "label": "洽詢設備與服務", "href": "contact.html" },
-    "secondary": { "label": "Masuhiro@bettertechgroup.com", "href": "mailto:Masuhiro@bettertechgroup.com" }
+    "secondary": { "label": "better_stg@163.com", "href": "mailto:better_stg@163.com" }
   },
 
   "shared_cta": {                  // 內頁重複出現的按鈕文案
@@ -252,7 +252,7 @@ content/
   },
 
   "form": {                        // 只有 contact.html 用；字串由 main.js 讀 data-* 取得
-    "mailto": "Masuhiro@bettertechgroup.com",             // 語言不變
+    "mailto": "better_stg@163.com",             // 語言不變
     "required_mark_aria": "必填",
     "fields": {                    // 六個欄位，鍵名固定（= <input name>）
       "name":     { "label": "姓名",    "placeholder": "請輸入您的姓名" },
@@ -637,8 +637,8 @@ cleaning → inspection → mask），`href` 語言不變。
   "info": {                                    // #contact-info：聯絡資訊列（.info-strip，三格）
     "eyebrow": "…", "title": "…", "lead": "",  // 本區無 lead，四語一律空字串
     "entries": [
-      { "title": "電子郵件", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
-      { "title": "電話",     "text": "+86-136-3266-5441",           "variant": "tel" },
+      { "title": "電子郵件", "text": "better_stg@163.com", "variant": "mailto" },
+      { "title": "電話",     "text": "+86-135-3007-1950",           "variant": "tel" },
       { "title": "公司地址", "text": "香港九龍…",                    "variant": "keep" }
     ],
     // variant 語言不變：

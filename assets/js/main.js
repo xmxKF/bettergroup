@@ -94,7 +94,7 @@
   /* ── 5. 詢問表單 mailto 組合器（無表單的頁面自動略過） ──────── */
   var form = doc.querySelector('[data-mailto-form]');
   if (form) {
-    var MAIL_TO = form.getAttribute('data-mailto') || 'Masuhiro@bettertechgroup.com';
+    var MAIL_TO = form.getAttribute('data-mailto') || 'better_stg@163.com';
     var t = function (name, fallback) {
       return form.getAttribute('data-' + name) || fallback;
     };
