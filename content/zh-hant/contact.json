@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "聯絡我們｜倍特爾科技集團",
-    "description": "聯絡倍特爾科技集團有限公司，地址位於香港九龍佐敦佐敦道5號至秀商業大廈10樓，電郵 Masuhiro@bettertechgroup.com、電話 +86-136-3266-5441，歡迎洽詢設備採購、拆裝運送、製程導入與 AI 整合。"
+    "description": "聯絡倍特爾科技集團有限公司，地址位於香港九龍佐敦佐敦道5號至秀商業大廈10樓，電郵 better_stg@163.com、電話 +86-135-3007-1950，歡迎洽詢設備採購、拆裝運送、製程導入與 AI 整合。"
   },
 
   "breadcrumb": [
@@ -20,8 +20,8 @@
     "title": "聯絡資訊",
     "lead": "",
     "entries": [
-      { "title": "電子郵件", "text": "Masuhiro@bettertechgroup.com", "variant": "mailto" },
-      { "title": "電話", "text": "+86-136-3266-5441", "variant": "tel" },
+      { "title": "電子郵件", "text": "better_stg@163.com", "variant": "mailto" },
+      { "title": "電話", "text": "+86-135-3007-1950", "variant": "tel" },
       { "title": "公司地址", "text": "香港九龍佐敦佐敦道5號至秀商業大廈10樓", "variant": "keep" }
     ],
     "media": {

@@ -518,11 +518,11 @@
 <div class="info-strip">
   <div class="info-strip__item">
     <h3 class="info-strip__label">電子郵件</h3>
-    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a></p>
+    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="mailto:better_stg@163.com">better_stg@163.com</a></p>
   </div>
   <div class="info-strip__item">
     <h3 class="info-strip__label">電話</h3>
-    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="tel:+8613632665441">+86-136-3266-5441</a></p>
+    <p class="info-strip__value"><a class="link contact-card__value--nowrap" href="tel:+8613530071950">+86-135-3007-1950</a></p>
   </div>
   <div class="info-strip__item">
     <h3 class="info-strip__label">公司地址</h3>
@@ -535,8 +535,8 @@
 
 ```html
 <ul class="contact-lines">
-  <li><span class="contact-lines__label">電郵：</span><a class="link contact-card__value--nowrap" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a></li>
-  <li><span class="contact-lines__label">電話：</span><a class="link contact-card__value--nowrap" href="tel:+8613632665441">+86-136-3266-5441</a></li>
+  <li><span class="contact-lines__label">電郵：</span><a class="link contact-card__value--nowrap" href="mailto:better_stg@163.com">better_stg@163.com</a></li>
+  <li><span class="contact-lines__label">電話：</span><a class="link contact-card__value--nowrap" href="tel:+8613530071950">+86-135-3007-1950</a></li>
 </ul>
 ```
 
@@ -582,7 +582,7 @@
 <!-- 暗帶（hero-dark / cta-band）內改用： -->
 <div class="btn-row">
   <a class="btn btn--on-dark-primary" href="contact.html">洽詢設備與服務</a>
-  <a class="btn btn--on-dark-secondary" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a>
+  <a class="btn btn--on-dark-secondary" href="mailto:better_stg@163.com">better_stg@163.com</a>
 </div>
 
 <a class="arrow-link" href="equipment.html">查看設備與製程總覽</a>
@@ -644,7 +644,7 @@
       <p class="lead">從設備選型到裝機與 AI 導入，提供單一窗口。</p>
       <div class="btn-row btn-row--center">
         <a class="btn btn--on-dark-primary" href="contact.html">洽詢設備與服務</a>
-        <a class="btn btn--on-dark-secondary" href="mailto:Masuhiro@bettertechgroup.com">Masuhiro@bettertechgroup.com</a>
+        <a class="btn btn--on-dark-secondary" href="mailto:better_stg@163.com">better_stg@163.com</a>
       </div>
     </div>
   </div>
@@ -660,7 +660,7 @@
 `data-mailto-form` 會被 `main.js` 接管：驗證 → 組 mailto → 開啟郵件軟體。**不需要後端。**
 
 ```html
-<form class="form form--2col" data-mailto-form data-mailto="Masuhiro@bettertechgroup.com" novalidate>
+<form class="form form--2col" data-mailto-form data-mailto="better_stg@163.com" novalidate>
   <div class="field">
     <label for="f-name">姓名<span class="req" aria-hidden="true">*</span></label>
     <input id="f-name" name="name" type="text" required placeholder="請輸入您的姓名">

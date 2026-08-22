@@ -30,7 +30,7 @@
 | 副行（header brand__en） | 倍特爾科技集團有限公司（英文版副行放中文法定名） |
 | 香港九龍佐敦佐敦道5號至秀商業大廈10樓 | 10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong |
 | （已移除：原「公司負責人」姓名對照列，about 頁該卡已移除） | — |
-| +86-136-3266-5441 | （不譯，逐字沿用；連結 `tel:+8613632665441`） |
+| +86-135-3007-1950 | （不譯，逐字沿用；連結 `tel:+8613530071950`） |
 | 地址： | `"Address: "`（字串結尾保留一個半形空白） |
 | 電郵： | `"Email: "` |
 | 電話： | `"Phone: "` |
@@ -39,7 +39,7 @@
 | 聯絡方式（footer 欄標題） | Contact |
 | © 2026 …版權所有。 | © 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED 倍特爾科技集團有限公司. All rights reserved. |
 | 本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。 | All brand names shown on this site are trademarks of their respective owners and are used for equipment identification only. |
-| 網站設計：顯藝科技（footer.credit，`href` 留空） | Website by 顯藝科技（footer.credit；company name not translated, no invented English name） |
+| 網站設計：顯藝科技（footer.credit；`href`／`logo` 四語一致） | Website by 顯藝科技（footer.credit；company name not translated, no invented English name） |
 | 先進半導體製程設備採購、拆裝運送、技術導入與 AI 整合。 | Procurement, de-installation and shipping, process technology transfer and AI integration for advanced semiconductor equipment. |
 
 ## 2. 導覽與介面字串（common.json → nav / a11y / media_ctrl / pager）

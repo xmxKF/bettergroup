@@ -4,9 +4,9 @@
     "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
-    "email": "Masuhiro@bettertechgroup.com",
-    "phone": "+86-136-3266-5441",
-    "phone_href": "tel:+8613632665441",
+    "email": "better_stg@163.com",
+    "phone": "+86-135-3007-1950",
+    "phone_href": "tel:+8613530071950",
     "copyright_year": "2026"
   },
 
@@ -86,7 +86,12 @@
     ],
     "copyright": "© 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED（倍特爾科技集團有限公司）／無断複製・転載を禁じます。",
     "trademark_note": "本サイトに記載のブランド名は、それぞれの所有者の商標であり、装置の説明を目的として表示しています。",
-    "credit": { "label": "ウェブサイト制作：", "name": "顯藝科技", "href": "" }
+    "credit": {
+      "label": "ウェブサイト制作：",
+      "name": "顯藝科技",
+      "href": "https://shinylogic.pages.dev",
+      "logo": "assets/img/xyl-logo-64.png"
+    }
   },
 
   "cta_band": {
@@ -95,8 +100,8 @@
     "lead": "装置選定から据付、AI 導入まで、ワンストップでご対応します。",
     "primary": { "label": "装置・サービスのご相談", "href": "contact.html" },
     "secondary": {
-      "label": "Masuhiro@bettertechgroup.com",
-      "href": "mailto:Masuhiro@bettertechgroup.com"
+      "label": "better_stg@163.com",
+      "href": "mailto:better_stg@163.com"
     }
   },
 
@@ -115,7 +120,7 @@
   },
 
   "form": {
-    "mailto": "Masuhiro@bettertechgroup.com",
+    "mailto": "better_stg@163.com",
     "required_mark_aria": "必須",
     "fields": {
       "name": { "label": "お名前", "placeholder": "お名前をご入力ください" },

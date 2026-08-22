@@ -4,9 +4,9 @@
     "legal_name": "倍特尔科技集团有限公司",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "香港九龙佐敦佐敦道5号至秀商业大厦10楼",
-    "email": "Masuhiro@bettertechgroup.com",
-    "phone": "+86-136-3266-5441",
-    "phone_href": "tel:+8613632665441",
+    "email": "better_stg@163.com",
+    "phone": "+86-135-3007-1950",
+    "phone_href": "tel:+8613530071950",
     "copyright_year": "2026"
   },
 
@@ -86,7 +86,12 @@
     ],
     "copyright": "© 2026 倍特尔科技集团有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版权所有。",
     "trademark_note": "本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。",
-    "credit": { "label": "网站设计：", "name": "显艺科技", "href": "" }
+    "credit": {
+      "label": "网站设计：",
+      "name": "显艺科技",
+      "href": "https://shinylogic.pages.dev",
+      "logo": "assets/img/xyl-logo-64.png"
+    }
   },
 
   "cta_band": {
@@ -95,8 +100,8 @@
     "lead": "从设备选型到装机与 AI 导入，提供统一对接窗口。",
     "primary": { "label": "咨询设备与服务", "href": "contact.html" },
     "secondary": {
-      "label": "Masuhiro@bettertechgroup.com",
-      "href": "mailto:Masuhiro@bettertechgroup.com"
+      "label": "better_stg@163.com",
+      "href": "mailto:better_stg@163.com"
     }
   },
 
@@ -115,7 +120,7 @@
   },
 
   "form": {
-    "mailto": "Masuhiro@bettertechgroup.com",
+    "mailto": "better_stg@163.com",
     "required_mark_aria": "必填",
     "fields": {
       "name": { "label": "姓名", "placeholder": "请输入您的姓名" },

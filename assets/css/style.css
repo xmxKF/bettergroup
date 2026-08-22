@@ -1303,6 +1303,20 @@ body.nav-open{ overflow:hidden; }
 }
 .footer__bottom p{ max-width:none; }
 
+/* 網站設計 credit：字標小徽章 ＋ 名稱文字同在一個連結內；圖片為裝飾，名稱由文字承擔 */
+.footer__credit{
+  margin-top:var(--space-1);
+  display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-2);
+}
+.footer__credit a{ display:inline-flex; align-items:center; gap:var(--space-2); }
+.footer__credit-logo{
+  display:block; height:24px; width:auto;
+  border-radius:var(--r-sm);
+  opacity:.82; transition:opacity var(--dur) var(--ease);
+}
+.footer__credit a:hover .footer__credit-logo,
+.footer__credit a:focus-visible .footer__credit-logo{ opacity:1; }
+
 /* ==========================================================================
    24. PRINT
    ========================================================================== */
