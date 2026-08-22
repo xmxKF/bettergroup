@@ -1,0 +1,26 @@
+name: Sync Upstream
+
+on:
+  # 每 30 分钟自动检查一次
+  schedule:
+    - cron: "7,37 * * * *"
+
+  # 允许在 GitHub Actions 页面手动执行
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from upstream
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync fork with upstream
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Syncing ${{ github.repository }} main branch with upstream..."
+          gh repo sync "${{ github.repository }}" --branch main
+          echo "Sync completed."
