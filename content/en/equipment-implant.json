@@ -70,7 +70,7 @@
     "id": "implant-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI integration",
-    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "lead": "The methods BETTER deploys and the third-party frontier architectures it benchmarks.",
     "entries": [
       {
         "arch": "Monte Carlo dopant profile simulation",
@@ -85,7 +85,7 @@
         "year": "(2025)",
         "arch_note": "Bayesian PINN approach",
         "text": "Combines physics residuals with observations to quantify uncertainty intervals in process predictions.",
-        "metric": "Benchmark metric: overcomes PINN overfitting, supports multiple segments",
+        "metric": "Benchmark metric: overcomes PINN overfitting, supports multiple segments (metric from the original domain)",
         "tag": "Benchmark architecture"
       },
       {
@@ -93,7 +93,7 @@
         "year": "",
         "arch_note": "",
         "text": "Gaussian processes model wafer-level parameter distributions and detect spatial outliers.",
-        "metric": "Benchmark metric: outperforms DPAT, about 90% Vmin coverage guarantee",
+        "metric": "Benchmark metric: outperforms DPAT, about 90% Vmin coverage guarantee (metric from the original domain)",
         "tag": "Benchmark architecture"
       }
     ],

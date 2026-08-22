@@ -70,14 +70,14 @@
     "id": "cvd-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI integration",
-    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "lead": "The methods BETTER deploys and the third-party frontier architectures it benchmarks.",
     "entries": [
       {
         "arch": "DeepOHeat-v1",
         "year": "(2025)",
         "arch_note": "",
         "text": "A DeepONet and KAN thermal surrogate model rapidly predicts chamber and wafer heat distribution.",
-        "metric": "Benchmark metric: MAPE 0.035%, training 62× faster, memory 31× lower",
+        "metric": "Benchmark metric: MAPE 0.035%, training 62× faster, memory 31× lower (metric from the original domain)",
         "tag": "Benchmark architecture"
       },
       {
@@ -85,7 +85,7 @@
         "year": "",
         "arch_note": "",
         "text": "An encoder-decoder CNN predicts temperature contours and electrothermal coupling effects.",
-        "metric": "Benchmark metric: average IR error 0.053 mV",
+        "metric": "Benchmark metric: average IR error 0.053 mV (metric from the original domain)",
         "tag": "Benchmark architecture"
       },
       {

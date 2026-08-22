@@ -70,14 +70,14 @@
     "id": "cvd-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 整合",
-    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "lead": "以下为倍特尔导入的方法与对标的第三方前沿架构。",
     "entries": [
       {
         "arch": "DeepOHeat-v1",
         "year": "（2025）",
         "arch_note": "",
         "text": "以 DeepONet＋KAN 建立热场代理模型，快速推算腔体与晶圆热分布。",
-        "metric": "对标指标：MAPE 0.035%、训练 -62×、内存 -31×",
+        "metric": "对标指标：MAPE 0.035%、训练 -62×、内存 -31×（原领域指标）",
         "tag": "对标／导入的前沿架构"
       },
       {
@@ -85,7 +85,7 @@
         "year": "",
         "arch_note": "",
         "text": "以 Encoder-Decoder CNN 推算温度轮廓与电热耦合影响。",
-        "metric": "对标指标：平均 IR 误差 0.053mV",
+        "metric": "对标指标：平均 IR 误差 0.053mV（原领域指标）",
         "tag": "对标／导入的前沿架构"
       },
       {

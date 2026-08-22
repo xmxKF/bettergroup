@@ -70,7 +70,7 @@
     "id": "inspection-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI integration",
-    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "lead": "The methods BETTER deploys and the third-party frontier architectures it benchmarks.",
     "entries": [
       {
         "arch": "G2LGAN + CNN",
@@ -93,7 +93,7 @@
         "year": "(2025)",
         "arch_note": "",
         "text": "Deep learning image classification, trained continuously in the fab, speeds up e-beam defect review.",
-        "metric": "Benchmark metric: 3× review speed, deployed at 2nm/GAA customers",
+        "metric": "Benchmark metric: 3× review speed",
         "tag": "Benchmark architecture"
       },
       {

@@ -72,7 +72,7 @@
     "id": "litho-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 統合",
-    "lead": "以下は BETTER がベンチマークする第三者の最先端アーキテクチャです。",
+    "lead": "以下は BETTER が導入する手法と、ベンチマークする第三者の最先端アーキテクチャです。",
     "entries": [
       {
         "arch": "LithoDreamer／ILT",

@@ -70,7 +70,7 @@
     "id": "bake-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI integration",
-    "lead": "The third-party frontier architectures BETTER benchmarks and deploys.",
+    "lead": "The methods BETTER deploys and the third-party frontier architectures it benchmarks.",
     "entries": [
       {
         "arch": "DeepOHeat-v1",
@@ -85,7 +85,7 @@
         "year": "",
         "arch_note": "",
         "text": "Time-varying power and heating distribution predict temperature contours and locate thermal non-uniformity.",
-        "metric": "Benchmark metric: average IR error 0.053 mV",
+        "metric": "Benchmark metric: average IR error 0.053 mV (metric from the original domain)",
         "tag": "Benchmark architecture"
       },
       {
