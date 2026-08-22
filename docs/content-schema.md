@@ -281,6 +281,9 @@ content/
     "categories": ["設備採購","拆裝運送","製程技術導入","人才培訓","AI 整合","其他"], // 6 項
     "submit": "送出詢問",
     "hint": "送出後將開啟您的郵件軟體，內容已預先填入，請確認後寄出。",
+    // 停用 JS 時才顯示（contact.html 的 <noscript>）：說明送出鍵為何停用，
+    // 並帶出信箱與電話兩條替代路徑。送出鍵預設 disabled，由 main.js 啟用。
+    "noscript": "此表單需要 JavaScript 才能開啟您的郵件軟體。若您的瀏覽器已停用 JavaScript，請直接以下列方式與我們聯絡。",
     "messages": { "required": "此欄位為必填。", "select": "請選擇需求類別。",
                   "email": "請輸入正確的電子郵件格式。" },
     "mail": {                      // 組進 mailto 內文的欄位抬頭

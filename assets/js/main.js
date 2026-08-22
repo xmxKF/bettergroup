@@ -155,6 +155,11 @@
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
     });
+    /* 送出鍵只有在上面的 submit 監聽器掛好之後才啟用；無 JS（或本檔載入失敗）時
+       它維持 disabled，瀏覽器不會對沒有 action 的表單做 GET，詢問內容也就不會
+       進到網址列與瀏覽歷史。無 JS 的替代路徑在 contact.html 的 <noscript> 內。 */
+    var submitBtn = form.querySelector('[data-mailto-submit]');
+    if (submitBtn) { submitBtn.disabled = false; }
   }
 
   /* ── 6. 表格橫捲：真的溢出時才顯示右緣漸隱提示 ─────────────── */

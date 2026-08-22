@@ -92,10 +92,20 @@
           <textarea id="f-message" name="message" required placeholder="{{ common.form.fields.message.placeholder }}"></textarea>
           <p class="error" role="alert" id="err-message"></p>
         </div>
+        <!-- 送出鍵預設 disabled，由 main.js 在 submit 監聽器掛好之後才啟用。
+             表單刻意沒有 action／method：無 JS 時若能送出，瀏覽器會對本頁做 GET，
+             把詢問內容寫進網址列、瀏覽歷史、伺服器日誌與 Referer（審查 C1）。 -->
         <div class="form__foot">
-          <button class="btn btn--primary" type="submit">{{ common.form.submit }}</button>
+          <button class="btn btn--primary" type="submit" disabled data-mailto-submit>{{ common.form.submit }}</button>
           <p class="form__hint">{{ common.form.hint }}</p>
         </div>
+        <noscript class="form__noscript">
+          <p class="form__hint">{{ common.form.noscript }}</p>
+          <ul class="contact-lines">
+            <li><span class="contact-lines__label">{{ common.footer.labels.email }}</span><a class="link contact-card__value--nowrap" href="mailto:{{ common.site.email }}">{{ common.site.email }}</a></li>
+            <li><span class="contact-lines__label">{{ common.footer.labels.phone }}</span><a class="link contact-card__value--nowrap" href="{{ common.site.phone_href }}">{{ common.site.phone }}</a></li>
+          </ul>
+        </noscript>
       </form>
 
       <aside class="reveal reveal--d2" aria-label="{{ page.enquiry.aside_label }}">

@@ -162,6 +162,7 @@
     ],
     "submit": "Send inquiry",
     "hint": "Submitting opens your email client with the message pre-filled. Please review it and send.",
+    "noscript": "This form needs JavaScript to open your email client. If JavaScript is disabled in your browser, please contact us directly using the details below.",
     "messages": {
       "required": "This field is required.",
       "select": "Please select an inquiry type.",

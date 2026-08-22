@@ -548,7 +548,7 @@ html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
     position:relative; display:block;
     padding-block:var(--space-5);
     font-size:15px; font-weight:500; color:var(--text-2);
-    text-decoration:none;
+    text-decoration:none; white-space:nowrap;
     transition:color var(--dur) var(--ease);
   }
   .nav__link:hover{ color:var(--text); }
@@ -582,8 +582,19 @@ html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
   .nav{ gap:var(--space-4); }
   .nav__list{ gap:var(--space-4); }
   .nav__link{ font-size:14px; }
+  .nav .btn--sm{ white-space:nowrap; }
   .lang-switch{ gap:0; }
   .lang-switch__item{ min-width:26px; padding-inline:4px; }
+}
+/* 960–1023px：第一段收緊仍不足 —— en 的六個導覽項與 ja 的長 CTA 在此區間會把
+   .nav 撐到 85px(en)／90px(ja)，超出 72px 的 .site-header__inner 而掉出頁首之外
+   （960 CSS px 正好是 1920 螢幕的 200% 縮放，屬 WCAG 1.4.4／1.4.10）。此處再降一階：
+   間距縮到 12px、導覽字級 13px、CTA 內距收窄；≥1024px 與 <960px 完全不受影響。 */
+@media (min-width:960px) and (max-width:1023px){
+  .nav{ gap:var(--space-3); }
+  .nav__list{ gap:var(--space-3); }
+  .nav__link{ font-size:13px; }
+  .nav .btn--sm{ padding-inline:var(--space-3); }
 }
 
 .lang-switch--mobile{
@@ -695,6 +706,14 @@ body.nav-open{ overflow:hidden; }
   font-size:var(--fs-display); line-height:var(--lh-display);
   font-weight:700; letter-spacing:-.02em; color:var(--on-dark);
   text-wrap:balance;
+}
+/* <640px：CJK 的 .nb 語意分段沒有空白可當斷點，一段放不下時整段溢出，
+   再被 body{overflow-x:hidden} 連字帶尾裁掉（ja「先端半導体プロセスの」在 320px
+   量到 340px，而容器只有 280px，見審查 C2）。此處讓每個語意分段各佔一行並允許
+   段內換行：zh-Hant／zh-Hans 兩段本來就放得下、渲染不變，拉丁語系不套用。 */
+@media (max-width:639px){
+  html[lang^="zh"] .hero__title .nb,
+  html[lang^="ja"] .hero__title .nb{ display:block; white-space:normal; line-break:strict; }
 }
 .hero__lead{
   margin-top:var(--space-5);
@@ -1163,7 +1182,10 @@ body.nav-open{ overflow:hidden; }
 .contact-card__value{ color:var(--text-2); }
 .contact-card__value--nowrap{ white-space:nowrap; overflow-wrap:normal; word-break:keep-all; }
 @media (max-width:419px){ .contact-card__value--nowrap{ font-size:var(--fs-small); } }
-.contact-card__value--keep{ word-break:keep-all; line-break:strict; overflow-wrap:break-word; }
+/* 地址：line-break:strict 已足以擋住 CJK 標點在行首行尾的壞斷點；word-break:keep-all
+   會把整串漢字視為一個不可斷的「詞」，在 ≤340px 撐爆 .info-strip 的 1fr 軌道，被
+   overflow:hidden 截掉尾端的樓層（見審查 T2）。改回 normal 讓漢字之間可正常換行。 */
+.contact-card__value--keep{ word-break:normal; line-break:strict; overflow-wrap:break-word; }
 
 /* 聯絡資訊列（contact 15.2）：三筆聯絡方式收成「一件」帶框物件，格間 1px
    分隔線 —— 與 §6.6 統計列同一視覺骨架。欄位名為小標籤、值才是主角；
@@ -1246,6 +1268,10 @@ body.nav-open{ overflow:hidden; }
 .field.has-error input,.field.has-error select,.field.has-error textarea{ border-color:var(--warn); }
 .form__foot{ grid-column:1 / -1; display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-4); }
 .form__hint{ font-size:var(--fs-small); color:var(--text-muted); max-width:var(--container-prose); text-wrap:pretty; }
+/* 送出鍵在 JS 啟用前為 disabled（見 contact.html 註解）；有 JS 時使用者看不到此狀態 */
+.form .btn[disabled]{ opacity:.55; cursor:not-allowed; }
+/* 無 JS 的替代聯絡路徑（<noscript> 在有 JS 時不會算繪） */
+.form__noscript{ grid-column:1 / -1; display:grid; gap:var(--space-3); }
 
 /* ==========================================================================
    23. FOOTER
