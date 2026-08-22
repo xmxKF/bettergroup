@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "BETTER SCIENCE TECHNOLOGY GROUP",
-    "legal_name": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
+    "legal_name": "倍特爾科技集團有限公司",
     "legal_name_en": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "address": "10/F, Chi Sau Commercial Building, 5 Jordan Road, Jordan, Kowloon, Hong Kong",
     "email": "better_stg@163.com",
@@ -11,7 +11,7 @@
   },
 
   "brand": {
-    "logo": "assets/img/logo-96.png",
+    "logo": "assets/img/logo-264.png",
     "logo_alt": "BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED",
     "name_primary": "BETTER",
     "name_secondary": "倍特爾科技集團有限公司"
@@ -101,9 +101,9 @@
     "trademark_note": "All brand names shown on this site are trademarks of their respective owners and are used for equipment identification only.",
     "credit": {
       "label": "Website by ",
-      "name": "顯藝科技",
+      "alt": "顯藝科技 (XYL)",
       "href": "https://shinylogic.pages.dev",
-      "logo": "assets/img/xyl-logo-64.png"
+      "logo": "assets/img/xyl-logo-full.png"
     }
   },
 
@@ -162,6 +162,7 @@
     ],
     "submit": "Send inquiry",
     "hint": "Submitting opens your email client with the message pre-filled. Please review it and send.",
+    "noscript": "This form needs JavaScript to open your email client. If JavaScript is disabled in your browser, please contact us directly using the details below.",
     "messages": {
       "required": "This field is required.",
       "select": "Please select an inquiry type.",

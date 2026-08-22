@@ -70,7 +70,7 @@
     "id": "inspection-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 整合",
-    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "lead": "以下为倍特尔导入的方法与对标的第三方前沿架构。",
     "entries": [
       {
         "arch": "G2LGAN＋CNN",
@@ -93,7 +93,7 @@
         "year": "（2025）",
         "arch_note": "",
         "text": "以产线持续训练的深度学习图像分类加速 e-beam 缺陷复检。",
-        "metric": "对标指标：3× 复检速度、已导入 2nm/GAA 客户",
+        "metric": "对标指标：3× 复检速度",
         "tag": "对标／导入的前沿架构"
       },
       {

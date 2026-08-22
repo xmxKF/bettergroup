@@ -70,14 +70,14 @@
     "id": "cvd-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 整合",
-    "lead": "以下為倍特爾對標導入的第三方前沿架構。",
+    "lead": "以下為倍特爾導入的方法與對標之第三方前沿架構。",
     "entries": [
       {
         "arch": "DeepOHeat-v1",
         "year": "（2025）",
         "arch_note": "",
         "text": "以 DeepONet＋KAN 建立熱場代理模型，快速推算腔體與晶圓熱分布。",
-        "metric": "對標指標：MAPE 0.035%、訓練 -62×、記憶體 -31×",
+        "metric": "對標指標：MAPE 0.035%、訓練 -62×、記憶體 -31×（原領域指標）",
         "tag": "對標／導入之前沿架構"
       },
       {
@@ -85,7 +85,7 @@
         "year": "",
         "arch_note": "",
         "text": "以 Encoder-Decoder CNN 推算溫度輪廓與電熱耦合影響。",
-        "metric": "對標指標：平均 IR 誤差 0.053mV",
+        "metric": "對標指標：平均 IR 誤差 0.053mV（原領域指標）",
         "tag": "對標／導入之前沿架構"
       },
       {

@@ -135,7 +135,8 @@
   --ease-in: cubic-bezier(.55,.06,.68,.19);
 
   /* ── Header 高度（版面預留用） ───────────────────── */
-  --header-h: 60px;
+  /* 客戶 2026-08-22 指示 header 標記放大兩倍（30→60px），高度隨之由 60px 增為 88px */
+  --header-h: 88px;
 }
 
 @media (min-width:640px){
@@ -161,7 +162,7 @@
     --sec-pad-tight:  var(--space-10);
     --hero-pad-top:   120px;
     --hero-pad-bottom:112px;
-    --header-h: 72px;
+    --header-h: 104px;
   }
 }
 
@@ -185,7 +186,7 @@ html[lang^="en"]{
 *,*::before,*::after{ box-sizing:border-box; }
 html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 /* 錨點／skip link 落點需避開 sticky header（72px ＋ 16px 呼吸） */
-#main,section[id],[id^="service-"],.accordion__item[id]{ scroll-margin-top:88px; }
+#main,section[id],[id^="service-"],.accordion__item[id]{ scroll-margin-top:120px; }
 body,h1,h2,h3,h4,p,figure,blockquote,dl,dd,ul,ol{ margin:0; padding:0; }
 ul[class],ol[class]{ list-style:none; }
 
@@ -523,7 +524,7 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
   text-decoration:none; color:var(--text);
   padding-block:var(--space-2);
 }
-.brand__mark{ width:30px; height:30px; flex:none; border-radius:var(--r-pill); }
+.brand__mark{ width:60px; height:60px; flex:none; border-radius:var(--r-pill); }
 .brand__name{ font-size:15px; font-weight:700; line-height:1.25; letter-spacing:.01em; white-space:nowrap; }
 .brand__en{
   display:none;
@@ -534,21 +535,26 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
    依 DESIGN.md §4 中文不得用 text-transform、字距不得超過 0.05em */
 html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
 @media (min-width:960px){
-  .brand__mark{ width:36px; height:36px; }
+  .brand__mark{ width:72px; height:72px; }
   .brand__name{ font-size:17px; }
   .brand__en{ display:block; }
 }
 
 /* 桌面導覽 */
 .nav{ display:none; }
+/* 間距說明（2026-08-22）：品牌標記放大為 72px 後品牌區寬 +36px，而 .container 上限 1200px
+   使 ≥1280px 的可用內容寬固定為 1120px —— 再寬的螢幕也補不回來。ja 版原本只餘 28px，
+   放大後短缺 7px，導致 CTA 與品牌英文副標各折成兩行。此處把 .nav 群組間距 32→24px、
+   導覽項間距 24→20px，合計歸還 36px（＝標記多佔的寬度），四語的餘裕即回到放大前的水準
+   （zh 60px／en 36px／ja 29px）。960px 以下的兩段收緊區間維持原值（在後方覆寫）。 */
 @media (min-width:960px){
-  .nav{ display:flex; align-items:center; gap:var(--space-8); }
-  .nav__list{ display:flex; align-items:center; gap:var(--space-6); list-style:none; }
+  .nav{ display:flex; align-items:center; gap:var(--space-6); }
+  .nav__list{ display:flex; align-items:center; gap:var(--space-5); list-style:none; }
   .nav__link{
     position:relative; display:block;
     padding-block:var(--space-5);
     font-size:15px; font-weight:500; color:var(--text-2);
-    text-decoration:none;
+    text-decoration:none; white-space:nowrap;
     transition:color var(--dur) var(--ease);
   }
   .nav__link:hover{ color:var(--text); }
@@ -582,8 +588,22 @@ html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
   .nav{ gap:var(--space-4); }
   .nav__list{ gap:var(--space-4); }
   .nav__link{ font-size:14px; }
+  .nav .btn--sm{ white-space:nowrap; }
   .lang-switch{ gap:0; }
   .lang-switch__item{ min-width:26px; padding-inline:4px; }
+}
+/* 960–1023px：第一段收緊仍不足 —— en 的六個導覽項與 ja 的長 CTA 在此區間會把
+   .nav 撐到 85px(en)／90px(ja)，超出 72px 的 .site-header__inner 而掉出頁首之外
+   （960 CSS px 正好是 1920 螢幕的 200% 縮放，屬 WCAG 1.4.4／1.4.10）。此處再降一階：
+   間距縮到 12px、導覽字級 13px、CTA 內距收窄；≥1024px 與 <960px 完全不受影響。 */
+@media (min-width:960px) and (max-width:1023px){
+  /* 標記由 36px 放大為 72px 後品牌區寬 +36px，此區間僅剩個位數餘裕（ja 最窄）；
+     品牌與導覽之間的間距一併收到 16px，讓 ja 在 960px 仍留有可見的緩衝。 */
+  .site-header__inner{ gap:var(--space-4); }
+  .nav{ gap:var(--space-3); }
+  .nav__list{ gap:var(--space-3); }
+  .nav__link{ font-size:13px; }
+  .nav .btn--sm{ padding-inline:var(--space-3); }
 }
 
 .lang-switch--mobile{
@@ -695,6 +715,14 @@ body.nav-open{ overflow:hidden; }
   font-size:var(--fs-display); line-height:var(--lh-display);
   font-weight:700; letter-spacing:-.02em; color:var(--on-dark);
   text-wrap:balance;
+}
+/* <640px：CJK 的 .nb 語意分段沒有空白可當斷點，一段放不下時整段溢出，
+   再被 body{overflow-x:hidden} 連字帶尾裁掉（ja「先端半導体プロセスの」在 320px
+   量到 340px，而容器只有 280px，見審查 C2）。此處讓每個語意分段各佔一行並允許
+   段內換行：zh-Hant／zh-Hans 兩段本來就放得下、渲染不變，拉丁語系不套用。 */
+@media (max-width:639px){
+  html[lang^="zh"] .hero__title .nb,
+  html[lang^="ja"] .hero__title .nb{ display:block; white-space:normal; line-break:strict; }
 }
 .hero__lead{
   margin-top:var(--space-5);
@@ -1163,7 +1191,10 @@ body.nav-open{ overflow:hidden; }
 .contact-card__value{ color:var(--text-2); }
 .contact-card__value--nowrap{ white-space:nowrap; overflow-wrap:normal; word-break:keep-all; }
 @media (max-width:419px){ .contact-card__value--nowrap{ font-size:var(--fs-small); } }
-.contact-card__value--keep{ word-break:keep-all; line-break:strict; overflow-wrap:break-word; }
+/* 地址：line-break:strict 已足以擋住 CJK 標點在行首行尾的壞斷點；word-break:keep-all
+   會把整串漢字視為一個不可斷的「詞」，在 ≤340px 撐爆 .info-strip 的 1fr 軌道，被
+   overflow:hidden 截掉尾端的樓層（見審查 T2）。改回 normal 讓漢字之間可正常換行。 */
+.contact-card__value--keep{ word-break:normal; line-break:strict; overflow-wrap:break-word; }
 
 /* 聯絡資訊列（contact 15.2）：三筆聯絡方式收成「一件」帶框物件，格間 1px
    分隔線 —— 與 §6.6 統計列同一視覺骨架。欄位名為小標籤、值才是主角；
@@ -1246,6 +1277,10 @@ body.nav-open{ overflow:hidden; }
 .field.has-error input,.field.has-error select,.field.has-error textarea{ border-color:var(--warn); }
 .form__foot{ grid-column:1 / -1; display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-4); }
 .form__hint{ font-size:var(--fs-small); color:var(--text-muted); max-width:var(--container-prose); text-wrap:pretty; }
+/* 送出鍵在 JS 啟用前為 disabled（見 contact.html 註解）；有 JS 時使用者看不到此狀態 */
+.form .btn[disabled]{ opacity:.55; cursor:not-allowed; }
+/* 無 JS 的替代聯絡路徑（<noscript> 在有 JS 時不會算繪） */
+.form__noscript{ grid-column:1 / -1; display:grid; gap:var(--space-3); }
 
 /* ==========================================================================
    23. FOOTER
@@ -1265,7 +1300,7 @@ body.nav-open{ overflow:hidden; }
 @media (min-width:640px){ .footer__grid{ grid-template-columns:repeat(2,1fr); gap:var(--space-10) var(--space-8); } }
 @media (min-width:960px){ .footer__grid{ grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:var(--space-10); } }
 
-.footer__brand-mark{ width:44px; height:44px; border-radius:var(--r-pill); }
+.footer__brand-mark{ width:132px; height:132px; border-radius:var(--r-pill); }
 .footer__name{ margin-top:var(--space-4); font-size:16px; font-weight:700; color:var(--on-dark); line-height:1.5; }
 .footer__en{
   margin-top:var(--space-1);
@@ -1303,19 +1338,24 @@ body.nav-open{ overflow:hidden; }
 }
 .footer__bottom p{ max-width:none; }
 
-/* 網站設計 credit：字標小徽章 ＋ 名稱文字同在一個連結內；圖片為裝飾，名稱由文字承擔 */
+/* 網站設計 credit：標籤一行，其下為完整 XYL 標誌圖（含倒影與圖內「顯藝科技」字樣）。
+   圖片即連結的全部內容，名稱由 alt 承擔，故 alt 為必填、不得為裝飾圖。 */
 .footer__credit{
   margin-top:var(--space-1);
-  display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-2);
+  display:flex; flex-direction:column; align-items:flex-start; gap:var(--space-2);
 }
-.footer__credit a{ display:inline-flex; align-items:center; gap:var(--space-2); }
+.footer__credit-label{ display:block; }
+.footer__credit-link{
+  display:inline-block; border-radius:var(--r-sm);
+  transition:box-shadow var(--dur) var(--ease);
+}
 .footer__credit-logo{
-  display:block; height:24px; width:auto;
+  display:block; height:128px; width:auto;
   border-radius:var(--r-sm);
-  opacity:.82; transition:opacity var(--dur) var(--ease);
+  border:1px solid var(--dark-700);
 }
-.footer__credit a:hover .footer__credit-logo,
-.footer__credit a:focus-visible .footer__credit-logo{ opacity:1; }
+.footer__credit-link:hover{ box-shadow:0 0 0 1px var(--accent-on-dark); }
+.footer__credit-link:focus-visible{ outline:2px solid var(--accent-on-dark); outline-offset:2px; }
 
 /* ==========================================================================
    24. PRINT

@@ -70,7 +70,7 @@
     "id": "mask-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 整合",
-    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "lead": "以下为倍特尔导入的方法与对标的第三方前沿架构。",
     "entries": [
       {
         "arch": "LithoDreamer 生成式光刻／ILT",

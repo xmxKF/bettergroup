@@ -41,7 +41,16 @@ content/
    多一個鍵、少一個鍵都會讓建置失敗，並印出第一個不符的路徑。
 3. **陣列長度完全一致**：`entries`、`features`、`steps`、`rows`… 的元素數量必須與
    `zh-hant` 相同。不可以因為某語言「講得比較短」就刪掉一項。
-4. **語言不變欄位**：下列鍵在所有語言必須**逐字相同**，翻譯時原樣複製：
+4. **型別完全一致，`null` 不是逃生門**：同一個路徑在每個語言的 JSON 型別必須**完全相同**
+   （string／list／object／boolean／`null`）。`zh-hant` 寫 `null` 的位置（`media`、`note`、
+   `cta` 等選填欄位）其他語言也必須是 `null`；`zh-hant` 有字串的位置不可以寫成 `null`，
+   否則頁面會直接印出字面 `None`。
+5. **必填非空字串**：`zh-hant` 有內容的字串欄位，其他語言不可以留成空字串 —— 那是漏譯，
+   頁面會靜默變空白。反過來，`zh-hant` 本來就是空字串 `""` 的位置（本檔多處註明的
+   「四語一律空字串」）四個語言都要保留空字串，不可補字、也不可刪鍵。
+   唯一的例外列在 `build.py` 的 `EMPTY_ALLOWED_PATTERNS`：`ai.pillars.entries[*].title`
+   與 `index.ai.pillars[*].title`（這幾張卡在拉丁語系裡只掛 `title_lat`）。
+6. **語言不變欄位**：下列鍵在所有語言必須**逐字相同**，翻譯時原樣複製：
 
    | 鍵 | 內容 |
    |---|---|
@@ -68,13 +77,15 @@ content/
    | `common.languages.*.label` | 語言切換器標籤 `繁`／`简`／`EN`／`日`，四語必須完全相同 |
    | `common.site.phone`／`common.site.phone_href` | 電話號碼與 `tel:` 連結，四語必須完全相同 |
 
-5. **保留字**：JSON 的鍵**不可**使用 `items`、`keys`、`values`、`get`、`pop`、`update`
+7. **保留字**：JSON 的鍵**不可**使用 `items`、`keys`、`values`、`get`、`pop`、`update`
    等 Python dict 方法名 —— Jinja 的 `a.b` 會取到方法而不是資料。
    清單一律用 **`entries`**（本檔所有 schema 皆已遵守）。
-6. **文案內的品牌與架構名不翻譯**：`KOKUSAI ELECTRIC (KE)`、`LASERTEC`、`NUFLARE`、
+8. **文案內的品牌與架構名不翻譯**：`KOKUSAI ELECTRIC (KE)`、`LASERTEC`、`NUFLARE`、
    `DeepOHeat-v1`、`LithoDreamer`、`G2LGAN` 等一律保留原文，只翻譯其周圍的說明文字。
-7. **AI 表格的量化結果是「對標架構」**：任何語言都不得改寫成倍特爾自有的量測數據。
+9. **AI 表格的量化結果是「對標架構」**：任何語言都不得改寫成倍特爾自有的量測數據。
    `note` 一定要譯出「第三方公開發表、作為導入與對標基準」的語意。
+10. **被參照的媒體必須實際存在**：`file`／`poster` 指到的檔案要真的在 `assets/` 底下
+    （大小寫完全相符）且未超過大小上限，否則建置失敗。詳見 `README.md` §2、§6。
 
 ---
 
@@ -168,7 +179,7 @@ content/
   },
 
   "brand": {                       // header 左上角
-    "logo": "assets/img/logo-96.png",   // 語言不變
+    "logo": "assets/img/logo-264.png",  // 語言不變
     "logo_alt": "倍特爾科技集團有限公司",
     "name_primary":   "倍特爾科技集團",              // 主行
     "name_secondary": "Better Science Technology Group" // 副行（小字、大寫）
@@ -226,13 +237,15 @@ content/
     "process_links": [ { "label": "黃光段", "href": "equipment-lithography.html" }, … 共 9 項 ],
     "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
-    "credit": { "label": "網站設計：", "name": "顯藝科技",
+    "credit": { "label": "網站設計：", "alt": "顯藝科技",
                 "href": "https://shinylogic.pages.dev",
-                "logo": "assets/img/xyl-logo-64.png" }
-    // 底部列的網站設計credit。href 留空字串時模板輸出 <span> 純文字；有值時輸出
-    // <a target="_blank" rel="noopener noreferrer">，內含 logo 小徽章＋name 文字
-    // （見 partials/footer.html）。href 與 logo 是語言不變值（兩個鍵名都已在
-    // INVARIANT_KEYS 內，四語必須完全一致）；label 與 name 各語言照譯。
+                "logo": "assets/img/xyl-logo-full.png" }
+    // 底部列的網站設計credit。label 自成一行；其下是完整 XYL 標誌圖（含倒影與圖內
+    // 「顯藝科技」字樣）。href 有值時圖包在 <a target="_blank" rel="noopener noreferrer">
+    // 內、連結內沒有可見文字；留空字串時只輸出該圖（見 partials/footer.html）。
+    // href 與 logo 是語言不變值（兩個鍵名都已在 INVARIANT_KEYS 內，四語必須完全一致）；
+    // label 與 alt 各語言照譯。alt 為必填 —— 連結內沒有可見文字，名稱全靠 alt 承擔，
+    // 不可留空或改成 aria-hidden。
     // logo 走 SHELL_ASSETS 白名單複製到 dist/（不是 IMG-* 資產，不進 media 表）。
   },
 
@@ -270,6 +283,9 @@ content/
     "categories": ["設備採購","拆裝運送","製程技術導入","人才培訓","AI 整合","其他"], // 6 項
     "submit": "送出詢問",
     "hint": "送出後將開啟您的郵件軟體，內容已預先填入，請確認後寄出。",
+    // 停用 JS 時才顯示（contact.html 的 <noscript>）：說明送出鍵為何停用，
+    // 並帶出信箱與電話兩條替代路徑。送出鍵預設 disabled，由 main.js 啟用。
+    "noscript": "此表單需要 JavaScript 才能開啟您的郵件軟體。若您的瀏覽器已停用 JavaScript，請直接以下列方式與我們聯絡。",
     "messages": { "required": "此欄位為必填。", "select": "請選擇需求類別。",
                   "email": "請輸入正確的電子郵件格式。" },
     "mail": {                      // 組進 mailto 內文的欄位抬頭

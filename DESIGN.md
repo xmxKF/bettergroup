@@ -18,16 +18,25 @@
 
 檔案：`assets/img/logo.png`（原始）＋後續衍生 `logo-mark.png` / `logo-on-dark.png`（若產生）。**根目錄 `logo.png` 不得修改。**
 
+實際交付的衍生檔為 `assets/img/logo-264.png`（264×264，由根目錄 `logo.png` 去除外圍透明留白後以 LANCZOS 縮放、255 色調色盤量化而成），header／footer／閘道頁三處共用；264px 為 footer 132px 顯示尺寸的 2× 供圖，同時足夠 header 使用。
+
 | 場景 | 高度 | 備註 |
 |---|---|---|
-| Header（≥960px） | 36px | 垂直置中，右側接公司中文名 |
-| Header（<960px） | 30px | 公司名可縮為單行或隱藏英文名 |
-| Footer | 44px | 置於暗帶上 |
+| Header（≥960px） | **72px** | 垂直置中，右側接公司中文名 |
+| Header（<960px） | **60px** | 公司名可縮為單行或隱藏英文名 |
+| Footer | **132px** | 置於暗帶上 |
 | Hero 內浮水印（可選，僅首頁） | 320–480px | opacity 0.06–0.10，不可蓋住文字 |
 | favicon | 32 / 180px | 直接使用圓形晶圓標 |
 
+> **2026-08-22 客戶指示**：「logo.png 的部分在 footer 可以放大三倍，header 可以放大兩倍。」
+> header 由 36／30px 放大為 72／60px（2×），footer 由 44px 放大為 132px（3×）。
+> Header 高度隨之由 72／60px 調整為 **104／88px**（見 §6.1）。
+
 規則：
 - **淨空區**：四周至少留 logo 高度 **0.5×** 的空白，任何文字、線、邊框不得侵入。
+  - **例外（2026-08-22）**：sticky header 內的標記，上下淨空為 16px（≥960px）／14px（<960px），約 0.22×。
+    完整 0.5× 需要 144px 高的 sticky header，會長期遮住近兩成視窗高度，故此處以「不被文字／線／邊框侵入」為底線，
+    左右淨空（容器留白與 `.brand` 的 12px gap）仍維持。footer 標記不受此例外限制，四周淨空充足。
 - **深色底**：logo 本身在深藍石墨（`--dark-900`）上可直接使用，不加白色方塊底、不加外框、不加陰影。
 - **禁止**：改色、去彩、加漸層濾鏡、拉伸變形（等比縮放 only）、旋轉、加陰影／描邊、放在雜亂照片上、與品牌名（NIKON/CANON/TEL…）並排成「合作夥伴牆」。
 - **最小尺寸**：24px 高以下不得使用（圓內網格會糊掉）。
@@ -229,7 +238,8 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 ## 6. 元件視覺規範
 
 ### 6.1 Header / Nav
-- Sticky `top:0`，高度 72px（<960px 為 60px）。底 `rgba(246,247,248,.86)` ＋ `backdrop-filter: blur(12px) saturate(1.2)`；不支援時 fallback 為不透明 `--bg`。
+- Sticky `top:0`，高度 **104px（<960px 為 88px）**——2026-08-22 品牌標記放大為 72／60px（§2）後由 72／60px 調高，
+  使標記上下各留 16／14px。錨點捲動補償 `scroll-margin-top` 同步由 88px 改為 120px。底 `rgba(246,247,248,.86)` ＋ `backdrop-filter: blur(12px) saturate(1.2)`；不支援時 fallback 為不透明 `--bg`。
 - 捲動 >8px 時加下邊框 `1px var(--border)` ＋ `--sh-sm`，同時底色提高到 `rgba(246,247,248,.94)`
   （以 class 切換，180ms）—— 頁面捲動時暗色媒體會從 header 底下通過，.86 的底在該瞬間讓導覽字浮動不定。
 - 導覽順序固定：首頁 / 關於我們 / 服務項目 / 設備與製程 / AI 智慧製造 / 聯絡我們。15px / 500 / `--text-2`；hover → `--text`；current → `--text` ＋ 文字寬度的 2px `--grad-spectral` 底線。
@@ -245,7 +255,9 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
   - 目前語言：文字 `--text`、底 `--surface-sunk`、字重 700，並加 `aria-current="true"`。**不使用底線或光譜線** —— 那是導覽項目的專屬記號，避免與「目前頁面」混淆。
   - 行動版放大為 `min-width:48px`、`height:40px`、15px，並加 1px `--border` 外框（目前語言為 `--border-strong`）以符合 44px 觸控目標。
 - **連結**：一律指向「其他語言的同一頁」（`../<lang>/<同檔名>`），不回首頁。
-- **960–1179px**：導覽列加上切換器後會超出容器，此區間整體收緊 —— 品牌英文副標暫隱、導覽字級 14px、`.nav` 與 `.nav__list` 間距降為 `--space-4`、切換器改窄版（`min-width:26px`、`padding-inline:4px`、`gap:0`）。**≥1180px 與 <960px 的版面與核准原型完全一致。**
+- **960–1179px**：導覽列加上切換器後會超出容器，此區間整體收緊 —— 品牌英文副標暫隱、導覽字級 14px、`.nav` 與 `.nav__list` 間距降為 `--space-4`、切換器改窄版（`min-width:26px`、`padding-inline:4px`、`gap:0`）。
+- **≥1180px（2026-08-22 調整）**：`.nav` 群組間距由 `--space-8`（32px）降為 `--space-6`（24px）、`.nav__list` 項目間距由 `--space-6`（24px）降為 `--space-5`（20px），合計歸還 36px。原因：`--container` 上限 1200px 使 ≥1280px 的可用內容寬固定為 1120px，品牌標記放大為 72px 後品牌區寬 +36px，ja 版短缺 7px 而使 CTA 與品牌英文副標各折成兩行。調整後四語餘裕回到放大前水準（zh 60px／en 36px／ja 29px），字級、字重、順序、切換器樣式皆未更動。
+- **<960px 的版面與核准原型完全一致。**
 - 切換器**不得**做成下拉選單、不得顯示國旗、不得只顯示目前語言。
 
 ### 6.2 Hero
@@ -292,13 +304,13 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
 
 ### 6.9 Footer
 - 底 `--dark-900`、上緣 1px `--grad-spectral-soft` 髮絲線。四欄（≥960）／單欄堆疊（<640）：
-  1. logo（44px）＋中文全名（`--on-dark` 16px）＋英文全名（`--on-dark-muted` `--fs-small` `--font-lat`）
+  1. logo（**132px**，2026-08-22 客戶指示由 44px 放大三倍）＋中文全名（`--on-dark` 16px）＋英文全名（`--on-dark-muted` `--fs-small` `--font-lat`）
   2. 導覽六項（`--on-dark-2`，hover `--accent-on-dark`）
   3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`better_stg@163.com`（mailto）、`+86-135-3007-1950`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
   - <960px 以觸控為主：導覽／製程連結補 `padding-block:12px`，可點高度 ≥44px（§10）。
   4. 九大製程快速連結（`--fs-small`）
-- 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`；末行為網站設計 credit（`common.footer.credit`），同一 `--fs-small` `--on-dark-muted`，`href` 有值時渲染為 `--accent-on-dark` 連結、無值則為純文字。
-- **credit 徽章**：credit 行為 `display:flex`、`align-items:center`、`gap:var(--space-2)`、`margin-top:var(--space-1)`（讓徽章列與上方商標聲明分得開）。標籤文字（`網站設計：`）在連結外，連結內是「XYL 字標小徽章 ＋ 顯藝科技文字」——名稱一律保留文字，不可只留圖。徽章 `.footer__credit-logo` 高 24px、寬自動（`assets/img/xyl-logo-64.png`，144×64、約 2.7×，字標已裁到水面線）、`--r-sm` 圓角、`opacity:.82`，hover／focus 回到 `1`；淺底在暗帶上因此讀作刻意的小徽章而非貼紙，亮度也不會壓過同列 `--on-dark-muted` 文字。徽章 `alt=""` `aria-hidden="true"`（裝飾用，名稱由旁邊文字承擔，同 footer logo 慣例）。這是全站唯一的站外連結，一律 `target="_blank" rel="noopener noreferrer"`；連結為 `inline-flex`，焦點環（`--accent-on-dark`）因此完整框住徽章與名稱。
+- 底列：上邊框 `1px solid var(--dark-700)`，依序為版權行、商標聲明行、網站設計 credit 區塊（`common.footer.credit`），`--fs-small` `--on-dark-muted`。
+- **credit 區塊**：credit 為 `display:flex`、`flex-direction:column`、`align-items:flex-start`、`gap:var(--space-2)`、`margin-top:var(--space-1)`（與上方商標聲明分開）。標籤文字（`網站設計：`）自成一行在連結外；**連結內只有圖片，沒有可見文字**（客戶 2026-08 指示）。圖為完整標誌構圖 `assets/img/xyl-logo-full.png`（291×256，原圖 `assets/src/xyl-logo.png` 1024×1024 去掉外圍留白後的裁切），**必須完整含字標、水面倒影與圖內「顯藝科技」字樣**，不得再裁成字標小徽章。`.footer__credit-logo` 高 128px、寬自動（約 145px，2× 供圖）、`--r-sm` 圓角、1px `--dark-700` 邊框讓白底圖在暗帶上收邊，`opacity:1`（圖即識別，不可再壓暗）。因為沒有可見文字承擔名稱，**`alt` 為必填**（`common.footer.credit.alt`，四語照譯：顯藝科技／显艺科技／顯藝科技 (XYL)／顯藝科技），不得使用 `alt=""` `aria-hidden`。這是全站唯一的站外連結，一律 `target="_blank" rel="noopener noreferrer"`；連結盒等於圖片盒，hover 為 1px `--accent-on-dark` 外框、focus 為 2px `--accent-on-dark` 焦點環（`outline-offset:2px`），因此完整框住圖片。
 
 ### 6.10 麵包屑
 `--fs-small`、`--text-muted`；分隔符 `/`（`--border-strong` 色，左右 8px）；最後一項為 `--text-2` 且非連結；位於內頁 hero 上緣，與 h1 間距 16px。
@@ -459,7 +471,7 @@ JS 亦須偵測 `matchMedia('(prefers-reduced-motion: reduce)')`，命中時直�
 | `title_lat` 的斜線 | 語言不變欄位一律用 ASCII `LithoDreamer / ILT`；CJK 譯文（`arch` 等非不變欄位）仍用全形／。 |
 | 閘道頁不自動轉頁 | 原先 `templates/gateway.html` 帶 `<meta http-equiv="refresh" content="1;url=…">` 當無 JS 的退路，任何非零延遲的自動轉頁都是 WCAG 2.2.1 的失敗案例（技術 F40）。已整條移除：有 JS 時由頁尾的路由腳本立即轉向，無 JS 時就停在閘道頁點四個語言連結。`common.json` 的 `shell.gateway_note` 四語同步改成祈使句（「請選擇語言版本」／`Choose your language`），無 JS 時文案才不會與行為矛盾。 |
 | 內容圖不做 `srcset` | 經評估後**維持現狀**：`media_img` 只出一張 1600px 長邊的 JPEG（`tools/optimize_media.py` 已壓到 400 KB 以下，實測最大 273 KB）。在 1440 版面下卡片圖約 355 CSS px，1x 螢幕確實多下載了像素，但這是頻寬取捨、不影響正確性（`.media` 有 `aspect-ratio`，CLS 為 0），而加 `srcset` 需要轉檔工具多產一組 800px 檔、資產數量翻倍。日後若要做，作法是 `optimize_media.py` 同時輸出 800／1600 兩個版本，並在 `media_img` 加 `srcset`／`sizes`。 |
-| `logo-256.png`／`logo-512.png` | 全站（HTML／CSS／模板／manifest）沒有任何地方參照，建置時本來就不複製到 `dist/`，已從版控移除以免誤以為是交付檔。實際使用中的衍生檔只有 `logo-96.png`（閘道頁與 header 標記）與 `favicon-*`；需要更大尺寸時從根目錄的 `logo.png`（2048px）重新產生。 |
+| `logo-256.png`／`logo-512.png` | 全站（HTML／CSS／模板／manifest）沒有任何地方參照，建置時本來就不複製到 `dist/`，已從版控移除以免誤以為是交付檔。實際使用中的衍生檔只有 `logo-264.png`（header／footer／閘道頁標記共用；2026-08-22 放大後取代原 `logo-96.png`）與 `favicon-*`；需要其他尺寸時從根目錄的 `logo.png`（2048px）重新產生。 |
 | `tools/check_links.py` | 第三階段新增：檢查 `dist/` 內部連結，root-absolute 路徑視為錯誤。CI 三關之一（README §8.4）。 |
 | `SITE_URL` 優先序 | `--base-url` ＞ 環境變數 `SITE_URL` ＞ `build.py` 常數（README §2、§8.2）。 |
 | 2026-08 精修（聯絡資訊／FAQ／版面） | 逐項改動與理由見 **§12 精修紀錄**；§5 垂直節奏表、§6.1、§6.2、§6.9、§6.15、§6.17 已同步更新。 |

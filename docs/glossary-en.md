@@ -264,7 +264,7 @@ CMP equipment、Wafer clean & dry equipment、Inspection & test equipment、Phot
 | 服務內容（h2） | Services provided |
 | AI 整合（h2） | AI integration |
 | 適用場景（h2） | Where it fits |
-| 以下為倍特爾對標導入的第三方前沿架構。 | The third-party frontier architectures BETTER benchmarks and deploys. |
+| 以下為倍特爾導入的方法與對標之第三方前沿架構。 | The methods BETTER deploys and the third-party frontier architectures it benchmarks. |
 | 對標／導入之前沿架構（tag） | Benchmark architecture |
 | 對標指標：… | `Benchmark metric: …`（半形冒號＋空白，句首大寫） |
 | 以日系主力品牌為主，涵蓋… | Focused on leading Japanese brands, covering … |
@@ -313,7 +313,7 @@ CMP equipment、Wafer clean & dry equipment、Inspection & test equipment、Phot
 | 設備範圍 | Equipment scope | `scope.title`（h2） |
 | 服務內容 | Services provided | `services.title`（h2） |
 | 適用場景 | Where it fits | `fit.title`（h2） |
-| 以下為倍特爾對標導入的第三方前沿架構。 | The third-party frontier architectures BETTER benchmarks and deploys. | `ai.lead` |
+| 以下為倍特爾導入的方法與對標之第三方前沿架構。 | The methods BETTER deploys and the third-party frontier architectures it benchmarks. | `ai.lead` |
 | 對標指標： | `"Benchmark metric: "` | `ai.entries[].metric` 前綴 |
 | 對標／導入之前沿架構 | Benchmark architecture | `ai.entries[].tag` |
 | 設備採購與機種評估選型 | Equipment procurement, evaluation and tool selection | `services.features` |

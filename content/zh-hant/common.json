@@ -11,7 +11,7 @@
   },
 
   "brand": {
-    "logo": "assets/img/logo-96.png",
+    "logo": "assets/img/logo-264.png",
     "logo_alt": "倍特爾科技集團有限公司",
     "name_primary": "倍特爾科技集團",
     "name_secondary": "Better Science Technology Group"
@@ -88,9 +88,9 @@
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
     "credit": {
       "label": "網站設計：",
-      "name": "顯藝科技",
+      "alt": "顯藝科技",
       "href": "https://shinylogic.pages.dev",
-      "logo": "assets/img/xyl-logo-64.png"
+      "logo": "assets/img/xyl-logo-full.png"
     }
   },
 
@@ -133,6 +133,7 @@
     "categories": ["設備採購", "拆裝運送", "製程技術導入", "人才培訓", "AI 整合", "其他"],
     "submit": "送出詢問",
     "hint": "送出後將開啟您的郵件軟體，內容已預先填入，請確認後寄出。",
+    "noscript": "此表單需要 JavaScript 才能開啟您的郵件軟體。若您的瀏覽器已停用 JavaScript，請直接以下列方式與我們聯絡。",
     "messages": {
       "required": "此欄位為必填。",
       "select": "請選擇需求類別。",

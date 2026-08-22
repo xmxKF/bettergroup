@@ -70,7 +70,7 @@
     "id": "bake-ai",
     "eyebrow": "AI INTEGRATION",
     "title": "AI 整合",
-    "lead": "以下为倍特尔对标导入的第三方前沿架构。",
+    "lead": "以下为倍特尔导入的方法与对标的第三方前沿架构。",
     "entries": [
       {
         "arch": "DeepOHeat-v1",
@@ -85,7 +85,7 @@
         "year": "",
         "arch_note": "",
         "text": "由时变功耗与加热分布推算温度轮廓，定位热不均区域。",
-        "metric": "对标指标：平均 IR 误差 0.053mV",
+        "metric": "对标指标：平均 IR 误差 0.053mV（原领域指标）",
         "tag": "对标／导入的前沿架构"
       },
       {
