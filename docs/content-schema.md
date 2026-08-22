@@ -179,7 +179,7 @@ content/
   },
 
   "brand": {                       // header 左上角
-    "logo": "assets/img/logo-96.png",   // 語言不變
+    "logo": "assets/img/logo-264.png",  // 語言不變
     "logo_alt": "倍特爾科技集團有限公司",
     "name_primary":   "倍特爾科技集團",              // 主行
     "name_secondary": "Better Science Technology Group" // 副行（小字、大寫）

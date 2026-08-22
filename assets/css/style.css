@@ -135,7 +135,8 @@
   --ease-in: cubic-bezier(.55,.06,.68,.19);
 
   /* ── Header 高度（版面預留用） ───────────────────── */
-  --header-h: 60px;
+  /* 客戶 2026-08-22 指示 header 標記放大兩倍（30→60px），高度隨之由 60px 增為 88px */
+  --header-h: 88px;
 }
 
 @media (min-width:640px){
@@ -161,7 +162,7 @@
     --sec-pad-tight:  var(--space-10);
     --hero-pad-top:   120px;
     --hero-pad-bottom:112px;
-    --header-h: 72px;
+    --header-h: 104px;
   }
 }
 
@@ -185,7 +186,7 @@ html[lang^="en"]{
 *,*::before,*::after{ box-sizing:border-box; }
 html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 /* 錨點／skip link 落點需避開 sticky header（72px ＋ 16px 呼吸） */
-#main,section[id],[id^="service-"],.accordion__item[id]{ scroll-margin-top:88px; }
+#main,section[id],[id^="service-"],.accordion__item[id]{ scroll-margin-top:120px; }
 body,h1,h2,h3,h4,p,figure,blockquote,dl,dd,ul,ol{ margin:0; padding:0; }
 ul[class],ol[class]{ list-style:none; }
 
@@ -523,7 +524,7 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
   text-decoration:none; color:var(--text);
   padding-block:var(--space-2);
 }
-.brand__mark{ width:30px; height:30px; flex:none; border-radius:var(--r-pill); }
+.brand__mark{ width:60px; height:60px; flex:none; border-radius:var(--r-pill); }
 .brand__name{ font-size:15px; font-weight:700; line-height:1.25; letter-spacing:.01em; white-space:nowrap; }
 .brand__en{
   display:none;
@@ -534,16 +535,21 @@ em,i{ font-style:normal; font-weight:500; color:var(--text); }
    依 DESIGN.md §4 中文不得用 text-transform、字距不得超過 0.05em */
 html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
 @media (min-width:960px){
-  .brand__mark{ width:36px; height:36px; }
+  .brand__mark{ width:72px; height:72px; }
   .brand__name{ font-size:17px; }
   .brand__en{ display:block; }
 }
 
 /* 桌面導覽 */
 .nav{ display:none; }
+/* 間距說明（2026-08-22）：品牌標記放大為 72px 後品牌區寬 +36px，而 .container 上限 1200px
+   使 ≥1280px 的可用內容寬固定為 1120px —— 再寬的螢幕也補不回來。ja 版原本只餘 28px，
+   放大後短缺 7px，導致 CTA 與品牌英文副標各折成兩行。此處把 .nav 群組間距 32→24px、
+   導覽項間距 24→20px，合計歸還 36px（＝標記多佔的寬度），四語的餘裕即回到放大前的水準
+   （zh 60px／en 36px／ja 29px）。960px 以下的兩段收緊區間維持原值（在後方覆寫）。 */
 @media (min-width:960px){
-  .nav{ display:flex; align-items:center; gap:var(--space-8); }
-  .nav__list{ display:flex; align-items:center; gap:var(--space-6); list-style:none; }
+  .nav{ display:flex; align-items:center; gap:var(--space-6); }
+  .nav__list{ display:flex; align-items:center; gap:var(--space-5); list-style:none; }
   .nav__link{
     position:relative; display:block;
     padding-block:var(--space-5);
@@ -591,6 +597,9 @@ html[lang^="zh"] .brand__en{ letter-spacing:.06em; text-transform:uppercase; }
    （960 CSS px 正好是 1920 螢幕的 200% 縮放，屬 WCAG 1.4.4／1.4.10）。此處再降一階：
    間距縮到 12px、導覽字級 13px、CTA 內距收窄；≥1024px 與 <960px 完全不受影響。 */
 @media (min-width:960px) and (max-width:1023px){
+  /* 標記由 36px 放大為 72px 後品牌區寬 +36px，此區間僅剩個位數餘裕（ja 最窄）；
+     品牌與導覽之間的間距一併收到 16px，讓 ja 在 960px 仍留有可見的緩衝。 */
+  .site-header__inner{ gap:var(--space-4); }
   .nav{ gap:var(--space-3); }
   .nav__list{ gap:var(--space-3); }
   .nav__link{ font-size:13px; }
@@ -1291,7 +1300,7 @@ body.nav-open{ overflow:hidden; }
 @media (min-width:640px){ .footer__grid{ grid-template-columns:repeat(2,1fr); gap:var(--space-10) var(--space-8); } }
 @media (min-width:960px){ .footer__grid{ grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:var(--space-10); } }
 
-.footer__brand-mark{ width:44px; height:44px; border-radius:var(--r-pill); }
+.footer__brand-mark{ width:132px; height:132px; border-radius:var(--r-pill); }
 .footer__name{ margin-top:var(--space-4); font-size:16px; font-weight:700; color:var(--on-dark); line-height:1.5; }
 .footer__en{
   margin-top:var(--space-1);

@@ -64,7 +64,7 @@ SHELL_ASSETS = {
     "assets/img/favicon.ico",
     "assets/img/favicon-32.png",
     "assets/img/favicon-180.png",
-    "assets/img/logo-96.png",
+    "assets/img/logo-264.png",
     "assets/img/xyl-logo-full.png",
 }
 

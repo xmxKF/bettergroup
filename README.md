@@ -39,7 +39,7 @@ bettergroup/
 ├── assets/                          css／img／js／video 四個子目錄複製到 dist/assets/
 │   ├── css/style.css                全站唯一樣式表（設計 token ＋ 所有元件）
 │   ├── js/main.js                   全站唯一腳本（導覽／捲動淡入／表單／媒體偵測）
-│   ├── img/                         logo-96、favicon、交付用圖片
+│   ├── img/                         logo-264、favicon、交付用圖片
 │   ├── video/                       交付用影片
 │   └── src/                         轉檔前的原始檔庫（optimize_media.py 自動搬入，不進 dist/）
 │
@@ -290,7 +290,7 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 
 影片一律靜音自動播放；有音軌也沒關係，`tools/optimize_media.py` 會自動移除。影像風格與禁忌見 `DESIGN.md` §8，逐一資產的提示詞見 `docs/image-prompts.md`／`docs/video-prompts.md`。
 
-**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中 `img`／`video` 裡沒有任何 content JSON 參照、也不在 `build.py` 的 `SHELL_ASSETS` 白名單（favicon 與 `logo-96.png`）內的檔案不會被複製（建置訊息會列出來）；超過大小上限的檔案也會被略過（圖片／`css`／`js` 上限 **1.5MB**，影片上限 **8MB**），並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
+**只有 `assets/css`、`assets/img`、`assets/js`、`assets/video` 這四個子目錄會被複製到 `dist/`**，其中 `img`／`video` 裡沒有任何 content JSON 參照、也不在 `build.py` 的 `SHELL_ASSETS` 白名單（favicon、`logo-264.png` 與 `xyl-logo-full.png`）內的檔案不會被複製（建置訊息會列出來）；超過大小上限的檔案也會被略過（圖片／`css`／`js` 上限 **1.5MB**，影片上限 **8MB**），並在建置訊息中提示改用 `python tools/optimize_media.py`。`assets/src/` 刻意不在複製清單內。直接放在 `assets/` 底下（不在這些子目錄內）的檔案不會進 `dist/`；建置時會出現警告。根目錄的 `logo.png` 在 `assets/` 之外，本來就不是複製對象。
 
 ### 檢查方式
 
