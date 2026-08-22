@@ -61,7 +61,7 @@
 **底部列**
 `© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。`
 `本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。`
-`網站設計：顯藝科技`（無已知網址，純文字呈現；`common.footer.credit = {label, name, href}`，`href` 留空字串，日後有連結再補）
+`網站設計：` ＋ XYL 字標小徽章 ＋ `顯藝科技`（徽章與名稱同在一個外部連結內，指向 `https://shinylogic.pages.dev`，另開分頁；`common.footer.credit = {label, name, href, logo}`，`href` 與 `logo` 四語一致，`label`／`name` 照譯）
 
 ### 0.4 共用 CTA 文字
 

@@ -41,7 +41,7 @@
     <div class="footer__bottom">
       <p>{{ common.footer.copyright }}</p>
       <p>{{ common.footer.trademark_note }}</p>
-      <p>{{ common.footer.credit.label }}{% if common.footer.credit.href %}<a class="link" href="{{ common.footer.credit.href }}">{{ common.footer.credit.name }}</a>{% else %}<span>{{ common.footer.credit.name }}</span>{% endif %}</p>
+      <p class="footer__credit">{{ common.footer.credit.label }}{% if common.footer.credit.href %}<a class="link" href="{{ common.footer.credit.href }}" target="_blank" rel="noopener noreferrer"><img class="footer__credit-logo" src="{{ asset_prefix }}{{ common.footer.credit.logo }}" width="144" height="64" alt="" aria-hidden="true">{{ common.footer.credit.name }}</a>{% else %}<span>{{ common.footer.credit.name }}</span>{% endif %}</p>
     </div>
   </div>
 </footer>

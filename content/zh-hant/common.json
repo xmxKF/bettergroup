@@ -86,7 +86,12 @@
     ],
     "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
-    "credit": { "label": "網站設計：", "name": "顯藝科技", "href": "" }
+    "credit": {
+      "label": "網站設計：",
+      "name": "顯藝科技",
+      "href": "https://shinylogic.pages.dev",
+      "logo": "assets/img/xyl-logo-64.png"
+    }
   },
 
   "cta_band": {

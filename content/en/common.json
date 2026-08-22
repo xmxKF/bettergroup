@@ -99,7 +99,12 @@
     ],
     "copyright": "© 2026 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED 倍特爾科技集團有限公司. All rights reserved.",
     "trademark_note": "All brand names shown on this site are trademarks of their respective owners and are used for equipment identification only.",
-    "credit": { "label": "Website by ", "name": "顯藝科技", "href": "" }
+    "credit": {
+      "label": "Website by ",
+      "name": "顯藝科技",
+      "href": "https://shinylogic.pages.dev",
+      "logo": "assets/img/xyl-logo-64.png"
+    }
   },
 
   "cta_band": {
