@@ -46,9 +46,10 @@ bettergroup/
 ├── tools/
 │   ├── optimize_media.py            ★ 把原始媒體檔轉成交付檔（比例／尺寸／壓縮）
 │   ├── check_parity.py              產出 HTML 與 docs/content-schema.md／templates/ 規格的結構檢查
-│   └── check_links.py               dist/ 內部連結檢查（無相依套件；CI 會跑）
+│   ├── check_links.py               dist/ 內部連結檢查（無相依套件；CI 會跑）
+│   └── test_build_guards.py         build.py 護欄的回歸測試（網址驗證／媒體必要性／語言目錄；CI 會跑）
 │
-├── .github/workflows/deploy.yml     推到 main → 建置 → 發佈到 GitHub Pages（見 §8）
+├── .github/workflows/deploy.yml     推到 main（或對 main 開 PR）→ 建置 → 發佈到 GitHub Pages（見 §8）
 │
 ├── dist/                            ← 產出目錄（不要手動編輯，也不要進版控）
 │   ├── index.html                   語言分流閘道
@@ -98,10 +99,24 @@ python -m http.server -d dist 8000   # 預覽 → http://localhost:8000/
 | `--lang zh-hant` | 只產出指定語言（可重複，或以逗號分隔） |
 | `--validate-only` | 只檢查翻譯結構與資產命名，不寫出任何檔案 |
 | `--base-url https://…` | 覆寫 canonical／hreflang／sitemap／CNAME 用的網址 |
+| `--allow-missing-media` | **開發用**：被參照的媒體缺檔或超過大小上限時只警告不失敗（頁面顯示佔位框）。CI 永遠不傳這個旗標 |
 | `--quiet` | 不列出「尚未產出的媒體檔」清單 |
 
+**預設是嚴格模式。** 只要有任何一個被 content JSON 參照的媒體、或 `build.py` 的
+`SHELL_ASSETS` 外殼資產缺檔、大小寫不符、超過大小上限，`build.py` 就會列出清單並以
+結束碼 1 失敗 —— 因為缺檔在頁面上只是佔位框、在 `tools/check_links.py` 又被當成
+「尚未產出」放行，不擋的話一次未轉檔的素材投放就會三道 CI 全綠地把破圖推上線。
+素材還沒到齊、只想先看版面時才加 `--allow-missing-media`，那會退回舊的容忍行為。
+
+同理，沒有帶 `--lang` 時，`content/` 底下必須剛好有 `build.py` 的 `LANGS` 所列的四個語言
+目錄（大小寫相符）。少一個目錄以前會讓那個語言從全站、語言閘道與 `sitemap.xml` 靜默消失，
+現在會直接失敗；刻意只處理部分語言時請用 `--lang` 明確指定。
+
 網站網址的優先順序：`--base-url` ＞ 環境變數 `SITE_URL` ＞ `build.py` 裡的 `SITE_URL` 常數。
-CI 走環境變數（見 §8），本機臨時試某個網址用旗標即可：
+三者都會經過驗證：只接受 `http`／`https` ＋ 合法主機名，拒絕 query（`?…`）、fragment（`#…`）、
+使用者資訊、空白與不合法的 port，結尾多餘的 `/` 會被正規化掉；網址指向自訂網域（會寫出
+`dist/CNAME`）時路徑必須為空、不可帶 port。不合格就直接建置失敗，訊息會指名是
+`SITE_URL` 還是 `--base-url` 出錯。CI 走環境變數（見 §8），本機臨時試某個網址用旗標即可：
 
 ```bash
 SITE_URL=https://acme.github.io/bettergroup python build.py --clean
@@ -279,7 +294,9 @@ VID-AI-01     →  assets/video/ai-01.mp4    ＋  assets/img/ai-01-poster.jpg
 
 ### 檢查方式
 
-檔案不存在時會看到灰底晶圓網格與資產 ID（例如 `IMG-HOME-01`）；放進正確檔名、跑完轉檔與建置後即顯示實圖。若仍是佔位框，多半是檔名不符對應規則，或該檔案超過大小上限被略過（圖片 1.5MB／影片 8MB，跑 `python tools/optimize_media.py`）。
+被參照的媒體缺檔或超過大小上限時，`build.py` 預設會**直接失敗**並列出清單（見 §2 的
+`--allow-missing-media`），所以正常流程不會看到佔位框。加了 `--allow-missing-media`
+之後才會看到灰底晶圓網格與資產 ID（例如 `IMG-HOME-01`）；放進正確檔名、跑完轉檔與建置後即顯示實圖。若仍是佔位框，多半是檔名不符對應規則（含大小寫），或該檔案超過大小上限被略過（圖片 1.5MB／影片 8MB，跑 `python tools/optimize_media.py`）。
 
 ---
 
@@ -350,17 +367,40 @@ workflow 依這個順序決定：
 
 ### 8.4 CI 會擋下什麼
 
-workflow 在發佈前依序跑這三關，任何一關失敗就不會發佈：
+workflow 在發佈前依序跑這四關，任何一關失敗就不會發佈：
 
 ```bash
-python build.py --validate-only   # 四語 JSON 結構、語言不變欄位、資產命名
-python tools/check_parity.py      # 產出與原型／模板規格的等價性
-python tools/check_links.py       # dist/ 內部連結；root-absolute 路徑一律視為錯誤
+python build.py --validate-only     # 四語 JSON 結構、語言不變欄位、資產命名、媒體齊備
+python tools/check_parity.py        # 產出與原型／模板規格的等價性
+python tools/test_build_guards.py   # build.py 護欄本身的回歸測試
+python build.py --clean             # 實際建置（SITE_URL 在這裡被驗證）
+python tools/check_links.py         # dist/ 內部連結；root-absolute 路徑一律視為錯誤
 ```
 
-本機送出前跑同樣三行，就不會被 CI 打回來。
+本機送出前跑同樣幾行，就不會被 CI 打回來。
 
-### 8.5 其他平台
+具體會被擋下來的情況：
+
+| 情況 | 擋在哪一關 |
+|---|---|
+| 某個語言少了鍵、多了鍵、陣列長度不同 | `--validate-only` |
+| 翻譯把欄位寫成 `null`、或型別與 `zh-hant` 不同 | `--validate-only` |
+| 翻譯把有內容的欄位留成空字串（漏譯） | `--validate-only` |
+| 語言不變欄位（`id`／`file`／`href`／`num`…）被翻譯了 | `--validate-only` |
+| 被參照的媒體或外殼資產缺檔、大小寫不符、超過大小上限 | `--validate-only` |
+| `content/` 少了（或多了）一個語言目錄 | `--validate-only` |
+| `SITE_URL` 不合法（缺 scheme、帶 query／fragment、自訂網域帶路徑…） | `--clean`（Build 步驟） |
+| `dist/` 內有指不到檔案的連結，或 root-absolute 路徑 | `check_links.py` |
+
+**CI 永遠不會傳 `--allow-missing-media`** —— 那個旗標只給本機開發用。
+
+### 8.5 pull request 也會跑一次
+
+對 `main` 開 pull request 時，同一個 `build` job 會完整跑一遍（建置＋上面四關），
+但會略過 Pages 的上傳與 `deploy` job，所以只驗證、不發佈。
+這樣護欄是在合併前擋，而不是等變更已經在 `main` 上、正在部署時才第一次執行。
+
+### 8.6 其他平台
 
 | 平台 | 做法 |
 |---|---|
@@ -369,7 +409,7 @@ python tools/check_links.py       # dist/ 內部連結；root-absolute 路徑一
 | Cloudflare Pages | build command `python build.py`，output directory `dist` |
 | 一般虛擬主機 | 本機建置後，FTP／SFTP 上傳 **`dist/` 的內容**（不是 repo 根目錄）到網站根目錄 |
 
-### 8.6 上線後自檢
+### 8.7 上線後自檢
 
 部署後請確認：
 

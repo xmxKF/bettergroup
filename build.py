@@ -7,6 +7,7 @@
     python build.py --clean         # 先清空 dist/ 再產出
     python build.py --lang zh-hant  # 只產出指定語言（可重複或用逗號分隔）
     python build.py --validate-only # 只跑翻譯結構與資產檢查，不寫檔
+    python build.py --allow-missing-media   # 開發用：缺媒體只警告不失敗（CI 永不使用）
 
 依賴：jinja2（見 requirements.txt）。除此之外只用標準函式庫。
 
@@ -31,7 +32,7 @@ import re
 import shutil
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlsplit
 
 try:
     from jinja2 import Environment, FileSystemLoader, StrictUndefined
@@ -140,8 +141,22 @@ INVARIANT_PATH_PATTERNS = (
     re.compile(r"^common\.site\.phone(_href)?$"),
 )
 
+# 允許「基準語言有字、某個翻譯刻意留空」的完整路徑。
+# 這幾張卡在拉丁語系裡只掛拉丁標題（title_lat，例如 Digital Twin），中文／日文才另有標題；
+# 除了這裡列出的路徑之外，翻譯把非空字串留成空字串一律視為漏譯（見 compare_structure）。
+EMPTY_ALLOWED_PATTERNS = (
+    re.compile(r"^ai\.pillars\.entries\[\d+\]\.title$"),
+    re.compile(r"^index\.ai\.pillars\[\d+\]\.title$"),
+)
+
 ASSET_ID_RE = re.compile(r"^(IMG|VID)-([A-Z0-9]+)-(\d{2})$")
 IMG_EXTS = ("jpg", "jpeg", "png", "webp", "avif")
+
+# 網站網址的主機名（每段 1–63 字元、不以 - 開頭或結尾，全長 ≤ 253）。
+HOSTNAME_RE = re.compile(
+    r"^(?=.{1,253}$)[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
+    r"(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$"
+)
 
 
 class BuildError(Exception):
@@ -163,6 +178,36 @@ def read_json(path: Path):
 def available_langs() -> list[dict]:
     """LANGS 中實際有 content/<code>/ 目錄的語言。"""
     return [l for l in LANGS if (CONTENT_DIR / l["code"]).is_dir()]
+
+
+def check_language_dirs() -> None:
+    """content/ 底下必須剛好有 LANGS 列出的語言目錄，大小寫完全相符。
+
+    少一個目錄不會讓任何檢查失敗 —— 站台會靜默縮小（入口頁、hreflang、sitemap 都只剩
+    剩下的語言），因此這裡把它變成硬性條件。刻意只產出部分語言時請用 --lang。
+    """
+    if not CONTENT_DIR.is_dir():
+        raise BuildError(f"找不到內容目錄：{CONTENT_DIR}")
+    actual = {p.name for p in CONTENT_DIR.iterdir() if p.is_dir()}
+    expected = {l["code"] for l in LANGS}
+    problems = []
+    missing = sorted(expected - actual)
+    if missing:
+        problems.append(
+            "缺少語言目錄：" + "、".join(f"content/{m}/" for m in missing)
+            + " —— 少一個語言就會從全站、語言閘道與 sitemap 靜默消失"
+        )
+    extra = sorted(n for n in actual - expected if not n.startswith((".", "_")))
+    if extra:
+        problems.append(
+            "content/ 有 LANGS 未列出的目錄：" + "、".join(extra)
+            + " —— 這些內容不會被產出，請加進 build.py 的 LANGS 或移除"
+        )
+    if problems:
+        raise BuildError(
+            "\n    ".join(problems)
+            + "\n    （確定只要處理部分語言時，請用 --lang 明確指定。）"
+        )
 
 
 def load_content(lang: str) -> dict:
@@ -207,8 +252,16 @@ def compare_structure(ref, other, path: str, ref_lang: str, lang: str) -> str | 
                 return found
         return None
 
-    if type(ref) is not type(other) and not (ref is None or other is None):
+    # 型別必須完全相符。以前 None 有逃生門，於是 title=null 這種漏譯可以通過驗證，
+    # 再由 Jinja（StrictUndefined 不擋已定義的 None）原樣印出字面 "None"。
+    if type(ref) is not type(other):
         return f"{path}：型別不同（{ref_lang}={type(ref).__name__}，{lang}={type(other).__name__}）"
+    # 必填非空字串：基準語言有字、翻譯卻是空字串＝漏譯，頁面會靜默變空白。
+    # 刻意留空的位置列在 EMPTY_ALLOWED_PATTERNS。
+    if isinstance(ref, str) and ref.strip() and not other.strip():
+        if not any(p.fullmatch(path) for p in EMPTY_ALLOWED_PATTERNS):
+            return (f"{path}：{lang} 是空字串，但 {ref_lang} 有內容"
+                    f"（{ref[:24]}…）— 漏譯欄位不得留空")
     return None
 
 
@@ -328,6 +381,77 @@ def validate_assets(files: dict, lang: str, verbose: bool) -> dict[str, list[str
     return per_page
 
 
+def asset_cap(rel: str) -> float:
+    """該檔案適用的大小上限（bytes）。"""
+    return MAX_VIDEO_BYTES if rel.lower().endswith((".mp4", ".webm")) else MAX_ASSET_BYTES
+
+
+def asset_inventory() -> set[str]:
+    """assets/ 的四個子目錄裡實際存在的檔案（相對 repo 根、posix、大小寫如同磁碟）。
+
+    用集合比對而不是 Path.exists()：Windows 的檔案系統不分大小寫，GitHub Pages 分，
+    因此 exists() 會放行只有大小寫不符的路徑，上線才 404。
+    """
+    found: set[str] = set()
+    for sub in ASSET_SUBDIRS:
+        source = ASSET_DIR / sub
+        if not source.is_dir():
+            continue
+        for path in source.rglob("*"):
+            if path.is_file():
+                found.add(path.relative_to(ROOT).as_posix())
+    return found
+
+
+def check_assets_present(contents: dict, allow_missing: bool) -> None:
+    """被參照的媒體、SHELL_ASSETS 與所有 css／js 必須存在且未超過大小上限。
+
+    預設是硬性條件：缺檔在頁面上只顯示佔位框，在 tools/check_links.py 又被當成
+    「尚未產出」放行，於是一次未轉檔的素材投放可以三道 CI 全綠地把破圖推上線。
+    開發時要看佔位框請加 --allow-missing-media —— CI 永遠不會傳這個旗標。
+    """
+    on_disk = asset_inventory()
+    by_lower = {rel.lower(): rel for rel in on_disk}
+    required = sorted(referenced_media(contents) | SHELL_ASSETS)
+
+    lines: list[str] = []
+    missing = 0
+    oversize = 0
+    for rel in required:
+        if rel not in on_disk:
+            missing += 1
+            actual = by_lower.get(rel.lower())
+            if actual:
+                lines.append(f"{rel}：磁碟上是「{actual}」— 大小寫不符（GitHub Pages 區分大小寫）")
+            else:
+                lines.append(f"{rel}：檔案不存在")
+    # css／js 不會被 content JSON 參照，但少一個或過大同樣會讓頁面壞掉。
+    for rel in sorted(set(required) | {r for r in on_disk if r.startswith(("assets/css/", "assets/js/"))}):
+        if rel not in on_disk:
+            continue
+        size = (ROOT / rel).stat().st_size
+        cap = asset_cap(rel)
+        if size > cap:
+            oversize += 1
+            lines.append(f"{rel}：{size:,} bytes（{size / 1024 / 1024:.2f}MB）"
+                         f"超過上限 {int(cap):,} bytes（{cap / 1024 / 1024:.1f}MB）"
+                         f"— 這是尚未轉檔的原始檔")
+
+    if not lines:
+        return
+    head = f"資產檢查未通過：缺少 {missing} 個、超過大小上限 {oversize} 個"
+    if allow_missing:
+        print(f"  ! {head}（--allow-missing-media 已開啟，頁面會顯示佔位框）：")
+        for line in lines:
+            print(f"      {line}")
+        return
+    raise BuildError(
+        head + "\n    " + "\n    ".join(lines)
+        + "\n    請執行 python tools/optimize_media.py 產出交付檔。"
+          "開發時要暫時放行，請加 --allow-missing-media（CI 不會、也不該傳入這個旗標）。"
+    )
+
+
 # ===========================================================================
 # 產出
 # ===========================================================================
@@ -350,6 +474,57 @@ def custom_domain(base_url: str) -> str:
     if not host or host.endswith(".github.io") or host in ("localhost", "127.0.0.1"):
         return ""
     return host
+
+
+def validate_base_url(raw: str, source: str) -> str:
+    """驗證並正規化網站網址；不合格就丟 BuildError，訊息一定指名來源（SITE_URL／--base-url）。
+
+    只接受 http(s) + 合法主機名，拒絕 query／fragment／使用者資訊／空白／結尾雜訊，
+    並把結尾多餘的 "/" 正規化掉。要寫出 CNAME（自訂網域）時路徑必須為空、不可帶 port ——
+    否則 dist/CNAME 會把 GitHub Pages 的自訂網域綁到別人家的主機上。
+    """
+    def bad(why: str) -> BuildError:
+        return BuildError(f"{source} 不是合法的網站網址（{raw!r}）：{why}")
+
+    if not raw:
+        raise bad("值是空的")
+    if any(ch.isspace() for ch in raw):
+        raise bad("含有空白字元")
+
+    split = urlsplit(raw)
+    scheme = split.scheme.lower()
+    if scheme not in ("http", "https"):
+        raise bad("scheme 必須是 http 或 https（要連 https:// 一起寫）")
+    if split.query:
+        raise bad(f"不可帶 query 字串（?{split.query}）")
+    if split.fragment:
+        raise bad(f"不可帶 fragment（#{split.fragment}）")
+    if "@" in split.netloc:
+        raise bad("不可帶使用者資訊（user:pass@host）")
+    try:
+        port = split.port
+    except ValueError:
+        raise bad("port 不是合法的數字") from None
+    host = (split.hostname or "")
+    if not host or not HOSTNAME_RE.match(host):
+        raise bad(f"主機名不合法（{host!r}）")
+
+    path = split.path.rstrip("/")
+    if path:
+        if not path.startswith("/"):
+            raise bad(f"路徑必須以 / 開頭（{split.path!r}）")
+        if "//" in path or any(ch in path for ch in "\\;"):
+            raise bad(f"路徑含有多餘的字元（{split.path!r}）")
+
+    netloc = f"{host}:{port}" if port else host
+    normalised = f"{scheme}://{netloc}{path}"
+    if custom_domain(normalised):
+        # 自訂網域 → build() 會寫 dist/CNAME，而 CNAME 只能是主機名。
+        if path:
+            raise bad(f"自訂網域會寫出 dist/CNAME，網址不可帶路徑（{path}）")
+        if port:
+            raise bad("自訂網域會寫出 dist/CNAME，網址不可帶 port")
+    return normalised
 
 
 def font_families(lang: dict) -> str:
@@ -447,7 +622,7 @@ def write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8", newline="\n")
 
 
-def build(langs: list[dict], base_url: str, verbose: bool) -> None:
+def build(langs: list[dict], base_url: str, verbose: bool, allow_missing: bool) -> None:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=True,
@@ -465,6 +640,7 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
     asset_report = {}
     for l in all_langs:
         asset_report[l["code"]] = validate_assets(contents[l["code"]], l["code"], verbose)
+    check_assets_present(contents, allow_missing)
     print("資產 ID 與路徑對應檢查通過")
 
     plan = page_plan(contents)
@@ -552,6 +728,12 @@ def build(langs: list[dict], base_url: str, verbose: bool) -> None:
         write(DIST_DIR / "CNAME", f"{domain}\n")
 
     copied, skipped_assets, unused_assets = copy_assets(contents)
+    if skipped_assets and not allow_missing:
+        raise BuildError(
+            f"有 {skipped_assets} 個資產超過大小上限被略過（見上方清單）——"
+            "略過即代表頁面上是佔位框，不得發佈。"
+            "請執行 python tools/optimize_media.py，或加 --allow-missing-media 暫時放行。"
+        )
 
     print()
     print("─" * 62)
@@ -587,13 +769,32 @@ def main() -> int:
     parser.add_argument("--lang", action="append", default=None,
                         help="只產出指定語言（可重複，或以逗號分隔）")
     env_site_url = (os.environ.get("SITE_URL") or "").strip()
-    parser.add_argument("--base-url", default=env_site_url or SITE_URL,
+    parser.add_argument("--base-url", default=None,
                         help="canonical / hreflang / sitemap / CNAME 用的網站網址"
                              f"（未指定時取環境變數 SITE_URL，再無則用預設 {SITE_URL}）")
     parser.add_argument("--validate-only", action="store_true",
                         help="只檢查內容結構與資產命名，不寫出任何檔案")
+    parser.add_argument("--allow-missing-media", action="store_true",
+                        help="開發用：被參照的媒體缺檔或超過大小上限時只警告不失敗"
+                             "（頁面顯示佔位框）。CI 永遠不傳這個旗標。")
     parser.add_argument("--quiet", action="store_true", help="不列出尚未產出的媒體檔")
     args = parser.parse_args()
+
+    if args.base_url is not None:
+        raw_url, url_source = args.base_url, "--base-url"
+    elif env_site_url:
+        raw_url, url_source = env_site_url, "環境變數 SITE_URL"
+    else:
+        raw_url, url_source = SITE_URL, "build.py 的 SITE_URL 常數"
+
+    try:
+        base_url = validate_base_url(raw_url, url_source)
+        # 沒帶 --lang 就代表要產出全站，四個語言目錄一個都不能少。
+        if not args.lang:
+            check_language_dirs()
+    except BuildError as exc:
+        print(f"\n建置失敗：{exc}", file=sys.stderr)
+        return 1
 
     all_langs = available_langs()
     if not all_langs:
@@ -615,13 +816,14 @@ def main() -> int:
             validate_translations(contents)
             for l in all_langs:
                 validate_assets(contents[l["code"]], l["code"], not args.quiet)
+            check_assets_present(contents, args.allow_missing_media)
             print("檢查通過。")
             return 0
 
         if args.clean and DIST_DIR.exists():
             shutil.rmtree(DIST_DIR)
             print("已清除 dist/")
-        build(selected, args.base_url, not args.quiet)
+        build(selected, base_url, not args.quiet, args.allow_missing_media)
     except BuildError as exc:
         print(f"\n建置失敗：{exc}", file=sys.stderr)
         return 1

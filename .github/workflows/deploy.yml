@@ -1,8 +1,13 @@
 name: Deploy to GitHub Pages
 
 # 推到 main 就重新建置並發佈；也可以在 Actions 分頁手動觸發。
+# 針對 main 的 pull request 也會跑同一個 build job（建置＋所有驗證），
+# 但會略過 Pages 上傳與 deploy job —— 讓護欄在合併前就先擋一次，
+# 而不是等變更已經在 main 上、正在部署時才第一次執行。
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -60,11 +65,17 @@ jobs:
           echo "url=${url}" >> "$GITHUB_OUTPUT"
           echo "SITE_URL = ${url}"
 
-      # 內容結構／語言不變欄位／資產命名 —— 任何一項不過就不發佈。
+      # 內容結構／語言不變欄位／資產命名／媒體齊備 —— 任何一項不過就不發佈。
+      # 注意：這裡刻意不傳 --allow-missing-media，缺媒體或超標一律讓 CI 紅燈。
       - name: Validate content
         run: |
           python build.py --validate-only
           python tools/check_parity.py
+
+      # build.py 的護欄本身也要有回歸測試（SITE_URL 驗證、媒體必要性、語言目錄、
+      # null／空字串結構檢查），確保護欄日後不會被無聲拿掉。
+      - name: Test build guards
+        run: python tools/test_build_guards.py
 
       - name: Build
         env:
@@ -75,15 +86,19 @@ jobs:
         run: python tools/check_links.py
 
       - name: Configure Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
+  # pull request 只驗證不發佈。
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
