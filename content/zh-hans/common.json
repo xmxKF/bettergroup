@@ -88,9 +88,9 @@
     "trademark_note": "本网站所列品牌名称均为其各自所有权人之商标，仅供设备说明用途。",
     "credit": {
       "label": "网站设计：",
-      "name": "显艺科技",
+      "alt": "显艺科技",
       "href": "https://shinylogic.pages.dev",
-      "logo": "assets/img/xyl-logo-64.png"
+      "logo": "assets/img/xyl-logo-full.png"
     }
   },
 

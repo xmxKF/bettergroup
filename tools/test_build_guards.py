@@ -186,9 +186,9 @@ def test_missing_referenced_media_fails():
 
 def test_missing_shell_asset_fails():
     with sandbox() as root:
-        (root / "assets/img/xyl-logo-64.png").unlink()
+        (root / "assets/img/xyl-logo-full.png").unlink()
         expect_fail(root, ["--validate-only", "--quiet"],
-                    ["assets/img/xyl-logo-64.png", "檔案不存在"], "缺少外殼資產")
+                    ["assets/img/xyl-logo-full.png", "檔案不存在"], "缺少外殼資產")
 
 
 def test_case_mismatch_fails():

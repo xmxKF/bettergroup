@@ -237,13 +237,15 @@ content/
     "process_links": [ { "label": "黃光段", "href": "equipment-lithography.html" }, … 共 9 項 ],
     "copyright": "© 2026 倍特爾科技集團有限公司 BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED. 版權所有。",
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
-    "credit": { "label": "網站設計：", "name": "顯藝科技",
+    "credit": { "label": "網站設計：", "alt": "顯藝科技",
                 "href": "https://shinylogic.pages.dev",
-                "logo": "assets/img/xyl-logo-64.png" }
-    // 底部列的網站設計credit。href 留空字串時模板輸出 <span> 純文字；有值時輸出
-    // <a target="_blank" rel="noopener noreferrer">，內含 logo 小徽章＋name 文字
-    // （見 partials/footer.html）。href 與 logo 是語言不變值（兩個鍵名都已在
-    // INVARIANT_KEYS 內，四語必須完全一致）；label 與 name 各語言照譯。
+                "logo": "assets/img/xyl-logo-full.png" }
+    // 底部列的網站設計credit。label 自成一行；其下是完整 XYL 標誌圖（含倒影與圖內
+    // 「顯藝科技」字樣）。href 有值時圖包在 <a target="_blank" rel="noopener noreferrer">
+    // 內、連結內沒有可見文字；留空字串時只輸出該圖（見 partials/footer.html）。
+    // href 與 logo 是語言不變值（兩個鍵名都已在 INVARIANT_KEYS 內，四語必須完全一致）；
+    // label 與 alt 各語言照譯。alt 為必填 —— 連結內沒有可見文字，名稱全靠 alt 承擔，
+    // 不可留空或改成 aria-hidden。
     // logo 走 SHELL_ASSETS 白名單複製到 dist/（不是 IMG-* 資產，不進 media 表）。
   },
 

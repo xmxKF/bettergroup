@@ -88,9 +88,9 @@
     "trademark_note": "本サイトに記載のブランド名は、それぞれの所有者の商標であり、装置の説明を目的として表示しています。",
     "credit": {
       "label": "ウェブサイト制作：",
-      "name": "顯藝科技",
+      "alt": "顯藝科技",
       "href": "https://shinylogic.pages.dev",
-      "logo": "assets/img/xyl-logo-64.png"
+      "logo": "assets/img/xyl-logo-full.png"
     }
   },
 

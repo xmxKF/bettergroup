@@ -88,9 +88,9 @@
     "trademark_note": "本網站所列品牌名稱均為其各自所有權人之商標，僅供設備說明用途。",
     "credit": {
       "label": "網站設計：",
-      "name": "顯藝科技",
+      "alt": "顯藝科技",
       "href": "https://shinylogic.pages.dev",
-      "logo": "assets/img/xyl-logo-64.png"
+      "logo": "assets/img/xyl-logo-full.png"
     }
   },
 

@@ -1329,19 +1329,24 @@ body.nav-open{ overflow:hidden; }
 }
 .footer__bottom p{ max-width:none; }
 
-/* 網站設計 credit：字標小徽章 ＋ 名稱文字同在一個連結內；圖片為裝飾，名稱由文字承擔 */
+/* 網站設計 credit：標籤一行，其下為完整 XYL 標誌圖（含倒影與圖內「顯藝科技」字樣）。
+   圖片即連結的全部內容，名稱由 alt 承擔，故 alt 為必填、不得為裝飾圖。 */
 .footer__credit{
   margin-top:var(--space-1);
-  display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-2);
+  display:flex; flex-direction:column; align-items:flex-start; gap:var(--space-2);
 }
-.footer__credit a{ display:inline-flex; align-items:center; gap:var(--space-2); }
+.footer__credit-label{ display:block; }
+.footer__credit-link{
+  display:inline-block; border-radius:var(--r-sm);
+  transition:box-shadow var(--dur) var(--ease);
+}
 .footer__credit-logo{
-  display:block; height:24px; width:auto;
+  display:block; height:128px; width:auto;
   border-radius:var(--r-sm);
-  opacity:.82; transition:opacity var(--dur) var(--ease);
+  border:1px solid var(--dark-700);
 }
-.footer__credit a:hover .footer__credit-logo,
-.footer__credit a:focus-visible .footer__credit-logo{ opacity:1; }
+.footer__credit-link:hover{ box-shadow:0 0 0 1px var(--accent-on-dark); }
+.footer__credit-link:focus-visible{ outline:2px solid var(--accent-on-dark); outline-offset:2px; }
 
 /* ==========================================================================
    24. PRINT

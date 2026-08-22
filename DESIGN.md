@@ -297,8 +297,8 @@ Mobile-first：base 單欄；≥640 兩欄；≥960 三欄＋桌面型階；≥1
   3. 聯絡：`香港九龍佐敦佐敦道5號至秀商業大廈10樓`、`better_stg@163.com`（mailto）、`+86-135-3007-1950`（tel）—— 兩個連結皆 `--accent-on-dark`。**不列聯絡人姓名**（客戶 2026-08 指示）。
   - <960px 以觸控為主：導覽／製程連結補 `padding-block:12px`，可點高度 ≥44px（§10）。
   4. 九大製程快速連結（`--fs-small`）
-- 底列：上邊框 `1px solid var(--dark-700)`，內容 `© 2026 倍特爾科技集團有限公司　BETTER SCIENCE TECHNOLOGY GROUP CO., LIMITED`，`--fs-small` `--on-dark-muted`；末行為網站設計 credit（`common.footer.credit`），同一 `--fs-small` `--on-dark-muted`，`href` 有值時渲染為 `--accent-on-dark` 連結、無值則為純文字。
-- **credit 徽章**：credit 行為 `display:flex`、`align-items:center`、`gap:var(--space-2)`、`margin-top:var(--space-1)`（讓徽章列與上方商標聲明分得開）。標籤文字（`網站設計：`）在連結外，連結內是「XYL 字標小徽章 ＋ 顯藝科技文字」——名稱一律保留文字，不可只留圖。徽章 `.footer__credit-logo` 高 24px、寬自動（`assets/img/xyl-logo-64.png`，144×64、約 2.7×，字標已裁到水面線）、`--r-sm` 圓角、`opacity:.82`，hover／focus 回到 `1`；淺底在暗帶上因此讀作刻意的小徽章而非貼紙，亮度也不會壓過同列 `--on-dark-muted` 文字。徽章 `alt=""` `aria-hidden="true"`（裝飾用，名稱由旁邊文字承擔，同 footer logo 慣例）。這是全站唯一的站外連結，一律 `target="_blank" rel="noopener noreferrer"`；連結為 `inline-flex`，焦點環（`--accent-on-dark`）因此完整框住徽章與名稱。
+- 底列：上邊框 `1px solid var(--dark-700)`，依序為版權行、商標聲明行、網站設計 credit 區塊（`common.footer.credit`），`--fs-small` `--on-dark-muted`。
+- **credit 區塊**：credit 為 `display:flex`、`flex-direction:column`、`align-items:flex-start`、`gap:var(--space-2)`、`margin-top:var(--space-1)`（與上方商標聲明分開）。標籤文字（`網站設計：`）自成一行在連結外；**連結內只有圖片，沒有可見文字**（客戶 2026-08 指示）。圖為完整標誌構圖 `assets/img/xyl-logo-full.png`（291×256，原圖 `assets/src/xyl-logo.png` 1024×1024 去掉外圍留白後的裁切），**必須完整含字標、水面倒影與圖內「顯藝科技」字樣**，不得再裁成字標小徽章。`.footer__credit-logo` 高 128px、寬自動（約 145px，2× 供圖）、`--r-sm` 圓角、1px `--dark-700` 邊框讓白底圖在暗帶上收邊，`opacity:1`（圖即識別，不可再壓暗）。因為沒有可見文字承擔名稱，**`alt` 為必填**（`common.footer.credit.alt`，四語照譯：顯藝科技／显艺科技／顯藝科技 (XYL)／顯藝科技），不得使用 `alt=""` `aria-hidden`。這是全站唯一的站外連結，一律 `target="_blank" rel="noopener noreferrer"`；連結盒等於圖片盒，hover 為 1px `--accent-on-dark` 外框、focus 為 2px `--accent-on-dark` 焦點環（`outline-offset:2px`），因此完整框住圖片。
 
 ### 6.10 麵包屑
 `--fs-small`、`--text-muted`；分隔符 `/`（`--border-strong` 色，左右 8px）；最後一項為 `--text-2` 且非連結；位於內頁 hero 上緣，與 h1 間距 16px。
