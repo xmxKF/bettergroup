@@ -1,15 +1,15 @@
 name: Sync Upstream
 
 on:
-  # 每 30 分钟自动检查一次
+  # 每 30 分钟检查一次
   schedule:
     - cron: "7,37 * * * *"
 
-  # 允许在 GitHub Actions 页面手动执行
+  # 允许手动执行
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   sync:
@@ -19,8 +19,17 @@ jobs:
     steps:
       - name: Sync fork with upstream
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
-          echo "Syncing ${{ github.repository }} main branch with upstream..."
-          gh repo sync "${{ github.repository }}" --branch main
+          BRANCH=$(gh repo view "${{ github.repository }}" \
+            --json defaultBranchRef \
+            --jq '.defaultBranchRef.name')
+
+          echo "Repository: ${{ github.repository }}"
+          echo "Default branch: ${BRANCH}"
+          echo "Syncing with upstream..."
+
+          gh repo sync "${{ github.repository }}" \
+            --branch "${BRANCH}"
+
           echo "Sync completed."
