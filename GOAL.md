@@ -1,7 +1,7 @@
 設計一個簡約又專業的半導體設備公司網站：
 中文公司：倍特爾科技集團有限公司
 英文公司：BETTER SCIENCE TECHNOLOGY GROUP co., LIMITED
-公司地址：香港九龙佐敦佐敦道5号至秀商业大厦10楼
+公司地址：香港九龙佐敦道5号智秀商业大厦10楼
 公司負責人： 蘇益宏 （Kerwin)
 公司郵箱： kerwin@bettertechgroup.com
 公司主要業務經營方向： 
